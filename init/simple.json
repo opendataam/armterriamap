@@ -1,0 +1,124 @@
+{
+    "homeCamera": {
+      "north": 42,
+      "east": 47,
+      "south": 38,
+      "west": 43
+    },
+    "catalog": [
+      {
+        "id": "ZIdekvc10z",
+        "type": "wms-group",
+        "name": "Sustainable Caucasus",
+        "description" : "This GeoNode instance has been developed in the frame of the \"Supporting Sustainable Mountain Development in the Caucasus (Sustainable Caucasus)\" project, funded by the Swiss National Science Foundation and the Swiss Agency for Development and Cooperation under the SCOPES Program, and coordinated by the University of Geneva.",
+        "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+        "members": [
+          {
+            "type": "wms",
+            "localId": "vegetation_arm",
+            "legends": [
+              {
+                "items": [
+                  {
+                    "title": "A - Best",
+                    "color": "#6B0038"
+                  },
+                  {
+                    "title": "B",
+                    "color": "#F41911"
+                  },
+                  {
+                    "title": "C",
+                    "color": "#F67F00"
+                  },
+                  {
+                    "title": "D",
+                    "color": "#D78B6D"
+                  },
+                  {
+                    "title": "E - Worst",
+                    "color": "#ECD2BE"
+                  },
+                  {
+                    "title": "No data",
+                    "color": "rgba(0,0,0,0)",
+                    "outlineColor": "black",
+                    "addSpacingAbove": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "FxPHcHvxoO",
+        "type": "wms-group",
+        "name": "CENS RA",
+        "url": "http://og.cens.am:8081/geoserver/ows",
+        "members": [
+          {
+            "type": "wms",
+            "localId": "cens",
+            "legends": [
+              {
+                "items": [
+                  {
+                    "title": "A - Best",
+                    "color": "#6B0038"
+                  },
+                  {
+                    "title": "B",
+                    "color": "#F41911"
+                  },
+                  {
+                    "title": "C",
+                    "color": "#F67F00"
+                  },
+                  {
+                    "title": "D",
+                    "color": "#D78B6D"
+                  },
+                  {
+                    "title": "E - Worst",
+                    "color": "#ECD2BE"
+                  },
+                  {
+                    "title": "No data",
+                    "color": "rgba(0,0,0,0)",
+                    "outlineColor": "black",
+                    "addSpacingAbove": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "HotOSM",
+        "type": "group",
+        "members": [
+          {
+            "type": "geojson",
+            "name": "Roads",
+            "description" : "Armenian roads from HotOSM communuty (original source - Humanitarian Data Exchange",
+            "id": "zrPtHVJcPi",
+            "url": "data/hotosm_roads.geojson"
+          },
+          {
+            "type": "geojson",
+            "name": "Health facilities",
+            "description" : "Armenian health facilities from HotOSM communuty (original source - Humanitarian Data Exchange",
+            "id": "ArPtHVJcPX",
+            "url": "data/hotosm_health.geojson"
+          }
+        ]
+      }
+    ],
+    "viewerMode": "3dSmooth",
+    "baseMaps": {
+      "defaultBaseMapId": "basemap-positron",
+      "previewBaseMapId": "basemap-positron"
+    }
+  }
