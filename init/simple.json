@@ -103,11 +103,11 @@
         "type": "group",
         "members": [
           {
-            "type": "kmz",
+            "type": "kml",
             "name": "Model Output Statistics for YEREVAN (ZVARTNOTS AIRPORT) (37788)",
             "description" : "DWD’s fully automatic MOSMIX product optimizes and interprets the forecast calculations of the NWP models ICON (DWD) and IFS (ECMWF), combines these and calculates statistically optimized weather forecasts in terms of point forecasts (PFCs). Thus, statistically corrected, updated forecasts for the next ten days are calculated for about 5400 locations around the world. Most forecasting locations are spread over Germany and Europe. MOSMIX forecasts (PFCs) include nearly all common meteorological parameters measured by weather stations.",
             "id": "de.dwd.mosmix.37788",
-            "url": "data/transport/MOSMIX_L_2024081403_37788.kmz"
+            "url": "data/transport/MOSMIX_L_2024081403_37788.kml"
           }
         ]
       },
