@@ -1,82 +1,82 @@
 {
   "gettingstarted": {
     "title": "Начните работу с картой",
-    "markdownText": "## Getting started with the map\n\nIf you're new to the map or using spatial data, our Getting Started video quickly covers the basic functionality you'll need to use to add and interrogate data sets.\n\nIf you don't have time to watch the video, we suggest exploring the following areas:\n\n1. Search for a location to quickly find an area of interest\n2. Use 'Explore map data' to view the catalogue of available data sets and add them to the map\n3. Interact with the data layer, including opacity and toggling on and off on the left in your workbench\n4. Click on the data on the map to view more detailed data, including the raw data\n5. Change your basemap using options in 'Map Settings' to help make some data sets more visible\n6. Zoom and change your view, including tilting the view angle using the controls on the right-hand side of the screen",
+    "markdownText": "## Начало работы с картой\n\nЕсли вы новичок в работе с картой или использовании пространственных данных, наш видеоролик \"Начало работы\" быстро расскажет об основных функциях, которые вам понадобятся для добавления и изучения наборов данных.\n\nЕсли у вас нет времени на просмотр видео, мы предлагаем изучить следующие области:\n\n1. Поиск местоположения для быстрого нахождения интересующей вас области\n2. Используйте функцию "Изучить данные карты", чтобы просмотреть каталог доступных наборов данных и добавить их на карту\n3. Взаимодействуйте со слоем данных, в том числе с полупрозрачностью и включением и выключением слева в рабочем столе\n4. Щелкните по данным на карте, чтобы просмотреть более подробные данные, включая исходные данные\n5. Измените базовую карту с помощью опций в "Настройках карты", чтобы сделать некоторые наборы данных более заметными\n6. Изменяйте масштаб и угол обзора, в том числе угол наклона, с помощью элементов управления в правой части экрана.",
     "videoUrl": "https://www.youtube-nocookie.com/embed/FjSxaviSLhc",
     "placeholderImage": "https://img.youtube.com/vi/FjSxaviSLhc/maxresdefault.jpg"
   },
   "stepbystepguide": {
     "title": "Пошаговое руководство",
-    "markdownText": "## Step by step guide\n\nLaunch a step by step guide for various popular workflows below:",
+    "markdownText": "## Пошаговое руководство\n\nСледующее пошаговое руководство для различных популярных рабочих процессов:",
     "gettingstarted": {
       "title": "Начните работу с картой",
       "step1": {
-        "markdownDescription": "The search is at the top of the workbench on the left.",
+        "markdownDescription": "Поиск находится в верхней части рабочего стола слева.",
         "title": "Ищите для поиска интересующих Вас мест"
       },
       "step2": {
         "markdownDescription": "Вы можете просмотреть каталог в любое время",
-        "title": "Use \"Explore map data\" to view data catalogue"
+        "title": "Используйте \"Исследовать данные карты\" для просмотра каталога данных."
       },
       "step3": {
-        "markdownDescription": "Find a dataset of interest",
-        "title": "Search for data or browse catalogue"
+        "markdownDescription": "Найдите интересующий набор данных",
+        "title": "Поищите данные или просмотрите каталог"
       },
       "step4": {
-        "title": "Add data to map by clicking on + sign or \"Add to map\" button in preview window",
+        "title": "Добавьте данные на карту, нажав на знак + или кнопку \"Добавить на карту\" в окне предварительного просмотра.",
         "markdownDescription": ""
       },
       "step5": {
-        "title": "Interact with data, including opacity and toggling on & off on the left in your workbench"
+        "title": "Взаимодействуйте с данными, в том числе с полупрозрачностью и включением и выключением слева на рабочем столе."
       },
       "step6": {
-        "title": "Click on data on the map to view more details by triggering Feature Information panel"
+        "title": "Нажмите на данные на карте, чтобы просмотреть более подробную информацию, вызвав панель Feature Information"
       },
       "step7": {
-        "title": "Change your basemap using options in \"Map Settings\" to improve contrast"
+        "title": "Измените базовую карту с помощью опций в разделе \"Настройки карты\", чтобы улучшить контрастность."
       },
       "step8": {
-        "title": "Zoom and change view using the controls on the right-hand side of the screen"
+        "title": "Масштабируйте и изменяйте вид с помощью элементов управления в правой части экрана"
       }
     },
     "satelliteimagery": {
-      "title": "Adding satellite imagery",
-      "footnote": "Important: Satellite imagery can take a little while to load so please be patient. If images don’t seem to be loading, zoom out a little bit",
+      "title": "Добавление изображений со спутников",
+      "footnote": "Важно: Изображения со спутников могут загружаться долго, пожалуйста, будьте терпеливы. Если изображения не подгружаются, слегка отдалите отображение",
       "step1": {
-        "title": "Find the location to view satellite imagery",
-        "markdownDescription": "- Use the location search or zoom and pan around the map using your mouse or the zoom controls"
+        "title": "Найдите местоположение для просмотра спутниковых снимков",
+        "markdownDescription": "- Используйте поиск по местоположению или масштабируйте и панорамируйте карту с помощью мыши или регуляторов масштаба."
       },
       "step2": {
-        "title": "Add the satellite imagery to the map",
-        "markdownDescription": "- Open the data catalogue using \"Explore map data\" button\n- Navigate through datasets to select your satellite option: Landsat or Sentinel, and daily or composite images. This can depend on resolution of the image you need (10m or 25m) and whether you want daily, 16 day composite, or annual average images\n - Select \"Add to the map\" to view the satellite imagery"
+        "title": "Добавьте спутниковые снимки на карту",
+        "markdownDescription": "- Откройте каталог данных с помощью кнопки \"Explore map data\"\n- Перейдите по наборам данных, чтобы выбрать спутник: Landsat или Sentinel, а также ежедневные или составные снимки. Это может зависеть от разрешения изображения, которое вам нужно (10 м или 25 м), а также от того, нужны ли вам ежедневные, 16-дневные или среднегодовые снимки\n- Выберите \n \"Добавить на карту\n\", чтобы просмотреть спутниковые снимки."
       },
       "step3": {
-        "title": "Filter images to find satellite imagery",
-        "markdownDescription": "- Filter images by location to quickly find satellite images for that location\n - Satellites circle the globe many times a day. You can expect satellite imagery to be available for one location every two weeks\n - If you haven't already selected your point of interest on the map, zoom in to select one. You will see the filter applied in blue in the Workbench on the left"
+        "title": "Фильтруйте изображения, чтобы найти спутниковые снимки",
+        "markdownDescription": "- Фильтруйте изображения по местоположению, чтобы быстро найти спутниковые снимки для этого места\n- Спутники облетают земной шар много раз в день. Вы можете ожидать, что спутниковые снимки будут доступны для одного места каждые две недели\n - Если вы еще не выбрали интересующую вас точку на карте, увеличьте масштаб, чтобы выбрать ее. Вы увидите примененный фильтр синим цветом в окне Workbench слева."
       },
       "step4": {
-        "title": "Select a time and date",
-        "markdownDescription": "- Use the date picker to select a time and date. Cycle backwards through previous years using the back arrow\n - Choose another date if your imagery is obscured by clouds. You can quickly cycle back and forward using the arrows next to the date picker"
+        "title": "Выберите время и дату",
+        "markdownDescription": "- Выберите время и дату с помощью кнопки выбора даты. Просматривайте предыдущие годы назад с помощью стрелки назад\n - Выберите другую дату, если изображение заслонено облаками. Вы можете быстро переходить назад и вперед с помощью стрелок рядом с выбором даты."
       }
     },
     "comparetimeseries": {
-      "title": "View and compare different points in time",
-      "footnote": "Important: Any time series data can be compared using the Split Screen Mode, not just satellite imagery",
+      "title": "Просмотр и сравнение разных точек во времени",
+      "footnote": "Важно: В режиме раздельного экрана можно сравнивать любые данные временных рядов, а не только спутниковые снимки.",
       "step1": {
-        "title": "Add a time series dataset to the map",
-        "markdownDescription": "- Satellite imagery is a good example of time series data, with many satellites going back decades\n- Find your location of interest and filter available imagery by this location\n-See our Adding Satellite Imagery to the Map guide for more"
+        "title": "Добавьте набор данных временного ряда на карту",
+        "markdownDescription": "- Спутниковые снимки - хороший пример данных временных рядов: многие спутники работают уже несколько десятилетий\n- Найдите интересующее вас место и отфильтруйте имеющиеся снимки по этому месту\n- Смотрите наше руководство по добавлению спутниковых снимков на карту, чтобы узнать больше."
       },
       "step2": {
-        "title": "Select the time and date",
-        "markdownDescription": "- In the workbench on the left, select the time and date which will open the date picker\n- Select a year, month and date, or navigate back to other years and even centuries using the back arrow\n- Available dates appear in blue"
+        "title": "Выберите время и дату",
+        "markdownDescription": "- В рабочем столе слева выберите время и дату, что откроет окно выбора даты\n- Выберите год, месяц и дату или перейдите к другим годам и даже векам с помощью стрелки назад\n- Доступные даты отображаются синим цветом"
       },
       "step3": {
-        "title": "Compare different dates at one location",
-        "markdownDescription": "- From the 3 dots drop-down menu in the workbench, press 'Compare' to activate Split Screen Mode\n- A duplicate copy of your dataset will appear in the workbench\n- Choose the dates you want to compare on the left and right of the screen\n- Drag the slider using the white button to swipe and compare the two image dates"
+        "title": "Сравнивайте разные даты в одном месте",
+        "markdownDescription": "- В выпадающем меню из трех точек на рабочем столе нажмите \"Сравнить\", чтобы активировать режим раздельного экрана\n- В рабочем столе появится дубликат набора данных\n- Выберите даты, которые вы хотите сравнить, в левой и правой частях экрана\n- Перетащите ползунок с помощью белой кнопки, чтобы провести и сравнить две даты изображения"
       },
       "step4": {
-        "title": "Close Split Screen Mode",
-        "markdownDescription": "- Escape the Split Screen Mode by pressing the 'x' of Split Screen Mode title in the workbench\n- Remove the duplicate copy of your dataset in the workbench using the 3 dots drop-down menu"
+        "title": "Закрыть режим разделенного экрана",
+        "markdownDescription": "- Выйдите из режима разделенного экрана, нажав \"x\" на заголовке Split Screen Mode в верстаке\n- Удалите дубликат набора данных в верстаке с помощью выпадающего меню с тремя точками"
       }
     }
   },

@@ -17,70 +17,70 @@
     "safari": "Apple Safari"
   },
   "trainer": {
-    "expandTrainer": "Show more step detail",
-    "collapseTrainer": "Hide step detail",
+    "expandTrainer": "Показать детали одного шага",
+    "collapseTrainer": "Скрыть детали шага",
     "showAllSteps": "Показать все шаги",
     "hideAllSteps": "Скрыть все шаги"
   },
   "tour": {
     "preface": {
       "title": "Пройти экскурсию",
-      "content": "Unsure of where to begin? Take a quick tour of the main features of our software, and learn about some of the key functions to help you get on your way.",
-      "close": "Maybe later",
+      "content": "Неуверены где начать? Начните быструю экскурсию по основным возможностям и узнайте о некоторых основных функциях которые Вам помогут.",
+      "close": "Возможно позже",
       "start": "Начать экскурсию"
     },
     "finish": "Finish",
     "locationSearchInput": {
-      "content": "## Location search\n\nEnter a locality or address to easily locate a point of interest on the map."
+      "content": "## Поиск места\n\nВведите населенный пункт или адрес, чтобы легко найти интересующую вас точку на карте."
     },
     "exploreMapDataButton": {
-      "content": "## Explore map data\n\nBrowse the catalogue of available data and add it to the map here. You can add multiple datasets at any one time, and you’ll see them listed down below in the Workbench."
+      "content": "## Данные карты\n\nПросмотрите каталог доступных данных и добавьте их на карту здесь. Вы можете добавлять несколько наборов данных одновременно, и вы увидите их список ниже в рабочей панели."
     },
     "sidePanelUploadButton": {
-      "content": "## Upload Data\n\nYou can upload your own data to the map to view it with other data sets. Upload a file or link to an existing online data set or data service. Supported data formats include CSV, GeoJSON, KML, GPX and CZML."
+      "content": "## Загрузить данные\n\nВы можете загрузить на карту свои собственные данные, чтобы просмотреть их вместе с другими наборами данных. Загрузите файл или ссылку на существующий онлайн-набор данных или сервис данных. Поддерживаются такие форматы данных, как CSV, GeoJSON, KML, GPX и CZML."
     },
     "menuBarMapSettingsButton": {
-      "content": "## Map Settings\n\nCustomise map settings such as base maps, 2D/3D Terrain, and map image quality for improved performance."
+      "content": "## Настройки карты\n\nНастройте параметры карты, такие как базовые карты, 2D/3D Terrain и качество изображения карты для повышения производительности."
     },
     "menuBarStoryButton": {
-      "content": "## Stories\n\nStories allow you to add contextual information to a dataset to bring a narrative to life. Create your own data story using the Story Editor, and share it via the ‘Share’ panel once you’re done."
+      "content": "## Истории\n\nИстории позволяют добавить контекстную информацию к набору данных, чтобы оживить повествование. Создайте собственную историю данных с помощью редактора историй и поделитесь ею с помощью панели \"Поделиться\", когда закончите."
     },
     "mapNavigationCompassOuterRing": {
-      "content": "## View controls\n\nHere you can change the view of the map. You can change the orientation of your view by using the outer ring, and you can tilt the camera angle using the inner ring. Double click to reset the view."
+      "content": "## \"Элементы управления просмотром\"\n\nЗдесь вы можете изменить вид карты. С помощью внешнего кольца можно изменить ориентацию вида, а с помощью внутреннего кольца - угол наклона камеры. Двойной щелчок позволяет сбросить вид."
     },
     "mapNavigationSplitterIcon": {
-      "content": "## Compare\n\nA powerful feature of Terria is the ability to compare datasets using a split screen view. For datasets with a time-series component, such as satellite images, you can compare dates backwards and forwards in time by clicking on the date picker/selector."
+      "content": "## Сравнение\n\nМощной функцией Terria является возможность сравнения наборов данных с помощью разделенного экрана. Для наборов данных с компонентом временного ряда, таких как спутниковые снимки, можно сравнивать даты назад и вперед во времени, щелкая на переключателе/селекторе дат."
     }
   },
   "measure": {
-    "measureTool": "Measure Tool",
-    "measureToolTitle": "Line Measure",
-    "measureDistance": "Measure distance between locations"
+    "measureTool": "Инструмент измерения",
+    "measureToolTitle": "Линия измерения",
+    "measureDistance": "Измерение расстояния между точками"
   },
   "location": {
-    "errorGettingLocation": "Error getting location",
-    "browserCannotProvide": "Your browser cannot provide your location.",
-    "myLocation": "My Location",
-    "location": "Location",
-    "originError": "Your browser can only provide your location when using HTTPS. You may be able to use {{secureUrl}} instead.",
-    "centreMap": "Centre map at your current location"
+    "errorGettingLocation": "Ошибка при получении местоположения",
+    "browserCannotProvide": "Ваш браузер не может указать ваше местоположение.",
+    "myLocation": "Мое местоположение",
+    "location": "Местонахождение",
+    "originError": "Ваш браузер может указать ваше местоположение только при использовании HTTPS. Возможно, вместо этого вы сможете использовать {{secureUrl}}.",
+    "centreMap": "Центральная карта в вашем текущем местоположении"
   },
   "splitterTool": {
-    "errorTitle": "Failed to compare catalog item.",
+    "errorTitle": "Не удалось сравнить элемент каталога.",
     "duplicateModelErrorMessage": "An error occurred while splitting the catalog item `\"{{name}}\"`. This catalog item may not support \"compare\" functionality",
     "modelNotFoundErrorMessage": "Model ID `\"{{id}}\"` could not be found",
-    "toggleSplitterToolTitle": "Compare",
+    "toggleSplitterToolTitle": "Сравнить",
     "toggleSplitterTool": "Enable side-by-side comparison between two different sets of data",
     "toggleSplitterToolDisabled": "Please disable other side-by-side comparison features in order to enable standard compare",
-    "title": "Drag left or right to adjust views",
+    "title": "Перетаскивайте влево или вправо, чтобы настроить вид",
     "workbench": {
-      "goleftTitle": "Show on the left side",
-      "goleft": "Left",
-      "bothTitle": "Show on both sides",
-      "both": "Both",
-      "gorightTitle": "Show on the right side",
-      "goright": "Right",
-      "copyName": "{{name}} (copy)"
+      "goleftTitle": "Показать с левой стороны",
+      "goleft": "Слева",
+      "bothTitle": "Показать с обеих сторон",
+      "both": "Оба",
+      "gorightTitle": "Показать с правой стороны",
+      "goright": "Справа",
+      "copyName": "{{name}} (копия)"
     }
   },
   "zoomCotrol": {
@@ -89,23 +89,23 @@
     "zoomOut": "Отдалить"
   },
   "compass": {
-    "description": "Drag outer ring: rotate view.\nDrag inner gyroscope: free orbit.\nDouble-click: reset view.\nTIP: You can also free orbit by holding the CTRL key and dragging the map.",
-    "title": "Click and drag to rotate the camera",
-    "guidanceBtnTitle": "Gyroscope Guidance",
-    "guidanceBtnText": "View detailed instructions on how to use the compass",
+    "description": "Перетащите внешнее кольцо: вращение вида.\nПеретащите внутренний гироскоп: свободная орбита.\nДвойной щелчок: сброс вида.\nTIP: Вы также можете освободить орбиту, удерживая клавишу CTRL и перетаскивая карту.",
+    "title": "Нажмите и тяните чтобы вращать камерой",
+    "guidanceBtnTitle": "Руководство Компаса",
+    "guidanceBtnText": "Просмотрите подробные инструкции по использованию компаса",
     "guidance": {
-      "title": "Gyroscope Controls",
-      "outerRingTitle": "Outer Ring",
-      "outerRingDescription": "Drag the outer ring in a circular motion to rotate the map view 360˚.",
-      "innerCircleTitle": "Inner Circle",
-      "innerCircleDescription1": "Click in the centre and slowly drag up, down, left or right to tilt and rotate the map at the same time.",
-      "innerCircleDescription2": "Double click in here to reset view to its default state.",
-      "ctrlDragDescription": "You can also tilt and rotate the map by holding the CTRL key and dragging the map.",
-      "dismissText": "Close and don't show again"
+      "title": "Управление Гироскопом",
+      "outerRingTitle": "Внешнее кольцо",
+      "outerRingDescription": "Перетащите внешнее кольцо круговыми движениями, чтобы повернуть вид карты на 360˚.",
+      "innerCircleTitle": "Внутренний круг",
+      "innerCircleDescription1": "Нажмите в центре и медленно потяните вверх, вниз, влево или вправо, чтобы одновременно наклонить и повернуть карту.",
+      "innerCircleDescription2": "Дважды щелкните здесь, чтобы вернуть вид в состояние по умолчанию.",
+      "ctrlDragDescription": "Вы также можете наклонять и поворачивать карту, удерживая клавишу CTRL и перетаскивая ее.",
+      "dismissText": "Закрыть и более не показывать"
     }
   },
   "AR": {
-    "title": "Experimental Feature: Augmented Reality",
+    "title": "Экспериментальная функция: Дополненная реальность",
     "experimentalFeatureMessage": "Augmented Reality mode is currently in beta. This mode is only designed for use on the latest high end mobile devices. <br /><br />WARNING: This mode can consume a lot of data, please be mindful of data usage charges from your network provider. <br /><br />The accuracy of this mode depends on the accuracy of your mobile devices internal compass.",
     "confirmText": "Got it",
     "manualAlignmentTitle": "Manual Alignment",
@@ -118,25 +118,25 @@
     "btnResetRealign": "reset compass alignment"
   },
   "tool": {
-    "closeButtonTitle": "Close {{toolName}} Tool",
+    "closeButtonTitle": "Закрыть {{toolName}} инструмент",
     "loadingError": {
-      "title": "Error Loading {{toolName}} Tool",
+      "title": "Ошибка загрузки {{toolName}} инструмента",
       "message": "An error occurred while trying to load the this tool from the server. Please try again."
     },
-    "exitBtnTitle": "Exit",
+    "exitBtnTitle": "Выход",
     "button": {
       "open": "Exit {{toolNameLowerCase}}",
       "closed": "{{toolName}}"
     }
   },
   "diffTool": {
-    "title": "Difference",
-    "exit": "Exit",
+    "title": "Разница",
+    "exit": "Выход",
     "instructions": {
       "setDateA": "Set date A",
       "setDateB": "Set date B",
       "changeDates": "Change dates",
-      "paneDescription": "Visualise and compare the difference of data between two dates at one location."
+      "paneDescription": "Визуализируйте и сравнивайте разницу данных между двумя датами в одном месте."
     },
     "choosePreview": "Choose a preview style",
     "chooseDifference": "Choose a difference output",
@@ -199,33 +199,33 @@
     "changeLanguage": "Выберите язык"
   },
   "share": {
-    "browserPrint": "For better printed results, please use {{appName}}'s Print button instead of your web browser's print feature.",
-    "shortLinkShortening": "Shortening...",
-    "shortLinkError": "An error occurred while attempting to shorten the URL.  Please check your internet connection and try again.",
-    "localDataNote": "<0><0>Note:</0></0><1>The following data sources will NOT be shared because they include data from this local system. To share these data sources, publish their data on a web server and <2>add them using a url</2>.</1>",
-    "generatingUrl": "Generating share URL...",
+    "browserPrint": "Чтобы печать была более качественной, используйте кнопку печати {{appName}}, а не функцию печати в веб-браузере.",
+    "shortLinkShortening": "Укорачивание...",
+    "shortLinkError": "При попытке сократить URL-адрес произошла ошибка.  Пожалуйста, проверьте подключение к Интернету и повторите попытку.",
+    "localDataNote": "<0><0>Примечание:</0></0><1>Следующие источники данных НЕ будут использоваться совместно, поскольку они содержат данные из этой локальной системы. Чтобы поделиться этими источниками данных, опубликуйте их данные на веб-сервере и <2> добавьте их с помощью url</2>.</1>",
+    "generatingUrl": "Генерация URL-адреса ресурса...",
     "printTitle": "Напечатать карту",
-    "printExplanation": "Open a printable version of this map.",
+    "printExplanation": "Откройте версию этой карты для печати.",
     "downloadMap": "Скачать карту (png)",
-    "printViewButton": "Show Print View",
+    "printViewButton": "Показать вид печати",
     "btnAdvanced": "Расширенные настройки",
     "embedTitle": "Встроить карту",
-    "embedDescription": "To embed, copy this code to embed this map into an HTML page:",
-    "shortenUsingService": "Shorten the share URL using a web service",
+    "embedDescription": "Для вставки скопируйте этот код, чтобы вставить эту карту в HTML-страницу:",
+    "shortenUsingService": "Сократите URL-адрес ресурса с помощью веб-службы",
     "btnCatalogShareText": "Поделиться",
     "btnStoryShareText": "Поделиться",
     "btnMapShareText": "Поделиться / Печатать",
-    "btnCatalogShareTitle": "Share your catalogue with others",
-    "btnStoryShareTitle": "Share your story with others",
-    "btnMapShareTitle": "Share your map with others",
-    "convertNotificationTitle": "Notice: share link upgraded",
-    "convertNotificationMessage": "This share link is based on an older version of TerriaJS - the software powering this web map. While best efforts are made to preserve the link, you might encounter issues with visualising the data.  \n\nIf you're a user of the share link, click OK to make the warning message disappear and continue with accessing the data.",
-    "convertNotificationHelp": "If you have created the share link, check the Help menu to see tips on updating the share link.",
-    "convertNotificationFeedback": "For questions or feedback, click here.",
-    "convertNotificationWarningsTitle": "Technical details",
-    "convertErrorTitle": "Could not upgrade share link to V8",
-    "convertErrorMessage": "This share link is based on an older version of TerriaJS - the software powering this web map. An error has occurred trying to upgrade the share data.",
-    "getShareSaveHelpMessage": "How to Bookmark Sharelinks"
+    "btnCatalogShareTitle": "Поделитесь своим каталогом с другими",
+    "btnStoryShareTitle": "Поделитесь своей историей с другими",
+    "btnMapShareTitle": "Поделитесь своей картой с другими",
+    "convertNotificationTitle": "Уведомление: обновлена ссылка на общий доступ",
+    "convertNotificationMessage": "Эта ссылка на ресурс основана на старой версии TerriaJS - программного обеспечения, на котором построена эта веб-карта. Несмотря на все усилия по сохранению ссылки, у вас могут возникнуть проблемы с визуализацией данных.  \n\nЕсли вы являетесь пользователем этой ссылки, нажмите OK, чтобы исчезло предупреждающее сообщение, и продолжите доступ к данным.",
+    "convertNotificationHelp": "Если вы создали ссылку на общий доступ, обратитесь к меню "Справка", чтобы узнать советы по обновлению ссылки на общий доступ.",
+    "convertNotificationFeedback": "Чтобы задать вопросы или оставить отзыв, нажмите здесь.",
+    "convertNotificationWarningsTitle": "Технические детали",
+    "convertErrorTitle": "Не удалось обновить ссылку на общий ресурс до V8",
+    "convertErrorMessage": "Эта ссылка на ресурс основана на старой версии TerriaJS - программного обеспечения, обеспечивающего работу этой веб-карты. При попытке обновить данные ресурса произошла ошибка.",
+    "getShareSaveHelpMessage": "Как добавлять ссылки в закладки"
   },
   "countDatasets": {
     "btnText": "Start",
@@ -241,8 +241,8 @@
     "mapDataState_plural": "{{count}} datasets enabled on map"
   },
   "toolsPanel": {
-    "btnText": "Tool",
-    "btnTitle": "Advanced toolbox"
+    "btnText": "Инструмент",
+    "btnTitle": "Расширенная панель инструментов"
   },
   "settingPanel": {
     "viewerModeLabels": {
@@ -251,9 +251,9 @@
       "Leaflet": "2D"
     },
     "qualityLabels": {
-      "maximumPerformance": "Maximum performance, lower quality",
-      "balancedPerformance": "Balanced performance & quality",
-      "lowerPerformance": "Maximum quality, lower performance"
+      "maximumPerformance": "Максимальная производительность, низкое качество",
+      "balancedPerformance": "Сбалансированная производительность и качество",
+      "lowerPerformance": "Максимальное качество, низкая производительность"
     },
     "nativeResolutionLabel": "Press to stop using {{resolution1}} resolution and start using {{resolution2}} resolution",
     "native": "native",
@@ -284,32 +284,32 @@
     }
   },
   "feedback": {
-    "feedbackPreamble": "We would love to hear from you!",
+    "feedbackPreamble": "Мы будем рады услышать вас!",
     "title": "Обратнася связь",
     "close": "close feedback",
-    "yourName": "Your name (optional)",
+    "yourName": "Ваше имя (необязательно)",
     "email": "Email address (optional)<br/><em>We can't follow up without it!</em>",
-    "commentQuestion": "Comment or question",
-    "shareWithDevelopers": "Share my map view with {{appName}} developers",
-    "cancel": "Cancel",
-    "sending": "Sending...",
-    "send": "Send",
-    "feedbackBtnText": "Give Feedback",
-    "minLength": "Minimum length of feedback comment is {{minLength}}"
+    "commentQuestion": "Комментарий или вопрос",
+    "shareWithDevelopers": "Поделитесь моим представлением карты с разработчиками {{appName}}.",
+    "cancel": "Отмена",
+    "sending": "Посылаю...",
+    "send": "Отправить",
+    "feedbackBtnText": "Дать обратную связь",
+    "minLength": "Минимальная длина комментария к отзыву - {{minLength}}"
   },
   "helpPanel": {
     "btnText": "Помощь",
     "menuPaneTitle": "Мы здесь чтобы помочь",
-    "menuPaneBody": "Find useful tips on how to use TerriaJS by either checking the guides below or by contacting the team at [{{supportEmail}}]({{supportEmail}})",
-    "promptMessage": "Find the Tour, how-to videos & other help content here",
-    "dismissText": "Got it, thanks!",
-    "takeTour": "Take the tour",
-    "mapUserGuide": "Map user guide"
+    "menuPaneBody": "Найти полезные советы по использованию TerriaJS можно в руководствах ниже или связавшись с командой по адресу [{{supportEmail}}]({{supportEmail}}).",
+    "promptMessage": "Найти тур, видеоролики и другие полезные материалы можно здесь",
+    "dismissText": "Понял, спасибо!",
+    "takeTour": "Пройдите экскурсию",
+    "mapUserGuide": "Руководство пользователя карты"
   },
   "sui": {
     "notifications": {
-      "title": "This map contains a story",
-      "message": "Would you like to view it now?",
+      "title": "Эта карта содержит историю",
+      "message": "Хотите посмотреть его прямо сейчас?",
       "confirmText": "Да",
       "denyText": "Возможно позже"
     },
@@ -323,50 +323,50 @@
       "featureInfoShown": "The first {{maximum}} are shown below."
     },
     "download": "Скачать эту Таблицу",
-    "pickLocation": "Pick Location",
-    "clickMap": "Click on the map to learn more about a location",
-    "noDataAvailable": "No data is available here - try another location.",
-    "clickToAddData": "Click '$t(addData.addDataBtnText)' to add data to the map.",
-    "userSelection": "User Selection",
-    "panelHeading": "Feature Information",
-    "btnCloseFeature": "Close data panel",
-    "satelliteSuggestionBtn": "Show {{catalogItemName}} at this location",
+    "pickLocation": "Выберите местоположение",
+    "clickMap": "Нажмите на карту, чтобы узнать больше о местоположении",
+    "noDataAvailable": "Здесь нет данных - попробуйте найти другое место.",
+    "clickToAddData": "Нажмите кнопку '$t(addData.addDataBtnText)', чтобы добавить данные на карту.",
+    "userSelection": "Выбор пользователя",
+    "panelHeading": "Информация о характеристиках",
+    "btnCloseFeature": "Закройте панель данных",
+    "satelliteSuggestionBtn": "Показать {{каталогItemName}} в этом месте",
     "locationMarker": "Location Marker",
-    "noInfoAvailable": "No information available",
-    "siteData": "Site Data",
-    "latLon": "Lat / Lon ",
-    "showRawData": "Show Raw Data",
-    "showCuratedData": "Show Curated Data"
+    "noInfoAvailable": "Информация отсутствует",
+    "siteData": "Данные сайта",
+    "latLon": "Шир / Дол",
+    "showRawData": "Показать необработанные данные",
+    "showCuratedData": "Показать курируемые данные"
   },
   "welcomeMessage": {
     "title": "Давайте начнем",
-    "welcomeMessage": "Interested in data discovery and exploration?<br/>Dive right in and get started or check the following help guide options.",
-    "welcomeMessageOnMobile": "Interested in data discovery and exploration?",
+    "welcomeMessage": "Заинтересованы в открытии и изучении данных? <br/>Погрузитесь в процесс и приступайте к работе или ознакомьтесь со следующими вариантами справочного руководства.",
+    "welcomeMessageOnMobile": "Заинтересованы в обнаружении и изучении данных?",
     "tourBtnText": "Пройдите экскурсию",
     "helpBtnText": "Мне нужна помощь",
     "exploreDataBtnText": "Изучить данные карты",
     "searchBtnText": "Поиск места",
-    "dismissText": "Close message and don't show me this again"
+    "dismissText": "Закройте сообщение и не показывайте мне это снова"
   },
   "story": {
     "panelTitle": "Редактор историй",
-    "panelBody": "Create and share interactive stories directly from your map",
+    "panelBody": "Создавайте интерактивные истории и делитесь ими прямо с карты",
     "gettingStarted": "Начать",
     "gettingStartedTitle": "Начать",
-    "badgeBarLabel": "Scenes",
+    "badgeBarLabel": "Сцены",
     "share": "Поделиться",
     "viewStory": "вид",
     "view": "Вид",
     "editStory": "редактировать",
     "edit": "Редактировать",
-    "expand": "Expand",
-    "collapse": "Collapse",
-    "recaptureStory": "re-capture",
+    "expand": "Развернуть",
+    "collapse": "Свернуть",
+    "recaptureStory": "повторный захват",
     "recapture": "Перезахватить",
-    "deleteStory": "delete",
+    "deleteStory": "удалить",
     "delete": "Удалить",
-    "untitledScene": "untitled scene",
-    "doesNotExist": "Story does not exist",
+    "untitledScene": "сцена без названия",
+    "doesNotExist": "История не существует",
     "removeAllStories": "Убрать все",
     "removeAllStoriesDialog": "Are you sure you wish to delete {{ count }} scene?",
     "removeAllStoriesDialog_plural": "Are you sure you wish to delete {{ count }} scenes?",
@@ -421,52 +421,52 @@
   },
   "addData": {
     "addDataBtnText": "Данные карты",
-    "btnHide": "Hide",
-    "load": "Load local/web data",
-    "closeDataPanel": "Close data panel",
-    "done": "Done",
+    "btnHide": "Скрыть",
+    "load": "Загрузка локальных/веб-данных",
+    "closeDataPanel": "Закройте панель данных",
+    "done": "Готово",
     "myData": "Мои данные",
     "dataCatalogue": "Каталог данных",
     "searchPlaceholderWhole": "Искать по всему каталогу",
     "searchPlaceholder": "Искать по каталогу",
     "localAdd": "Добавить локальный файл",
-    "localFileType": "<0>Step 1:</0> Select file type",
-    "localFile": "<0>Step 2:</0> Select file",
-    "webAdd": "Add web data",
-    "webFileType": "<0>Step 1:</0> Select file or web service type",
-    "webFile": "<0>Step 2:</0> Enter the URL of the data file or web service",
-    "urlInputBtn": "Add",
+    "localFileType": "<0> Шаг 1:</0> Выберите тип файла",
+    "localFile": "<0> Шаг 2:</0> Выберите файл",
+    "webAdd": "Добавьте веб-данные",
+    "webFileType": "<0> Шаг 1:</0> Выберите тип файла или веб-службы",
+    "webFile": "<0>Шаг 2:</0> Введите URL-адрес файла данных или веб-службы",
+    "urlInputBtn": "Добавить",
     "browse": "Просмотр...",
     "localTitle": "Добавить локальные данные",
     "webTitle": "Добавить Веб данные",
-    "dragDrop": "Drag and Drop",
-    "infoText": "<0>Drag and drop a file here to view it locally on the map</0><1>(it won’t be saved or uploaded to the internet)</1>",
+    "dragDrop": "Перетаскивание",
+    "infoText": "<0>Перетащите файл сюда, чтобы просмотреть его локально на карте</0><1>(он не будет сохранен или загружен в интернет)</1>",
     "back": "Назад",
-    "note": "<0>Note: </0>Data added in this way is not saved or made visible to others."
+    "note": "<0> Примечание: </0> Данные, добавленные таким образом, не сохраняются и не становятся видимыми для других."
   },
   "search": {
     "resultsLabel": "Результаты поиска",
     "done": "Сделано",
     "data": "Данные",
-    "searchInDataCatalog": "Search '{{locationSearchText}}' in the Data Catalogue",
-    "search": "Search '{{searchText}}' in the Data Catalogue",
-    "viewLess": "View less {{name}} results",
-    "viewMore": "View more {{name}} results",
+    "searchInDataCatalog": "Поиск '{{locationSearchText}}' в Каталоге данных",
+    "search": "Поиск '{{searchText}}' в каталоге данных",
+    "viewLess": "Посмотреть меньше результатов {{name}}",
+    "viewMore": "Посмотреть другие результаты {{name}}",
     "placeholder": "Поиск мест",
     "searchCatalogue": "Поиск в каталоге"
   },
   "mobile": {
-    "toggleNavigation": "toggle navigation",
-    "addDataBtnText": "Data",
-    "doneBtnText": "Done"
+    "toggleNavigation": "переключать навигацию",
+    "addDataBtnText": "Данные",
+    "doneBtnText": "Готово"
   },
   "preview": {
-    "doesNotContainGeospatialData": "This file does not contain geospatial data.",
-    "selectToPreviewDataset": "Select a dataset to see a preview",
+    "doesNotContainGeospatialData": "Этот файл не содержит геопространственных данных.",
+    "selectToPreviewDataset": "Выберите набор данных для предварительного просмотра",
     "selectMultipleDatasets": "<0>Press <strong>Shift</strong> and click</0><1 /><2>to add multiple datasets</2>",
     "selectToPreviewSeparator": "OR",
     "goToTheMap": "Go to the map",
-    "loading": "PREVIEW LOADING...",
+    "loading": "ПРЕДВАРИТЕЛЬНАЯ ЗАГРУЗКА...",
     "preview": "{{appName}} preview",
     "previewItemErrorTitle": "Catalog item could not be previewed.",
     "previewItemErrorMessage": "An error occurred while loading the catalog item.",
@@ -517,31 +517,31 @@
     "colorScaleRangeMax": "The maximum value must be a number.",
     "colorScaleRangeMinSmallerThanMax": "The minimum value of the color scale range must be less than the maximum value.",
     "colorScaleRange": "Color Scale Range",
-    "rangeMax": "Maximum:",
-    "rangeMin": "Minimum:",
-    "colorScaleUpdateRange": "Update Range",
+    "rangeMax": "Максимум:",
+    "rangeMin": "Минимум:",
+    "colorScaleUpdateRange": "Обновить расстояние",
     "displayPercent": "Display as a percentage of regional total",
     "opacity": "Opacity: {{opacity}} %",
     "zoomToTitle": "Zoom to extent",
-    "zoomTo": "Ideal Zoom",
-    "openFeatureTitle": "Zoom to data",
+    "zoomTo": "Идеальный зум",
+    "openFeatureTitle": "Зум к данным",
     "openFeature": "Zoom to",
-    "previewItemTitle": "About this data",
+    "previewItemTitle": "О этих данных",
     "showMoreActionsTitle": "Show more actions",
-    "previewItem": "About Data",
+    "previewItem": "О данных",
     "splitItemTitle": "Duplicate and show splitter",
-    "splitItem": "Compare",
+    "splitItem": "Сравнить",
     "diffImageTitle": "View image differences between two dates",
-    "diffImage": "Difference",
-    "exportDataTitle": "Export map data",
-    "exportData": "Export",
+    "diffImage": "Отличия",
+    "exportDataTitle": "Экспортировать данные карты",
+    "exportData": "Экспорт",
     "removeFromMapTitle": "Remove this data",
     "removeFromMap": "Remove",
-    "label": "Data sets",
-    "removeAll": "Remove All",
-    "collapseAll": "Collapse All",
-    "expandAll": "Expand All",
-    "toggleVisibility": "Data show/hide",
+    "label": "Наборы данных",
+    "removeAll": "Убрать все",
+    "collapseAll": "Скрыть все",
+    "expandAll": "Раскрыть все",
+    "toggleVisibility": "Данные показать/скрыть",
     "addItemErrorTitle": "Catalog item could not be added to workbench.",
     "addItemErrorMessage": "An error occurred while loading the catalog item.",
     "searchItem": "Search",
@@ -549,12 +549,12 @@
     "splitScreenMode": "SPLIT SCREEN MODE"
   },
   "dateTime": {
-    "selectorLabel": "Time:",
-    "back": "Go back",
-    "previous": "Previous time",
+    "selectorLabel": "Время:",
+    "back": "Назад",
+    "previous": "Предыдущее время",
     "selectTime": "Select a time",
     "outOfRange": "Currently out of range.",
-    "next": "Next time",
+    "next": "Следующее время",
     "useTimeline": "Use timeline",
     "availableTimeChart": "Show available times on chart",
     "timeline": {
@@ -568,11 +568,11 @@
   "satellite": {
     "pickPoint": "Select a point by clicking on the map.",
     "querying": "Querying position...",
-    "filterByLocation": "Filter by location",
+    "filterByLocation": "Фильтр по месту",
     "infoGroup": "Only showing available capture times for:",
-    "removeFilter": "Remove filter",
+    "removeFilter": "Убрать фильтр",
     "zoomTo": "Zoom to",
-    "newLocation": "New location"
+    "newLocation": "Новое место"
   },
   "timer": {
     "nextScheduledUpdateTime": "Next data update at {{scheduledUpdateTime}}",
@@ -580,7 +580,7 @@
   },
   "concept": {
     "active": {
-      "edit": "Edit condition",
+      "edit": "Редактировать состояние",
       "remove": "Remove condition"
     },
     "inactive": {
@@ -607,7 +607,7 @@
     "not": "<0>bbbb</0>"
   },
   "loader": {
-    "loadingMessage": "Loading"
+    "loadingMessage": "Загрузка"
   },
   "emptyWorkbench": {
     "emptyArea": "Ваш верстак пуст",
@@ -630,13 +630,13 @@
     "preview": "Preview"
   },
   "chart": {
-    "sectionLabel": "Charts",
-    "closePanel": "Close Panel",
-    "expand": "Expand",
-    "download": "Download",
+    "sectionLabel": "Графики",
+    "closePanel": "Закрыть панель",
+    "expand": "Расширить",
+    "download": "Скачать",
     "showItemInChart": "Show {{value}} in chart",
-    "loading": "Loading chart data...",
-    "noData": "No chart data found."
+    "loading": "Загрузка данных графика...",
+    "noData": "Данные графика не найдены."
   },
   "viewModels": {
     "searchNoLocations": "Sorry, no locations match your search query.",
@@ -661,12 +661,12 @@
     "webGLNotSupportedOrSlowMessage": "Your web browser cannot display the map in 3D, either because it does not support WebGL or because your web browser has reported that WebGL will be extremely slow. Please try a different web browser, such as the latest version of $t(browsers.chrome), $t(browsers.firefox), $t(browsers.edge), or $t(browsers.safari). In some cases, you may need to upgrade your computer's video driver or operating system in order to get the 3D view in {{appName}}."
   },
   "analytics": {
-    "selectLocation": "Select Location",
-    "point": "Point (lat/lon)",
-    "polygon": "Polygon",
-    "existingPolygon": "Existing Polygon",
+    "selectLocation": "Выбор места",
+    "point": "Почка (шир/дол)",
+    "polygon": "Полигон",
+    "existingPolygon": "Существующий полигон",
     "nothingSelected": "Nothing has been selected, please use the buttons above to make a selection.",
-    "runAnalysis": "Run Analysis",
+    "runAnalysis": "Запуск анализа",
     "clickToDrawLine": "Click to draw line",
     "enterValidCoords": "Please enter valid coordinates (e.g. 131.0361, -25.3450).",
     "selectPoint": "Select a point by clicking on the map.",
@@ -688,14 +688,14 @@
       "errorMessage": "Unfortunately Microsoft browsers (including all versions of Internet Explorer and Edge) do not support the data uri functionality needed to download data as a file. To download, copy the following uri into another browser such as $t(browsers.chrome), $t(browsers.firefox), or $t(browsers.safari): {{href}}"
     },
     "dataType": {
-      "auto": "File type",
-      "wms-group": "Web Map Service (WMS) Server",
-      "wmts-group": "Web Map Tile Service (WMTS) Server",
-      "wfs-group": "Web Feature Service (WFS) Server",
-      "wps-getCapabilities": "Web Processing Service (WPS) Server",
-      "esri-group": "Esri ArcGIS Server",
-      "esri-mapServer": "Esri ArcGIS MapServer (single layer)",
-      "esri-featureServer": "Esri ArcGIS FeatureServer (single layer)",
+      "auto": "Тип файла",
+      "wms-group": "Web Map Service (WMS) сервер",
+      "wmts-group": "Web Map Tile Service (WMTS) сервер",
+      "wfs-group": "Web Feature Service (WFS) сервер",
+      "wps-getCapabilities": "Web Processing Service (WPS) сервер",
+      "esri-group": "Esri ArcGIS сервер",
+      "esri-mapServer": "Esri ArcGIS MapServer (один слой)",
+      "esri-featureServer": "Esri ArcGIS FeatureServer (один слой)",
       "3d-tiles": "3D Tiles",
       "open-street-map": "Open Street Map Server",
       "sdmx-group": "SDMX-JSON",
@@ -719,7 +719,7 @@
       "ifc": "IFC"
     },
     "printWindow": {
-      "errorTitle": "Error printing",
+      "errorTitle": "Ошибка при печати",
       "errorMessage": "Printing did not start within 10 seconds. Maybe this web browser does not support printing?",
       "printMediaStart": "print media start",
       "printMediaEnd": "print media end",
@@ -736,7 +736,7 @@
       "logEnabledOnDevelopment": "Google Analytics was initialised in a `development` environment"
     },
     "readText": {
-      "fileRequired": "file is require"
+      "fileRequired": "файл необходим"
     },
     "readXml": {
       "xmlError": "The file does not contain valid XML."
@@ -756,8 +756,8 @@
     "unverifiedExternalLink": {
       "title": "Warning: unverified link",
       "message": "You are about to open: \n\n`{{url}}`  \n\nThis link is unverified and could be unsafe.",
-      "denyText": "Cancel",
-      "confirmText": "Open in a new tab"
+      "denyText": "Отмена",
+      "confirmText": "Открыть в новой вкладке"
     }
   },
   "map": {
@@ -2077,17 +2077,17 @@
     "searching": "Searching",
     "searchError": "Search failed. Check console for detailed errors.",
     "numericParameter": {
-      "minimum": "Minimum",
-      "maximum": "Maximum"
+      "minimum": "Минимум",
+      "maximum": "Максимум"
     },
-    "searchBtnText": "Search",
-    "resetBtnText": "Clear input",
-    "backBtnText": "Search again",
-    "resultsCount": "{{count}} match found",
-    "resultsCount_plural": "{{count}} matches found",
+    "searchBtnText": "Поиск",
+    "resetBtnText": "Очистить ввод",
+    "backBtnText": "Искать снова",
+    "resultsCount": "{{count}} найдено",
+    "resultsCount_plural": "{{count}} найдено",
     "actions": {
-      "highlightAll": "Highlight all",
-      "showMatchingOnly": "Show matching only"
+      "highlightAll": "Подсветить все",
+      "showMatchingOnly": "Показать только совпадающие"
     }
   },
   "indexedItemSearchProvider": {
@@ -2102,36 +2102,36 @@
     }
   },
   "notification": {
-    "title": "Message"
+    "title": "Сообщение"
   },
   "toast": {
-    "mapIsZooming": "Loading ideal zoom..."
+    "mapIsZooming": "Создать идеальное приближение..."
   },
   "printView": {
-    "loading": "Creating print view..."
+    "loading": "Создать вид для печати..."
   },
   "compare": {
-    "title": "Compare",
-    "done": "Done",
-    "leftPanel": "Left panel",
-    "rightPanel": "Right panel",
+    "title": "Сравнить",
+    "done": "Готово",
+    "leftPanel": "Левая панель",
+    "rightPanel": "Правая панель",
     "entireMap": {
-      "title": "Entire map",
+      "title": "Вся карта",
       "emptyText": "Add new data to show across the entire map via the dotted menu above."
     },
     "entireMapMenu": {
-      "browse": "Browse map data",
-      "sendAllToFront": "Send all to front",
-      "sendAllToBack": "Send all to back",
-      "hideAll": "Hide all"
+      "browse": "Просмотр данных карты",
+      "sendAllToFront": "Отправить все вперед",
+      "sendAllToBack": "Отправить все назад",
+      "hideAll": "Скрыть все"
     },
-    "info": "Compare spatial datasets from your workbench side-by-side on the map.",
+    "info": "Сравнить геопространственные наборы данных с Вашего верстака на карте.",
     "dataset": {
       "label": "Dataset",
-      "selectOne": "Select one"
+      "selectOne": "Выбрать один"
     },
     "dimensionSelector": {
-      "undefinedLabel": "Not specified"
+      "undefinedLabel": "Не опеределено"
     },
     "dateButton": {
       "left": "Слева",
@@ -2139,21 +2139,21 @@
       "select": "Выберите дату"
     },
     "dateLocationFilter": {
-      "filter": "Filter date by location",
-      "loading": "Loading filter...",
-      "cancel": "Cancel",
-      "location": "Now showing available imagery for {{latitude}}, {{longitude}}",
-      "mouseTooltipTitle": "Select location",
-      "mouseTooltipMessage": "Right click to cancel"
+      "filter": "Фильтровать даты по месту",
+      "loading": "Загрузка фильтра...",
+      "cancel": "Отмена",
+      "location": "Сейчас показываем изображения для {{latitude}}, {{longitude}}",
+      "mouseTooltipTitle": "Выбрать место",
+      "mouseTooltipMessage": "Правый клик для отмены"
     }
   },
   "selectableDimensions": {
-    "undefinedLabel": "Not specified",
-    "enabled": "Enabled",
-    "disabled": "Disabled",
+    "undefinedLabel": "Не определно",
+    "enabled": "Включено",
+    "disabled": "Отключено",
     "colorAdd": "Добавить",
-    "colorRemove": "Убратб",
-    "invalid": "Invalid"
+    "colorRemove": "Убрать",
+    "invalid": "Неверно"
   },
   "relatedMaps": {
     "buttonText": "Связанные карты",

@@ -52,6 +52,72 @@
         ]
       },
       {
+        "name": "HotOSM",
+        "type": "group",
+        "members": [
+          {
+            "type": "geojson",
+            "name": "Buildings",
+            "description" : "Armenian buildings from HotOSM communuty (original source - Humanitarian Data Exchange",
+            "id": "hotosmbuildings",
+            "url": "data/hotosm/buildings.geojson"
+          },
+          {
+            "type": "geojson",
+            "name": "Waterways",
+            "description" : "Armenian waterways from HotOSM communuty (original source - Humanitarian Data Exchange",
+            "id": "hotosmwaterways",
+            "url": "data/hotosm/roads.geojson"
+          },
+          {
+            "type": "geojson",
+            "name": "Roads",
+            "description" : "Armenian roads from HotOSM communuty (original source - Humanitarian Data Exchange",
+            "id": "hotosmroads",
+            "url": "data/hotosm/roads.geojson"
+          },
+          {
+            "type": "geojson",
+            "name": "Health facilities",
+            "description" : "Armenian health facilities from HotOSM communuty (original source - Humanitarian Data Exchange",
+            "id": "hotosmhealth",
+            "url": "data/hotosm/health.geojson"
+          }
+        ]
+      },
+      {
+        "name": "Events",
+        "type": "group",
+        "members": [
+          {
+            "type": "kml",
+            "name": "December 1988 Leninakan-Spitak-Kirovakan, Armenia Images",
+            "description" : "The magnitude 6.9 earthquake shook northwestern Armenia, and was followed four minutes later by a magnitude 5.8 aftershock. The earthquakes affected an area 80 kilometers in diameter. This set includes damage photographs taken in and around the devastated cities of Spitak and Leninakan, where 25,000 deaths occurred. Location: Northwestern Armenian SSR, 18 kilometers north northwest of Spitak. Damage: $14.2 billion. Fifteen thousand were injured and 517,000 lost their homes. The death toll (25,000) could have been much worse had it not been for the heroic rescue of 15,000 who were pulled from the rubble.",
+            "id": "event0001",
+            "url": "data/events/noaa_1998.kml"
+          }
+        ]
+      },      
+      {
+        "name": "Transport",
+        "type": "group",
+        "members": [
+          {
+            "type": "kmz",
+            "name": "Model Output Statistics for YEREVAN (ZVARTNOTS AIRPORT) (37788)",
+            "description" : "DWD’s fully automatic MOSMIX product optimizes and interprets the forecast calculations of the NWP models ICON (DWD) and IFS (ECMWF), combines these and calculates statistically optimized weather forecasts in terms of point forecasts (PFCs). Thus, statistically corrected, updated forecasts for the next ten days are calculated for about 5400 locations around the world. Most forecasting locations are spread over Germany and Europe. MOSMIX forecasts (PFCs) include nearly all common meteorological parameters measured by weather stations.",
+            "id": "de.dwd.mosmix.37788",
+            "url": "data/transport/MOSMIX_L_2024081403_37788.kmz"
+          }
+        ]
+      },
+      {
+        "url": "https://unosat-geodrr.cern.ch/data/rest/services/Hosted/Province_Boundary_GOV_ARM_2019/FeatureServer",
+        "type": "esri-featureServer-group",
+        "name": "Province boundaries (Government of Armenia)",
+        "id": "geodrrarmboundariesgov"
+      },            
+      {
         "id": "FxPHcHvxoO",
         "type": "wms-group",
         "name": "CENS RA",
@@ -92,26 +158,6 @@
                 ]
               }
             ]
-          }
-        ]
-      },
-      {
-        "name": "HotOSM",
-        "type": "group",
-        "members": [
-          {
-            "type": "geojson",
-            "name": "Roads",
-            "description" : "Armenian roads from HotOSM communuty (original source - Humanitarian Data Exchange",
-            "id": "zrPtHVJcPi",
-            "url": "data/hotosm_roads.geojson"
-          },
-          {
-            "type": "geojson",
-            "name": "Health facilities",
-            "description" : "Armenian health facilities from HotOSM communuty (original source - Humanitarian Data Exchange",
-            "id": "ArPtHVJcPX",
-            "url": "data/hotosm_health.geojson"
           }
         ]
       }

@@ -41,7 +41,7 @@
     // See comments in lib/Views/global.scss for further information about customising colors, logos, fonts etc.
     "brandBarElements": [
       "",
-      "<a target=\"_blank\" href=\"https://opendata.am\"><img src=\"https://opendata.am/wp-content/uploads/2023/03/cropped-logo-favicon-192x192.png\" height=\"52\" title=\"Version: {{version}}\" /></a>",
+      "<a target=\"_blank\" href=\"https://opendata.am\"><img src=\"images/opendataam_logo.png\" height=\"52\" title=\"Version: {{version}}\" /></a>",
       ""
     ],
     // Shown when things go wrong.
