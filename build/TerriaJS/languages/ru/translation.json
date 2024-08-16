@@ -70,8 +70,8 @@
     "duplicateModelErrorMessage": "An error occurred while splitting the catalog item `\"{{name}}\"`. This catalog item may not support \"compare\" functionality",
     "modelNotFoundErrorMessage": "Model ID `\"{{id}}\"` could not be found",
     "toggleSplitterToolTitle": "Сравнить",
-    "toggleSplitterTool": "Enable side-by-side comparison between two different sets of data",
-    "toggleSplitterToolDisabled": "Please disable other side-by-side comparison features in order to enable standard compare",
+    "toggleSplitterTool": "Возможность сравнения двух разных наборов данных «бок о бок».",
+    "toggleSplitterToolDisabled": "Чтобы включить стандартное сравнение, отключите другие функции сравнения бок о бок.",
     "title": "Перетаскивайте влево или вправо, чтобы настроить вид",
     "workbench": {
       "goleftTitle": "Показать с левой стороны",
@@ -135,19 +135,19 @@
     "instructions": {
       "setDateA": "Set date A",
       "setDateB": "Set date B",
-      "changeDates": "Change dates",
+      "changeDates": "Изменить даты",
       "paneDescription": "Визуализируйте и сравнивайте разницу данных между двумя датами в одном месте."
     },
-    "choosePreview": "Choose a preview style",
-    "chooseDifference": "Choose a difference output",
-    "differenceResultsTitle": "Change detection results",
+    "choosePreview": "Выберите стиль предварительного просмотра",
+    "chooseDifference": "Выберите вывод различий",
+    "differenceResultsTitle": "Результаты определения изменений",
     "labels": {
-      "area": "Area",
-      "dates": "Dates",
+      "area": "Область",
+      "dates": "Даты",
       "dateComparisonA": "Date Comparison A",
       "dateComparisonB": "Date Comparison B",
-      "sourceDataset": "Source dataset",
-      "previewStyle": "Preview style",
+      "sourceDataset": "Исходный набор данных",
+      "previewStyle": "Стиль просмотра",
       "differenceOutput": "Difference output",
       "generateDiffButtonText": "Generate change detection",
       "disabledButtonPrompt": "Please note: A location and dates must be selected to proceed with change detection",
@@ -155,7 +155,7 @@
     },
     "locationDisplay": {
       "noLocationSelected": {
-        "title": "No location selected",
+        "title": "Местоположение не выбрано",
         "description": "To filter image date picker by location, please select a point on the map"
       },
       "locationSelected": {
@@ -228,17 +228,17 @@
     "getShareSaveHelpMessage": "Как добавлять ссылки в закладки"
   },
   "countDatasets": {
-    "btnText": "Start",
-    "loadError": "failed to load.",
-    "countingMessage": "Counting, please wait...",
+    "btnText": "Начало",
+    "loadError": "не удалось загрузить.",
+    "countingMessage": "Подсчет, пожалуйста, подождите...",
     "totals": "<div>The catalog contains {{items}} items in {{groups}} groups.</div>",
     "subTotals": "<div> {{name}}: {{items}} items / {{groups}} groups</div>",
-    "recount": "Recount",
+    "recount": "Пересчет",
     "title": "Count Datasets",
     "btnCount": "Count datasets",
-    "noMapDataEnabled": "No map data enabled",
-    "mapDataState": "{{count}} dataset enabled on map",
-    "mapDataState_plural": "{{count}} datasets enabled on map"
+    "noMapDataEnabled": "Данные карты не включены",
+    "mapDataState": "Набор данных {{count}} включен на карте",
+    "mapDataState_plural": "{{count}} наборов данных, включенных на карте"
   },
   "toolsPanel": {
     "btnText": "Инструмент",
@@ -255,29 +255,29 @@
       "balancedPerformance": "Сбалансированная производительность и качество",
       "lowerPerformance": "Максимальное качество, низкая производительность"
     },
-    "nativeResolutionLabel": "Press to stop using {{resolution1}} resolution and start using {{resolution2}} resolution",
+    "nativeResolutionLabel": "Нажмите, чтобы остановить использование разрешения {{resolution1}} и начать использовать разрешение {{resolution2}}.",
     "native": "native",
     "screen": "screen",
-    "btnTitle": "Change view",
+    "btnTitle": "Изменить вид",
     "btnText": "Настройки",
     "mapView": "Вид",
     "baseMap": "Основа карты",
-    "imageOptimisation": "Image Optimisation",
-    "nativeResolutionHeader": "Use native device resolution",
+    "imageOptimisation": "Оптимизация изображений",
+    "nativeResolutionHeader": "Используйте родное разрешение устройства",
     "mapQuality": "Качество карты:",
     "qualityLabel": "Качество",
     "performanceLabel": "Производительность",
     "timeline": {
       "title": "Timeline",
-      "alwaysShowLabel": "Press to start only showing the timeline when there are time-varying datasets on the workbench",
-      "hideLabel": "Press to start always showing the timeline, even when no time-varying datasets are on the workbench",
+      "alwaysShowLabel": "Нажмите, чтобы начать показывать временную шкалу только при наличии на рабочем столе наборов данных, изменяющихся во времени",
+      "hideLabel": "Нажмите, чтобы начать всегда показывать временную шкалу, даже если на рабочем столе нет наборов данных, изменяющихся во времени",
       "alwaysShow": "Всегда снег"
     },
     "terrain": {
-      "hideUnderground": "Terrain hides underground features",
+      "hideUnderground": "Рельеф местности скрывает подземные объекты",
       "showUndergroundFeatures": "Press to start showing features that are underneath the terrain surface",
       "hideUndergroundFeatures": "Press to start hiding features that are underneath the terrain surface",
-      "sideLabel": "Show Terrain on the",
+      "sideLabel": "Показать местность на экране",
       "left": "Слева",
       "both": "Оба",
       "right": "Справа"
@@ -368,16 +368,16 @@
     "untitledScene": "сцена без названия",
     "doesNotExist": "История не существует",
     "removeAllStories": "Убрать все",
-    "removeAllStoriesDialog": "Are you sure you wish to delete {{ count }} scene?",
-    "removeAllStoriesDialog_plural": "Are you sure you wish to delete {{ count }} scenes?",
-    "removeStoryDialog": "Are you sure you wish to delete '<1>{{storyName}}</1>'?",
-    "preview": "preview stories",
-    "play": "Play",
+    "removeAllStoriesDialog": "Вы уверены, что хотите удалить сцену {{ count }}?",
+    "removeAllStoriesDialog_plural": "Вы уверены, что хотите удалить {{ count }} сцены?",
+    "removeStoryDialog": "Вы уверены, что хотите удалить '<1>{{storyName}}</1>'?",
+    "preview": "предпросмотр историй",
+    "play": "Играть",
     "playStory": "История",
-    "captureSceneTitle": "capture current scene",
+    "captureSceneTitle": "захват текущей сцены",
     "captureScene": "Захватить сцену",
     "editor": {
-      "placeholder": "Enter a title here",
+      "placeholder": "Введите название здесь",
       "cancelBtn": "отмена",
       "cancelEditing": "Отмена",
       "saveBtn": "сохранение",
@@ -390,7 +390,7 @@
     "untitled": "untitled scene",
     "navBtn": "go to story {{title}}",
     "nextBtn": "go to next scene",
-    "next": "Next",
+    "next": "Следующий",
     "restart": "Перезапуск",
     "navBtnMobile": "go to story {{title}}",
     "promptHtml1": "<0>You can view and create stories at any time by clicking here.</0>",
@@ -404,15 +404,15 @@
     "loadSceneErrorMessage": "An error occurred while loading data for story scene: `{{title}}`."
   },
   "satelliteGuidance": {
-    "menuTitle": "You can access map guides at any time by looking in the <2>help menu</2>.",
-    "dismissText": "Got it, thanks!",
-    "titleI": "Satellite Imagery: How do I…?",
-    "bodyI": "A super-quick guide to getting the most out of historical satellite imagery.",
-    "prevI": "No thanks",
-    "nextI": "View guide",
-    "titleII": "Where is my satellite imagery?",
-    "bodyII": "You may need to adjust your zoom level to make satellite imagery visible on the map.",
-    "titleIII": "Loading historical imagery",
+    "menuTitle": "Вы можете в любой момент получить доступ к руководству по карте, заглянув в меню <2>help</2>.",
+    "dismissText": "Понял, спасибо!",
+    "titleI": "Спутниковые снимки: Как мне...?",
+    "bodyI": "Супербыстрое руководство по получению максимальной отдачи от исторических спутниковых снимков.",
+    "prevI": "Нет, спасибо",
+    "nextI": "Посмотреть путеводитель",
+    "titleII": "Где мои спутниковые снимки?",
+    "bodyII": "Возможно, вам потребуется изменить масштаб карты, чтобы на ней были видны спутниковые снимки.",
+    "titleIII": "Загрузка исторических изображений",
     "bodyIII": "In your data workbench, click on the capture date dropdown and select from available times to load historical imagery.",
     "titleIV": "Filtering imagery by location",
     "bodyIV": "Satellite imagery may not always be available at your preferred time and location. If you only want to view imagery for a particular location, click ‘filter by location’ in your data workbench.",
@@ -463,9 +463,9 @@
   "preview": {
     "doesNotContainGeospatialData": "Этот файл не содержит геопространственных данных.",
     "selectToPreviewDataset": "Выберите набор данных для предварительного просмотра",
-    "selectMultipleDatasets": "<0>Press <strong>Shift</strong> and click</0><1 /><2>to add multiple datasets</2>",
+    "selectMultipleDatasets": "<0>Нажмите <strong>Shift</strong> и щелкните</0><1 /><2>для добавления нескольких наборов данных</2>",
     "selectToPreviewSeparator": "OR",
-    "goToTheMap": "Go to the map",
+    "goToTheMap": "Перейти к карте",
     "loading": "ПРЕДВАРИТЕЛЬНАЯ ЗАГРУЗКА...",
     "preview": "{{appName}} preview",
     "previewItemErrorTitle": "Catalog item could not be previewed.",
@@ -493,26 +493,26 @@
     "mayBeExperiencingIssues": "This dataset may currently be experiencing issues"
   },
   "description": {
-    "name": "Description",
-    "dataLocal": "This file only exists in your browser. To share it, you must load it onto a public web server.",
-    "dataNotLocal": "Please contact the provider of this data for more information, including information about usage rights and constraints.",
-    "wms": "This is a <1>WMS service</1>, which generates map images on request. It can be used in GIS software with this URL:",
-    "wfs": "This is a <1>WFS service</1>, which transfers raw spatial data on request. It can be used in GIS software with this URL:",
-    "layerName": "Layer name",
+    "name": "Описание",
+    "dataLocal": "Этот файл существует только в вашем браузере. Чтобы поделиться им, необходимо загрузить его на общедоступный веб-сервер.",
+    "dataNotLocal": "За дополнительной информацией, включая сведения о правах и ограничениях на использование, обращайтесь к поставщику этих данных.",
+    "wms": "Это <1>WMS-сервис</1>, который генерирует изображения карт по запросу. Его можно использовать в программном обеспечении ГИС с помощью этого URL:",
+    "wfs": "Это <1>WFS-сервис</1>, который передает необработанные пространственные данные по запросу. Его можно использовать в программном обеспечении ГИС с помощью этого URL:",
+    "layerName": "Название слоя",
     "typeName": "Type name",
     "metadataUrls": "Metadata Links",
     "dataUrl": "Data Links",
-    "useLinkBelow": "Use the link below to download the data. See the {{link}} for more information on customising URL query parameters.",
-    "downloadInFormat": "Download the currently selected data in {{format}} format",
+    "useLinkBelow": "Чтобы загрузить данные, воспользуйтесь приведенной ниже ссылкой. Дополнительные сведения о настройке параметров запроса URL см. в разделе {{link}}.",
+    "downloadInFormat": "Загрузите выбранные в данный момент данные в формате {{format}}",
     "downloadNotSupported": "Unfortunately your browser does not support the functionality needed to download this data as a file. Please use $t(browsers.chrome), $t(browsers.firefox), $t(browsers.edge), or $t(browsers.safari) to download this data.",
-    "useTheLinkToDownload": "Use the link below to download the data directly.",
-    "downloadData": "Download Data",
-    "dataSourceDetails": "Data Source Details",
-    "dataServiceDetails": "Data Service Details",
-    "dataCustodian": "Data Custodian"
+    "useTheLinkToDownload": "Воспользуйтесь приведенной ниже ссылкой, чтобы загрузить данные напрямую.",
+    "downloadData": "Скачать данные",
+    "dataSourceDetails": "Детали источника данных",
+    "dataServiceDetails": "Детали службы данных",
+    "dataCustodian": "Хранитель данных"
   },
   "workbench": {
-    "colorScaleRangeTitle": "Invalid color scale range",
+    "colorScaleRangeTitle": "Недопустимый диапазон цветовой шкалы",
     "colorScaleRangeMin": "The minimum value must be a number.",
     "colorScaleRangeMax": "The maximum value must be a number.",
     "colorScaleRangeMinSmallerThanMax": "The minimum value of the color scale range must be less than the maximum value.",
@@ -542,8 +542,8 @@
     "collapseAll": "Скрыть все",
     "expandAll": "Раскрыть все",
     "toggleVisibility": "Данные показать/скрыть",
-    "addItemErrorTitle": "Catalog item could not be added to workbench.",
-    "addItemErrorMessage": "An error occurred while loading the catalog item.",
+    "addItemErrorTitle": "Не удалось добавить элемент каталога в верстак.",
+    "addItemErrorMessage": "При загрузке элемента каталога произошла ошибка.",
     "searchItem": "Search",
     "searchItemTitle": "Search",
     "splitScreenMode": "SPLIT SCREEN MODE"
@@ -552,21 +552,21 @@
     "selectorLabel": "Время:",
     "back": "Назад",
     "previous": "Предыдущее время",
-    "selectTime": "Select a time",
+    "selectTime": "Выберите время",
     "outOfRange": "Currently out of range.",
     "next": "Следующее время",
-    "useTimeline": "Use timeline",
-    "availableTimeChart": "Show available times on chart",
+    "useTimeline": "Используйте временную шкалу",
+    "availableTimeChart": "Показать доступное время на графике",
     "timeline": {
-      "textCell": "Name of the dataset whose time range is shown",
-      "gotoStart": "Go to beginning",
-      "togglePlay": "Play",
-      "playSlower": "Play Slower",
-      "playFaster": "Play Faster"
+      "textCell": "Имя набора данных, временной диапазон которого отображается",
+      "gotoStart": "Перейти к началу",
+      "togglePlay": "Играть",
+      "playSlower": "Играть медленнее",
+      "playFaster": "Играть быстрее"
     }
   },
   "satellite": {
-    "pickPoint": "Select a point by clicking on the map.",
+    "pickPoint": "Выберите точку, щелкнув по карте.",
     "querying": "Querying position...",
     "filterByLocation": "Фильтр по месту",
     "infoGroup": "Only showing available capture times for:",
@@ -580,30 +580,30 @@
   },
   "concept": {
     "active": {
-      "edit": "Редактировать состояние",
-      "remove": "Remove condition"
+      "edit": "Редактировать условие",
+      "remove": "Удалить условие"
     },
     "inactive": {
-      "cancel": "Cancel",
-      "newText": "New condition"
+      "cancel": "Отмена",
+      "newText": "Новое состояние"
     },
     "summary": {
-      "addMoreText": "Add a condition",
-      "addFirstText": "Add new condition"
+      "addMoreText": "Добавить условие",
+      "addFirstText": "Добавить новое условие"
     }
   },
   "clipboard": {
-    "success": "Copied to clipboard",
-    "unsuccessful": "Copy unsuccessful...",
+    "success": "Скопировано в буфер обмена",
+    "unsuccessful": "Копирование не удалось...",
     "shareURL": "Поделиться ссылкой",
-    "shareExplanation": "Anyone with this URL will be able to access this map.",
+    "shareExplanation": "Любой человек, имеющий этот URL-адрес, сможет получить доступ к этой карте.",
     "copy": "Скопировать"
   },
   "includeStory": {
-    "message": "Include Story in Share"
+    "message": "Включите историю в общий доступ"
   },
   "dragDrop": {
-    "text": "<0>Drag & Drop</0><1>Your data anywhere to view on the map<1>",
+    "text": "<0>Перетаскивание</0><1>Ваши данные в любом месте для просмотра на карте<1>",
     "not": "<0>bbbb</0>"
   },
   "loader": {
@@ -621,27 +621,27 @@
     "groupEmpty": "Эта группа пуста"
   },
   "catalogItem": {
-    "privateIndicatorTitle": "Private Dataset",
-    "loading": "Loading...",
-    "remove": "Remove",
-    "add": "Add",
-    "trash": "Remove from catalogue",
-    "removeFromMap": "Remove from map",
-    "preview": "Preview"
+    "privateIndicatorTitle": "Частный набор данных",
+    "loading": "Загрузка...",
+    "remove": "Удалить",
+    "add": "Добавить",
+    "trash": "Удалить из каталога",
+    "removeFromMap": "Удалить с карты",
+    "preview": "Предварительный просмотр"
   },
   "chart": {
     "sectionLabel": "Графики",
     "closePanel": "Закрыть панель",
     "expand": "Расширить",
     "download": "Скачать",
-    "showItemInChart": "Show {{value}} in chart",
+    "showItemInChart": "Показать {{value}} в таблице",
     "loading": "Загрузка данных графика...",
     "noData": "Данные графика не найдены."
   },
   "viewModels": {
-    "searchNoLocations": "Sorry, no locations match your search query.",
-    "searchErrorOccurred": "An error occurred while searching.  Please check your internet connection or try again later.",
-    "searchMinCharacters": "You need to enter minimum {{count}} character",
+    "searchNoLocations": "К сожалению, ни одно место не соответствует вашему поисковому запросу.",
+    "searchErrorOccurred": "Во время поиска произошла ошибка.  Пожалуйста, проверьте подключение к Интернету или повторите попытку позже.",
+    "searchMinCharacters": "Вам нужно ввести минимум {{count}} символов",
     "searchMinCharacters_plural": "You need to enter minimum {{count}} characters",
     "searchAddresses": "Addresses",
     "searchPlaceNames": "Official Place Names",
@@ -650,14 +650,14 @@
     "searchCatalogueItem": "Catalogue Items",
     "searchNoCatalogueItem": "Sorry, no catalogue items match your search query.",
     "inMultipleLocations": "In multiple locations including: ",
-    "inDataCatalogue": "In Data Catalogue"
+    "inDataCatalogue": "В каталоге данных"
   },
   "terriaViewer": {
-    "slowWebGLAvailableTitle": "Poor WebGL performance",
+    "slowWebGLAvailableTitle": "Низкая производительность WebGL",
     "slowWebGLAvailableMessage": "Your web browser reports that it has performance issues displaying {{appName}} in 3D, so you will see a limited, 2D-only experience. For the full 3D experience, please try using a different web browser, upgrading your video drivers, or upgrading your operating system.",
     "slowWebGLAvailableMessageII": "{{appName}}  works best with a web browser that supports {{webGL}} including the latest versions of $t(browsers.chrome), $t(browsers.firefox), $t(browsers.edge), and $t(browsers.safari). Your web browser does not appear to support WebGL, so you will see a limited, 2D-only experience.",
-    "webGLNotSupportedTitle": "WebGL not supported",
-    "webGLNotSupportedOrSlowTitle": "WebGL not supported or too slow",
+    "webGLNotSupportedTitle": "WebGL не поддерживается",
+    "webGLNotSupportedOrSlowTitle": "WebGL не поддерживается или работает слишком медленно",
     "webGLNotSupportedOrSlowMessage": "Your web browser cannot display the map in 3D, either because it does not support WebGL or because your web browser has reported that WebGL will be extremely slow. Please try a different web browser, such as the latest version of $t(browsers.chrome), $t(browsers.firefox), $t(browsers.edge), or $t(browsers.safari). In some cases, you may need to upgrade your computer's video driver or operating system in order to get the 3D view in {{appName}}."
   },
   "analytics": {
@@ -665,17 +665,17 @@
     "point": "Почка (шир/дол)",
     "polygon": "Полигон",
     "existingPolygon": "Существующий полигон",
-    "nothingSelected": "Nothing has been selected, please use the buttons above to make a selection.",
+    "nothingSelected": "Ничего не выбрано, воспользуйтесь кнопками выше, чтобы сделать выбор.",
     "runAnalysis": "Запуск анализа",
-    "clickToDrawLine": "Click to draw line",
-    "enterValidCoords": "Please enter valid coordinates (e.g. 131.0361, -25.3450).",
-    "selectPoint": "Select a point by clicking on the map.",
-    "clickToDrawPolygon": "Click to draw polygon",
-    "shiftToDrawRectangle": "Press the SHIFT key and hold down the left mouse button to draw a rectangle",
-    "clickToDrawRectangle": "Click to draw rectangle",
-    "selectedPolygon": "Selected Polygon",
-    "regionName": "Region name",
-    "selectExistingPolygon": "Select existing polygon"
+    "clickToDrawLine": "Нажмите, чтобы нарисовать линию",
+    "enterValidCoords": "Введите действительные координаты (например, 131.0361, -25.3450).",
+    "selectPoint": "Выберите точку, щелкнув на карте.",
+    "clickToDrawPolygon": "Нажмите, чтобы нарисовать многоугольник",
+    "shiftToDrawRectangle": "Нажмите клавишу SHIFT и удерживайте левую кнопку мыши, чтобы нарисовать прямоугольник",
+    "clickToDrawRectangle": "Нажмите, чтобы нарисовать прямоугольник",
+    "selectedPolygon": "Выбранный полигон",
+    "regionName": "Название региона",
+    "selectExistingPolygon": "Выберите существующий полигон"
   },
   "core": {
     "errors": {
@@ -684,7 +684,7 @@
     "userAddedData": "User-Added Data",
     "chartData": "Chart Data",
     "dataUri": {
-      "errorTitle": "Browser Does Not Support Data Download",
+      "errorTitle": "Браузер не поддерживает загрузку данных",
       "errorMessage": "Unfortunately Microsoft browsers (including all versions of Internet Explorer and Edge) do not support the data uri functionality needed to download data as a file. To download, copy the following uri into another browser such as $t(browsers.chrome), $t(browsers.firefox), or $t(browsers.safari): {{href}}"
     },
     "dataType": {
@@ -702,7 +702,7 @@
       "opendatasoft-group": "Opendatasoft Portal",
       "geojson": "GeoJSON",
       "geoRss": "GeoRSS",
-      "kml": "KML or KMZ",
+      "kml": "KML или KMZ",
       "csv": "CSV",
       "czml": "CZML",
       "gpx": "GPX",
@@ -720,7 +720,7 @@
     },
     "printWindow": {
       "errorTitle": "Ошибка при печати",
-      "errorMessage": "Printing did not start within 10 seconds. Maybe this web browser does not support printing?",
+      "errorMessage": "Печать не началась в течение 10 секунд. Возможно, этот веб-браузер не поддерживает печать?",
       "printMediaStart": "print media start",
       "printMediaEnd": "print media end",
       "onbeforeprint": "onbeforeprint",
@@ -739,7 +739,7 @@
       "fileRequired": "файл необходим"
     },
     "readXml": {
-      "xmlError": "The file does not contain valid XML."
+      "xmlError": "Файл не содержит корректного XML."
     },
     "serverConfig": {
       "failedToGet": "Failed to get server config from {{serverConfigUrl}}. This means services such as proxy, convert and URL shortening may not work."
@@ -754,7 +754,7 @@
       "networkRequestMessageDetailed": "This may indicate one of the following:\n\n* The server hostname could not be resolved\n* The server did not respond to the request - or is temporarily unavailable\n* The server denied [Cross-Origin Resource Sharing (CORS)](https://docs.terria.io/guide/connecting-to-data/cross-origin-resource-sharing/) access to this URL\n* There is a problem with your internet connection\n\nIf you entered the link manually, please verify that the link is correct."
     },
     "unverifiedExternalLink": {
-      "title": "Warning: unverified link",
+      "title": "Предупреждение: непроверенная ссылка",
       "message": "You are about to open: \n\n`{{url}}`  \n\nThis link is unverified and could be unsafe.",
       "denyText": "Отмена",
       "confirmText": "Открыть в новой вкладке"
@@ -810,7 +810,7 @@
       "postOfficeBox": "post office box"
     },
     "imageryProviderHooks": {
-      "devError": "No context for image recoloring."
+      "devError": "Нет контекста для перекрашивания изображений."
     },
     "mapboxVectorTileImageryProvider": {
       "requireLayerName": "MapboxVectorTileImageryProvider requires a layer name passed as options.layerName",
@@ -825,10 +825,10 @@
       "csvRegionMappingMessageLoadError": "Couldn't load region boundaries for region {{regionName}} {{exception}}"
     },
     "extraCreditLinks": {
-      "dataAttribution": "Data attribution",
-      "disclaimer": "Disclaimer",
+      "dataAttribution": "Атрибуция данных",
+      "disclaimer": "Отказ от ответственности",
       "basemap": "Basemap",
-      "dataProvider": "Data provided by:"
+      "dataProvider": "Данные предоставлены:"
     }
   },
   "models": {
@@ -1161,7 +1161,7 @@
       "name": "Open Street Map"
     },
     "placesLikeMe": {
-      "regionsLikeThisName": "Regions like this",
+      "regionsLikeThisName": "Регионы, подобные этому",
       "regionsLikeThisDescription": "Identifies regions that are _most like_ a given region according to a given set of characteristics.",
       "regionTypeName": "Region Type",
       "regionTypeDescription": "The type of region to analyze.",
@@ -2095,7 +2095,7 @@
     "errorParsingIndexRoot": "Error parsing indexRoot file: {{indexRootUrl}}."
   },
   "pedestrianMode": {
-    "toolButtonTitle": "Pedestrian Mode",
+    "toolButtonTitle": "Режим пешехода",
     "dropPedestrianTooltipMessage": "<b>Left click</b> to select drop location<br /><b>Right click / Esc</b> to cancel",
     "controls": {
       "title": "Controls"
@@ -2117,7 +2117,7 @@
     "rightPanel": "Правая панель",
     "entireMap": {
       "title": "Вся карта",
-      "emptyText": "Add new data to show across the entire map via the dotted menu above."
+      "emptyText": "Добавьте новые данные для отображения на всей карте с помощью пунктирного меню выше."
     },
     "entireMapMenu": {
       "browse": "Просмотр данных карты",
@@ -2127,7 +2127,7 @@
     },
     "info": "Сравнить геопространственные наборы данных с Вашего верстака на карте.",
     "dataset": {
-      "label": "Dataset",
+      "label": "Набор данных",
       "selectOne": "Выбрать один"
     },
     "dimensionSelector": {
