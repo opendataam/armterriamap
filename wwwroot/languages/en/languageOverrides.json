@@ -247,5 +247,48 @@
       "name": "Open Data Armenia: datasets for the atlas",
       "description": "Datasets of [data.opendata.am](https://data.opendata.am) tagged `atlas`, loaded from the catalogue when the map opens. Tag a dataset `atlas` to add it here."
     }
+  },
+  "atlasStory": {
+    "intro": {
+      "title": "Armenia in maps",
+      "text": "<p>Armenia is divided into 11 marzes (provinces), including the capital Yerevan, where more than a third of the population lives. This story shows what the atlas can tell about the country: people, natural hazards, water, climate and nature. Use the arrows to move between scenes.</p>"
+    },
+    "people": {
+      "title": "Where people live",
+      "text": "<p>Population estimated for every ~100 m cell (WorldPop) shows how people concentrate in the Ararat valley, around Lake Sevan and along the river valleys of the north and south. The high mountains are almost empty.</p>"
+    },
+    "yerevan": {
+      "title": "Yerevan",
+      "text": "<p>The capital's 12 administrative districts, metro stations and the city's air quality network. The coloured dots show the hourly concentration of fine particulate matter PM2.5 measured by about 200 sensors.</p>"
+    },
+    "seismic": {
+      "title": "A seismic country",
+      "text": "<p>Armenia lies in one of the most seismically active parts of the Caucasus. The map shows the probabilistic seismic hazard, active faults and earthquakes of magnitude 3 and above recorded since 1970.</p>"
+    },
+    "spitak": {
+      "title": "Spitak, 7 December 1988",
+      "text": "<p>The magnitude 6.8 Spitak earthquake destroyed Spitak and badly damaged Leninakan (now Gyumri) and Kirovakan (now Vanadzor). At least 25,000 people died. The points show where damage photographs were taken.</p>"
+    },
+    "water": {
+      "title": "Water",
+      "text": "<p>Rivers, their catchments, lakes and reservoirs. Lake Sevan, about 1,900 m above sea level, is the largest lake in the Caucasus and the country's main reserve of fresh water.</p>"
+    },
+    "climate": {
+      "title": "Climate",
+      "text": "<p>Average annual precipitation ranges from about 200–300 mm in the Ararat valley to 800 mm and more in the mountains. Explore the Climate group for temperature, solar radiation and wind resources.</p>"
+    },
+    "nature": {
+      "title": "Biodiversity",
+      "text": "<p>About 390,000 observations of plants, animals and fungi in Armenia have been published to GBIF. Brighter areas have more records: they show where nature is studied most, not only where it is richest.</p>"
+    },
+    "data": {
+      "title": "Open data",
+      "text": "<p>All layers of the atlas come from open sources, and many are published on <a href=\"https://data.opendata.am\">data.opendata.am</a>. Open the data catalogue to find more layers, or tag a dataset <code>atlas</code> on data.opendata.am to add it to the map.</p>"
+    }
+  },
+  "welcomeMessage": {
+    "title": "Atlas of Armenia",
+    "welcomeMessage": "Explore open data about Armenia on the map: population, natural hazards, water, climate, nature and the city of Yerevan.<br/>Start with the story, browse the data catalogue or search for a place.",
+    "welcomeMessageOnMobile": "Explore open data about Armenia on the map."
   }
 }

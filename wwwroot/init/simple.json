@@ -587,6 +587,200 @@
       ]
     }
   ],
+  "stories": [
+    {
+      "id": "atlas-intro",
+      "title": "translate#atlasStory.intro.title",
+      "text": "translate#atlasStory.intro.text",
+      "shareData": {
+        "version": "8.0.0",
+        "initSources": [
+          {
+            "stratum": "user",
+            "workbench": ["arm-admin-marz-population-2021"],
+            "initialCamera": {
+              "west": 43.3,
+              "south": 38.7,
+              "east": 46.8,
+              "north": 41.4
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "atlas-people",
+      "title": "translate#atlasStory.people.title",
+      "text": "translate#atlasStory.people.text",
+      "shareData": {
+        "version": "8.0.0",
+        "initSources": [
+          {
+            "stratum": "user",
+            "workbench": ["worldpop-2020"],
+            "initialCamera": {
+              "west": 43.3,
+              "south": 38.7,
+              "east": 46.8,
+              "north": 41.4
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "atlas-yerevan",
+      "title": "translate#atlasStory.yerevan.title",
+      "text": "translate#atlasStory.yerevan.text",
+      "shareData": {
+        "version": "8.0.0",
+        "initSources": [
+          {
+            "stratum": "user",
+            "workbench": [
+              "yerevan-air-quality",
+              "yerevan-metro-stations",
+              "yerevan-districts"
+            ],
+            "initialCamera": {
+              "west": 44.36,
+              "south": 40.06,
+              "east": 44.62,
+              "north": 40.25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "atlas-seismic",
+      "title": "translate#atlasStory.seismic.title",
+      "text": "translate#atlasStory.seismic.text",
+      "shareData": {
+        "version": "8.0.0",
+        "initSources": [
+          {
+            "stratum": "user",
+            "workbench": [
+              "usgs-earthquakes",
+              "sc-model_2017",
+              "sc-seismic_hazard_475"
+            ],
+            "initialCamera": {
+              "west": 43.3,
+              "south": 38.7,
+              "east": 46.8,
+              "north": 41.4
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "atlas-spitak",
+      "title": "translate#atlasStory.spitak.title",
+      "text": "translate#atlasStory.spitak.text",
+      "shareData": {
+        "version": "8.0.0",
+        "initSources": [
+          {
+            "stratum": "user",
+            "workbench": ["event0001", "sc-seismic_zones"],
+            "initialCamera": {
+              "west": 43.55,
+              "south": 40.55,
+              "east": 44.75,
+              "north": 41.05
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "atlas-water",
+      "title": "translate#atlasStory.water.title",
+      "text": "translate#atlasStory.water.text",
+      "shareData": {
+        "version": "8.0.0",
+        "initSources": [
+          {
+            "stratum": "user",
+            "workbench": [
+              "sc-lakes_and_reservoirs",
+              "sc-arm_rivers_erica",
+              "sc-arm_catchmets"
+            ],
+            "initialCamera": {
+              "west": 43.3,
+              "south": 38.7,
+              "east": 46.8,
+              "north": 41.4
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "atlas-climate",
+      "title": "translate#atlasStory.climate.title",
+      "text": "translate#atlasStory.climate.text",
+      "shareData": {
+        "version": "8.0.0",
+        "initSources": [
+          {
+            "stratum": "user",
+            "workbench": ["sc-armenia_prec"],
+            "initialCamera": {
+              "west": 43.3,
+              "south": 38.7,
+              "east": 46.8,
+              "north": 41.4
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "atlas-nature",
+      "title": "translate#atlasStory.nature.title",
+      "text": "translate#atlasStory.nature.text",
+      "shareData": {
+        "version": "8.0.0",
+        "initSources": [
+          {
+            "stratum": "user",
+            "workbench": ["gbif-occurrences"],
+            "initialCamera": {
+              "west": 43.3,
+              "south": 38.7,
+              "east": 46.8,
+              "north": 41.4
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "atlas-data",
+      "title": "translate#atlasStory.data.title",
+      "text": "translate#atlasStory.data.text",
+      "shareData": {
+        "version": "8.0.0",
+        "initSources": [
+          {
+            "stratum": "user",
+            "workbench": [],
+            "initialCamera": {
+              "west": 43.3,
+              "south": 38.7,
+              "east": 46.8,
+              "north": 41.4
+            }
+          }
+        ]
+      }
+    }
+  ],
   "viewerMode": "3dSmooth",
   "baseMaps": {
     "defaultBaseMapId": "basemap-openstreetmap",

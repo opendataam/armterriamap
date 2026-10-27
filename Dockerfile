@@ -17,7 +17,9 @@ COPY --chown=node:node .yarn /app/.yarn
 RUN yarn install --frozen-lockfile --network-timeout 1000000
 
 COPY --chown=node:node . /app
-RUN yarn gulp release
+# Same heap limit as the upstream CI: without it the webpack build can exhaust
+# the memory of a Docker VM with 8 GB
+RUN NODE_OPTIONS=--max_old_space_size=4096 yarn gulp release
 
 # deploy container
 FROM node:24-slim AS deploy
