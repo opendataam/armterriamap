@@ -1,0 +1,13 @@
+.git
+node_modules/
+wwwroot/build/
+wwwroot/index.html
+wwwroot/version.json
+version.js
+wwwroot/data/hotosm/*.geojson
+deploy/packages/
+deploy/work/
+npm-debug.log
+yarn-error.log
+*.log
+.DS_Store
