@@ -126,6 +126,18 @@
         "name": "Population by marz, 2021",
         "description": "Population of Armenia by marz (province) and sex, 2021 estimates.\n\nSource: [Armenia - Subnational Population Statistics](https://data.opendata.am/dataset/armenia-subnational-population-statistics), Open Data Armenia (OCHA common operational dataset)."
       },
+      "worldpop": {
+        "name": "Population distribution, 2020 (WorldPop, ~100 m)",
+        "description": "Estimated number of people per ~100 m cell in 2020 (WorldPop constrained). Cells without buildings are empty.\n\nSource: [WorldPop](https://data.opendata.am/dataset/wdwp-49747), CC BY 4.0. Coloured for the atlas by `scripts/population/build.sh`."
+      },
+      "kontur": {
+        "name": "Population in 400 m hexagons (Kontur)",
+        "description": "Population of 400 m H3 hexagons, 2022.\n\nSource: [Kontur Population](https://data.opendata.am/dataset/armenia-population-density-for-400m-h3-hexagons), CC BY 4.0."
+      },
+      "rwi": {
+        "name": "Relative Wealth Index (Meta)",
+        "description": "Relative standard of living within Armenia at 2.4 km resolution, estimated from satellite imagery, connectivity and survey data. Higher values mean wealthier areas.\n\nSource: [Data for Good at Meta](https://data.opendata.am/dataset/armenia-relative-wealth-index), CC BY-SA."
+      },
       "settlements": {
         "name": "Settlements",
         "description": "Settlements in Armenia from OpenStreetMap, exported monthly by the Humanitarian OpenStreetMap Team.\n\nSource: [HDX](https://data.humdata.org/dataset/hotosm_arm_populated_places), © OpenStreetMap contributors, ODbL."
@@ -209,6 +221,27 @@
       "spitak": "Spitak earthquake of 1988: damage photographs",
       "pleiades": "Ancient places (Pleiades)",
       "name": "History and culture"
+    },
+    "yerevan": {
+      "name": "Yerevan",
+      "description": "Layers of the [Yerevan Municipality GIS](https://gis.yerevan.am/server/rest/services). The municipality does not state a licence for these data; they are shown with attribution to the source.",
+      "districts": "Administrative districts",
+      "metroStations": "Metro stations",
+      "metroLines": "Metro lines",
+      "busStops": "Bus stops",
+      "monuments": "Monuments",
+      "kindergartens": "Kindergartens",
+      "hotels": "Hotels",
+      "greenAreas": "Public green areas",
+      "airQuality": {
+        "description": "Hourly mean concentration of fine particulate matter PM2.5 (µg/m³) at the sensors of the Yerevan air quality network. Sensors without readings in the last 24 hours are hidden. For comparison, the WHO guideline for the daily mean is 15 µg/m³.",
+        "name": "Air quality: PM2.5, last hour"
+      },
+      "seismicMicrozonation": "Seismic microzonation: peak ground acceleration",
+      "landslides": "Landslides",
+      "mainFault": "Main fault zone (assumed)",
+      "faults": "Secondary faults",
+      "construction": "Construction projects"
     },
     "odam": {
       "name": "Open Data Armenia: datasets for the atlas",

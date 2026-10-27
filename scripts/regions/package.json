@@ -4,7 +4,8 @@
   "description": "Builds region mapping layers (boundaries, vector tiles, region ids) for the atlas",
   "type": "module",
   "scripts": {
-    "build-marz": "node build-marz.mjs"
+    "build-marz": "node build-marz.mjs",
+    "build-yerevan-districts": "node build-yerevan-districts.mjs"
   },
   "dependencies": {
     "geojson-vt": "5.0.4",

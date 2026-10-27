@@ -49,6 +49,74 @@
           "activeStyle": "T_TL"
         },
         {
+          "type": "cog",
+          "id": "worldpop-2020",
+          "name": "translate#catalog.admin.worldpop.name",
+          "description": "translate#catalog.admin.worldpop.description",
+          "url": "https://data.opendata.am/dataset/c71a9a28-1943-4c7d-ad8b-cc183de6440a/resource/521cd9e9-c80b-43ba-883a-1a11b4057eaa/download/worldpop_arm_2020_ppp_100m_rgba_cog.tif",
+          "renderOptions": {
+            "convertToRGB": true
+          },
+          "hasAlphaChannel": true,
+          "opacity": 0.8,
+          "legends": [
+            {
+              "items": [
+                {
+                  "title": "1–5",
+                  "color": "rgb(255,255,178)"
+                },
+                {
+                  "title": "5–20",
+                  "color": "rgb(254,204,92)"
+                },
+                {
+                  "title": "20–50",
+                  "color": "rgb(253,141,60)"
+                },
+                {
+                  "title": "50–150",
+                  "color": "rgb(240,59,32)"
+                },
+                {
+                  "title": "150–400",
+                  "color": "rgb(189,0,38)"
+                },
+                {
+                  "title": "400+",
+                  "color": "rgb(128,0,38)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "geojson",
+          "id": "kontur-h3-population",
+          "name": "translate#catalog.admin.kontur.name",
+          "description": "translate#catalog.admin.kontur.description",
+          "url": "https://data.opendata.am/dataset/9b4ba0a3-8eda-4e92-ba70-aa7a19ae9683/resource/0d94bf3b-d876-41e7-bd76-41ac56e27e26/download/kontur_population_arm_h3_400m.geojson.zip",
+          "activeStyle": "population",
+          "defaultStyle": {
+            "color": {
+              "colorPalette": "YlOrRd"
+            },
+            "outline": {
+              "null": {
+                "width": 0
+              }
+            }
+          }
+        },
+        {
+          "type": "csv",
+          "id": "rwi",
+          "name": "translate#catalog.admin.rwi.name",
+          "description": "translate#catalog.admin.rwi.description",
+          "url": "https://data.opendata.am/dataset/9feb85b6-388a-42d3-a154-42cce2aad112/resource/01d52a12-6a12-40ea-8db9-3879a0f74d19/download/armenia_relative_wealth_index.csv",
+          "activeStyle": "rwi"
+        },
+        {
           "type": "geojson",
           "id": "hot-populated_places",
           "name": "translate#catalog.admin.settlements.name",
@@ -394,6 +462,107 @@
           "url": "https://data.opendata.am",
           "datasetId": "arm-pleiades",
           "resourceId": "198859e9-2a19-4d7e-bafc-9f24770255b6"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "id": "arm-yerevan",
+      "name": "translate#catalog.yerevan.name",
+      "description": "translate#catalog.yerevan.description",
+      "members": [
+        {
+          "type": "esri-featureServer",
+          "id": "yerevan-districts",
+          "name": "translate#catalog.yerevan.districts",
+          "url": "https://gis.yerevan.am/server/rest/services/Hosted/Yerevan_Districts/FeatureServer/0",
+          "opacity": 0.4
+        },
+        {
+          "type": "esri-featureServer",
+          "id": "yerevan-metro-stations",
+          "name": "translate#catalog.yerevan.metroStations",
+          "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D5%84%D5%A5%D5%BF%D6%80%D5%B8_%D5%AF%D5%A1%D5%B5%D5%A1%D5%B6%D5%B6%D5%A5%D6%80/FeatureServer/0"
+        },
+        {
+          "type": "esri-featureServer",
+          "id": "yerevan-metro-lines",
+          "name": "translate#catalog.yerevan.metroLines",
+          "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D5%84%D5%A5%D5%BF%D6%80%D5%B8_lines/FeatureServer/0"
+        },
+        {
+          "type": "esri-featureServer",
+          "id": "yerevan-bus-stops",
+          "name": "translate#catalog.yerevan.busStops",
+          "url": "https://gis.yerevan.am/server/rest/services/Hosted/Bus_stops_lots/FeatureServer/0"
+        },
+        {
+          "type": "esri-featureServer",
+          "id": "yerevan-monuments",
+          "name": "translate#catalog.yerevan.monuments",
+          "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D4%B2%D5%B8%D5%AC%D5%B8%D6%80_%D5%B0%D5%B8%D6%82%D5%B7%D5%A1%D6%80%D5%B1%D5%A1%D5%B6%D5%B6%D5%A5%D6%80%D5%A8_view/FeatureServer/0"
+        },
+        {
+          "type": "esri-featureServer",
+          "id": "yerevan-kindergartens",
+          "name": "translate#catalog.yerevan.kindergartens",
+          "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D5%84%D5%A1%D5%B6%D5%AF%D5%A1%D5%BA%D5%A1%D6%80%D5%BF%D5%A5%D5%A6%D5%B6%D5%A5%D6%80/FeatureServer/0"
+        },
+        {
+          "type": "esri-featureServer",
+          "id": "yerevan-hotels",
+          "name": "translate#catalog.yerevan.hotels",
+          "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D5%80%D5%B5%D5%B8%D6%82%D6%80%D5%A1%D5%B6%D5%B8%D6%81%D5%B6%D5%A5%D6%80/FeatureServer/0"
+        },
+        {
+          "type": "esri-featureServer",
+          "id": "yerevan-green-areas",
+          "name": "translate#catalog.yerevan.greenAreas",
+          "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D4%B8%D5%B6%D5%A4%D5%B0_%D6%85%D5%A3%D5%BF_%D5%AF%D5%A1%D5%B6%D5%A1%D5%B9_%D5%BF%D5%A1%D6%80%D5%A1%D5%AE%D6%84/FeatureServer/0"
+        },
+        {
+          "type": "esri-featureServer",
+          "id": "yerevan-air-quality",
+          "name": "translate#catalog.yerevan.airQuality.name",
+          "url": "https://gis.yerevan.am/server/rest/services/Hosted/Device_Joined_NewAPI/FeatureServer/0",
+          "description": "translate#catalog.yerevan.airQuality.description",
+          "where": "endofperiod_date >= CURRENT_TIMESTAMP - INTERVAL '1' DAY",
+          "useStyleInformationFromService": false,
+          "activeStyle": "pm2_5concmass1hourmean_value",
+          "tileRequests": false
+        },
+        {
+          "type": "esri-featureServer",
+          "id": "yerevan-seismic-microzonation",
+          "name": "translate#catalog.yerevan.seismicMicrozonation",
+          "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D5%8D%D5%A5%D5%B5%D5%BD%D5%B4%D5%B8%D5%B4%D5%AB%D5%AF%D6%80%D5%B8%D5%B7%D6%80%D5%BB%D5%A1%D5%B6%D5%A1%D6%81%D5%B8%D6%82%D5%B4/FeatureServer/15",
+          "opacity": 0.6
+        },
+        {
+          "type": "esri-featureServer",
+          "id": "yerevan-landslides",
+          "name": "translate#catalog.yerevan.landslides",
+          "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D5%8D%D5%B8%D5%B2%D5%A1%D5%B6%D6%84%D5%B6%D5%A5%D6%80/FeatureServer/6",
+          "opacity": 0.7
+        },
+        {
+          "type": "esri-featureServer",
+          "id": "yerevan-main-fault",
+          "name": "translate#catalog.yerevan.mainFault",
+          "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D4%BD%D5%A6%D5%B8%D6%82%D5%B4%D5%A1%D5%B5%D5%AB%D5%B6_%D5%AD%D5%A1%D5%AD%D5%BF%D5%B8%D6%82%D5%B4%D5%B6%D5%A5%D6%80/FeatureServer/2",
+          "opacity": 0.6
+        },
+        {
+          "type": "esri-featureServer",
+          "id": "yerevan-faults",
+          "name": "translate#catalog.yerevan.faults",
+          "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D4%BD%D5%A6%D5%B8%D6%82%D5%B4%D5%A1%D5%B5%D5%AB%D5%B6_%D5%AD%D5%A1%D5%AD%D5%BF%D5%B8%D6%82%D5%B4%D5%B6%D5%A5%D6%80/FeatureServer/3"
+        },
+        {
+          "type": "esri-featureServer",
+          "id": "yerevan-construction",
+          "name": "translate#catalog.yerevan.construction",
+          "url": "https://gis.yerevan.am/server/rest/services/Hosted/Construction_public_view/FeatureServer/0"
         }
       ]
     },

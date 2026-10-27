@@ -90,25 +90,44 @@ After rebuilding the marz boundaries, upload the new GeoJSON to the CKAN dataset
 curl -H "Authorization: $CKAN_API_TOKEN" -F id=88d2a994-b95a-4684-8a10-a716269b8dcd -F upload=@wwwroot/data/regions/arm_marz.geojson https://data.opendata.am/api/3/action/resource_update
 ```
 
-### Region mapping (choropleths by marz)
+### Population layers
 
-A CSV with a column of marzes is shown as a choropleth without any configuration. The column is
-recognised by its name (`marz`, `province`, `region`, `adm1_pcode`, `adm1_en`, `մարզ`, `марз`,
-`область`, ...) and its values can be:
+The WorldPop raster and the Kontur hexagons are converted for the map by
+`scripts/population/build.sh` (needs Docker for GDAL) and published as resources on data.opendata.am:
 
-- ISO 3166-2 codes: `AM-ER`, `AM-SH`
-- OCHA P-codes: `AM01` ... `AM11`
-- names in English, Armenian or Russian: `Shirak`, `Շիրակի մարզ`, `Ширакская область`, `г. Ереван`
+- [wdwp-49747](https://data.opendata.am/dataset/wdwp-49747): coloured RGBA Cloud Optimised GeoTIFF
+  (TerriaJS cannot colour single-band COGs; the colours are in `scripts/population/population-colors.txt`
+  and the legend of the `worldpop-2020` catalog item)
+- [armenia-population-density-for-400m-h3-hexagons](https://data.opendata.am/dataset/armenia-population-density-for-400m-h3-hexagons):
+  zipped GeoJSON
 
-The region type is `ARM_MARZ`, defined in `wwwroot/data/regions/regionMapping.json`. Boundaries,
-vector tiles and the region id list are built from OpenStreetMap by:
+To rebuild them and replace the resources:
 
 ```bash
-cd scripts/regions && npm install && npm run build-marz
+sh scripts/population/build.sh /tmp/population
+curl -H "Authorization: $CKAN_API_TOKEN" -F id=521cd9e9-c80b-43ba-883a-1a11b4057eaa -F upload=@/tmp/population/worldpop_arm_2020_ppp_100m_rgba_cog.tif https://data.opendata.am/api/3/action/resource_update
+curl -H "Authorization: $CKAN_API_TOKEN" -F id=0d94bf3b-d876-41e7-bd76-41ac56e27e26 -F upload=@/tmp/population/kontur_population_arm_h3_400m.geojson.zip https://data.opendata.am/api/3/action/resource_update
 ```
 
-The script overwrites `wwwroot/data/regions/`; edit the spelling variants in
-`scripts/regions/build-marz.mjs`, not the generated files.
+### Region mapping (choropleths by marz and Yerevan district)
+
+A CSV with a column of marzes or Yerevan districts is shown as a choropleth without any configuration.
+The column is recognised by its name and its values can be codes or names in English, Armenian or Russian:
+
+| Region type            | Column names                                                                          | Values                                                                                                       |
+| ---------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| `ARM_MARZ`             | `marz`, `province`, `region`, `adm1_pcode`, `adm1_en`, `մարզ`, `марз`, `область`, ... | ISO 3166-2 codes (`AM-ER`), OCHA P-codes (`AM01`), `Shirak`, `Շիրակի մարզ`, `Ширакская область`, `г. Ереван` |
+| `ARM_YEREVAN_DISTRICT` | `district`, `yerevan_district`, `community_code`, `վարչական_շրջան`, `район`, ...      | codes `01-001` ... `01-012`, `Kentron`, `Կենտրոն վարչական շրջան`, `Кентрон район`                            |
+
+The region types are defined in `wwwroot/data/regions/regionMapping.json`. Boundaries, vector tiles
+and region id lists are built by (marzes from OpenStreetMap, districts from the Yerevan Municipality GIS):
+
+```bash
+cd scripts/regions && npm install && npm run build-marz && npm run build-yerevan-districts
+```
+
+The scripts overwrite their files in `wwwroot/data/regions/`; edit the spelling variants in
+`scripts/regions/build-*.mjs`, not the generated files.
 
 ### Updating TerriaMap
 
