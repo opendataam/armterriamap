@@ -1,0 +1,10 @@
+# gdaldem color-relief palette for WorldPop people per ~100 m cell (R G B A).
+# Keep in sync with the legend of the "worldpop-2020" item in wwwroot/init/simple.json.
+nv 0 0 0 0
+0 255 255 178 0
+1 255 255 178 210
+5 254 204 92 220
+20 253 141 60 230
+50 240 59 32 240
+150 189 0 38 250
+400 128 0 38 255

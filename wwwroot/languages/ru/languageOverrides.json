@@ -2423,6 +2423,18 @@
         "name": "Население по марзам, 2021",
         "description": "Население Армении по марзам (областям) и полу, оценка на 2021 год.\n\nИсточник: [Armenia - Subnational Population Statistics](https://data.opendata.am/dataset/armenia-subnational-population-statistics), Open Data Armenia (общие оперативные данные OCHA)."
       },
+      "worldpop": {
+        "name": "Распределение населения, 2020 (WorldPop, ~100 м)",
+        "description": "Оценка числа жителей в ячейке ~100 м на 2020 год (WorldPop constrained). Ячейки без застройки пустые.\n\nИсточник: [WorldPop](https://data.opendata.am/dataset/wdwp-49747), CC BY 4.0. Раскрашено для атласа скриптом `scripts/population/build.sh`."
+      },
+      "kontur": {
+        "name": "Население в шестиугольниках 400 м (Kontur)",
+        "description": "Население шестиугольников H3 размером 400 м, 2022 год.\n\nИсточник: [Kontur Population](https://data.opendata.am/dataset/armenia-population-density-for-400m-h3-hexagons), CC BY 4.0."
+      },
+      "rwi": {
+        "name": "Индекс относительного благосостояния (Meta)",
+        "description": "Относительный уровень жизни внутри Армении с разрешением 2,4 км, оценённый по спутниковым снимкам, данным о связи и опросам. Чем выше значение, тем благополучнее территория.\n\nИсточник: [Data for Good at Meta](https://data.opendata.am/dataset/armenia-relative-wealth-index), CC BY-SA."
+      },
       "settlements": {
         "name": "Населённые пункты",
         "description": "Населённые пункты в Армении по данным OpenStreetMap, ежемесячная выгрузка Humanitarian OpenStreetMap Team.\n\nИсточник: [HDX](https://data.humdata.org/dataset/hotosm_arm_populated_places), © участники OpenStreetMap, ODbL."
@@ -2506,6 +2518,27 @@
       "spitak": "Спитакское землетрясение 1988 года: фотографии разрушений",
       "pleiades": "Древние места (Pleiades)",
       "name": "История и культура"
+    },
+    "yerevan": {
+      "name": "Ереван",
+      "description": "Слои [ГИС мэрии Еревана](https://gis.yerevan.am/server/rest/services). Мэрия не указывает лицензию на эти данные; они показаны со ссылкой на источник.",
+      "districts": "Административные районы",
+      "metroStations": "Станции метро",
+      "metroLines": "Линии метро",
+      "busStops": "Автобусные остановки",
+      "monuments": "Памятники",
+      "kindergartens": "Детские сады",
+      "hotels": "Гостиницы",
+      "greenAreas": "Озеленённые территории общего пользования",
+      "airQuality": {
+        "description": "Среднечасовая концентрация мелкодисперсных частиц PM2.5 (мкг/м³) на датчиках сети мониторинга воздуха Еревана. Датчики без замеров за последние 24 часа скрыты. Для сравнения: рекомендация ВОЗ для среднесуточного значения — 15 мкг/м³.",
+        "name": "Качество воздуха: PM2.5 за последний час"
+      },
+      "seismicMicrozonation": "Сейсмическое микрорайонирование: максимальные ускорения грунта",
+      "landslides": "Оползни",
+      "mainFault": "Главная зона разлома (предполагаемая)",
+      "faults": "Второстепенные разломы",
+      "construction": "Строительные проекты"
     },
     "odam": {
       "name": "Open Data Armenia: данные для атласа",

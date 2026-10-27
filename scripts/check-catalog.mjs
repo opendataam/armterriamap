@@ -94,8 +94,16 @@ const checks = {
     return checkFile(url);
   }
 };
-for (const type of ["geojson", "csv", "kml", "czml", "gpx", "shp"]) {
+for (const type of ["geojson", "csv", "kml", "czml", "gpx", "shp", "cog"]) {
   checks[type] = (item) => checkFile(item.url);
+}
+// ArcGIS REST services answer HTTP 200 with an "error" object
+for (const type of ["esri-featureServer", "esri-mapServer", "i3s"]) {
+  checks[type] = async (item) => {
+    const json = await (await request(`${item.url}?f=json`)).json();
+    if (json.error) throw new Error(`ArcGIS: ${json.error.message}`);
+    return json.name ?? json.serviceName ?? "service answers";
+  };
 }
 
 function* items(entries, groupPath = []) {

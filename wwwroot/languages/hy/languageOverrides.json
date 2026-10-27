@@ -2388,6 +2388,18 @@
         "name": "Բնակչությունն ըստ մարզերի, 2021",
         "description": "Հայաստանի բնակչությունն ըստ մարզերի և սեռի, 2021 թվականի գնահատական։\n\nԱղբյուր՝ [Armenia - Subnational Population Statistics](https://data.opendata.am/dataset/armenia-subnational-population-statistics), Open Data Armenia (OCHA ընդհանուր օպերատիվ տվյալներ)։"
       },
+      "worldpop": {
+        "name": "Բնակչության բաշխվածություն, 2020 (WorldPop, ~100 մ)",
+        "description": "Բնակիչների գնահատված թիվը ~100 մ բջիջում, 2020 (WorldPop constrained)։ Առանց շենքերի բջիջները դատարկ են։\n\nԱղբյուր՝ [WorldPop](https://data.opendata.am/dataset/wdwp-49747), CC BY 4.0։ Ատլասի համար գունավորված է `scripts/population/build.sh`-ով։"
+      },
+      "kontur": {
+        "name": "Բնակչությունը 400 մ վեցանկյուններում (Kontur)",
+        "description": "Բնակչությունը 400 մ H3 վեցանկյուններում, 2022։\n\nԱղբյուր՝ [Kontur Population](https://data.opendata.am/dataset/armenia-population-density-for-400m-h3-hexagons), CC BY 4.0։"
+      },
+      "rwi": {
+        "name": "Հարաբերական բարեկեցության ինդեքս (Meta)",
+        "description": "Հարաբերական կենսամակարդակը Հայաստանի ներսում 2.4 կմ լուծաչափով՝ գնահատված արբանյակային պատկերների, կապի և հարցումների տվյալներով։ Ավելի բարձր արժեքները նշանակում են ավելի բարեկեցիկ տարածքներ։\n\nԱղբյուր՝ [Data for Good at Meta](https://data.opendata.am/dataset/armenia-relative-wealth-index), CC BY-SA։"
+      },
       "settlements": {
         "name": "Բնակավայրեր",
         "description": "Բնակավայրեր՝ ըստ OpenStreetMap-ի, ամսական արտահանում Humanitarian OpenStreetMap Team-ի կողմից։\n\nԱղբյուր՝ [HDX](https://data.humdata.org/dataset/hotosm_arm_populated_places), © OpenStreetMap contributors, ODbL։"
@@ -2471,6 +2483,27 @@
       "spitak": "Սպիտակի 1988 թվականի երկրաշարժ. ավերածությունների լուսանկարներ",
       "pleiades": "Հնագույն վայրեր (Pleiades)",
       "name": "Պատմություն և մշակույթ"
+    },
+    "yerevan": {
+      "name": "Երևան",
+      "description": "[Երևանի քաղաքապետարանի ԱՏՀ-ի](https://gis.yerevan.am/server/rest/services) շերտեր։ Քաղաքապետարանը այս տվյալների լիցենզիա չի նշում. դրանք ցուցադրվում են աղբյուրի նշումով։",
+      "districts": "Վարչական շրջաններ",
+      "metroStations": "Մետրոյի կայարաններ",
+      "metroLines": "Մետրոյի գծեր",
+      "busStops": "Ավտոբուսի կանգառներ",
+      "monuments": "Հուշարձաններ",
+      "kindergartens": "Մանկապարտեզներ",
+      "hotels": "Հյուրանոցներ",
+      "greenAreas": "Ընդհանուր օգտագործման կանաչ տարածքներ",
+      "airQuality": {
+        "description": "Մանր կախված մասնիկների PM2.5 միջին ժամային խտությունը (մկգ/մ³) Երևանի օդի որակի ցանցի սենսորներում։ Վերջին 24 ժամում չափում չունեցող սենսորները թաքցված են։ Համեմատության համար՝ ԱՀԿ ուղենիշը միջին օրական արժեքի համար 15 մկգ/մ³ է։",
+        "name": "Օդի որակ. PM2.5, վերջին ժամ"
+      },
+      "seismicMicrozonation": "Սեյսմիկ միկրոշրջանացում. գրունտի առավելագույն արագացումներ",
+      "landslides": "Սողանքներ",
+      "mainFault": "Գլխավոր խզման գոտի (ենթադրյալ)",
+      "faults": "Երկրորդական խզումներ",
+      "construction": "Շինարարական նախագծեր"
     },
     "odam": {
       "name": "Open Data Armenia. տվյալներ ատլասի համար",
