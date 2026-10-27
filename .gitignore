@@ -30,3 +30,6 @@ yarn-error.log
 
 package-lock.json
 .nvmrc
+
+# Server-only compose settings (COMPOSE_FILE, SITE_ADDRESS)
+/.env

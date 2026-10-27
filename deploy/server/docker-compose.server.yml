@@ -1,0 +1,33 @@
+# Production server: Caddy listens on HTTP/HTTPS, gets the TLS certificate for
+# SITE_ADDRESS and proxies to the atlas. Use together with the main compose file;
+# relative paths below are relative to the repository root (the first file):
+#
+#   docker compose -f docker-compose.yml -f deploy/server/docker-compose.server.yml up -d
+services:
+  terriamap:
+    # Docker publishes ports past ufw, so terriajs-server must not listen on
+    # public addresses: only Caddy and the server itself reach it.
+    ports: !override
+      - "127.0.0.1:3001:3001"
+
+  caddy:
+    image: caddy:2.11.7
+    restart: unless-stopped
+    depends_on:
+      - terriamap
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    environment:
+      SITE_ADDRESS: ${SITE_ADDRESS:-maps.opendata.am}
+    volumes:
+      - ./deploy/server/Caddyfile:/etc/caddy/Caddyfile:ro
+      # Certificates and the ACME account; kept across restarts so that
+      # certificates are not requested again (Let's Encrypt rate limits)
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  caddy_data:
+  caddy_config:
