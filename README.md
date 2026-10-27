@@ -53,7 +53,7 @@ docker build -t armterriamap:latest . && docker compose up -d --no-build
 ```
 
 `.env` makes plain `docker compose` commands use both files; add `SITE_ADDRESS=...` to it to serve
-another domain. The build takes about half an hour on this server.
+another domain. The build takes about 10 minutes on this server.
 
 Updates of the catalog, config or translations (`config.json` is mounted as a single file, which
 `git pull` replaces, so the container is restarted):
