@@ -1,0 +1,231 @@
+{
+  "regionWmsMap": {
+    "ARM_MARZ": {
+      "layerName": "arm_marz",
+      "server": "data/regions/arm_marz/{z}/{x}/{y}.pbf",
+      "serverType": "MVT",
+      "serverMinZoom": 0,
+      "serverMaxNativeZoom": 11,
+      "serverMaxZoom": 28,
+      "regionIdsFile": "data/regions/regionids/arm_marz_iso.json",
+      "uniqueIdProp": "FID",
+      "regionProp": "iso",
+      "nameProp": "name_en",
+      "textCodes": true,
+      "aliases": [
+        "arm_marz",
+        "marz",
+        "marz_code",
+        "marz_iso",
+        "marz_name",
+        "marz_en",
+        "marz_hy",
+        "marz_ru",
+        "province",
+        "province_name",
+        "region",
+        "adm1_pcode",
+        "adm1_en",
+        "adm1_hy",
+        "adm1_ru",
+        "adm1_name",
+        "adm1",
+        "iso_3166_2",
+        "iso3166_2",
+        "մարզ",
+        "марз",
+        "область",
+        "регион"
+      ],
+      "dataReplacements": [
+        [
+          "^(?:aragats?otn)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-ag"
+        ],
+        [
+          "^(?:արագածոտն)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-ag"
+        ],
+        [
+          "^(?:арагацотн)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-ag"
+        ],
+        [
+          "^(?:am02)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-ag"
+        ],
+        [
+          "^(?:ararat)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-ar"
+        ],
+        [
+          "^(?:արարատ)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-ar"
+        ],
+        [
+          "^(?:арарат)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-ar"
+        ],
+        [
+          "^(?:am03)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-ar"
+        ],
+        [
+          "^(?:armavir)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-av"
+        ],
+        [
+          "^(?:արմավիր)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-av"
+        ],
+        [
+          "^(?:армавир)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-av"
+        ],
+        [
+          "^(?:am04)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-av"
+        ],
+        [
+          "^(?:(?:c\\. ?|city of )?y?erevan)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-er"
+        ],
+        [
+          "^(?:(?:ք\\. ?)?եր[ևեւ]+ան)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-er"
+        ],
+        [
+          "^(?:(?:г\\. ?|город )?ереван)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-er"
+        ],
+        [
+          "^(?:am01)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-er"
+        ],
+        [
+          "^(?:gegh?ar ?k'?unik)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-gr"
+        ],
+        [
+          "^(?:գեղարքունիք)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-gr"
+        ],
+        [
+          "^(?:гех?аркуник)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-gr"
+        ],
+        [
+          "^(?:гегаркуник)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-gr"
+        ],
+        [
+          "^(?:am05)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-gr"
+        ],
+        [
+          "^(?:kotay[kq])[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-kt"
+        ],
+        [
+          "^(?:կոտայք)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-kt"
+        ],
+        [
+          "^(?:котайк)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-kt"
+        ],
+        [
+          "^(?:am07)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-kt"
+        ],
+        [
+          "^(?:lori)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-lo"
+        ],
+        [
+          "^(?:լոռ[իու])[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-lo"
+        ],
+        [
+          "^(?:лори)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-lo"
+        ],
+        [
+          "^(?:am06)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-lo"
+        ],
+        [
+          "^(?:shirak)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-sh"
+        ],
+        [
+          "^(?:շիրակ)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-sh"
+        ],
+        [
+          "^(?:ширак)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-sh"
+        ],
+        [
+          "^(?:am08)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-sh"
+        ],
+        [
+          "^(?:s[iy]uni[kq])[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-su"
+        ],
+        [
+          "^(?:սյունիք)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-su"
+        ],
+        [
+          "^(?:сюник)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-su"
+        ],
+        [
+          "^(?:am09)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-su"
+        ],
+        [
+          "^(?:tavush)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-tv"
+        ],
+        [
+          "^(?:տավուշ)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-tv"
+        ],
+        [
+          "^(?:тавуш)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-tv"
+        ],
+        [
+          "^(?:am11)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-tv"
+        ],
+        [
+          "^(?:vayot[sz]'?[ -]?dzor)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-vd"
+        ],
+        [
+          "^(?:վայոց ձոր)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-vd"
+        ],
+        [
+          "^(?:вайоц[ -]?дзор)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-vd"
+        ],
+        [
+          "^(?:am10)[^ ,-]*(?: (?:province|marz|region|city|область|марз|регион|մարզ))?$",
+          "am-vd"
+        ]
+      ],
+      "description": "Marzes (provinces) of Armenia",
+      "bbox": [
+        43.45,
+        38.84,
+        46.63,
+        41.3
+      ]
+    }
+  }
+}

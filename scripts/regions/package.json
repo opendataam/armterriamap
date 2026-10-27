@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "name": "armterriamap-regions",
+  "description": "Builds region mapping layers (boundaries, vector tiles, region ids) for the atlas",
+  "type": "module",
+  "scripts": {
+    "build-marz": "node build-marz.mjs"
+  },
+  "dependencies": {
+    "geojson-vt": "5.0.4",
+    "osmtogeojson": "3.0.0-beta.5",
+    "vt-pbf": "3.1.3"
+  }
+}
