@@ -54,6 +54,15 @@ yarn gulp dev
 1. Publish the data on [data.opendata.am](https://data.opendata.am), or upload it to `wwwroot/data`
 2. Write new record to `wwwroot/init/simple.json` to add it to the public catalog
 
+Check that every layer of the catalog can be loaded from its source (no dependencies, Node.js >= 22):
+
+```bash
+node scripts/check-catalog.mjs
+```
+
+The GitHub Actions workflow "Check catalog" runs the same check weekly and on pull requests that change
+`wwwroot/init/`.
+
 Catalog names and descriptions are written as translation keys, e.g. `"name": "translate#catalog.climate.zones"`,
 with the texts under `catalog` in `wwwroot/languages/{en,hy,ru}/languageOverrides.json`. TerriaJS itself does not
 translate catalog entries; `index.js` replaces the keys when the map loads and when the language changes.

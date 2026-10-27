@@ -1,0 +1,25 @@
+# Checks that every layer of the catalog can still be loaded from its source
+# (WMS servers, CKAN, HDX, USGS, GBIF, ...). External services change without
+# notice, so this also runs weekly.
+
+name: Check catalog
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "wwwroot/init/**"
+      - "scripts/check-catalog.mjs"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
+        with:
+          node-version: 24.x
+      - run: node scripts/check-catalog.mjs
