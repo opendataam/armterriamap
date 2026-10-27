@@ -1,0 +1,13 @@
+services:
+  terriamap:
+    build: .
+    image: armterriamap:latest
+    ports:
+      - "3001:3001"
+    restart: unless-stopped
+    volumes:
+      # Catalog, config and translations are read by the browser at load time,
+      # so edits to these files apply after a page refresh, without a rebuild.
+      - ./wwwroot/config.json:/app/wwwroot/config.json:ro
+      - ./wwwroot/init:/app/wwwroot/init:ro
+      - ./wwwroot/languages:/app/wwwroot/languages:ro
