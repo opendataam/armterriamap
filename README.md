@@ -11,7 +11,7 @@ The application is built from source; compiled output (`wwwroot/build/`) is not 
 - `wwwroot/init/simple.json` - data catalog
 - `wwwroot/languages/<lng>/languageOverrides.json` - translations of the interface and map-specific texts
 - `wwwroot/data/` - data files served with the map
-- `wwwroot/about.html`, `wwwroot/help/`, `wwwroot/public/` - static pages
+- `wwwroot/about.html` - about page
 - `lib/`, `index.js`, `gulpfile.js`, `buildprocess/` - TerriaMap application source
 - `serverconfig.json` - terriajs-server configuration (proxy whitelist etc.)
 
@@ -53,9 +53,6 @@ yarn gulp dev
 
 1. Upload data to `wwwroot/data` directory, it should be one of the supported data formats
 2. Write new record to `wwwroot/init/simple.json` to add it to the public catalog
-
-HotOSM layers are stored as zip archives in `wwwroot/data/hotosm/`; the Docker build unpacks them.
-For local development run `sh unpack.sh` in that directory.
 
 Resources of data.opendata.am are served without CORS headers, so the map loads them through
 the terriajs-server proxy (`allowProxyFor` in `serverconfig.json`).
