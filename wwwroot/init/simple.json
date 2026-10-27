@@ -824,7 +824,7 @@
           "maximumLevel": 20,
           "opacity": 1.0
         },
-        "image": "https://tiles.stadiamaps.com/tiles/alidade_smooth/7/79/48.png",
+        "image": "https://tiles.stadiamaps.com/tiles/alidade_smooth/8/159/96.png",
         "contrastColor": "#000000"
       },
       {
@@ -837,7 +837,7 @@
           "maximumLevel": 20,
           "opacity": 1.0
         },
-        "image": "https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/7/79/48.png",
+        "image": "https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/8/159/96.png",
         "contrastColor": "#ffffff"
       },
       {
@@ -850,7 +850,7 @@
           "maximumLevel": 20,
           "opacity": 1.0
         },
-        "image": "https://tiles.stadiamaps.com/tiles/outdoors/7/79/48.png",
+        "image": "https://tiles.stadiamaps.com/tiles/outdoors/8/159/96.png",
         "contrastColor": "#000000"
       },
       {
@@ -863,7 +863,7 @@
           "maximumLevel": 20,
           "opacity": 1.0
         },
-        "image": "https://tiles.stadiamaps.com/tiles/stamen_terrain/7/79/48.png",
+        "image": "https://tiles.stadiamaps.com/tiles/stamen_terrain/8/159/96.png",
         "contrastColor": "#000000"
       },
       {
@@ -876,8 +876,28 @@
           "maximumLevel": 20,
           "opacity": 1.0
         },
-        "image": "https://tiles.stadiamaps.com/tiles/osm_bright/7/79/48.png",
+        "image": "https://tiles.stadiamaps.com/tiles/osm_bright/8/159/96.png",
         "contrastColor": "#000000"
+      },
+      {
+        "item": "basemap-bing-aerial-with-labels",
+        "image": "https://t0.ssl.ak.dynamic.tiles.virtualearth.net/comp/ch/12211111?mkt=en-US&it=A,G,L&n=z"
+      },
+      {
+        "item": "basemap-bing-aerial",
+        "image": "https://ecn.t0.tiles.virtualearth.net/tiles/a12211111.jpeg?g=15646"
+      },
+      {
+        "item": "basemap-bing-roads",
+        "image": "https://t0.ssl.ak.dynamic.tiles.virtualearth.net/comp/ch/12211111?mkt=en-US&it=G,L&shading=hill&n=z"
+      },
+      {
+        "item": "basemap-natural-earth-II",
+        "image": "https://storage.googleapis.com/terria-datasets-public/basemaps/natural-earth-tiles/7/79/79.png"
+      },
+      {
+        "item": "basemap-openstreetmap",
+        "image": "https://tile.openstreetmap.org/8/159/96.png"
       }
     ],
     "defaultBaseMapId": "basemap-stadia-alidade-smooth",
