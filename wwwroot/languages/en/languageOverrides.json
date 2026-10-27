@@ -244,6 +244,17 @@
       "faults": "Secondary faults",
       "construction": "Construction projects"
     },
+    "threeD": {
+      "photorealistic": {
+        "name": "Photorealistic 3D (Google)",
+        "description": "Photorealistic 3D model of the terrain and buildings by Google, delivered through Cesium ion. Shown only in the 3D view: switch the layer on and zoom in to Yerevan or another town."
+      },
+      "osmBuildings": {
+        "name": "Buildings from OpenStreetMap (3D)",
+        "description": "3D buildings of the world from OpenStreetMap data (Cesium OSM Buildings); heights come from OpenStreetMap tags. Shown only in the 3D view.\n\n© OpenStreetMap contributors, ODbL."
+      },
+      "name": "3D: terrain and buildings"
+    },
     "odam": {
       "name": "Open Data Armenia: datasets for the atlas",
       "description": "Datasets of [data.opendata.am](https://data.opendata.am) tagged `atlas`, loaded from the catalogue when the map opens. Tag a dataset `atlas` to add it here."

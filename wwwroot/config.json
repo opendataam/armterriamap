@@ -11,6 +11,12 @@
       "data/regions/regionMapping.json",
       "build/TerriaJS/data/regionMapping.json"
     ],
+    // Cesium ion token of the atlas for Cesium World Terrain, Bing imagery and 3D tiles.
+    // Browsers send it to Cesium ion, so it is public by design: it has only the
+    // read scopes (assets:read, assets:limited-list, geocode).
+    "cesiumIonAccessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub25jZSI6IlFweFh3di04RjNJWFJZSXQiLCJqdGkiOiJkNTg4M2VhMS04OTg0LTQ2ZTMtYTZhMy01ZTJhNWQxNWY4YzAiLCJpZCI6NTM2NjQ3LCJzdWIiOiJpYmVndGluIiwiaXNzIjoiaHR0cHM6Ly9hcGkuY2VzaXVtLmNvbSIsImF1ZCI6Ik9wZW5EYXRhQXJtZW5pYSIsImlhdCI6MTc5MzEzMDY5NX0.Irimz2DQQ2sL5CeHGKQEbSy_O8bR2bcSy7EXWX8HshY",
+    // Bing base maps from Cesium ion
+    "useCesiumIonBingImagery": true,
     // Log ConsoleAnalytics events to console
     // logToConsole: true,
     /* Text that appears at the bottom of the map */

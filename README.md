@@ -111,9 +111,14 @@ with the texts under `catalog` in `wwwroot/languages/{en,hy,ru}/languageOverride
 translate catalog entries; `index.js` replaces the keys when the map loads and when the language changes.
 
 Base maps are the `baseMaps` of `wwwroot/init/simple.json`: raster styles of [Stadia Maps](https://stadiamaps.com)
-(the default is Alidade Smooth), then Natural Earth II and OpenStreetMap from TerriaJS. Stadia authorises tile requests
-from maps.opendata.am by domain, as set in the Stadia account, and from localhost without any authorisation, so the
-config has no API key. To serve the atlas under another domain, add the domain in the Stadia account.
+(the default is Alidade Smooth), then Bing imagery from Cesium ion, Natural Earth II and OpenStreetMap from TerriaJS.
+Stadia authorises tile requests from maps.opendata.am by domain, as set in the Stadia account, and from localhost without
+any authorisation, so the config has no API key. To serve the atlas under another domain, add the domain in the Stadia account.
+
+The map opens in 3D with Cesium World Terrain. Terrain, Bing imagery and the 3D tiles of the group "3D: terrain and
+buildings" (Google Photorealistic 3D Tiles, Cesium OSM Buildings) come from [Cesium ion](https://ion.cesium.com) with the
+token `cesiumIonAccessToken` in `wwwroot/config.json`. Browsers send the token to Cesium ion, so it is public: keep it
+limited to the read scopes (`assets:read`, `assets:limited-list`, `geocode`) and to the atlas URLs in the ion account.
 
 Resources of data.opendata.am are served without CORS headers, so the map loads them through
 the terriajs-server proxy (`allowProxyFor` in `serverconfig.json`).
