@@ -1,4 +1,5 @@
 import i18next from "i18next";
+import { autorun, reaction, runInAction } from "mobx";
 import ConsoleAnalytics from "terriajs/lib/Core/Analytics/ConsoleAnalytics";
 import GoogleAnalytics from "terriajs/lib/Core/Analytics/GoogleAnalytics";
 import registerCatalogMembers from "terriajs/lib/Models/Catalog/registerCatalogMembers";
@@ -73,6 +74,30 @@ function translateCatalog() {
   visit(terria.catalog.group);
 }
 
+// Story scenes of the init file can be written with "translate#key" titles
+// and texts too. Their keys are kept by scene id, so scenes captured by the
+// user are left as they are.
+const storyKeys = new Map();
+function translateStories() {
+  terria.stories.forEach((story) => {
+    if (!storyKeys.has(story.id) && story.title?.startsWith(TRANSLATE_PREFIX)) {
+      storyKeys.set(story.id, { title: story.title, text: story.text });
+    }
+  });
+  const t = (value) =>
+    value?.startsWith(TRANSLATE_PREFIX)
+      ? i18next.t(value.slice(TRANSLATE_PREFIX.length))
+      : value;
+  runInAction(() => {
+    terria.stories = terria.stories.map((story) => {
+      const keys = storyKeys.get(story.id);
+      return keys
+        ? { ...story, title: t(keys.title), text: t(keys.text) }
+        : story;
+    });
+  });
+}
+
 export default terria
   .start({
     applicationUrl: window.location,
@@ -103,8 +128,39 @@ export default terria
     // Load init sources like init files and share links
     terria.loadInitSources().then((result) => {
       result.raiseError(terria);
-      translateCatalog();
-      i18next.on("languageChanged", translateCatalog);
+      const translate = () => {
+        translateCatalog();
+        translateStories();
+        // The welcome message shows the video title from config.json as is
+        runInAction(() => {
+          terria.configParameters.welcomeMessageVideo.videoTitle = i18next.t(
+            "gettingstarted.title"
+          );
+        });
+      };
+      translate();
+      i18next.on("languageChanged", translate);
+
+      // On the first visit TerriaJS opens the story prompt on top of the
+      // welcome message. Hold the prompt back and ask once the welcome
+      // message is closed.
+      const notifications = terria.notificationState;
+      autorun(() => {
+        if (
+          viewState.showWelcomeMessage &&
+          notifications.currentNotification?.type === "story"
+        ) {
+          notifications.dismissCurrentNotification();
+        }
+      });
+      reaction(
+        () => viewState.showWelcomeMessage,
+        (shown, wasShown) => {
+          if (wasShown && !shown && !viewState.storyShown) {
+            runInAction(() => terria.storyPromptShown++);
+          }
+        }
+      );
     });
 
     try {

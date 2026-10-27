@@ -54,6 +54,11 @@ yarn gulp dev
 1. Publish the data on [data.opendata.am](https://data.opendata.am), or upload it to `wwwroot/data`
 2. Write new record to `wwwroot/init/simple.json` to add it to the public catalog
 
+The story "Armenia in maps" is the `stories` list of `wwwroot/init/simple.json`: each scene sets the
+workbench (catalog item ids) and the camera. Scene titles and texts are translation keys under `atlasStory`
+in `languageOverrides.json`, and the welcome message texts are under `welcomeMessage`. On the first visit
+the story is offered after the welcome message is closed.
+
 Check that every layer of the catalog can be loaded from its source (no dependencies, Node.js >= 22):
 
 ```bash
