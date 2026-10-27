@@ -36,6 +36,38 @@ docker build -t armterriamap:latest . && docker compose up -d --no-build --force
 into the container, so edits to the catalog, config and translations apply after
 a browser refresh, without a rebuild. Any other change needs `docker compose up -d --build`.
 
+### Deploy on a server
+
+maps.opendata.am runs on a Hetzner CX23 (2 vCPU, 4 GB RAM, Ubuntu) with Docker, 4 GB of swap for
+the build and ufw allowing only ports 22, 80 and 443. `deploy/server/docker-compose.server.yml` adds
+[Caddy](https://caddyserver.com), which gets the TLS certificate from Let's Encrypt and proxies to
+the atlas; terriajs-server listens only on `127.0.0.1:3001`. The DNS record of the site must point
+to the server before Caddy can get the certificate.
+
+First installation, as root:
+
+```bash
+git clone https://github.com/opendataam/armterriamap.git /opt/armterriamap && cd /opt/armterriamap
+echo "COMPOSE_FILE=docker-compose.yml:deploy/server/docker-compose.server.yml" > .env
+docker build -t armterriamap:latest . && docker compose up -d --no-build
+```
+
+`.env` makes plain `docker compose` commands use both files; add `SITE_ADDRESS=...` to it to serve
+another domain. The build takes about half an hour on this server.
+
+Updates of the catalog, config or translations (`config.json` is mounted as a single file, which
+`git pull` replaces, so the container is restarted):
+
+```bash
+cd /opt/armterriamap && git pull && docker compose restart terriamap
+```
+
+Updates of the application code:
+
+```bash
+cd /opt/armterriamap && git pull && docker build -t armterriamap:latest . && docker compose up -d --no-build
+```
+
 ### Develop locally
 
 Requires Node.js >= 22.

@@ -1,0 +1,5 @@
+# Caddy gets and renews the certificate for SITE_ADDRESS (set in
+# docker-compose.server.yml) and redirects HTTP to HTTPS.
+{$SITE_ADDRESS} {
+	reverse_proxy terriamap:3001
+}
