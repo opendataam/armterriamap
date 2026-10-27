@@ -121,7 +121,8 @@
           "id": "hot-populated_places",
           "name": "translate#catalog.admin.settlements.name",
           "description": "translate#catalog.admin.settlements.description",
-          "url": "https://production-raw-data-api.s3.amazonaws.com/ISO3/ARM/populated_places/hotosm_arm_populated_places_osm_geojson.zip"
+          "url": "https://production-raw-data-api.s3.amazonaws.com/ISO3/ARM/populated_places/hotosm_arm_populated_places_osm_geojson.zip",
+          "activeStyle": "place"
         }
       ]
     },
@@ -380,40 +381,44 @@
       "name": "translate#catalog.infrastructure.name",
       "members": [
         {
-          "type": "ckan-item",
+          "type": "geojson",
           "id": "arm-health-healthsites",
           "name": "translate#catalog.infrastructure.health",
-          "url": "https://data.opendata.am",
-          "datasetId": "healthsites-of-armenia",
-          "resourceId": "4c1fffc1-b547-45bb-bdaa-0e6e0cccf026"
+          "description": "translate#catalog.infrastructure.healthDescription",
+          "url": "https://data.opendata.am/dataset/c30103a9-216d-4e55-b446-e34a2f371a5d/resource/4c1fffc1-b547-45bb-bdaa-0e6e0cccf026/download/armenia.geojson",
+          "activeStyle": "amenity"
         },
         {
           "type": "geojson",
           "id": "hot-education_facilities",
           "name": "translate#catalog.infrastructure.education.name",
           "description": "translate#catalog.infrastructure.education.description",
-          "url": "https://production-raw-data-api.s3.amazonaws.com/ISO3/ARM/education_facilities/hotosm_arm_education_facilities_osm_geojson.zip"
+          "url": "https://production-raw-data-api.s3.amazonaws.com/ISO3/ARM/education_facilities/hotosm_arm_education_facilities_osm_geojson.zip",
+          "activeStyle": "amenity"
         },
         {
           "type": "geojson",
           "id": "hot-financial_services",
           "name": "translate#catalog.infrastructure.financial.name",
           "description": "translate#catalog.infrastructure.financial.description",
-          "url": "https://production-raw-data-api.s3.amazonaws.com/ISO3/ARM/financial_services/hotosm_arm_financial_services_osm_geojson.zip"
+          "url": "https://production-raw-data-api.s3.amazonaws.com/ISO3/ARM/financial_services/hotosm_arm_financial_services_osm_geojson.zip",
+          "activeStyle": "amenity"
         },
         {
           "type": "geojson",
           "id": "hot-airports",
           "name": "translate#catalog.infrastructure.airports.name",
           "description": "translate#catalog.infrastructure.airports.description",
-          "url": "https://production-raw-data-api.s3.amazonaws.com/ISO3/ARM/airports/hotosm_arm_airports_osm_geojson.zip"
+          "url": "https://production-raw-data-api.s3.amazonaws.com/ISO3/ARM/airports/hotosm_arm_airports_osm_geojson.zip",
+          "activeStyle": "aeroway"
         },
         {
           "type": "geojson",
           "id": "hot-railways",
           "name": "translate#catalog.infrastructure.railways.name",
           "description": "translate#catalog.infrastructure.railways.description",
-          "url": "https://production-raw-data-api.s3.amazonaws.com/ISO3/ARM/railways/hotosm_arm_railways_osm_geojson.zip"
+          "url": "https://production-raw-data-api.s3.amazonaws.com/ISO3/ARM/railways/hotosm_arm_railways_osm_geojson.zip",
+          "activeStyle": "railway"
         }
       ]
     },

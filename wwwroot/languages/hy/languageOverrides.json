@@ -2454,6 +2454,7 @@
     },
     "infrastructure": {
       "health": "Բժշկական հաստատություններ (healthsites.io)",
+      "healthDescription": "Հիվանդանոցներ, կլինիկաներ, դեղատներ և ատամնաբուժարաններ Հայաստանում՝ ըստ healthsites.io-ի, OpenStreetMap-ի հիման վրա։\n\nԱղբյուր՝ [Healthsites of Armenia](https://data.opendata.am/dataset/healthsites-of-armenia), CC BY-SA։",
       "education": {
         "name": "Կրթական հաստատություններ",
         "description": "Կրթական հաստատություններ՝ ըստ OpenStreetMap-ի, ամսական արտահանում Humanitarian OpenStreetMap Team-ի կողմից։\n\nԱղբյուր՝ [HDX](https://data.humdata.org/dataset/hotosm_arm_education_facilities), © OpenStreetMap contributors, ODbL։"

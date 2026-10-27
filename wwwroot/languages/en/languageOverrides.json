@@ -192,6 +192,7 @@
     },
     "infrastructure": {
       "health": "Health facilities (healthsites.io)",
+      "healthDescription": "Hospitals, clinics, pharmacies and dentists in Armenia from healthsites.io, based on OpenStreetMap.\n\nSource: [Healthsites of Armenia](https://data.opendata.am/dataset/healthsites-of-armenia), CC BY-SA.",
       "education": {
         "name": "Education facilities",
         "description": "Education facilities in Armenia from OpenStreetMap, exported monthly by the Humanitarian OpenStreetMap Team.\n\nSource: [HDX](https://data.humdata.org/dataset/hotosm_arm_education_facilities), © OpenStreetMap contributors, ODbL."

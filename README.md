@@ -24,7 +24,13 @@ docker compose up -d --build
 ```
 
 The map is served at http://localhost:3001. The image builds TerriaMap from source,
-so no local Node.js is needed.
+so no local Node.js is needed. The build needs about 5 GB of memory in Docker. If
+`docker compose` stops with "cannot allocate memory", build the image with `docker build`
+and start it without building:
+
+```bash
+docker build -t armterriamap:latest . && docker compose up -d --no-build --force-recreate
+```
 
 `docker-compose.yml` mounts `wwwroot/config.json`, `wwwroot/init/` and `wwwroot/languages/`
 into the container, so edits to the catalog, config and translations apply after

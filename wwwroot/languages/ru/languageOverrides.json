@@ -2489,6 +2489,7 @@
     },
     "infrastructure": {
       "health": "Медицинские учреждения (healthsites.io)",
+      "healthDescription": "Больницы, клиники, аптеки и стоматологии Армении по данным healthsites.io на основе OpenStreetMap.\n\nИсточник: [Healthsites of Armenia](https://data.opendata.am/dataset/healthsites-of-armenia), CC BY-SA.",
       "education": {
         "name": "Учебные заведения",
         "description": "Учебные заведения в Армении по данным OpenStreetMap, ежемесячная выгрузка Humanitarian OpenStreetMap Team.\n\nИсточник: [HDX](https://data.humdata.org/dataset/hotosm_arm_education_facilities), © участники OpenStreetMap, ODbL."
