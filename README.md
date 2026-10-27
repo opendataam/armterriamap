@@ -110,6 +110,11 @@ Catalog names and descriptions are written as translation keys, e.g. `"name": "t
 with the texts under `catalog` in `wwwroot/languages/{en,hy,ru}/languageOverrides.json`. TerriaJS itself does not
 translate catalog entries; `index.js` replaces the keys when the map loads and when the language changes.
 
+Base maps are the `baseMaps` of `wwwroot/init/simple.json`: raster styles of [Stadia Maps](https://stadiamaps.com)
+(the default is Alidade Smooth), then Natural Earth II and OpenStreetMap from TerriaJS. Stadia authorises tile requests
+from maps.opendata.am by domain, as set in the Stadia account, and from localhost without any authorisation, so the
+config has no API key. To serve the atlas under another domain, add the domain in the Stadia account.
+
 Resources of data.opendata.am are served without CORS headers, so the map loads them through
 the terriajs-server proxy (`allowProxyFor` in `serverconfig.json`).
 
