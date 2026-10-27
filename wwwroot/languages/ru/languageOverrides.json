@@ -2541,6 +2541,17 @@
       "faults": "Второстепенные разломы",
       "construction": "Строительные проекты"
     },
+    "threeD": {
+      "photorealistic": {
+        "name": "Фотореалистичная 3D-модель (Google)",
+        "description": "Фотореалистичная трёхмерная модель рельефа и зданий от Google, через Cesium ion. Видна только в режиме 3D: включите слой и приблизьтесь к Еревану или другому городу."
+      },
+      "osmBuildings": {
+        "name": "Здания из OpenStreetMap (3D)",
+        "description": "Трёхмерные здания мира по данным OpenStreetMap (Cesium OSM Buildings); высоты взяты из тегов OpenStreetMap. Видны только в режиме 3D.\n\n© участники OpenStreetMap, ODbL."
+      },
+      "name": "3D: рельеф и здания"
+    },
     "odam": {
       "name": "Open Data Armenia: данные для атласа",
       "description": "Наборы данных [data.opendata.am](https://data.opendata.am) с тегом `atlas`, загружаемые из каталога при открытии карты. Добавьте датасету тег `atlas`, чтобы он появился здесь."

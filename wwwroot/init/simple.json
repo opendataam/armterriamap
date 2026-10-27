@@ -572,6 +572,31 @@
       ]
     },
     {
+      "type": "group",
+      "id": "arm-3d",
+      "name": "translate#catalog.threeD.name",
+      "members": [
+        {
+          "type": "3d-tiles",
+          "id": "google-photorealistic-3d",
+          "name": "translate#catalog.threeD.photorealistic.name",
+          "description": "translate#catalog.threeD.photorealistic.description",
+          "ionAssetId": 2275207,
+          "url": "https://tile.googleapis.com/v1/3dtiles/root.json",
+          "options": {
+            "showCreditsOnScreen": true
+          }
+        },
+        {
+          "type": "3d-tiles",
+          "id": "cesium-osm-buildings",
+          "name": "translate#catalog.threeD.osmBuildings.name",
+          "description": "translate#catalog.threeD.osmBuildings.description",
+          "ionAssetId": 96188
+        }
+      ]
+    },
+    {
       "type": "ckan-group",
       "id": "odam-atlas",
       "name": "translate#catalog.odam.name",
@@ -786,7 +811,7 @@
       }
     }
   ],
-  "viewerMode": "3dSmooth",
+  "viewerMode": "3d",
   "baseMaps": {
     "items": [
       {
@@ -863,6 +888,9 @@
       "basemap-stadia-outdoors",
       "basemap-stadia-stamen-terrain",
       "basemap-stadia-osm-bright",
+      "basemap-bing-aerial-with-labels",
+      "basemap-bing-aerial",
+      "basemap-bing-roads",
       "basemap-natural-earth-II",
       "basemap-openstreetmap"
     ]
