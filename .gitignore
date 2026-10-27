@@ -30,6 +30,3 @@ yarn-error.log
 
 package-lock.json
 .nvmrc
-
-# HotOSM GeoJSON unpacked from wwwroot/data/hotosm/*.zip (done in the Docker build)
-wwwroot/data/hotosm/*.geojson

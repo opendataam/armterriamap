@@ -19,10 +19,6 @@ RUN yarn install --frozen-lockfile --network-timeout 1000000
 COPY --chown=node:node . /app
 RUN yarn gulp release
 
-# HotOSM layers are stored as zip archives in git; the catalog references the
-# unpacked GeoJSON files.
-RUN cd wwwroot/data/hotosm && for f in *.zip; do unzip -oq "$f" && rm "$f"; done
-
 # deploy container
 FROM node:24-slim AS deploy
 
