@@ -60,6 +60,26 @@ For local development run `sh unpack.sh` in that directory.
 Resources of data.opendata.am are served without CORS headers, so the map loads them through
 the terriajs-server proxy (`allowProxyFor` in `serverconfig.json`).
 
+### Data from data.opendata.am
+
+The atlas data lives in the [Open Data Armenia catalogue](https://data.opendata.am) and is loaded
+when the map opens:
+
+- Catalog entries of type `ckan-item` reference a CKAN dataset and resource by id
+  (`datasetId`, `resourceId`); the data URL, description and licence come from CKAN.
+  TerriaJS does not apply styling traits to `ckan-item`, so layers that need a style
+  (e.g. a choropleth) use their own type (`csv`, `geojson`) with the CKAN resource URL.
+- The group "Open Data Armenia: datasets for the atlas" (`ckan-group`) lists every dataset tagged
+  `atlas` on data.opendata.am, grouped by CKAN group. Tag a dataset `atlas` to add it to the map.
+
+After rebuilding the marz boundaries, upload the new GeoJSON to the CKAN dataset
+[armenia-marz-boundaries-osm](https://data.opendata.am/dataset/armenia-marz-boundaries-osm)
+(`CKAN_API_TOKEN` is a token of a user who can edit the dataset):
+
+```bash
+curl -H "Authorization: $CKAN_API_TOKEN" -F id=88d2a994-b95a-4684-8a10-a716269b8dcd -F upload=@wwwroot/data/regions/arm_marz.geojson https://data.opendata.am/api/3/action/resource_update
+```
+
 ### Region mapping (choropleths by marz)
 
 A CSV with a column of marzes is shown as a choropleth without any configuration. The column is

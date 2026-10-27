@@ -12,14 +12,12 @@
       "id": "arm-admin",
       "members": [
         {
-          "type": "geojson",
+          "type": "ckan-item",
           "name": "Marzes (provinces)",
           "id": "arm-admin-marz",
-          "description": "Boundaries of the 11 marzes (provinces) of Armenia, including Yerevan.\n\nSource: [OpenStreetMap](https://www.openstreetmap.org/relation/364087) contributors, ODbL. Built by `scripts/regions/build-marz.mjs`.",
-          "url": "data/regions/arm_marz.geojson",
-          "featureInfoTemplate": {
-            "template": "<h3>{{name_en}}</h3><p>{{name_hy}}<br/>{{name_ru}}</p><p>ISO 3166-2: {{iso}}</p>"
-          }
+          "url": "https://data.opendata.am",
+          "datasetId": "armenia-marz-boundaries-osm",
+          "resourceId": "88d2a994-b95a-4684-8a10-a716269b8dcd"
         },
         {
           "type": "csv",
@@ -37,6 +35,32 @@
           "activeStyle": "T_TL"
         }
       ]
+    },
+    {
+      "name": "Healthcare",
+      "type": "group",
+      "id": "arm-health",
+      "members": [
+        {
+          "type": "ckan-item",
+          "name": "Health facilities (healthsites.io)",
+          "id": "arm-health-healthsites",
+          "url": "https://data.opendata.am",
+          "datasetId": "healthsites-of-armenia",
+          "resourceId": "4c1fffc1-b547-45bb-bdaa-0e6e0cccf026"
+        }
+      ]
+    },
+    {
+      "name": "Open Data Armenia: datasets for the atlas",
+      "type": "ckan-group",
+      "id": "odam-atlas",
+      "description": "Datasets of [data.opendata.am](https://data.opendata.am) tagged `atlas`, loaded from the catalogue when the map opens. Tag a dataset `atlas` to add it here.",
+      "url": "https://data.opendata.am",
+      "filterQuery": [{ "fq": "tags:atlas" }],
+      "groupBy": "group",
+      "ungroupedTitle": "Other",
+      "supportedResourceFormats": [{ "id": "CSV", "formatRegex": "^csv$" }]
     },
     {
       "id": "ZIdekvc10z",
@@ -107,13 +131,6 @@
           "description": "Armenian roads from HotOSM communuty (original source - Humanitarian Data Exchange",
           "id": "hotosmroads",
           "url": "data/hotosm/roads.geojson"
-        },
-        {
-          "type": "geojson",
-          "name": "Health facilities",
-          "description": "Armenian health facilities from HotOSM communuty (original source - Humanitarian Data Exchange",
-          "id": "hotosmhealth",
-          "url": "data/hotosm/health.geojson"
         }
       ]
     },
@@ -122,11 +139,13 @@
       "type": "group",
       "members": [
         {
-          "type": "kml",
+          "type": "ckan-item",
           "name": "December 1988 Leninakan-Spitak-Kirovakan, Armenia Images",
           "description": "The magnitude 6.9 earthquake shook northwestern Armenia, and was followed four minutes later by a magnitude 5.8 aftershock. The earthquakes affected an area 80 kilometers in diameter. This set includes damage photographs taken in and around the devastated cities of Spitak and Leninakan, where 25,000 deaths occurred. Location: Northwestern Armenian SSR, 18 kilometers north northwest of Spitak. Damage: $14.2 billion. Fifteen thousand were injured and 517,000 lost their homes. The death toll (25,000) could have been much worse had it not been for the heroic rescue of 15,000 who were pulled from the rubble.",
           "id": "event0001",
-          "url": "data/events/noaa_1998.kml"
+          "url": "https://data.opendata.am",
+          "datasetId": "the-spitak-earthquake",
+          "resourceId": "2097b1a7-fdc7-4f3d-9e5f-79e829bf59b6"
         }
       ]
     },
