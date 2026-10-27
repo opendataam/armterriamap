@@ -1,4 +1,17 @@
-@forward "~terriajs/lib/Sass/common/_default_variables.scss";
+// Inter has no Armenian glyphs, so the browser takes them from Noto Sans Armenian
+// (loaded in wwwroot/index.ejs).
+@forward "~terriajs/lib/Sass/common/_default_variables.scss" with (
+  $font-base: (
+    "Inter",
+    "Noto Sans Armenian",
+    sans-serif
+  ),
+  $font-pop: (
+    "Inter",
+    "Noto Sans Armenian",
+    sans-serif
+  )
+);
 /**
 // To customise the look of your map, uncomment and change values here (remove line above after uncommenting) and in lib/Views/global.scss
 

@@ -1,6 +1,9 @@
+import i18next from "i18next";
 import ConsoleAnalytics from "terriajs/lib/Core/Analytics/ConsoleAnalytics";
 import GoogleAnalytics from "terriajs/lib/Core/Analytics/GoogleAnalytics";
 import registerCatalogMembers from "terriajs/lib/Models/Catalog/registerCatalogMembers";
+import CommonStrata from "terriajs/lib/Models/Definition/CommonStrata";
+import NominatimSearchProvider from "terriajs/lib/Models/SearchProviders/NominatimSearchProvider";
 import registerSearchProviders from "terriajs/lib/Models/SearchProviders/registerSearchProviders";
 import ShareDataService from "terriajs/lib/Models/ShareDataService";
 import Terria from "terriajs/lib/Models/Terria";
@@ -96,6 +99,21 @@ export default terria
         styleSheet.innerText = fontImports;
         document.head.appendChild(styleSheet);
       }
+
+      // Nominatim returns place names in the browser language; ask for the
+      // interface language instead, and follow language switches.
+      const setSearchLanguage = () => {
+        const language = i18next.resolvedLanguage ?? i18next.language;
+        terria.searchBarModel.locationSearchProvidersArray
+          .filter((provider) => provider.type === NominatimSearchProvider.type)
+          .forEach((provider) => {
+            const url = new URL(provider.url);
+            url.searchParams.set("accept-language", language);
+            provider.setTrait(CommonStrata.override, "url", url.toString());
+          });
+      };
+      setSearchLanguage();
+      i18next.on("languageChanged", setSearchLanguage);
     } catch (e) {
       console.error(e);
       console.error(e.stack);

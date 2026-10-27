@@ -73,20 +73,23 @@
       "debug": false,
       "languages": {
         "en": "English",
-        "am": "Armenian",
-        "ru": "Russian",
-        "fr": "Français"
+        "hy": "Հայերեն",
+        "ru": "Русский"
       },
       "fallbackLanguage": "en"
     },
     "searchBarConfig": {},
+    // Nominatim (OpenStreetMap). Place names come in the browser's language.
+    // Usage policy: https://operations.osmfoundation.org/policies/nominatim/
+    // (search runs on Enter only, no autocomplete).
     "searchProviders": [
       {
-        "id": "search-provider/cesium-ion",
-        "type": "cesium-ion-search-provider",
+        "id": "search-provider/nominatim",
+        "type": "nominatim-search-provider",
         "name": "translate#viewModels.searchLocations",
         "flightDurationSeconds": 1.5,
-        "minCharacters": 3
+        "minCharacters": 3,
+        "maxResults": 10
       }
     ],
     "helpContent": [

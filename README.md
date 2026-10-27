@@ -41,7 +41,8 @@ yarn gulp dev
 
 ### Translation
 
-1. Languages are enabled in `wwwroot/config.json` (`languageConfiguration`)
+1. Languages are enabled in `wwwroot/config.json` (`languageConfiguration`): English (`en`), Armenian (`hy`) and Russian (`ru`).
+   The language can be set in the URL with `?lng=hy`
 2. Edit `wwwroot/languages/<lng>/languageOverrides.json`. Keys in this file take precedence
    over the TerriaJS translations, so it can contain both map-specific texts and translations
    of any TerriaJS interface string (see `node_modules/terriajs/wwwroot/languages/en/translation.json`

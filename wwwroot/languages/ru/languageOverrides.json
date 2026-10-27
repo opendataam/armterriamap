@@ -76,45 +76,87 @@
       },
       "step4": {
         "title": "Закрыть режим разделенного экрана",
-        "markdownDescription": "- Выйдите из режима разделенного экрана, нажав \"x\" на заголовке Split Screen Mode в верстаке\n- Удалите дубликат набора данных в верстаке с помощью выпадающего меню с тремя точками"
+        "markdownDescription": "- Выйдите из режима разделенного экрана, нажав \"x\" на заголовке режима разделённого экрана на рабочей панели\n- Удалите дубликат набора данных на рабочей панели с помощью выпадающего меню с тремя точками"
       }
     }
   },
   "helpContentTerm1": {
-    "term": "dataset",
-    "aliases": ["data set", "data sets", "datasets"],
-    "content": "A collection of related information, organised as one using a common data structure, e.g. \"average house prices in Sydney for 2019\" or \"minimum and maximum daily temperature\""
+    "term": "набор данных",
+    "aliases": [
+      "набора данных",
+      "набору данных",
+      "набором данных",
+      "наборе данных",
+      "наборы данных",
+      "наборов данных",
+      "наборам данных",
+      "наборами данных",
+      "наборах данных",
+      "датасет",
+      "датасеты"
+    ],
+    "content": "Совокупность связанных сведений, объединенных общей структурой данных, например «средние цены на жилье в Ереване за 2019 год» или «минимальная и максимальная суточная температура»"
   },
   "helpContentTerm2": {
-    "term": "time series",
-    "aliases": ["timeseries"],
-    "content": "A sequence of data collected over different points in time, e.g. temperature sensor data or a gallery of images of the same location"
+    "term": "временной ряд",
+    "aliases": [
+      "временного ряда",
+      "временному ряду",
+      "временным рядом",
+      "временном ряде",
+      "временные ряды",
+      "временных рядов",
+      "временным рядам",
+      "временными рядами",
+      "временных рядах"
+    ],
+    "content": "Последовательность данных, собранных в разные моменты времени, например показания датчика температуры или серия снимков одного и того же места"
   },
   "helpContentTerm3": {
-    "term": "workbench",
-    "content": "The panel on the left side of the screen that shows what datasets you have added to the map"
+    "term": "рабочая панель",
+    "content": "Панель в левой части экрана, на которой отображаются наборы данных, добавленные на карту"
   },
   "helpContentTerm4": {
     "term": "4D",
-    "content": "3D data that also has a time-series component"
+    "content": "3D-данные, у которых также есть компонент временного ряда"
   },
   "helpContentTerm5": {
-    "term": "catalog",
-    "aliases": ["catalogue"],
-    "content": "the inventory of all datasets available to be added to the map"
+    "term": "каталог",
+    "aliases": [
+      "каталога",
+      "каталогу",
+      "каталогом",
+      "каталоге",
+      "каталог данных",
+      "каталога данных",
+      "каталоге данных"
+    ],
+    "content": "перечень всех наборов данных, которые можно добавить на карту"
   },
   "helpContentTerm6": {
-    "term": "base maps",
-    "aliases": ["basemap", "base map", "basemaps"],
-    "content": "Different map options for the blank base map, such as Bing imagery, roads, dark or light maps"
+    "term": "базовые карты",
+    "aliases": [
+      "базовая карта",
+      "базовой карты",
+      "базовую карту",
+      "базовой картой",
+      "базовой карте",
+      "базовых карт",
+      "базовым картам",
+      "базовыми картами",
+      "базовых картах",
+      "подложка",
+      "подложки"
+    ],
+    "content": "Варианты фоновой базовой карты, например снимки Bing, дороги, темная или светлая карта"
   },
   "helpContentTerm7": {
-    "term": "source dataset",
-    "content": "The dataset you added to your workbench that allows for difference calculations"
+    "term": "исходный набор данных",
+    "content": "Набор данных на рабочей панели, по которому вычисляется разница"
   },
   "helpContentTerm8": {
-    "term": "preview style",
-    "content": "The way the dataset appears in the preview window. We recommend true colour to search for cloud-free images"
+    "term": "стиль просмотра",
+    "content": "Способ отображения набора данных в окне предварительного просмотра. Для поиска снимков без облаков рекомендуем естественные цвета"
   },
   "general": {
     "close": "Закрыть",
@@ -126,6 +168,12 @@
     "delete": "Удалить",
     "cancel": "Отменить",
     "confirm": "Подтвердить"
+  },
+  "browsers": {
+    "chrome": "Google Chrome",
+    "firefox": "Mozilla Firefox",
+    "edge": "Microsoft Edge",
+    "safari": "Apple Safari"
   },
   "trainer": {
     "expandTrainer": "Показать детали одного шага",
@@ -140,6 +188,7 @@
       "close": "Возможно позже",
       "start": "Начать экскурсию"
     },
+    "finish": "Завершить",
     "locationSearchInput": {
       "content": "## Поиск места\n\nВведите населенный пункт или адрес, чтобы легко найти интересующую вас точку на карте."
     },
@@ -173,10 +222,15 @@
     "myLocation": "Мое местоположение",
     "location": "Местонахождение",
     "originError": "Ваш браузер может указать ваше местоположение только при использовании HTTPS. Возможно, вместо этого вы сможете использовать {{secureUrl}}.",
-    "centreMap": "Центральная карта в вашем текущем местоположении"
+    "centreMap": "Центральная карта в вашем текущем местоположении",
+    "permissionDenied": "Нет разрешения на определение вашего местоположения. Проверьте настройки браузера.",
+    "positionUnavailable": "Сведения о вашем местоположении недоступны.",
+    "timeout": "Определение вашего местоположения заняло слишком много времени. Повторите попытку позже."
   },
   "splitterTool": {
     "errorTitle": "Не удалось сравнить элемент каталога.",
+    "duplicateModelErrorMessage": "При разделении элемента каталога `\"{{name}}\"` произошла ошибка. Возможно, этот элемент каталога не поддерживает функцию сравнения",
+    "modelNotFoundErrorMessage": "Модель с ID `\"{{id}}\"` не найдена",
     "toggleSplitterToolTitle": "Сравнить",
     "toggleSplitterTool": "Возможность сравнения двух разных наборов данных «бок о бок».",
     "toggleSplitterToolDisabled": "Чтобы включить стандартное сравнение, отключите другие функции сравнения бок о бок.",
@@ -190,6 +244,11 @@
       "goright": "Справа",
       "copyName": "{{name}} (копия)"
     }
+  },
+  "zoomControl": {
+    "zoomIn": "Приблизить",
+    "zoomReset": "Сбросить масштаб",
+    "zoomOut": "Отдалить"
   },
   "compass": {
     "description": "Перетащите внешнее кольцо: вращение вида.\nПеретащите внутренний гироскоп: свободная орбита.\nДвойной щелчок: сброс вида.\nTIP: Вы также можете освободить орбиту, удерживая клавишу CTRL и перетаскивая карту.",
@@ -208,18 +267,36 @@
     }
   },
   "AR": {
-    "title": "Экспериментальная функция: Дополненная реальность"
+    "title": "Экспериментальная функция: Дополненная реальность",
+    "experimentalFeatureMessage": "Режим дополненной реальности сейчас находится в бета-версии. Он предназначен только для новейших мощных мобильных устройств. <br /><br />ВНИМАНИЕ: этот режим может расходовать много трафика, учитывайте тарифы вашего оператора связи. <br /><br />Точность этого режима зависит от точности встроенного компаса вашего мобильного устройства.",
+    "confirmText": "Понятно",
+    "manualAlignmentTitle": "Ручное выравнивание",
+    "manualAlignmentMessage": "Расположите мобильное устройство так, чтобы его ориентация совпадала с текущей ориентацией карты, затем нажмите на мигающий компас. Если на карте сейчас не видно ориентиров для выравнивания, перемещайте карту перетаскиванием и сведением пальцев, пока не появится узнаваемый ориентир, а затем совместите устройство с картой. <br /><div>{{img}}</div> <br />Совет: если вы находитесь в незнакомом месте, хорошими ориентирами часто служат солнце или луна (не смотрите прямо на солнце — это может повредить глаза).",
+    "resetAlignmentTitle": "Сброс выравнивания",
+    "resetAlignmentMessage": "Восстанавливается выравнивание по компасу. Если ориентация не совпадает с реальной, поводите устройством по траектории восьмерки, чтобы откалибровать его. Это можно сделать в любой момент.<br /> <br />Избегайте мест с магнитными полями или металлическими предметами: они могут сбить компас устройства.",
+    "arTool": "инструмент дополненной реальности",
+    "btnHover": "переключить высоту зависания",
+    "btnRealign": "переключить ручное выравнивание",
+    "btnResetRealign": "сбросить выравнивание по компасу"
   },
   "tool": {
     "closeButtonTitle": "Закрыть {{toolName}} инструмент",
     "loadingError": {
-      "title": "Ошибка загрузки {{toolName}} инструмента"
+      "title": "Ошибка загрузки {{toolName}} инструмента",
+      "message": "При загрузке этого инструмента с сервера произошла ошибка. Повторите попытку."
     },
-    "exitBtnTitle": "Выход"
+    "exitBtnTitle": "Выход",
+    "button": {
+      "open": "Выйти из режима «{{toolNameLowerCase}}»",
+      "closed": "{{toolName}}"
+    }
   },
   "diffTool": {
     "title": "Разница",
+    "close": "Закрыть",
     "instructions": {
+      "setDateA": "Задайте дату A",
+      "setDateB": "Задайте дату B",
       "changeDates": "Изменить даты",
       "paneDescription": "Визуализируйте и сравнивайте разницу данных между двумя датами в одном месте."
     },
@@ -229,20 +306,57 @@
     "labels": {
       "area": "Область",
       "dates": "Даты",
+      "dateComparisonA": "Дата сравнения A",
+      "dateComparisonB": "Дата сравнения B",
       "sourceDataset": "Исходный набор данных",
-      "previewStyle": "Стиль просмотра"
+      "previewStyle": "Стиль просмотра",
+      "differenceOutput": "Вывод различий",
+      "generateDiffButtonText": "Определить изменения",
+      "disabledButtonPrompt": "Обратите внимание: для определения изменений необходимо выбрать местоположение и даты",
+      "areaFilterSelection": "Выбор области для фильтра",
+      "saveToWorkbench": "Сохранить на рабочую панель"
     },
     "locationDisplay": {
       "noLocationSelected": {
-        "title": "Местоположение не выбрано"
+        "title": "Местоположение не выбрано",
+        "description": "Чтобы отфильтровать даты снимков по местоположению, приблизьте карту и выберите на ней интересующую точку"
+      },
+      "locationSelected": {
+        "title": "Местоположение выбрано, даты отфильтрованы",
+        "description": "Чтобы изменить, нажмите на другую точку на карте"
       }
+    },
+    "locationPicker": {
+      "initialMessages": {
+        "title": "Выберите точное местоположение",
+        "beforePick": "Это необходимо для определения изменений.",
+        "afterPick": "Нажмите на другую точку, чтобы изменить выбранную область"
+      },
+      "nextMessages": {
+        "title": "Вы выбрали местоположение {{latitude}} {{longitude}}",
+        "beforePick": "Нажмите на другую точку, чтобы изменить выбор",
+        "afterPick": "Нажмите на другую точку, чтобы изменить выбор"
+      },
+      "errorMessages": {
+        "title": "Выберите точное местоположение",
+        "beforePick": "Не удалось получить снимки для этого места. Выберите другое местоположение или масштаб.",
+        "afterPick": "Нажмите на другую точку, чтобы изменить выбор"
+      }
+    },
+    "datePicker": {
+      "back": "Назад",
+      "previousDateTitle": "Предыдущая дата",
+      "nextDateTitle": "Следующая дата",
+      "dateButtonTitle": "Выберите дату"
     }
   },
   "legend": {
     "lat": "Шир",
     "lon": "Дол",
+    "zone": "ЗОНА",
     "e": "В",
-    "n": "С"
+    "n": "С",
+    "elev": "Выс"
   },
   "languagePanel": {
     "changeLanguage": "Выберите язык"
@@ -274,42 +388,74 @@
     "convertNotificationWarningsTitle": "Технические детали",
     "convertErrorTitle": "Не удалось обновить ссылку на общий ресурс до V8",
     "convertErrorMessage": "Эта ссылка на ресурс основана на старой версии TerriaJS - программного обеспечения, обеспечивающего работу этой веб-карты. При попытке обновить данные ресурса произошла ошибка.",
-    "getShareSaveHelpMessage": "Как добавлять ссылки в закладки"
+    "getShareSaveHelpMessage": "Как добавлять ссылки в закладки",
+    "shareStoryLink": "Поделиться ссылкой на историю",
+    "storyLinkCreated": "Сохранено как новая история",
+    "shareLinkCreated": "Ссылка создана"
   },
   "countDatasets": {
     "btnText": "Начало",
     "loadError": "не удалось загрузить.",
     "countingMessage": "Подсчет, пожалуйста, подождите...",
+    "totals": "<div>В каталоге элементов: {{items}}, групп: {{groups}}.</div>",
+    "subTotals": "<div> {{name}}: элементов — {{items}}, групп — {{groups}}</div>",
     "recount": "Пересчет",
-    "noMapDataEnabled": "Данные карты не включены"
+    "title": "Подсчет наборов данных",
+    "btnCount": "Подсчитать наборы данных",
+    "noMapDataEnabled": "Данные карты не включены",
+    "mapDataState_one": "На карте включен {{count}} набор данных",
+    "mapDataState_few": "На карте включено {{count}} набора данных",
+    "mapDataState_many": "На карте включено {{count}} наборов данных",
+    "mapDataState_other": "На карте включено {{count}} набора данных"
   },
   "toolsPanel": {
     "btnText": "Инструмент",
     "btnTitle": "Расширенная панель инструментов"
   },
   "settingPanel": {
+    "viewerModeLabels": {
+      "CesiumTerrain": "3D с рельефом",
+      "CesiumEllipsoid": "3D без рельефа",
+      "Leaflet": "2D"
+    },
     "qualityLabels": {
       "maximumPerformance": "Максимальная производительность, низкое качество",
       "balancedPerformance": "Сбалансированная производительность и качество",
       "lowerPerformance": "Максимальное качество, низкая производительность"
     },
     "nativeResolutionLabel": "Нажмите, чтобы остановить использование разрешения {{resolution1}} и начать использовать разрешение {{resolution2}}.",
+    "native": "устройства",
+    "screen": "экрана",
     "btnTitle": "Изменить вид",
     "btnText": "Настройки",
     "mapView": "Вид",
-    "baseMap": "Основа карты",
+    "baseMap": "Базовая карта",
     "imageOptimisation": "Оптимизация изображений",
     "nativeResolutionHeader": "Используйте родное разрешение устройства",
     "mapQuality": "Качество карты:",
     "qualityLabel": "Качество",
     "performanceLabel": "Производительность",
+    "baseMapStatus": {
+      "requiresViewerMode": "⚠️ Выбранную базовую карту можно просматривать только в режиме {{viewerMode}}"
+    },
+    "viewerModeSwitched": {
+      "title": "Режим просмотра изменен",
+      "message": "Базовую карту «{{newBaseMap}}» нельзя просматривать в режиме {{currentMode}}. Вид карты изменен на {{newMode}}"
+    },
+    "baseMapSwitched": {
+      "title": "Базовая карта изменена",
+      "message": "Базовую карту «{{currentBaseMap}}» нельзя просматривать в режиме {{mapMode}}. Базовая карта изменена на «{{newBaseMap}}»"
+    },
     "timeline": {
+      "title": "Временная шкала",
       "alwaysShowLabel": "Нажмите, чтобы начать показывать временную шкалу только при наличии на рабочем столе наборов данных, изменяющихся во времени",
       "hideLabel": "Нажмите, чтобы начать всегда показывать временную шкалу, даже если на рабочем столе нет наборов данных, изменяющихся во времени",
       "alwaysShow": "Всегда снег"
     },
     "terrain": {
       "hideUnderground": "Рельеф местности скрывает подземные объекты",
+      "showUndergroundFeatures": "Нажмите, чтобы показывать объекты под поверхностью рельефа",
+      "hideUndergroundFeatures": "Нажмите, чтобы скрывать объекты под поверхностью рельефа",
       "sideLabel": "Показать местность на экране",
       "left": "Слева",
       "both": "Оба",
@@ -319,7 +465,9 @@
   "feedback": {
     "feedbackPreamble": "Мы будем рады услышать вас!",
     "title": "Обратнася связь",
+    "close": "закрыть форму обратной связи",
     "yourName": "Ваше имя (необязательно)",
+    "email": "Адрес электронной почты (необязательно)<br/><em>Без него мы не сможем вам ответить!</em>",
     "commentQuestion": "Комментарий или вопрос",
     "shareWithDevelopers": "Поделитесь моим представлением карты с разработчиками {{appName}}.",
     "cancel": "Отмена",
@@ -344,9 +492,15 @@
       "confirmText": "Да",
       "denyText": "Возможно позже"
     },
-    "hideWorkbench": "Скрыть Верстак"
+    "showWorkbench": "Наборы данных [{{count}}]",
+    "hideWorkbench": "Скрыть рабочую панель"
   },
   "featureInfo": {
+    "catalogItem": {
+      "moreThanMax": "Для «{{catalogItemName}}» найдено более {{maximum}} объектов.",
+      "featuresFound": "Для «{{catalogItemName}}» найдено объектов: {{featCount}}.",
+      "featureInfoShown": "Ниже показаны первые {{maximum}}."
+    },
     "download": "Скачать эту Таблицу",
     "pickLocation": "Выберите местоположение",
     "clickMap": "Нажмите на карту, чтобы узнать больше о местоположении",
@@ -355,6 +509,8 @@
     "userSelection": "Выбор пользователя",
     "panelHeading": "Информация о характеристиках",
     "btnCloseFeature": "Закройте панель данных",
+    "satelliteSuggestionBtn": "Показать {{catalogItemName}} в этом месте",
+    "locationMarker": "Маркер местоположения",
     "noInfoAvailable": "Информация отсутствует",
     "siteData": "Данные сайта",
     "latLon": "Шир / Дол",
@@ -374,6 +530,7 @@
   "story": {
     "panelTitle": "Редактор историй",
     "panelBody": "Создавайте интерактивные истории и делитесь ими прямо с карты",
+    "panelBodyCapped": "Размер каждой истории ограничен {{ shareMaxRequestSize }}. Чтобы не превышать лимит, разделяйте большие данные или множество сцен на несколько историй.",
     "gettingStarted": "Начать",
     "gettingStartedTitle": "Начать",
     "badgeBarLabel": "Сцены",
@@ -390,7 +547,12 @@
     "delete": "Удалить",
     "untitledScene": "сцена без названия",
     "doesNotExist": "История не существует",
+    "saveInstructions": "Нажмите «Поделиться», чтобы создать новую ссылку на историю.",
     "removeAllStories": "Убрать все",
+    "removeAllStoriesDialog_one": "Вы действительно хотите удалить {{ count }} сцену?",
+    "removeAllStoriesDialog_few": "Вы действительно хотите удалить {{ count }} сцены?",
+    "removeAllStoriesDialog_many": "Вы действительно хотите удалить {{ count }} сцен?",
+    "removeAllStoriesDialog_other": "Вы действительно хотите удалить {{ count }} сцены?",
     "removeStoryDialog": "Вы уверены, что хотите удалить '<1>{{storyName}}</1>'?",
     "preview": "предпросмотр историй",
     "play": "Играть",
@@ -398,15 +560,35 @@
     "captureSceneTitle": "захват текущей сцены",
     "captureScene": "Захватить сцену",
     "editor": {
+      "modalHeader": "Редактор историй — захват сцены",
+      "titleLabel": "Название (обязательно)",
+      "descriptionLabel": "Описание",
       "placeholder": "Введите название здесь",
       "cancelBtn": "отмена",
       "cancelEditing": "Отмена",
       "saveBtn": "сохранение",
       "saveStory": "Сохранить"
     },
+    "locationBtn": "центрировать сцену",
+    "exitBtn": "выйти из истории",
+    "previousBtn": "перейти к предыдущей сцене",
+    "prev": "Назад",
+    "untitled": "сцена без названия",
+    "navBtn": "перейти к истории {{title}}",
+    "nextBtn": "перейти к следующей сцене",
     "next": "Следующий",
     "restart": "Перезапуск",
-    "story": "История"
+    "navBtnMobile": "перейти к истории {{title}}",
+    "promptHtml1": "<0>Вы можете в любое время просматривать и создавать истории, нажав здесь.</0>",
+    "promptHtml2": "<0><0>НОВИНКА</0><1>Истории данных</1><2>Создавайте интерактивные истории и делитесь ими прямо с карты.</2></0>",
+    "story": "История",
+    "dismissText": "Понятно, спасибо!",
+    "mobileViewStory": "Просмотреть истории {{storiesLength}}",
+    "storyEditor": "Редактор историй",
+    "storiesTooLong": "Эта история превышает максимально допустимый размер. Уменьшите количество видимых наборов данных или захватите меньше сцен.",
+    "hideStoryPanel": "скрыть конструктор историй",
+    "loadSceneErrorTitle": "Ошибка загрузки сцены истории",
+    "loadSceneErrorMessage": "При загрузке данных для сцены истории `{{title}}` произошла ошибка."
   },
   "satelliteGuidance": {
     "menuTitle": "Вы можете в любой момент получить доступ к руководству по карте, заглянув в меню <2>help</2>.",
@@ -417,7 +599,12 @@
     "nextI": "Посмотреть путеводитель",
     "titleII": "Где мои спутниковые снимки?",
     "bodyII": "Возможно, вам потребуется изменить масштаб карты, чтобы на ней были видны спутниковые снимки.",
-    "titleIII": "Загрузка исторических изображений"
+    "titleIII": "Загрузка исторических изображений",
+    "bodyIII": "На рабочей панели откройте раскрывающийся список дат съемки и выберите доступное время, чтобы загрузить исторические снимки.",
+    "titleIV": "Фильтрация снимков по местоположению",
+    "bodyIV": "Спутниковые снимки не всегда доступны для нужного вам времени и места. Если вы хотите просматривать снимки только для определенного места, нажмите «Фильтр по месту» на рабочей панели.",
+    "titleV": "Как просматривать снимки в псевдоцветах?",
+    "bodyV": "К спутниковым снимкам можно применить различные стили, например псевдоцвета: выберите стиль в раскрывающемся списке стилей на рабочей панели."
   },
   "addData": {
     "addDataBtnText": "Данные карты",
@@ -425,7 +612,9 @@
     "load": "Загрузка локальных/веб-данных",
     "closeDataPanel": "Закройте панель данных",
     "done": "Готово",
+    "data": "Данные",
     "myData": "Мои данные",
+    "modalTitle": "Данные карты",
     "dataCatalogue": "Каталог данных",
     "searchPlaceholderWhole": "Искать по всему каталогу",
     "searchPlaceholder": "Искать по каталогу",
@@ -442,7 +631,9 @@
     "dragDrop": "Перетаскивание",
     "infoText": "<0>Перетащите файл сюда, чтобы просмотреть его локально на карте</0><1>(он не будет сохранен или загружен в интернет)</1>",
     "back": "Назад",
-    "note": "<0> Примечание: </0> Данные, добавленные таким образом, не сохраняются и не становятся видимыми для других."
+    "note": "<0> Примечание: </0> Данные, добавленные таким образом, не сохраняются и не становятся видимыми для других.",
+    "cesiumIonToken": "Токен Cesium ion:",
+    "cesiumIonStep2": "Шаг 2:"
   },
   "search": {
     "resultsLabel": "Результаты поиска",
@@ -464,8 +655,33 @@
     "doesNotContainGeospatialData": "Этот файл не содержит геопространственных данных.",
     "selectToPreviewDataset": "Выберите набор данных для предварительного просмотра",
     "selectMultipleDatasets": "<0>Нажмите <strong>Shift</strong> и щелкните</0><1 /><2>для добавления нескольких наборов данных</2>",
+    "selectToPreviewSeparator": "ИЛИ",
     "goToTheMap": "Перейти к карте",
-    "loading": "ПРЕДВАРИТЕЛЬНАЯ ЗАГРУЗКА..."
+    "loading": "ПРЕДВАРИТЕЛЬНАЯ ЗАГРУЗКА...",
+    "preview": "Предпросмотр {{appName}}",
+    "previewItemErrorTitle": "Не удалось открыть предпросмотр элемента каталога.",
+    "previewItemErrorMessage": "При загрузке элемента каталога произошла ошибка.",
+    "noPreviewAvailable": "ПРЕДПРОСМОТР НЕДОСТУПЕН",
+    "dataPreviewLoading": "ЗАГРУЗКА ПРЕДПРОСМОТРА ДАННЫХ...",
+    "dataPreview": "ПРЕДПРОСМОТР ДАННЫХ",
+    "dataPreviewError": "ОШИБКА ПРЕДПРОСМОТРА ДАННЫХ",
+    "removeFromMap": "Удалить с карты",
+    "addToMap": "Добавить на карту",
+    "disclaimer": "Отказ от ответственности",
+    "dataDescription": "Описание данных",
+    "datasetDescription": "Описание набора данных",
+    "serviceDescription": "Описание сервиса",
+    "resourceDescription": "Описание ресурса",
+    "licence": "Лицензия",
+    "accessConstraints": "Ограничения доступа",
+    "fees": "Плата",
+    "author": "Автор",
+    "contact": "Контакты",
+    "created": "Создано",
+    "modified": "Изменено",
+    "updateFrequency": "Частота обновления",
+    "dataCustodian": "Владелец данных",
+    "mayBeExperiencingIssues": "С этим набором данных сейчас могут быть проблемы"
   },
   "description": {
     "name": "Описание",
@@ -474,8 +690,12 @@
     "wms": "Это <1>WMS-сервис</1>, который генерирует изображения карт по запросу. Его можно использовать в программном обеспечении ГИС с помощью этого URL:",
     "wfs": "Это <1>WFS-сервис</1>, который передает необработанные пространственные данные по запросу. Его можно использовать в программном обеспечении ГИС с помощью этого URL:",
     "layerName": "Название слоя",
+    "typeName": "Имя типа",
+    "metadataUrls": "Ссылки на метаданные",
+    "dataUrl": "Ссылки на данные",
     "useLinkBelow": "Чтобы загрузить данные, воспользуйтесь приведенной ниже ссылкой. Дополнительные сведения о настройке параметров запроса URL см. в разделе {{link}}.",
     "downloadInFormat": "Загрузите выбранные в данный момент данные в формате {{format}}",
+    "downloadNotSupported": "К сожалению, ваш браузер не поддерживает функцию, необходимую для скачивания этих данных в виде файла. Чтобы скачать данные, используйте $t(browsers.chrome), $t(browsers.firefox), $t(browsers.edge) или $t(browsers.safari).",
     "useTheLinkToDownload": "Воспользуйтесь приведенной ниже ссылкой, чтобы загрузить данные напрямую.",
     "downloadData": "Скачать данные",
     "dataSourceDetails": "Детали источника данных",
@@ -484,30 +704,51 @@
   },
   "workbench": {
     "colorScaleRangeTitle": "Недопустимый диапазон цветовой шкалы",
+    "colorScaleRangeMin": "Минимальное значение должно быть числом.",
+    "colorScaleRangeMax": "Максимальное значение должно быть числом.",
+    "colorScaleRangeMinSmallerThanMax": "Минимальное значение диапазона цветовой шкалы должно быть меньше максимального.",
+    "colorScaleRange": "Диапазон цветовой шкалы",
     "rangeMax": "Максимум:",
     "rangeMin": "Минимум:",
     "colorScaleUpdateRange": "Обновить расстояние",
+    "displayPercent": "Показывать в процентах от общего значения по региону",
+    "opacity": "Непрозрачность: {{opacity}} %",
+    "zoomToTitle": "Приблизить к границам данных",
     "zoomTo": "Идеальный зум",
     "openFeatureTitle": "Зум к данным",
+    "openFeature": "Приблизить",
     "previewItemTitle": "О этих данных",
+    "showMoreActionsTitle": "Показать другие действия",
     "previewItem": "О данных",
+    "previewJob": "О задаче",
+    "previewJobTitle": "Об этой задаче",
+    "splitItemTitle": "Дублировать и показать разделитель",
     "splitItem": "Сравнить",
+    "diffImageTitle": "Просмотреть различия снимков за две даты",
     "diffImage": "Отличия",
     "exportDataTitle": "Экспортировать данные карты",
     "exportData": "Экспорт",
+    "removeFromMapTitle": "Удалить эти данные",
+    "removeFromMap": "Удалить",
     "label": "Наборы данных",
     "removeAll": "Убрать все",
     "collapseAll": "Скрыть все",
     "expandAll": "Раскрыть все",
+    "disableAll": "Отключить все",
+    "enableAll": "Включить все",
     "toggleVisibility": "Данные показать/скрыть",
-    "addItemErrorTitle": "Не удалось добавить элемент каталога в верстак.",
-    "addItemErrorMessage": "При загрузке элемента каталога произошла ошибка."
+    "addItemErrorTitle": "Не удалось добавить элемент каталога на рабочую панель.",
+    "addItemErrorMessage": "При загрузке элемента каталога произошла ошибка.",
+    "searchItem": "Поиск",
+    "searchItemTitle": "Поиск",
+    "splitScreenMode": "РЕЖИМ РАЗДЕЛЁННОГО ЭКРАНА"
   },
   "dateTime": {
     "selectorLabel": "Время:",
     "back": "Назад",
     "previous": "Предыдущее время",
     "selectTime": "Выберите время",
+    "outOfRange": "Сейчас вне диапазона.",
     "next": "Следующее время",
     "useTimeline": "Используйте временную шкалу",
     "availableTimeChart": "Показать доступное время на графике",
@@ -521,9 +762,16 @@
   },
   "satellite": {
     "pickPoint": "Выберите точку, щелкнув по карте.",
+    "querying": "Запрос местоположения...",
     "filterByLocation": "Фильтр по месту",
+    "infoGroup": "Показаны только доступные даты съемки для:",
     "removeFilter": "Убрать фильтр",
+    "zoomTo": "Приблизить",
     "newLocation": "Новое место"
+  },
+  "timer": {
+    "nextScheduledUpdateTime": "Следующее обновление данных в {{scheduledUpdateTime}}",
+    "nextScheduledUpdateCountdown": "Следующее обновление данных через {{timeCountdown}}"
   },
   "concept": {
     "active": {
@@ -544,17 +792,49 @@
     "unsuccessful": "Копирование не удалось...",
     "shareURL": "Поделиться ссылкой",
     "shareExplanation": "Любой человек, имеющий этот URL-адрес, сможет получить доступ к этой карте.",
+    "storyExplanation": "Любой, у кого есть эта ссылка, сможет открыть эту карту.",
     "copy": "Скопировать"
   },
   "includeStory": {
     "message": "Включите историю в общий доступ"
   },
   "dragDrop": {
-    "text": "<0>Перетаскивание</0><1>Ваши данные в любом месте для просмотра на карте<1>"
+    "text": "<0>Перетаскивание</0><1>Ваши данные в любом месте для просмотра на карте<1>",
+    "notification_one": "Файл <0>\"{{fileNames}}\"</0> добавлен в <4>Мои данные</4>.",
+    "notification_few": "Файлы <0>\"{{fileNames}}\"</0> добавлены в <4>Мои данные</4>.",
+    "notification_many": "Файлы <0>\"{{fileNames}}\"</0> добавлены в <4>Мои данные</4>.",
+    "notification_other": "Файлы <0>\"{{fileNames}}\"</0> добавлены в <4>Мои данные</4>."
   },
   "loader": {
     "loadingMessage": "Загрузка"
   },
+  "emptyWorkbenchInfo": [
+    {
+      "heading": "Добавьте сюда набор данных",
+      "body": "Когда вы добавите набор данных, здесь появятся его легенда и настройки."
+    },
+    {
+      "heading": "С чего начать",
+      "list": [
+        "Нажмите «Данные карты», чтобы просмотреть доступные наборы данных",
+        "Загрузите собственные данные с помощью кнопки «Загрузить данные»",
+        "Добавленные данные появятся на этой панели"
+      ]
+    },
+    {
+      "heading": "Что можно сделать",
+      "list": [
+        "Показывать и скрывать данные",
+        "Настраивать прозрачность (непрозрачность)",
+        "Сравнивать данные бок о бок",
+        "Менять стили (цвета, линии, символы)",
+        "Просматривать данные за разные даты и время (если поддерживается)"
+      ]
+    },
+    {
+      "body": "На этой панели можно изучать данные, управлять настройками и создавать сцену карты или историю."
+    }
+  ],
   "dataCatalog": {
     "groupRemove": "убрать эту группу",
     "groupEmpty": "Эта группа пуста"
@@ -580,12 +860,27 @@
   "viewModels": {
     "searchNoLocations": "К сожалению, ни одно место не соответствует вашему поисковому запросу.",
     "searchErrorOccurred": "Во время поиска произошла ошибка.  Пожалуйста, проверьте подключение к Интернету или повторите попытку позже.",
-    "inDataCatalogue": "В каталоге данных"
+    "searchMinCharacters_one": "Введите минимум {{count}} символ",
+    "searchMinCharacters_few": "Введите минимум {{count}} символа",
+    "searchMinCharacters_many": "Введите минимум {{count}} символов",
+    "searchMinCharacters_other": "Введите минимум {{count}} символа",
+    "searchAddresses": "Адреса",
+    "searchPlaceNames": "Официальные названия мест",
+    "searchNoPlaceNames": "К сожалению, официальные названия мест по вашему запросу не найдены.",
+    "searchLocations": "Места",
+    "searchCatalogueItem": "Элементы каталога",
+    "searchNoCatalogueItem": "К сожалению, элементы каталога по вашему запросу не найдены.",
+    "inMultipleLocations": "В нескольких местах, включая: ",
+    "inDataCatalogue": "В каталоге данных",
+    "enterToStartSearch": "Нажмите Enter, чтобы начать поиск"
   },
   "terriaViewer": {
     "slowWebGLAvailableTitle": "Низкая производительность WebGL",
+    "slowWebGLAvailableMessage": "Ваш браузер сообщает о проблемах с производительностью при отображении {{appName}} в 3D, поэтому будет доступен только ограниченный режим 2D. Чтобы работать в полноценном 3D, попробуйте другой браузер, обновите видеодрайверы или операционную систему.",
+    "slowWebGLAvailableMessageII": "{{appName}} лучше всего работает в браузерах с поддержкой {{webGL}}, включая последние версии $t(browsers.chrome), $t(browsers.firefox), $t(browsers.edge) и $t(browsers.safari). Похоже, ваш браузер не поддерживает WebGL, поэтому будет доступен только ограниченный режим 2D.",
     "webGLNotSupportedTitle": "WebGL не поддерживается",
-    "webGLNotSupportedOrSlowTitle": "WebGL не поддерживается или работает слишком медленно"
+    "webGLNotSupportedOrSlowTitle": "WebGL не поддерживается или работает слишком медленно",
+    "webGLNotSupportedOrSlowMessage": "Ваш браузер не может отображать карту в 3D: либо он не поддерживает WebGL, либо сообщает, что WebGL будет работать крайне медленно. Попробуйте другой браузер, например последнюю версию $t(browsers.chrome), $t(browsers.firefox), $t(browsers.edge) или $t(browsers.safari). В некоторых случаях для работы в 3D в {{appName}} может потребоваться обновить видеодрайвер или операционную систему компьютера."
   },
   "analytics": {
     "selectLocation": "Выбор места",
@@ -605,8 +900,14 @@
     "selectExistingPolygon": "Выберите существующий полигон"
   },
   "core": {
+    "errors": {
+      "tooDeepAddedByUser": "При проверке addedByUser достигнуто 100 элементов каталога, последний ID: \"{{memberId}}\". Убедитесь, что в каталоге нет рекурсивной группы."
+    },
+    "userAddedData": "Пользовательские данные",
+    "chartData": "Данные графика",
     "dataUri": {
-      "errorTitle": "Браузер не поддерживает загрузку данных"
+      "errorTitle": "Браузер не поддерживает загрузку данных",
+      "errorMessage": "К сожалению, браузеры Microsoft (включая все версии Internet Explorer и Edge) не поддерживают функцию data URI, необходимую для скачивания данных в виде файла. Чтобы скачать данные, скопируйте следующий URI в другой браузер, например $t(browsers.chrome), $t(browsers.firefox) или $t(browsers.safari): {{href}}"
     },
     "dataType": {
       "auto": "Тип файла",
@@ -616,12 +917,49 @@
       "wps-getCapabilities": "Web Processing Service (WPS) сервер",
       "esri-group": "Esri ArcGIS сервер",
       "esri-mapServer": "Esri ArcGIS MapServer (один слой)",
+      "esri-imageServer": "Esri ArcGIS ImageServer (один слой)",
       "esri-featureServer": "Esri ArcGIS FeatureServer (один слой)",
-      "kml": "KML или KMZ"
+      "3d-tiles": "3D Tiles",
+      "open-street-map": "Сервер Open Street Map",
+      "sdmx-group": "SDMX-JSON",
+      "opendatasoft-group": "Портал Opendatasoft",
+      "geojson": "GeoJSON",
+      "geoRss": "GeoRSS",
+      "kml": "KML или KMZ",
+      "csv": "CSV",
+      "czml": "CZML",
+      "gpx": "GPX",
+      "json": "Каталог Terria",
+      "carto": "Carto V1",
+      "carto-v3": "Carto V3",
+      "gltf": "glTF",
+      "shp": "Shapefile",
+      "socrata-group": "Сервер Socrata",
+      "assimp-local": "Конвертер 3D-файлов (zip) (экспериментальный)",
+      "assimp-local-description": "**Внимание:** конвертер 3D-файлов работает в экспериментальном режиме.  \nСм. список [поддерживаемых форматов](https://github.com/assimp/assimp/blob/master/doc/Fileformats.md).  \nФайлы должны быть упакованы в zip-архив.",
+      "assimp-remote": "Конвертер 3D-файлов (экспериментальный)",
+      "assimp-remote-description": "**Внимание:** конвертер 3D-файлов работает в экспериментальном режиме.  \nСм. список [поддерживаемых форматов](https://github.com/assimp/assimp/blob/master/doc/Fileformats.md).  \nТакже поддерживаются zip-архивы",
+      "ifc": "IFC",
+      "cog": "Cloud Optimised Geotiff",
+      "i3s": "I3S",
+      "cesium-ion": "Cesium ion"
     },
     "printWindow": {
       "errorTitle": "Ошибка при печати",
-      "errorMessage": "Печать не началась в течение 10 секунд. Возможно, этот веб-браузер не поддерживает печать?"
+      "errorMessage": "Печать не началась в течение 10 секунд. Возможно, этот веб-браузер не поддерживает печать?",
+      "printMediaStart": "начало печати",
+      "printMediaEnd": "конец печати",
+      "onbeforeprint": "onbeforeprint",
+      "onafterprint": "onafterprint"
+    },
+    "consoleAnalytics": {
+      "started": "ConsoleAnalytics запущен.",
+      "startedNoenableConsoleAnalytics": "ConsoleAnalytics запущен, однако параметр `configParameters.enableConsoleAnalytics` не задан или имеет значение false.",
+      "logStartedWithGAParameters": "ConsoleAnalytics запущен, но в `configParameters` обнаружен ключ `googleAnalyticsKey` или `googleAnalyticsOptions`"
+    },
+    "googleAnalytics": {
+      "log": "Отслеживание Google Analytics отключено, поскольку не задан параметр terria.configParameters.googleAnalyticsKey",
+      "logEnabledOnDevelopment": "Google Analytics инициализирован в среде `development`"
     },
     "readText": {
       "fileRequired": "файл необходим"
@@ -629,33 +967,1365 @@
     "readXml": {
       "xmlError": "Файл не содержит корректного XML."
     },
+    "serverConfig": {
+      "failedToGet": "Не удалось получить конфигурацию сервера с {{serverConfigUrl}}. Из-за этого такие сервисы, как прокси, конвертация и сокращение ссылок, могут не работать."
+    },
+    "terriaError": {
+      "defaultTitle": "Произошла ошибка",
+      "defaultMessage": "Неизвестная ошибка",
+      "defaultCombineTitle": "Произошло несколько ошибок",
+      "defaultCombineMessage": "Подробности об ошибках приведены ниже",
+      "networkRequestTitle": "Ошибка сетевого запроса",
+      "networkRequestMessage": "Данные могут быть недоступны или отображаться некорректно из-за сбоя в работе сервиса владельца данных. Попробуйте перезагрузить карту, обратиться к данным позже или выбрать другой набор данных. <feedbacklink feedback-message='Если проблема сохраняется, отправьте отзыв здесь.' email-message='Если проблема сохраняется, сообщите о ней по адресу {{email}}'/>",
+      "networkRequestMessageDetailed": "Возможные причины:\n\n* не удалось определить имя хоста сервера;\n* сервер не ответил на запрос или временно недоступен;\n* сервер запретил доступ к этому URL по механизму [Cross-Origin Resource Sharing (CORS)](https://docs.terria.io/guide/connecting-to-data/cross-origin-resource-sharing/);\n* возникла проблема с подключением к интернету.\n\nЕсли вы ввели ссылку вручную, проверьте, правильна ли она."
+    },
     "unverifiedExternalLink": {
       "title": "Предупреждение: непроверенная ссылка",
+      "message": "Вы собираетесь открыть: \n\n`{{url}}`  \n\nЭта ссылка не проверена и может быть небезопасной.",
       "denyText": "Отмена",
       "confirmText": "Открыть в новой вкладке"
     }
   },
   "map": {
+    "addressGeocoder": {
+      "devError": "Метод bulkConvertAddresses должен быть реализован в производном классе."
+    },
+    "cesium": {
+      "stoppedRenderingTitle": "Не удалось отрисовать 3D-карту",
+      "stoppedRenderingMessage": "Возможно, причина в наборе данных, только что добавленном на рабочую панель, — попробуйте удалить его. Если это не поможет, может потребоваться перезагрузить {{appName}}.",
+      "devError": "Требуется cesium.",
+      "failedToObtain": "Не удалось получить тайл изображения X: {{x}} Y: {{y}} уровень: {{level}}.",
+      "notWebMercatorTilingScheme": "Этот набор данных нельзя отобразить на 2D-карте, так как он не поддерживает проекцию Web Mercator (EPSG:3857).",
+      "unusalTilingScheme": "Этот набор данных нельзя отобразить на 2D-карте, так как он использует нестандартную схему тайлов, которая не поддерживается.",
+      "terrainServerErrorTitle": "Сервер рельефа не отвечает",
+      "terrainServerErrorMessage": "Сервер рельефа сейчас не отвечает. Вы по-прежнему можете пользоваться всеми функциями {{appName}}, но в режиме 3D рельеф отображаться не будет. Приносим извинения за неудобства. Повторите попытку позже, сервер рельефа должен снова заработать. Если проблема сохранится, свяжитесь с нами по электронной почте {{supportEmail}}."
+    },
+    "computeRingWindingOrder": {
+      "devError": "Ожидались точки типа {x:number, y:number}"
+    },
+    "displayVariablesConcept": {
+      "defaultName": "Отображаемая переменная"
+    },
+    "drawExtentHelper": {
+      "drawExtent": "Нарисовать область",
+      "extent": "Область"
+    },
+    "gmlToGeoJson": {
+      "missingPos": "В элементе точки GML отсутствует элемент pos.",
+      "missingExteriorRing": "У полигона GML отсутствует внешнее кольцо.",
+      "missingPosList": "Во внешнем кольце полигона GML отсутствует posList.",
+      "containsUnsupportedFeatureType": "GML содержит неподдерживаемый тип объекта: {{type}}"
+    },
+    "geoRssToGeoJson": {
+      "containsUnsupportedFeatureType": "GeoRSS содержит неподдерживаемый тип объекта: {{type}}"
+    },
+    "w3cToGeoJson": {
+      "containsUnsupportedFeatureType": "GeoRSS с геометрией W3C содержит неподдерживаемый тип объекта: {{type}}"
+    },
+    "gnafAddressGeocoder": {
+      "noAddresses": "В этой tableStructure нет адресов!",
+      "noAddresses2": "Хотя tableStructure сообщает о наличии столбца адресов, адресов в нем нет",
+      "suburb": "Район",
+      "state": "Штат",
+      "postcode": "Почтовый индекс",
+      "matchedAddresses": "Найденный адрес",
+      "lon": "Дол",
+      "lat": "Шир",
+      "score": "Оценка",
+      "poBox": "po box",
+      "postOfficeBox": "post office box"
+    },
     "imageryProviderHooks": {
       "devError": "Нет контекста для перекрашивания изображений."
     },
+    "mapboxVectorTileImageryProvider": {
+      "requireLayerName": "Для MapboxVectorTileImageryProvider требуется имя слоя, переданное в options.layerName",
+      "requireStyles": "Для MapboxVectorTileImageryProvider требуется функция стилизации, переданная в options.styleFunc",
+      "moreThanFourTiles": "Согласно rectangle и minimumLevel поставщика изображений, число тайлов на минимальном уровне: {{tileCount}}. Поставщики изображений, у которых на минимальном уровне больше четырех тайлов, не поддерживаются.",
+      "maxLevelError": "Слишком высокий максимальный уровень для набора данных"
+    },
+    "regionProvider": {
+      "csvRegionMappingTitle": "Сопоставление регионов CSV",
+      "csvRegionMappingMessageZeroFound": "Для типа регионов {{regionType}} не найдено ни одного названия региона",
+      "csvRegionMappingMessageZeroBoundariesFound": "Для региона {{regionName}} не найдено ни одной границы",
+      "csvRegionMappingMessageLoadError": "Не удалось загрузить границы для региона {{regionName}} {{exception}}"
+    },
     "extraCreditLinks": {
       "dataAttribution": "Атрибуция данных",
-      "dataProvider": "Данные предоставлены:"
+      "termsOfUse": "Условия использования",
+      "credits": "Источники",
+      "mapCredits": "Источники карты",
+      "dataProvider": "Данные предоставлены:",
+      "searchProvider": "Поиск предоставлен:"
     }
   },
   "models": {
+    "userData": {
+      "addingDataErrorTitle": "Не удалось добавить данные",
+      "addingDataErrorMessage": "Не удалось добавить указанные данные: они некорректны или имеют неожиданный формат.",
+      "fileApiNotSupportedTitle": "File API не поддерживается",
+      "fileApiNotSupportedMessage": "К сожалению, ваш браузер не поддерживает File API, который нужен {{appName}} для добавления данных из файла на вашем компьютере. Обновите браузер. Для наилучшей работы рекомендуем последнюю версию {{chrome}}, {{firefox}} или {{edge}}."
+    },
+    "arcGisService": {
+      "name": "Группа сервисов ArcGIS",
+      "invalidServerTitle": "Некорректный сервер ArcGIS",
+      "invalidServerMessage": "При обращении к REST-сервису ArcGIS произошла ошибка. Ответ сервера не похож на корректный документ ArcGIS REST.",
+      "groupNotAvailableTitle": "Группа недоступна",
+      "groupNotAvailableMessage": "При обращении к REST-сервису ArcGIS произошла ошибка."
+    },
+    "arcGisFeatureServer": {
+      "name": "ArcGIS Feature Server",
+      "nameGroup": "Группа ArcGIS Feature Server",
+      "invalidServiceTitle": "Некорректный сервис ArcGIS Feature Service",
+      "invalidServiceMessage": "При обращении к ArcGIS Feature Service произошла ошибка. Ответ сервера не похож на корректный документ Feature Service.",
+      "groupNotAvailableTitle": "Группа недоступна",
+      "groupNotAvailableMessage": "При обращении к ArcGIS Feature Service произошла ошибка."
+    },
+    "arcGisFeatureServerCatalogGroup": {
+      "name": "Группа ArcGIS Feature Server",
+      "dataDescription": "Описание данных",
+      "serviceDescription": "Описание сервиса",
+      "copyrightText": "Сведения об авторских правах",
+      "invalidServiceTitle": "Некорректный сервис ArcGIS Feature Service",
+      "invalidServiceMessage": "При обращении к ArcGIS Feature Service произошла ошибка. Ответ сервера не похож на корректный документ Feature Service.",
+      "groupNotAvailableTitle": "Группа недоступна",
+      "groupNotAvailableMessage": "При обращении к ArcGIS Feature Service произошла ошибка."
+    },
+    "arcGisFeatureServerCatalogItem": {
+      "name": "Esri ArcGIS FeatureServer",
+      "dataDescription": "Описание данных",
+      "serviceDescription": "Описание сервиса",
+      "copyrightText": "Сведения об авторских правах",
+      "missingUrlTitle": "Не удалось загрузить FeatureServer",
+      "missingUrlMessage": "Не удалось загрузить конечную точку ArcGis FeatureServer, так как у элемента каталога не указан `url`.",
+      "invalidServiceTitle": "Некорректный слой ArcGIS Feature Service",
+      "invalidServiceMessage": "При обращении к ArcGIS Feature Service произошла ошибка. Ответ сервера не похож на корректный слой Feature Service.",
+      "reachedMaxFeatureLimit": "Внимание: в этом слое достигнут предел числа объектов FeatureService ({{maxFeatures}})."
+    },
+    "arcGisMapServerCatalogGroup": {
+      "name": "Группа ArcGIS Map Server",
+      "dataDescription": "Описание данных",
+      "serviceDescription": "Описание сервиса",
+      "copyrightText": "Сведения об авторских правах",
+      "invalidServiceTitle": "Некорректный сервис ArcGIS Map Service",
+      "invalidServiceMessage": "При обращении к ArcGIS Map Service произошла ошибка. Ответ сервера не похож на корректный документ Map Service.",
+      "groupNotAvailableTitle": "Группа недоступна",
+      "groupNotAvailableMessage": "При обращении к ArcGIS Map Service произошла ошибка.",
+      "singleFusedMapCacheLayerName": "Все слои"
+    },
+    "arcGisMapServerCatalogItem": {
+      "name": "Esri ArcGIS MapServer",
+      "dataDescription": "Описание данных",
+      "serviceDescription": "Описание сервиса",
+      "copyrightText": "Сведения об авторских правах",
+      "invalidUrlTitle": "Не удалось загрузить MapServer",
+      "invalidUrlMessage": "Не удалось загрузить конечную точку ArcGis MapServer, так как у элемента каталога не указан `url`.",
+      "noLayersFoundTitle": "Не удалось загрузить ArcGIS MapServer.",
+      "noLayersFoundMessage": "В Esri ArcGIS MapServer «{{name}}» нет слоев для отображения."
+    },
+    "arcGisImageServerCatalogItem": {
+      "name": "Esri ArcGIS ImageServer",
+      "invalidUrlTitle": "Не удалось загрузить ImageServer",
+      "invalidUrlMessage": "Не удалось загрузить конечную точку ArcGis ImageServer, так как у элемента каталога не указан `url`.",
+      "invalidServiceTitle": "Некорректный сервис ArcGIS Image Service",
+      "invalidServiceMessage": "При обращении к ArcGIS Image Service произошла ошибка. Ответ сервера не похож на корректный документ Image Service.",
+      "rasterFunction": "Растровая функция"
+    },
+    "bing": {
+      "name": "Bing Maps"
+    },
+    "wcs": {
+      "asyncResultLoadingMetadata": "Загрузка WCS:\nсервис {{name}}, {{timestamp}}.\n\n*Загрузка метаданных (`DescribeCoverage`)*",
+      "asyncResultDescription": "Это результат экспорта данных из сервиса {{name}} ({{timestamp}}) с указанными ниже входными параметрами.",
+      "asyncPendingDescription": "Загрузка WCS:\nсервис {{name}}, {{timestamp}}.\n\n*Скачивание покрытия*",
+      "exportFailedTitle": "Не удалось экспортировать данные",
+      "exportFailedMessage": "Ошибка Web Coverage Service",
+      "exportFailedMessageII": "Ошибка Web Coverage Service: {{error}}"
+    },
+    "carto-v3": {
+      "name": "Carto V3"
+    },
+    "cartoMap": {
+      "name": "Carto Map",
+      "noUrlTitle": "Нет URL",
+      "noUrlMessage": "Не удалось найти подходящий URL для слоя Carto Map."
+    },
+    "cesiumTerrain": {
+      "name": "Рельеф Cesium",
+      "name3D": "Cesium 3D Tiles",
+      "notSupportedErrorTitle": "Не поддерживается в 2D",
+      "notSupportedErrorMessage": "\"{{name}}\" нельзя показать в режиме 2D. Переключитесь в 3D и повторите попытку.",
+      "errorRenderingTitle": "Ошибка отрисовки в 3D",
+      "errorRenderingMessage": "При отрисовке в 3D произошла ошибка. Вероятно, это ошибка в {{appName}} или несовместимость с вашей системой или браузером. Сейчас мы переключим вас в режим 2D, чтобы вы могли продолжить работу."
+    },
+    "ckan": {
+      "nameServer": "Сервер CKAN",
+      "errorLoadingTitle": "Ошибка загрузки каталога CKAN",
+      "errorLoadingMessage": "В определении этого каталога CKAN нет корректного запроса фильтрации.",
+      "corsErrorMessage": "Не удалось получить пакеты с этого сервера CKAN.",
+      "name": "Ресурс CKAN",
+      "dataSourceErrorMessage": "Для этого источника данных нет доступных сведений.",
+      "serviceErrorMessage": "Для этого сервиса нет доступных сведений.",
+      "datasetDescription": "Описание набора данных",
+      "dataDescription": "Описание данных",
+      "resourceDescription": "Описание ресурса",
+      "datasetCustodian": "Ответственный за набор данных",
+      "licence": "Лицензия",
+      "author": "Автор",
+      "contact_point": "Контакты",
+      "metadata_created": "Создано",
+      "metadata_modified": "Изменено",
+      "update_freq": "Частота обновления",
+      "idsNotSpecifiedTitle": "Необходимо указать resourceId или datasetId",
+      "idsNotSpecifiedMessage": "Для CkanCatalogItem необходимо указать resourceId или datasetId.",
+      "errorRetrievingUrlTitle": "Ошибка при получении URL CKAN",
+      "errorRetrievingUrlMessage": "Не удалось получить данные JSON по адресу {{url}}.",
+      "invalidCkanTitle": "Некорректный JSON ресурса CKAN",
+      "invalidCkanMessage": "Ресурс, полученный с сервера CKAN, не содержит package_id.",
+      "notCompatibleTitle": "Совместимые ресурсы не найдены",
+      "notCompatibleMessageI": "В наборе данных CKAN нет ресурса с идентификатором {{resourceId}}, или формат этого ресурса не поддерживается.",
+      "notCompatibleMessageII": "В наборе данных CKAN нет ресурсов в поддерживаемом формате."
+    },
+    "composite": {
+      "name": "Составной элемент каталога"
+    },
+    "arcgisPortal": {
+      "nameGroup": "Группа ArcGIS Portal",
+      "errorLoadingTitle": "Ошибка загрузки каталога ArcGIS Portal",
+      "errorLoadingMessage": "Описание этого каталога ArcGIS Portal не содержит корректного запроса фильтра.",
+      "corsErrorMessage": "Не удалось получить пакеты с этого сервера ArcGIS Portal. ",
+      "name": "Элемент ArcGIS Portal",
+      "dataSourceErrorMessage": "Сведения об этом источнике данных недоступны.",
+      "serviceErrorMessage": "Сведения об этом сервисе недоступны.",
+      "datasetDescription": "Описание набора данных",
+      "licence": "Лицензия",
+      "openInPortal": "Открыть в ArcGIS Portal",
+      "idsNotSpecifiedTitle": "Необходимо указать resourceId или datasetId",
+      "idsNotSpecifiedMessage": "Для элемента ArcGIS Portal необходимо указать itemId.",
+      "errorRetrievingUrlTitle": "Ошибка при получении URL ArcGIS Portal",
+      "errorRetrievingUrlMessage": "Не удалось получить данные JSON по адресу {{url}}."
+    },
     "catalog": {
+      "name": "Элемент без названия",
       "group": "Группа",
+      "idForMatchingErrorTitle": "Отсутствует свойство",
+      "idForMatchingErrorMessage": "У объектов модели должно быть свойство `id`, `localId` или `name`.",
+      "catalogMemberMustHaveName": "У нового элемента каталога должно быть название.",
+      "catalogMemberMustHaveType": "У элемента каталога должен быть тип.",
+      "userAddedDataGroup": "Группа для данных, добавленных пользователем через панель добавления данных.",
+      "chartDataGroup": "Группа для данных графиков.",
+      "dataSourceErrorMessage": "Сведения об этом источнике данных недоступны.",
+      "serviceErrorMessage": "Сведения об этом сервисе недоступны.",
+      "stubCreationFailure": "Не удалось создать заглушку для элемента каталога {{item}}",
+      "unsupportedTypeTitle": "Неизвестный тип",
+      "unsupportedTypeMessage": "Не удалось создать модель неизвестного типа {{type}}.",
+      "unsupportedFileTypeTitle": "Неподдерживаемый тип файла",
+      "unsupportedFileTypeMessage": "{{appName}} не поддерживает этот формат файлов. Поддерживаются следующие форматы: <ul><li>.geojson</li><li>.kml, .kmz</li><li>.csv ({{link}})</li><li>Shapefile (.zip)</li></ul>",
       "upload": "Загрузить",
+      "mustHaveType": "У каждого элемента должен быть тип.",
+      "compositesError": "Составные элементы не могут включать другие составные элементы.",
+      "convertErrorTitle": "Не удалось обновить каталог до V8",
+      "convertErrorMessage": "Этот файл каталога создан для более старой версии TerriaJS — программного обеспечения, на котором работает эта веб-карта. При попытке обновить данные каталога для {{url}} произошла ошибка.",
       "addAll": "Добавить Все",
       "removeAll": "Убрать Все"
     },
+    "createParameter": {
+      "unsupportedErrorTitle": "Неподдерживаемый тип параметра функции",
+      "unsupportedErrorMessage": "Неизвестный тип параметра функции: {{type}}."
+    },
+    "csv": {
+      "name": "Значения, разделенные запятыми (CSV)",
+      "dataSourceErrorMessage": "Сведения об этом источнике данных недоступны.",
+      "serviceErrorMessage": "Сведения об этом сервисе недоступны.",
+      "unexpectedTypeTitle": "Неожиданный тип данных CSV",
+      "unexpectedTypeMessage": "Данные CsvCatalogItem должны иметь тип Blob, File или String, но имеют другой тип.",
+      "unableToLoadTitle": "Не удалось загрузить файл CSV",
+      "unableToLoadMessage": "Поддерживаемые форматы CSV описаны в спецификации <a href=\"https://github.com/TerriaJS/nationalmap/wiki/csv-geo-au\">csv-geo-au</a>.\n\n {{message}}",
+      "unableToLoadItemTitle": "Нет данных CSV",
+      "unableToLoadItemMessage": "Не удалось загрузить элемент каталога CSV: для него не задано свойство `url` или `csvString`."
+    },
+    "csw": {
+      "name": "Сервис каталогов (CSW)",
+      "unknownError": "Сервер CSW сообщил о неизвестной ошибке.",
+      "exceptionMessage": "Сервер CSW сообщил об ошибке:\n\n {{exceptionText}}",
+      "errorLoadingTitle": "Не удалось загрузить CSW",
+      "notUseableTitle": "Сервис каталогов нельзя использовать.  \n\n {{message}}",
+      "notUseableMessage": "При вызове GetDomain на сервере CSW получен некорректный ответ.",
+      "errorLoadingRecordsTitle": "Не удалось загрузить записи CSW.",
+      "errorLoadingRecordsMessage": "При вызове GetRecords на сервере CSW получен некорректный ответ",
+      "checkCORSDomain": "Не удалось выполнить GetDomain на этом сервере CSW.",
+      "checkCORSRecords": "Не удалось выполнить GetRecords на этом сервере CSW.",
+      "dataResponsibility": "Ответственность за данные",
+      "links": "Ссылки",
+      "metadataURL": "URL записи метаданных",
+      "checkCORS": "Не удалось выполнить GetRecords на этом сервере CSW.",
+      "cors": "CORS",
+      "missingUrlTitle": "Не удалось загрузить сервис каталогов (CSW)",
+      "missingUrlMessage": "Не удалось загрузить сервис каталогов (CSW): у группы каталога не задан `url`."
+    },
+    "czml": {
+      "name": "Язык Cesium (CZML)",
+      "dataSourceErrorMessage": "Сведения об этом источнике данных недоступны.",
+      "serviceErrorMessage": "Сведения об этом сервисе недоступны.",
+      "errorLoadingTitle": "Не удалось загрузить CZML",
+      "errorLoadingMessage": "При загрузке файла CZML произошла ошибка.",
+      "unableToLoadItemTitle": "Нет данных CZML",
+      "unableToLoadItemMessage": "Не удалось загрузить элемент каталога CZML: для него не задано свойство `url`, `czmlData` или `czmlString`."
+    },
+    "function": {
+      "unknownFormaterTitle": "Неизвестный модуль форматирования",
+      "unknownFormaterMessage": "Модуль форматирования параметра функции {{formatter}} неизвестен.\n\nДопустимые модули форматирования:\n\n"
+    },
+    "geoJson": {
+      "name": "GeoJSON",
+      "dataSourceErrorMessage": "Сведения об этом источнике данных недоступны.",
+      "serviceErrorMessage": "Сведения об этом сервисе недоступны.",
+      "errorLoadingTitle": "Ошибка загрузки GeoJSON",
+      "errorParsingMessage": "При разборе предоставленных данных как JSON произошла ошибка. Возможно, файл некорректен или не поддерживается.",
+      "errorLoadingMessage": "При загрузке файла GeoJSON произошла ошибка. Возможно, файл некорректен или не поддерживается.",
+      "couldNotLoadTitle": "Не удалось загрузить JSON",
+      "couldNotLoadMessage": "При получении данных JSON по указанной ссылке произошла ошибка.CORS",
+      "unableToLoadItemTitle": "Нет данных GeoJSON",
+      "unableToLoadItemMessage": "Не удалось загрузить элемент каталога GeoJSON: для него не задано свойство `url`, `geoJsonData` или `geoJsonString`.",
+      "unsupportedBrowserTitle": "Неподдерживаемый веб-браузер",
+      "unsupportedBrowserMessage": "К сожалению, ваш веб-браузер не поддерживает File API, который нужен {{appName}} для загрузки этого набора данных. Обновите веб-браузер. Для наилучшей работы рекомендуем последние версии $t(browsers.chrome), $t(browsers.firefox), $t(browsers.edge) или $t(browsers.safari)."
+    },
+    "shapefile": {
+      "name": "Shapefile"
+    },
+    "getToken": {
+      "errorTitle": "Ошибка токена",
+      "invalidToken": "<p>Сервер токенов вернул недействительный токен.</p><p>Сообщите об этом по электронной почте: {{email}}</p>",
+      "unableToRequest": "<p>Не удалось запросить токен у сервера токенов.</p><p>Сообщите об этом по электронной почте: {{email}}</p>"
+    },
+    "gltf": {
+      "name": "GL Transmission Format (glTF)",
+      "dataSourceErrorMessage": "Сведения об этом источнике данных недоступны.",
+      "serviceErrorMessage": "Сведения об этом сервисе недоступны.",
+      "notSupportedErrorTitle": "Не поддерживается в 2D",
+      "notSupportedErrorMessage": "«{{name}}» нельзя показать в режиме 2D. Переключитесь в 3D и повторите попытку.",
+      "error": "Ошибка",
+      "unableToRetrieve": "Не удалось получить сведения об объекте из:\n\n{{url}}"
+    },
+    "gpx": {
+      "name": "GPX",
+      "dataSourceErrorMessage": "Сведения об этом источнике данных недоступны.",
+      "serviceErrorMessage": "Сведения об этом сервисе недоступны.",
+      "errorLoadingTitle": "Ошибка загрузки GPX",
+      "errorLoadingMessage": "При загрузке файла GPX произошла ошибка. Возможно, файл некорректен или не поддерживается {{appName}}."
+    },
+    "georss": {
+      "name": "GeoRSS",
+      "subtitle": "Подзаголовок",
+      "updated": "Обновлено",
+      "category": "Категория",
+      "description": "Описание",
+      "copyrightText": "Сведения об авторских правах",
+      "link": "Ссылка",
+      "author": "Автор",
+      "errorLoadingTitle": "Не удалось загрузить GeoRSS",
+      "errorLoadingMessage": "При загрузке файла GeoRSS произошла ошибка.",
+      "unableToLoadItemTitle": "Нет данных GeoRSS",
+      "unableToLoadItemMessage": "Не удалось загрузить элемент каталога GeoRSS: для него не задано свойство `url` или `geoRss`."
+    },
+    "imageryLayer": {
+      "intervalSupportErrorTitle": "Интервалы не поддерживаются",
+      "intervalSupportErrorMessage": "К сожалению, элементы каталога {{typeName}} ({{type}}) пока нельзя сделать зависящими от времени с помощью свойства \"intervals\".",
+      "resolvingAvailability": "Проверка доступности в этом месте...",
+      "accessingBaseMapErrorTitle": "Ошибка доступа к базовой карте",
+      "accessingBaseMapErrorMessage": "При попытке получить тайлы базовой карты произошла ошибка:<p><center>{{name}} </center></p> Выберите другую базовую карту в настройках карты (кнопка в правом верхнем углу).",
+      "accessingCatalogItemErrorTitle": "Ошибка доступа к элементу каталога",
+      "accessingCatalogItemErrorMessage": "При попытке получить тайлы элемента каталога произошла ошибка:<p><center>{{name}}</center></p> Элемент каталога скрыт с карты. Чтобы повторить попытку, снова включите его на рабочей панели.",
+      "tileErrorTitle": "Ошибка тайла",
+      "tileErrorMessage": "Тайл с URL:\n{{url}}\n успешно загружается через XMLHttpRequest, но несколько раз не загрузился при прямой загрузке через Cesium или Leaflet.\n Возможно, сервер очень чувствителен к передаваемым заголовкам запроса или просто работает ненадежно.",
+      "tileErrorMessageII": "От URL:\n{{url}}\nполучен ответ 200 (OK), но его не удалось загрузить как изображение.",
+      "unknownTileErrorTitle": "Неизвестная ошибка тайла",
+      "unknownTileErrorMessage": "Ошибка при обращении к URL:\n{{url}}\nВероятные причины:\n* не удалось определить имя хоста сервера;\n* сервер не ответил на запрос;\n* сервер запретил доступ к этому URL по Cross-Origin Resource Sharing (CORS) (см. https://docs.terria.io/guide/connecting-to-data/cross-origin-resource-sharing/).",
+      "unableToDisplayTitle": "Не удалось показать набор данных",
+      "unableToDisplayMessage": "Набор данных {{name}} нельзя показать в режиме 2D: он не поддерживает стандартную проекцию Web Mercator (EPSG:3857). Переключитесь в 3D, если ваша система это поддерживает, обновите набор данных для поддержки этой проекции или используйте другой набор данных.",
+      "unableToShowLocTitle": "Не удалось показать в этом месте",
+      "unableToShowLocMessage": "Слой {{name}} нельзя показать в этом месте: доступные моменты съемки неизвестны. Свойство {{featureTimesProperty}} не найдено."
+    },
+    "invokeAnalyticsService": {
+      "invocationFailedTitle": "Ошибка вызова сервиса",
+      "invocationFailedMessage": "При вычислении {{invocationName}} на сервере произошла ошибка."
+    },
+    "ionImagery": {
+      "name": "Изображения Cesium ion"
+    },
+    "kml": {
+      "name": "KML или KMZ",
+      "dataSourceErrorMessage": "Сведения об этом источнике данных недоступны.",
+      "serviceErrorMessage": "Сведения об этом сервисе недоступны.",
+      "unexpectedTypeTitle": "Неожиданный тип данных KML",
+      "unexpectedTypeMessage": "KmlCatalogItem.data должен иметь тип XML Document, Blob или File, но имеет другой тип. Возможно, это ошибка в {{appName}} или неправильное использование API {{appName}}.",
+      "errorLoadingTitle": "Ошибка загрузки KML или KMZ",
+      "errorLoadingMessage": "При загрузке файла KML или KMZ произошла ошибка. Возможно, файл некорректен или не поддерживается {{appName}}.",
+      "unableToLoadItemTitle": "Нет данных KML",
+      "unableToLoadItemMessage": "Не удалось загрузить элемент каталога KML/KMZ: для него не задано свойство `url`, `kmlData` или `kmlString`."
+    },
+    "magda": {
+      "name": "Дистрибутив MAGDA",
+      "dataSourceErrorMessage": "Сведения об этом источнике данных недоступны.",
+      "serviceErrorMessage": "Сведения об этом сервисе недоступны.",
+      "distributionDesc": "Описание дистрибутива",
+      "idsNotSpecifiedTitle": "Необходимо указать recordId",
+      "idsNotSpecifiedMessage": "Для MagdaReference необходимо указать recordId.",
+      "retrieveErrorTitle": "Ошибка при получении записи MAGDA",
+      "retrieveErrorMessage": "Не указан идентификатор дистрибутива или набора данных",
+      "notCompatibleTitle": "Совместимые дистрибутивы не найдены",
+      "notCompatibleMessageI": "В наборе данных MAGDA нет дистрибутива с идентификатором {{distributionId}}, или формат этого дистрибутива не поддерживается.",
+      "notCompatibleMessageII": "В наборе данных MAGDA нет дистрибутивов в поддерживаемом формате."
+    },
+    "terria-reference": {
+      "failedToLoadTarget": "Не удалось загрузить элемент из внешнего каталога"
+    },
+    "mapboxMap": {
+      "name": "Карта Mapbox"
+    },
+    "mapboxVectorTile": {
+      "name": "Векторные тайлы Mapbox"
+    },
+    "mapboxStyle": {
+      "name": "Стиль Mapbox"
+    },
+    "senaps": {
+      "name": "Местоположения Senaps",
+      "retrieveErrorTitle": "Ошибка обработки элемента каталога Senaps",
+      "generalErrorMessage": "Ошибка при обработке данных Senaps",
+      "missingKeyErrorMessage": "Добавьте ключ API Senaps в конфигурацию terriajs-server с помощью параметра appendParamToQueryString",
+      "locationHeadingFeatureInfo": "Местоположение",
+      "availableStreamsHeadingFeatureInfo": "Доступные потоки",
+      "noStreamsMessageFeatureInfo": "В этом месте нет потоков.",
+      "missingSenapsBaseUrl": "Не указан базовый URL Senaps. Вы вошли в систему?"
+    },
+    "openStreetMap": {
+      "name": "Open Street Map"
+    },
     "placesLikeMe": {
-      "regionsLikeThisName": "Регионы, подобные этому"
+      "regionsLikeThisName": "Регионы, подобные этому",
+      "regionsLikeThisDescription": "Определяет регионы, _наиболее похожие_ на заданный регион по заданному набору характеристик.",
+      "regionTypeName": "Тип региона",
+      "regionTypeDescription": "Тип региона для анализа.",
+      "regionName": "Регион",
+      "regionDescription": "Регион для анализа. Анализ определит, какие регионы больше всего похожи на него.",
+      "characteristics": "Характеристики",
+      "characteristicsDescription": "Характеристики регионов, включаемые в анализ.",
+      "name": "Похожие места",
+      "regioNotSelectedName": "Регион не выбран",
+      "regioNotSelectedDescription": "Выберите регион.",
+      "placesLike": "Места, похожие на {{regionName}}",
+      "likenessesError": "Список сходств и список кодов регионов содержат разное количество элементов."
+    },
+    "raiseError": {
+      "errorTitle": "Произошла ошибка",
+      "notificationFeedback": "Если у вас есть вопросы или отзывы, нажмите здесь.",
+      "notificationFeedbackEmail": "С вопросами и отзывами обращайтесь по адресу {{email}}",
+      "developerDetails": "Сведения для разработчиков"
+    },
+    "regionMapping": {
+      "noDataForDate": "Нет данных на выбранную дату.",
+      "noDataForRegion": "Нет данных для выбранного региона.",
+      "outdatedBrowserTitle": "Устаревший веб-браузер",
+      "outdatedBrowserMessage": "Вы используете очень старый веб-браузер, который не может отображать наборы данных с привязкой к регионам, такие как этот. Как можно скорее обновите его до последней версии $t(browsers.chrome), $t(browsers.firefox), $t(browsers.edge) или $t(browsers.safari).",
+      "invalidServerTypeTitle": "Недопустимый serverType {{serverType}} в regionMapping.json",
+      "invalidServerTypeMessage": "Ожидалось значение serverType \"WMS\" или \"vector\", но получено \"{{serverType}}\"",
+      "notRecognised": "Эти названия регионов {{notRecognisedText}} ",
+      "notRecognisedText": "не распознаны",
+      "moreThanOneValue": "У этих регионов {{moreThanOneValueText}}",
+      "moreThanOneValueText": "более одного значения",
+      "msg": "Требования к оформлению файла: {{link}}.",
+      "csvSpecification": "спецификация CSV-geo-au",
+      "issuesLoadingTitle": "Проблемы при загрузке {{name}}"
+    },
+    "feedback": {
+      "thanksTitle": "Спасибо за отзыв!",
+      "thanksMessage": "Ваш отзыв помогает улучшать {{appName}}",
+      "unableToSendTitle": "Не удалось отправить отзыв",
+      "unableToSendMessage": "К сожалению, при отправке отзыва произошла ошибка. Отправьте его по электронной почте на адрес {{email}}."
+    },
+    "resultPending": {
+      "name": "Результат ожидается"
+    },
+    "sensorObservationService": {
+      "procedure": "Процедура",
+      "property": "Свойство",
+      "sos": "SOS",
+      "alreadyLoadingTitle": "Данные уже загружаются",
+      "alreadyLoadingMessage": "Данные еще загружаются. Изменить отображение можно будет после завершения загрузки",
+      "unknownError": "Сервер сообщил о неизвестной ошибке.",
+      "exceptionMessage": "Сервер сообщил об ошибке: \n\n {{exceptionText}}",
+      "missingBody": "Сервер вернул ответ без тела.",
+      "noFeatures": "Нет объектов, соответствующих запросу.",
+      "unknownFormat": "Сервер вернул объекты в неизвестном формате.",
+      "noMatchingFeatures": "Сервис Sensor Observation Service не вернул ни одного объекта, соответствующего запросу."
+    },
+    "openDataSoft": {
+      "viewDatasetPage": "Открыть страницу набора данных"
+    },
+    "sdmxServerStratum": {
+      "sdmxStructureLoadErrorTitle": "Ошибка запроса структуры SDMX",
+      "loadDataErrorTitle": "Не удалось загрузить группу SDMX",
+      "loadDataErrorMessage": "На сервере нет потоков данных"
+    },
+    "sdmxJsonDataflowStratum": {
+      "loadDataErrorTitle": "Не удалось загрузить поток данных SDMX",
+      "loadDataErrorMessage": {
+        "invalidResponse": "Некорректный объект JSON",
+        "noDatastructure": "Не найдено структур данных для потока данных {{catalogItem.dataflowId}}",
+        "noDataflow": "Поток данных {{catalogItem.dataflowId}} некорректен"
+      },
+      "defaultUnitMeasure": "Единицы"
+    },
+    "sdmxCatalogItem": {
+      "viewBy": {
+        "title": "Показать по",
+        "time": "Временной ряд",
+        "region": "Регион"
+      },
+      "loadDataErrorTitle": "Не удалось загрузить данные SDMX для {{name}}",
+      "loadDataErrorMessage": "Некорректный ответ от {{csvUrl}}",
+      "noResultsWithDimensions": "Результаты не найдены. Выберите на рабочей панели значения измерений, отличные от следующих:  \n\n{{dimensions}}"
+    },
+    "time": {
+      "invalidDate": "Недопустимая дата",
+      "invalidInitialTimeSource": "В файле конфигурации указан недопустимый initialTimeSource: {{initialTimeSource}}"
+    },
+    "shareData": {
+      "generateErrorTitle": "Не удалось создать ссылку",
+      "generateErrorMessage": "Что-то пошло не так",
+      "generateErrorMessageWithStatus": "Что-то пошло не так ({{statusCode}})",
+      "generateErrorMessageUnauthorized": "Что-то пошло не так (401)",
+      "generateErrorDataExceedsLimitMessage": "История или ссылка слишком велика. Удалите часть содержимого или сцен и повторите попытку.",
+      "expandErrorTitle": "Не удалось развернуть ссылку",
+      "expandErrorMessage": "Сервис данных общего доступа, через который запускается {{appName}}, не найден. Возможно, в ссылке есть ошибка или сервис сейчас недоступен.",
+      "shareNotFoundTitle": "Ссылка не найдена",
+      "shareNotFoundMessage": "История или ссылка не существует. Возможно, она была удалена или URL указан неверно."
+    },
+    "socrataServer": {
+      "name": "Сервер Socrata",
+      "retrieveErrorMessage": "Не удалось получить пакеты с этого сервера Socrata.",
+      "description": "Описание",
+      "licence": "Лицензия",
+      "attributes": "Атрибуты",
+      "tags": "Теги"
+    },
+    "spatialDetailing": {
+      "name": "Пространственная детализация",
+      "description": "Прогнозирует характеристики мелких регионов, выявляя и используя корреляции укрупненных данных с характеристиками переписи населения.",
+      "regionTypeToPredictName": "Тип региона для прогноза",
+      "regionTypeToPredictDescription": "Тип региона, для которого прогнозируются характеристики.",
+      "coarseDataRegionTypeName": "Тип региона укрупненных данных",
+      "coarseDataRegionTypeDescription": "Тип региона, к которому относятся укрупненные входные характеристики.",
+      "aggregationName": "Агрегирование",
+      "aggregationDescription": "Определяет, как агрегированы значения по крупным регионам. True — значение является средним по региону, False — суммой значений по региону.",
+      "aggregationTrueName": "Агрегирование по среднему",
+      "aggregationTrueDescription": "Значения по крупным регионам — средние значения выборки в регионе. Например, средний доход домохозяйства.",
+      "aggregationFalseName": "Агрегирование по сумме",
+      "aggregationFalseDescription": "Значения по крупным регионам — суммы значений выборки в регионе. Например, общая численность населения.",
+      "characteristicToPredictName": "Прогнозируемая характеристика",
+      "characteristicToPredictDescription": "Характеристика, прогнозируемая для каждого региона.",
+      "spatialDetailingOf": "Пространственная детализация {{of}} на уровне {{at}}",
+      "wrongNumberOfElements": "Список значений и список кодов регионов содержат разное количество элементов"
+    },
+    "tableData": {
+      "noData": "Нет данных для отображения",
+      "unsupportedCharactersTitle": "Недопустимые символы в столбцах широты и долготы",
+      "unsupportedCharactersMessage": "Не удалось распознать пару широты и долготы {{longitude}}, {{latitude}}",
+      "bulkGeocoderInfoTitle": "Сведения о пакетном геокодировании",
+      "bulkGeocoderInfoMessage": "CSV содержит адреса, но некоторые из них ({{number}}) не удалось найти на карте: ",
+      "bulkGeocoderInfo2Message": "Отсутствующих адресов в CSV: {{nullAddresses}}.",
+      "bulkGeocoderErrorTitle": "Ошибка пакетного геокодирования",
+      "bulkGeocoderErrorMessage": "Не удалось сопоставить адреса с координатами (широта, долгота): при получении координат адресов произошла ошибка. Проверьте подключение к интернету или повторите попытку позже.",
+      "legendZFilterLabel": "Экстремальные значения",
+      "legendNullLabel": "(Нет значения)",
+      "activeStyle": "Отображаемая переменная",
+      "styleDisabledLabel": "Отключить стиль",
+      "zFilterEnabled": "Экстремальные значения скрыты (нажмите, чтобы показать)",
+      "zFilterDisabled": "Обнаружены экстремальные значения (нажмите, чтобы скрыть)",
+      "timeDimensionEnabled": "Время включено (нажмите, чтобы отключить)",
+      "timeDimensionDisabled": "Время отключено (нажмите, чтобы включить)",
+      "editStyle": "Изменить стиль",
+      "custom": "Пользовательский",
+      "regionMapping": "Привязка к регионам",
+      "regionColumn": "Столбец регионов",
+      "manualRegionMapping": "Ручная привязка к регионам"
+    },
+    "terrainCatalog": {
+      "notSupportedErrorTitle": "Не поддерживается в 2D",
+      "notSupportedErrorMessage": "{{name}} нельзя показать в режиме 2D. Переключитесь в 3D и повторите попытку"
+    },
+    "terria": {
+      "loadConfigErrorTitle": "Не удалось загрузить конфигурацию Terria Map",
+      "proxyableDomainsDeprecation": "`proxyableDomainsUrl` больше не поддерживается в v8",
+      "initErrorTitle": "Не удалось инициализировать сервисы",
+      "initErrorMessage": "Возникла проблема с сервером Terria. Из-за этого некоторые слои или сервис преобразования могут быть недоступны.",
+      "urlLoadErrorTitle": "Проблема при загрузке URL",
+      "urlLoadErrorMessage": "Возникла проблема при инициализации Terria с параметрами URL.",
+      "loadModelErrorMessage": "При загрузке модели `{{model}}` произошла ошибка.",
+      "loadingMagdaInitSourceErrorTitle": "Ошибка загрузки источника инициализации Magda",
+      "loadingMagdaInitSourceErrorMessage": "При загрузке данных инициализации из записи Magda `{{url}}` произошла ошибка.",
+      "loadingInitSourcesErrorTitle": "Ошибка загрузки конфигурации карты",
+      "loadingInitSourcesErrorMessage": "При загрузке конфигурации карты {{appName}} произошла ошибка &mdash; карта может отображаться некорректно. Перезагрузите карту, а если проблема сохранится, сообщите о ней по электронной почте {{email}} или нажмите кнопку ниже.",
+      "loadingInitSourceErrorTitle": "Ошибка загрузки источника инициализации",
+      "loadingInitSourceErrorMessage": "Не удалось загрузить данные инициализации из `{{fragment}}`: не задан параметр initFragmentPaths.",
+      "loadingInitSourceError2Message": "При загрузке данных инициализации из следующего источника произошла ошибка:  \n*`{{loadSource}}`*.",
+      "loadingInitJsonMessage": "При загрузке файла JSON {{url}} произошла ошибка.",
+      "loadingBaseMapsErrorTitle": "Ошибка загрузки базовых карт",
+      "loadingBaseMapErrorTitle": "Ошибка загрузки базовой карты: `{{name}}`",
+      "loadingShareDataErrorTitle": "Ошибка загрузки данных по ссылке",
+      "parsingStartDataErrorMessage": "При разборе начальных данных JSON произошла ошибка.",
+      "loadingWorkbenchItemErrorTitle": "Ошибка загрузки элемента на рабочей панели: `{{name}}`",
+      "disclaimer": "Отказ от ответственности",
+      "buttonTitleConfirm": "Принимаю"
+    },
+    "terriaJSONcatalog": {
+      "name": "Функция каталога Terria JSON",
+      "misconfiguredErrorTitle": "Неправильно настроенный файл инициализации",
+      "misconfiguredErrorMessage": "Сервис не настроен для TerriaJsonCatalogFunction HTTP 202.",
+      "misconfiguredError2Message": "Конфигурация HTTP 202 {{url}} отсутствует в ответе {{xhr}}",
+      "serviceResponseErrorTitle": "Ответ сервиса не является строкой JSON",
+      "serviceResponseErrorMessage": "TerriaJsonCatalogFunction должна была получить строку JSON, но получила {{xhr}}",
+      "requestFailedTitle": "Ошибка запроса",
+      "requestFailedMessage": "Запрос завершился ошибкой с кодом состояния {{status}}.",
+      "asyncResultDescription": "Это результат вызова процесса или сервиса {{name}} в {{timestamp}} с приведенными ниже входными параметрами.",
+      "loadingInitSourceErrorTitle": "Ошибка загрузки источника инициализации",
+      "loadingInitSourceErrorMessage": "Ошибка загрузки источника инициализации {{fragment}}: не задан параметр initFragmentPaths.",
+      "loadingInitSourceError2Message": "При загрузке данных инициализации из следующего источника произошла ошибка:  \n*`{{loadSource}}`*.",
+      "disclaimer": "Отказ от ответственности",
+      "buttonTitleConfirm": "Принимаю"
+    },
+    "thredds": {
+      "nameGroup": "Группа каталога THREDDS"
+    },
+    "threddsItem": {
+      "name": "Ссылка на элемент THREDDS"
+    },
+    "urlTemplateMapServer": {
+      "name": "Картографический сервер по шаблону URL"
+    },
+    "userDrawing": {
+      "devError": "Требуется экземпляр Terria.",
+      "messageHeader": "Рисование на карте",
+      "pointEntities": "Точки",
+      "otherEntities": "Линии и полигоны",
+      "line": "Линия",
+      "firstPoint": "Первая точка",
+      "btnCancel": "Отмена",
+      "btnDone": "Готово",
+      "clickToAddFirstPoint": "Нажмите, чтобы добавить точку",
+      "clickToAddAnotherPoint": "Щелкните, чтобы добавить еще одну точку",
+      "clickToRedrawRectangle": "Щелкните другую точку, чтобы перерисовать прямоугольник",
+      "anotherPoint": "Еще одна точка",
+      "userPolygon": "Пользовательский полигон"
+    },
+    "webFeatureServiceCatalogGroup": {
+      "wfsServer": "Сервер Web Feature Service (WFS)",
+      "invalidWFSServerTitle": "Некорректный сервер WFS",
+      "invalidWFSServerMessage": "При вызове GetCapabilities на сервере WFS произошла ошибка. Ответ сервера не похож на корректный документ GetCapabilities.",
+      "groupNotAvailableTitle": "Группа недоступна",
+      "groupNotAvailableMessage": "При вызове GetCapabilities на сервере WFS произошла ошибка.",
+      "abstract": "Описание Web Feature Service",
+      "accessConstraints": "Ограничения доступа Web Feature Service",
+      "fees": "Плата за использование Web Feature Service"
+    },
+    "webFeatureServiceCatalogItem": {
+      "wfs": "Web Feature Service (WFS)",
+      "dataDescription": "Описание данных",
+      "abstract": "Описание Web Feature Service",
+      "serviceDescription": "Описание сервиса",
+      "metadataUrls": "Ссылки на метаданные",
+      "accessConstraints": "Ограничения доступа",
+      "serviceContact": "Контакты сервиса",
+      "getCapabilitiesUrl": "URL GetCapabilities",
+      "noLayerFoundTitle": "Слой не найден",
+      "noLayerFoundMessage": "В наборе данных WFS «{{name}}» нет слоев, соответствующих «{{typeNames}}». Возможно, файл каталога настроен неправильно или сервер WFS изменился.",
+      "missingDataTitle": "Нет данных",
+      "missingDataMessage": "Набор данных WFS «{{name}}» не вернул данных. Возможно, файл каталога настроен неправильно или изменился адрес сервера.",
+      "missingUrlTitle": "Не удалось загрузить GetCapabilities",
+      "missingUrlMessage": "Не удалось загрузить документ GetCapabilities сервиса Web Feature Service (WFS): у элемента каталога не задан `url`.",
+      "reachedMaxFeatureLimit": "Внимание: в этом слое достигнуто ограничение WFS на число объектов ({{maxFeatures}})"
+    },
+    "webMapServiceCatalogGroup": {
+      "wmsServer": "Сервер Web Map Service (WMS)",
+      "invalidWMSServerTitle": "Некорректный сервер WMS",
+      "invalidWMSServerMessage": "При вызове GetCapabilities на сервере WMS произошла ошибка. Ответ сервера не похож на корректный документ GetCapabilities.",
+      "groupNotAvailableTitle": "Группа недоступна",
+      "groupNotAvailableMessage": "При вызове GetCapabilities на сервере WMS произошла ошибка.",
+      "missingUrlTitle": "Не удалось загрузить GetCapabilities",
+      "missingUrlMessage": "Не удалось загрузить документ GetCapabilities сервиса Web Map Service (WMS): у элемента каталога не задан `url`.",
+      "abstract": "Описание Web Map Service",
+      "accessConstraints": "Ограничения доступа Web Map Service",
+      "fees": "Плата за использование Web Map Service"
+    },
+    "webMapServiceCatalogItem": {
+      "wms": "Web Map Service (WMS)",
+      "dataDescription": "Описание данных",
+      "serviceDescription": "Описание сервиса",
+      "metadataUrls": "Ссылки на метаданные",
+      "accessConstraints": "Ограничения доступа",
+      "serviceContact": "Контакты сервиса",
+      "getCapabilitiesUrl": "URL GetCapabilities",
+      "defaultStyleLabel": "Стиль по умолчанию",
+      "noLayerFoundTitle": "Слой не найден",
+      "noLayerFoundMessage": "В наборе данных WMS «{{name}}» нет слоев, соответствующих «{{layers}}». Возможно, файл каталога настроен неправильно или сервер WMS изменился.",
+      "badlyFormatedTitle": "Неверный формат периодичности",
+      "badlyFormatedMessage": "У набора данных «{{name}}» неверно задана периодичность: «{{isoSegments}}». Нажмите кнопку информации у набора данных, чтобы узнать больше о нем и о его владельце.",
+      "missingDataTitle": "Нет данных",
+      "missingDataMessage": "Набор данных WMS «{{name}}» не вернул данных.{{line}}{{line}}Возможно, файл каталога настроен неправильно или изменился адрес сервера.",
+      "missingUrlTitle": "Не удалось загрузить GetCapabilities",
+      "missingUrlMessage": "Не удалось загрузить документ GetCapabilities сервиса Web Map Service (WMS): у элемента каталога не задан `url`."
+    },
+    "webMapTileServiceCatalogGroup": {
+      "wmtsServer": "Сервер Web Map Tile Service (WMTS)",
+      "invalidWMTSServerTitle": "Некорректный сервер WMTS",
+      "invalidWMTSServerMessage": "При вызове GetCapabilities на сервере WMTS произошла ошибка. Ответ сервера не похож на корректный документ GetCapabilities.",
+      "groupNotAvailableTitle": "Группа недоступна",
+      "groupNotAvailableMessage": "При вызове GetCapabilities на сервере WMTS произошла ошибка.",
+      "abstract": "Описание Web Map Service",
+      "accessConstraints": "Ограничения доступа Web Map Service",
+      "fees": "Плата за использование Web Map Service",
+      "invalidCapabilitiesTitle": "Некорректный документ GetCapabilities",
+      "invalidCapabilitiesMessage": "Данные по адресу {{url}} успешно получены, но они не похожи на корректный документ GetCapabilities сервиса Web Map Tile Service (WMTS). \n\nВозможно, файл каталога настроен неправильно или изменился адрес сервера."
+    },
+    "webMapTileServiceCatalogItem": {
+      "wmts": "Web Map Tile Service (WMTS)",
+      "dataDescription": "Описание данных",
+      "serviceDescription": "Описание сервиса",
+      "accessConstraints": "Ограничения доступа",
+      "fees": "Плата за использование Web Map Tile Service",
+      "serviceContact": "Контакты сервиса",
+      "getCapabilitiesUrl": "URL GetCapabilities",
+      "missingUrlTitle": "Не удалось загрузить GetCapabilities",
+      "missingUrlMessage": "Не удалось загрузить документ GetCapabilities сервиса Web Map Tile Service (WMTS): у элемента каталога не задан `url`.",
+      "noUsableTileMatrixTitle": "Внимание",
+      "noUsableTileMatrixMessage": "У этого слоя WMTS нет набора матриц тайлов в проекции Web Mercator — он может отображаться некорректно"
+    },
+    "webProcessingService": {
+      "wps": "Web Processing Service (WPS)",
+      "invalidWPSServerTitle": "Некорректный сервер WPS",
+      "invalidWPSServerMessage": "При вызове {{endpoint}} на сервере WPS для процесса {{name}} произошла ошибка. Ответ сервера не похож на корректный документ {{endpoint}}.",
+      "processDescriptionErrorTitle": "У процесса нет описания",
+      "processDescriptionErrorMessage": "Ответ WPS DescribeProcess для этого процесса не содержит элемента ProcessDescription.",
+      "processInputErrorTitle": "У процесса нет входных параметров",
+      "processInputErrorMessage": "Для этого процесса WPS не задано ни одного входного параметра.",
+      "unsupportedParameterErrorTitle": "Неподдерживаемый тип параметра",
+      "unsupportedParameterErrorMessage": "Параметр {{identifier}} имеет неподдерживаемый тип.",
+      "invalidResponseErrorTitle": "Некорректный ответ сервера WPS",
+      "invalidResponseErrorMessage": "При обращении к адресу статуса на сервере WPS для процесса {{name}} произошла ошибка.",
+      "invalidResponseError2Title": "Некорректный ответ от сервера WPS",
+      "invalidResponseError2Message": "Ответ сервера WPS не содержит элемента Status.",
+      "failureReasonUnknowError": "Причина сбоя неизвестна.",
+      "asyncShortReportFailed": "Не удалось вызвать Web Processing Service. Подробности доступны на информационной панели.",
+      "errorDetails": "Подробности ошибки",
+      "resultPendingDescription": "Это результат вызова процесса или сервиса {{name}} в {{timestamp}} с приведенными ниже входными параметрами.",
+      "regionTypeDescription": "Тип анализируемого региона.",
+      "regionTypeName": "Тип региона",
+      "regionParameterName": "Параметр региона",
+      "wpsServer": "Сервер Web Processing Service (WPS)",
+      "wpsResult": "Результат Web Processing Service"
+    },
+    "webProcessingServiceCatalogGroup": {
+      "typeName": "Сервер Web Processing Service (WPS)",
+      "missingUrlTitle": "Не удалось загрузить GetCapabilities",
+      "missingUrlMessage": "Не удалось загрузить документ GetCapabilities сервиса Web Processing Service (WPS): у элемента каталога не задан `url`.",
+      "invalidCapabilitiesTitle": "Некорректный документ GetCapabilities",
+      "invalidCapabilitiesMessage": "Данные по адресу {{url}} успешно получены, но они не похожи на корректный документ GetCapabilities сервиса Web Processing Service (WPS). \n\nВозможно, файл каталога настроен неправильно или изменился адрес сервера.",
+      "invalidServerTitle": "Некорректный сервер WPS",
+      "invalidServerMessage": "При вызове GetCapabilities на сервере WPS произошла ошибка. Ответ сервера не похож на корректный документ GetCapabilities.",
+      "abstract": "Описание Web Processing Service",
+      "accessConstraints": "Ограничения доступа Web Processing Service",
+      "fees": "Плата за использование Web Processing Service",
+      "providerName": "Название поставщика Web Processing Service",
+      "providerSite": "Сайт поставщика Web Processing Service"
+    },
+    "wfsFeatures": {
+      "featuresGroup": "Группа объектов сервера Web Feature Service (WFS)",
+      "queryErrorTitle": "Ошибка запроса к серверу WFS",
+      "queryErrorMessage": "При вызове GetFeature на сервере WFS произошла ошибка. Ответ сервера не похож на корректный документ GeoJSON.",
+      "groupNotAvailableTitle": "Группа недоступна",
+      "groupNotAvailableMessage": "При вызове GetFeature на сервере WFS произошла ошибка."
+    },
+    "shadow": {
+      "name": "Тени",
+      "options": {
+        "none": "Нет",
+        "cast": "Только отбрасывать",
+        "receive": "Только принимать",
+        "both": "Отбрасывать и принимать"
+      }
+    },
+    "clippingBox": {
+      "groupName": "Область отсечения",
+      "clipModel": "Обрезать модель",
+      "showClippingBox": "Показать область отсечения",
+      "keepBoxAboveGround": "Только над землей",
+      "clipDirection": {
+        "name": "Направление отсечения",
+        "options": {
+          "inside": "Отсекать внутри области",
+          "outside": "Отсекать снаружи области"
+        }
+      }
+    },
+    "commonModelErrors": {
+      "3dTypeIn2dMode": "**Примечание:** этот набор данных нельзя отобразить в режиме 2D. Переключитесь на один из 3D-режимов карты."
+    },
+    "scaleDatasetNotVisible": {
+      "scaleZoomIn": "Набор данных недоступен в этом масштабе. Приблизьте карту, чтобы его увидеть",
+      "scaleZoomOut": "Набор данных недоступен в этом масштабе. Отдалите карту, чтобы его увидеть"
+    },
+    "tableStyling": {
+      "hideAdvancedOptions": "Скрыть дополнительные параметры",
+      "showAdvancedOptions": "Показать дополнительные параметры",
+      "copyUserStratum": "Скопировать пользовательские настройки (user stratum) в буфер обмена",
+      "name": "Стиль",
+      "reset": "Сбросить до стиля по умолчанию",
+      "data": {
+        "name": "Данные",
+        "selectableDimensions": {
+          "dataset": {
+            "name": "Набор данных"
+          },
+          "tableStyle": {
+            "name": "Стиль"
+          },
+          "tableStyleType": {
+            "name": "Символика",
+            "options": {
+              "fill": {
+                "name": "Цвет заливки"
+              },
+              "pointSize": {
+                "name": "Размер точки"
+              },
+              "point": {
+                "name": "Стиль точки/маркера"
+              },
+              "outline": {
+                "name": "Цвет контура"
+              },
+              "label": {
+                "name": "Стиль подписи"
+              },
+              "trail": {
+                "name": "Стиль следа"
+              }
+            }
+          }
+        }
+      },
+      "fill": {
+        "name": "Цвет заливки",
+        "selectableDimensions": {
+          "tableColorColumn": {
+            "name": "Переменная"
+          },
+          "dataType": {
+            "name": "Тип столбца (дополнительно)"
+          },
+          "type": {
+            "name": "Тип",
+            "undefinedLabel": "Укажите",
+            "options": {
+              "noStyle": {
+                "name": "Без стиля"
+              },
+              "sequentialContinuous": {
+                "name": "Последовательный (непрерывный)"
+              },
+              "sequentialDiscrete": {
+                "name": "Последовательный (дискретный)"
+              },
+              "divergingContinuous": {
+                "name": "Расходящийся (непрерывный)"
+              },
+              "divergingDiscrete": {
+                "name": "Расходящийся (дискретный)"
+              },
+              "qualitative": {
+                "name": "Качественный"
+              },
+              "customQualitative": {
+                "name": "Пользовательский (качественный)"
+              },
+              "customDiscrete": {
+                "name": "Пользовательский (дискретный)"
+              }
+            }
+          },
+          "scheme": {
+            "name": "Схема"
+          },
+          "numberOfBins": {
+            "name": "Количество интервалов"
+          }
+        }
+      },
+      "min": {
+        "name": "Мин."
+      },
+      "displayRange": {
+        "name": "Диапазон отображения",
+        "selectableDimensions": {
+          "max": {
+            "name": "Макс."
+          }
+        }
+      },
+      "bins": {
+        "name": "Интервалы",
+        "selectableDimensions": {
+          "start": {
+            "name": "От {{value1}} до {{value2}}",
+            "selectableDimensions": {
+              "color": {
+                "name": "Цвет"
+              },
+              "start": {
+                "name": "Начало"
+              },
+              "stop": {
+                "name": "Конец"
+              }
+            }
+          }
+        }
+      },
+      "colors": {
+        "name": "Цвета",
+        "selectableDimensions": {
+          "color": {
+            "name": "Цвет"
+          },
+          "value": {
+            "name": "Значение"
+          },
+          "remove": {
+            "value": "Удалить"
+          },
+          "add": {
+            "value": "Добавить цвет"
+          }
+        }
+      },
+      "nullColor": {
+        "name": "Цвет по умолчанию"
+      },
+      "outlierColor": {
+        "name": "Цвет выбросов"
+      },
+      "additionalColors": {
+        "name": "Дополнительные цвета",
+        "selectableDimensions": {
+          "regionColor": {
+            "name": "Цвет региона"
+          },
+          "nullColor": {
+            "name": "Цвет по умолчанию"
+          },
+          "outlierColor": {
+            "name": "Цвет выбросов"
+          }
+        }
+      },
+      "pointSize": {
+        "name": "Размер точки",
+        "selectableDimensions": {
+          "pointSizeColumn": {
+            "name": "Переменная"
+          },
+          "pointSizeNull": {
+            "name": "Размер по умолчанию"
+          },
+          "pointSizesFactor": {
+            "name": "Коэффициент размера"
+          },
+          "pointSizeOffset": {
+            "name": "Смещение размера"
+          }
+        }
+      },
+      "regionMapping": {
+        "name": "Привязка к регионам"
+      },
+      "legend": {
+        "name": "Легенда",
+        "selectableDimensions": {
+          "legendTitle": {
+            "name": "Заголовок"
+          },
+          "legendTicks": {
+            "name": "Деления"
+          },
+          "title": {
+            "name": "Заголовок элемента {{index}}"
+          }
+        }
+      },
+      "styleOptions": {
+        "name": "Параметры стиля",
+        "selectableDimensions": {
+          "styleTitle": {
+            "name": "Заголовок"
+          },
+          "longitudeColumn": {
+            "name": "Столбец долготы"
+          },
+          "latitudeColumn": {
+            "name": "Столбец широты"
+          }
+        }
+      },
+      "timeOptions": {
+        "name": "Параметры времени",
+        "selectableDimensions": {
+          "tableTimeColumn": {
+            "name": "Столбец времени"
+          },
+          "tableEndTimeColumn": {
+            "name": "Столбец времени окончания"
+          },
+          "tableTimeIdColumns": {
+            "name": "Столбцы ID"
+          },
+          "tableTimeIsSampled": {
+            "name": "Выборочные значения",
+            "options": {
+              "true": {
+                "name": "Да"
+              },
+              "false": {
+                "name": "Нет"
+              }
+            }
+          },
+          "tableTimeDisplayDuration": {
+            "name": "Длительность отображения"
+          },
+          "tableTimeSpreadStartTime": {
+            "name": "Распространить время начала",
+            "options": {
+              "true": {
+                "name": "Да"
+              },
+              "false": {
+                "name": "Нет"
+              }
+            }
+          },
+          "tableTimeSpreadFinishTime": {
+            "name": "Распространить время окончания",
+            "options": {
+              "true": {
+                "name": "Да"
+              },
+              "false": {
+                "name": "Нет"
+              }
+            }
+          }
+        }
+      },
+      "workbenchOptions": {
+        "name": "Параметры рабочей панели",
+        "selectableDimensions": {
+          "tableStyleEnalbed": {
+            "name": "Показывать стиль на рабочей панели",
+            "options": {
+              "true": {
+                "name": "Стиль показан"
+              },
+              "false": {
+                "name": "Стиль скрыт"
+              }
+            }
+          },
+          "showDisableStyleOption": {
+            "name": "Показывать параметр отключения стиля"
+          },
+          "showDisableTimeOption": {
+            "name": "Показывать параметр отключения времени"
+          },
+          "enableManualRegionMapping": {
+            "name": "Включить ручную привязку к регионам"
+          }
+        }
+      },
+      "variableAndColumn": {
+        "name": "Переменная/столбец",
+        "selectableDimensions": {
+          "columnTitle": {
+            "name": "Заголовок"
+          },
+          "columnUnits": {
+            "name": "Единицы измерения"
+          }
+        }
+      },
+      "style": {
+        "selectableDimensions": {
+          "column": {
+            "name": "Переменная"
+          },
+          "styleType": {
+            "name": "Тип",
+            "undefinedLabel": "Укажите",
+            "constant": {
+              "name": "Без стиля"
+            },
+            "bin": {
+              "name": "Дискретный"
+            },
+            "enum": {
+              "name": "Качественный"
+            }
+          },
+          "enum": {
+            "name": "Стили по значениям",
+            "selectableDimensions": {
+              "enum": {
+                "noValue": "Нет значения",
+                "selectableDimensions": {
+                  "value": {
+                    "name": "Значение"
+                  },
+                  "remove": {
+                    "value": "Удалить"
+                  }
+                },
+                "add": {
+                  "value": "Добавить стиль для значения"
+                }
+              }
+            }
+          },
+          "bin": {
+            "name": "Стили интервалов",
+            "selectableDimensions": {
+              "add": {
+                "value": "Добавить интервал"
+              },
+              "bin": {
+                "noValue": "Нет значения",
+                "range": "От {{value1}} до {{value2}}",
+                "selectableDimensions": {
+                  "start": {
+                    "name": "Начало"
+                  },
+                  "stop": {
+                    "name": "Конец"
+                  },
+                  "remove": {
+                    "value": "Удалить"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "null": {
+          "name": "По умолчанию"
+        }
+      },
+      "point": {
+        "name": "Стиль маркера",
+        "selectableDimensions": {
+          "marker": {
+            "name": "Маркер",
+            "tooltip": "Маркер можно задать URL-адресом или в base64 в любом поддерживаемом формате изображений (например, PNG, SVG)"
+          },
+          "rotation": {
+            "name": "Поворот"
+          },
+          "height": {
+            "name": "Высота"
+          },
+          "width": {
+            "name": "Ширина"
+          }
+        }
+      },
+      "outline": {
+        "name": "Стиль контура",
+        "selectableDimensions": {
+          "color": {
+            "name": "Цвет"
+          },
+          "width": {
+            "name": "Ширина"
+          }
+        }
+      },
+      "label": {
+        "name": "Стиль подписи",
+        "selectableDimensions": {
+          "column": {
+            "name": "Столбец подписей"
+          },
+          "font": {
+            "name": "Шрифт"
+          },
+          "style": {
+            "name": "Стиль подписи",
+            "options": {
+              "fill": {
+                "name": "Только заливка"
+              },
+              "outline": {
+                "name": "Только контур"
+              },
+              "fillAndOutline": {
+                "name": "Заливка и контур"
+              }
+            }
+          },
+          "scale": {
+            "name": "Масштаб"
+          },
+          "fillColor": {
+            "name": "Цвет заливки"
+          },
+          "outlineColor": {
+            "name": "Цвет контура"
+          },
+          "outlineWidth": {
+            "name": "Толщина контура"
+          },
+          "horizontalOrigin": {
+            "name": "Привязка по горизонтали",
+            "options": {
+              "left": {
+                "name": "По левому краю"
+              },
+              "center": {
+                "name": "По центру"
+              },
+              "right": {
+                "name": "По правому краю"
+              }
+            }
+          },
+          "verticalOrigin": {
+            "name": "Привязка по вертикали",
+            "options": {
+              "top": {
+                "name": "По верхнему краю"
+              },
+              "center": {
+                "name": "По центру"
+              },
+              "baseline": {
+                "name": "По базовой линии"
+              },
+              "bottom": {
+                "name": "По нижнему краю"
+              }
+            }
+          },
+          "offsetX": {
+            "name": "Смещение по X (пикс.)"
+          },
+          "offsetY": {
+            "name": "Смещение по Y (пикс.)"
+          }
+        }
+      },
+      "trail": {
+        "selectableDimensions": {
+          "leadTime": {
+            "name": "Время опережения (с)"
+          },
+          "trailTime": {
+            "name": "Длительность следа (с)"
+          },
+          "width": {
+            "name": "Ширина"
+          },
+          "resolution": {
+            "name": "Разрешение"
+          },
+          "growColor": {
+            "name": "Цвет свечения"
+          },
+          "growPower": {
+            "name": "Сила свечения"
+          },
+          "taperPower": {
+            "name": "Степень сужения"
+          },
+          "solidColor": {
+            "name": "Сплошной цвет"
+          },
+          "trailStyleOptions": {
+            "name": "Параметры стиля следа",
+            "selectableDimensions": {
+              "material": {
+                "name": "Тип материала",
+                "options": {
+                  "solidColor": {
+                    "name": "Сплошной цвет"
+                  },
+                  "polylineGlow": {
+                    "name": "Свечение линии"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "cogCatalogItem": {
+      "experimentalReprojectionWarning": "Этот COG представлен не в поддерживаемой проекции (EPSG:4326 или EPSG:3857). Перепроецирование работает в экспериментальном режиме и может давать неожиданные результаты. Если у вас есть доступ к исходным данным, рекомендуем перепроецировать их в EPSG:4326 или EPSG:3857 с помощью GDAL или аналогичного инструмента."
     }
   },
+  "searchProvider": {
+    "noSearchProviders": "Поставщики поиска не настроены",
+    "models": {
+      "unsupportedTypeTitle": "Неизвестный тип",
+      "unsupportedTypeMessage": "Не удалось создать модель неизвестного типа {{type}}.",
+      "idForMatchingErrorTitle": "Отсутствует свойство",
+      "idForMatchingErrorMessage": "У объектов модели должно быть свойство `id`, `localId` или `name`."
+    }
+  },
+  "deltaTool": {
+    "titlePrefix": "Определение изменений",
+    "description": "Этот инструмент показывает разницу между снимками, сделанными в два разных момента времени.",
+    "pickLocation": "Чтобы просмотреть доступные снимки, выберите интересующее вас место на карте.",
+    "cancelBtn": "Отмена",
+    "generateDeltaBtn": "Построить карту различий",
+    "selectedLocation": "Выбранное место",
+    "primaryImage": "Первый снимок",
+    "secondaryImage": "Второй снимок",
+    "pickerMessage": {
+      "pickFirst": "Выберите точку, щелкнув по карте",
+      "pickAnother": "Щелкните другую точку, чтобы изменить выбор",
+      "pickError": "Не удалось получить снимки для этого места. Выберите точку еще раз, щелкнув по карте."
+    },
+    "catalogItem": {
+      "description": "Этот слой показывает разницу между снимками, сделанными в два разных момента времени"
+    },
+    "loadingError": {
+      "title": "Ошибка загрузки инструмента определения изменений",
+      "message": "При загрузке инструмента определения изменений с сервера произошла ошибка. Повторите попытку."
+    }
+  },
+  "term": {
+    "missingContent": "содержимое отсутствует"
+  },
+  "mapNavigation": {
+    "additionalTools": "Дополнительные инструменты",
+    "additionalToolsTitle": "Открыть дополнительные инструменты"
+  },
   "itemSearchTool": {
+    "toolLoadError": "Ошибка загрузки инструмента поиска.",
+    "title": "Поиск: {{itemName}}",
+    "loading": "Загрузка параметров поиска",
+    "loadError": "Ошибка загрузки параметров поиска. Подробности см. в консоли.",
+    "noParameters": "Параметры для поиска не найдены",
+    "searching": "Идет поиск",
+    "searchError": "Поиск не удался. Подробности см. в консоли.",
     "numericParameter": {
       "minimum": "Минимум",
       "maximum": "Максимум"
@@ -663,13 +2333,25 @@
     "searchBtnText": "Поиск",
     "resetBtnText": "Очистить ввод",
     "backBtnText": "Искать снова",
+    "resultsCount_one": "Найдено {{count}} совпадение",
+    "resultsCount_few": "Найдено {{count}} совпадения",
+    "resultsCount_many": "Найдено {{count}} совпадений",
+    "resultsCount_other": "Найдено {{count}} совпадения",
     "actions": {
       "highlightAll": "Подсветить все",
       "showMatchingOnly": "Показать только совпадающие"
     }
   },
+  "indexedItemSearchProvider": {
+    "missingOptionIndexRootUrl": "В настройках поиска элемента отсутствует параметр `indexRootUrl`.",
+    "errorParsingIndexRoot": "Ошибка разбора файла indexRoot: {{indexRootUrl}}."
+  },
   "pedestrianMode": {
-    "toolButtonTitle": "Режим пешехода"
+    "toolButtonTitle": "Режим пешехода",
+    "dropPedestrianTooltipMessage": "<b>Левый щелчок</b> — выбрать место размещения<br /><b>Правый щелчок / Esc</b> — отмена",
+    "controls": {
+      "title": "Управление"
+    }
   },
   "notification": {
     "title": "Сообщение"
@@ -695,7 +2377,7 @@
       "sendAllToBack": "Отправить все назад",
       "hideAll": "Скрыть все"
     },
-    "info": "Сравнить геопространственные наборы данных с Вашего верстака на карте.",
+    "info": "Сравнить геопространственные наборы данных с вашей рабочей панели на карте.",
     "dataset": {
       "label": "Набор данных",
       "selectOne": "Выбрать один"
@@ -730,5 +2412,8 @@
     "buttonTitle": "Посмотреть связанные карты",
     "panelHeading": "Связанные карты",
     "panelText": "Нажатие на карту ниже откроет её в отдельном окне или вкладке."
+  },
+  "aboutButton": {
+    "caption": "О проекте"
   }
 }
