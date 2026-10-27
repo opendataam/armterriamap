@@ -788,7 +788,83 @@
   ],
   "viewerMode": "3dSmooth",
   "baseMaps": {
-    "defaultBaseMapId": "basemap-openstreetmap",
-    "previewBaseMapId": "basemap-openstreetmap"
+    "items": [
+      {
+        "item": {
+          "id": "basemap-stadia-alidade-smooth",
+          "name": "Stadia Alidade Smooth",
+          "type": "url-template-imagery",
+          "url": "https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}.png",
+          "attribution": "© <a href=\"https://stadiamaps.com/\">Stadia Maps</a> © <a href=\"https://openmaptiles.org/\">OpenMapTiles</a> © <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a>",
+          "maximumLevel": 20,
+          "opacity": 1.0
+        },
+        "image": "https://tiles.stadiamaps.com/tiles/alidade_smooth/7/79/48.png",
+        "contrastColor": "#000000"
+      },
+      {
+        "item": {
+          "id": "basemap-stadia-alidade-smooth-dark",
+          "name": "Stadia Alidade Smooth Dark",
+          "type": "url-template-imagery",
+          "url": "https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}.png",
+          "attribution": "© <a href=\"https://stadiamaps.com/\">Stadia Maps</a> © <a href=\"https://openmaptiles.org/\">OpenMapTiles</a> © <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a>",
+          "maximumLevel": 20,
+          "opacity": 1.0
+        },
+        "image": "https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/7/79/48.png",
+        "contrastColor": "#ffffff"
+      },
+      {
+        "item": {
+          "id": "basemap-stadia-outdoors",
+          "name": "Stadia Outdoors",
+          "type": "url-template-imagery",
+          "url": "https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}.png",
+          "attribution": "© <a href=\"https://stadiamaps.com/\">Stadia Maps</a> © <a href=\"https://openmaptiles.org/\">OpenMapTiles</a> © <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a>",
+          "maximumLevel": 20,
+          "opacity": 1.0
+        },
+        "image": "https://tiles.stadiamaps.com/tiles/outdoors/7/79/48.png",
+        "contrastColor": "#000000"
+      },
+      {
+        "item": {
+          "id": "basemap-stadia-stamen-terrain",
+          "name": "Stamen Terrain",
+          "type": "url-template-imagery",
+          "url": "https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}.png",
+          "attribution": "© <a href=\"https://stamen.com/\">Stamen Design</a> © <a href=\"https://stadiamaps.com/\">Stadia Maps</a> © <a href=\"https://openmaptiles.org/\">OpenMapTiles</a> © <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a>",
+          "maximumLevel": 20,
+          "opacity": 1.0
+        },
+        "image": "https://tiles.stadiamaps.com/tiles/stamen_terrain/7/79/48.png",
+        "contrastColor": "#000000"
+      },
+      {
+        "item": {
+          "id": "basemap-stadia-osm-bright",
+          "name": "Stadia OSM Bright",
+          "type": "url-template-imagery",
+          "url": "https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}.png",
+          "attribution": "© <a href=\"https://stadiamaps.com/\">Stadia Maps</a> © <a href=\"https://openmaptiles.org/\">OpenMapTiles</a> © <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a>",
+          "maximumLevel": 20,
+          "opacity": 1.0
+        },
+        "image": "https://tiles.stadiamaps.com/tiles/osm_bright/7/79/48.png",
+        "contrastColor": "#000000"
+      }
+    ],
+    "defaultBaseMapId": "basemap-stadia-alidade-smooth",
+    "previewBaseMapId": "basemap-stadia-alidade-smooth",
+    "enabledBaseMaps": [
+      "basemap-stadia-alidade-smooth",
+      "basemap-stadia-alidade-smooth-dark",
+      "basemap-stadia-outdoors",
+      "basemap-stadia-stamen-terrain",
+      "basemap-stadia-osm-bright",
+      "basemap-natural-earth-II",
+      "basemap-openstreetmap"
+    ]
   }
 }
