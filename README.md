@@ -51,8 +51,12 @@ yarn gulp dev
 
 ### Adding data
 
-1. Upload data to `wwwroot/data` directory, it should be one of the supported data formats
+1. Publish the data on [data.opendata.am](https://data.opendata.am), or upload it to `wwwroot/data`
 2. Write new record to `wwwroot/init/simple.json` to add it to the public catalog
+
+Catalog names and descriptions are written as translation keys, e.g. `"name": "translate#catalog.climate.zones"`,
+with the texts under `catalog` in `wwwroot/languages/{en,hy,ru}/languageOverrides.json`. TerriaJS itself does not
+translate catalog entries; `index.js` replaces the keys when the map loads and when the language changes.
 
 Resources of data.opendata.am are served without CORS headers, so the map loads them through
 the terriajs-server proxy (`allowProxyFor` in `serverconfig.json`).

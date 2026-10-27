@@ -51,6 +51,28 @@ if (process.env.NODE_ENV === "development") {
   window.viewState = viewState;
 }
 
+const TRANSLATE_PREFIX = "translate#";
+
+// TerriaJS shows catalog names and descriptions as they are written in the
+// init file. Names and descriptions written as "translate#key" are translated
+// here (keys live in wwwroot/languages/<lng>/languageOverrides.json).
+function translateCatalog() {
+  const visit = (model) => {
+    const definition = model.strata.get(CommonStrata.definition);
+    ["name", "description"].forEach((trait) => {
+      const value = definition?.[trait];
+      if (typeof value === "string" && value.startsWith(TRANSLATE_PREFIX)) {
+        const text = i18next.t(value.slice(TRANSLATE_PREFIX.length));
+        model.setTrait(CommonStrata.override, trait, text);
+        // Items loaded from a reference (e.g. ckan-item) copy the name once
+        model.target?.setTrait(CommonStrata.override, trait, text);
+      }
+    });
+    model.memberModels?.forEach(visit);
+  };
+  visit(terria.catalog.group);
+}
+
 export default terria
   .start({
     applicationUrl: window.location,
@@ -79,7 +101,11 @@ export default terria
     }
 
     // Load init sources like init files and share links
-    terria.loadInitSources().then((result) => result.raiseError(terria));
+    terria.loadInitSources().then((result) => {
+      result.raiseError(terria);
+      translateCatalog();
+      i18next.on("languageChanged", translateCatalog);
+    });
 
     try {
       // Automatically update Terria (load new catalogs, etc.) when the hash part of the URL changes.

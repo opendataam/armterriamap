@@ -7,80 +7,413 @@
   },
   "catalog": [
     {
-      "name": "Administrative division",
       "type": "group",
       "id": "arm-admin",
+      "name": "translate#catalog.admin.name",
       "members": [
         {
           "type": "ckan-item",
-          "name": "Marzes (provinces)",
           "id": "arm-admin-marz",
+          "name": "translate#catalog.admin.marz",
           "url": "https://data.opendata.am",
           "datasetId": "armenia-marz-boundaries-osm",
           "resourceId": "88d2a994-b95a-4684-8a10-a716269b8dcd"
         },
         {
           "type": "csv",
-          "name": "Population by marz, 2021",
           "id": "arm-admin-marz-population-2021",
-          "description": "Population of Armenia by marz (province) and sex, 2021 estimates.\n\nSource: [Armenia - Subnational Population Statistics](https://data.opendata.am/dataset/armenia-subnational-population-statistics), Open Data Armenia (OCHA common operational dataset).",
+          "name": "translate#catalog.admin.population.name",
+          "description": "translate#catalog.admin.population.description",
           "url": "https://data.opendata.am/dataset/4db06f31-816a-47f3-b1f4-3232908a41b0/resource/4b597832-d863-49f6-9e08-2a22ab02809d/download/arm_admpop_adm1_2021.csv",
           "columns": [
-            { "name": "ADM1_PCODE", "regionType": "ARM_MARZ" },
-            { "name": "T_TL", "title": "Total population" },
-            { "name": "F_TL", "title": "Female population" },
-            { "name": "M_TL", "title": "Male population" }
+            {
+              "name": "ADM1_PCODE",
+              "regionType": "ARM_MARZ"
+            },
+            {
+              "name": "T_TL",
+              "title": "Total population"
+            },
+            {
+              "name": "F_TL",
+              "title": "Female population"
+            },
+            {
+              "name": "M_TL",
+              "title": "Male population"
+            }
           ],
-          "defaultStyle": { "regionColumn": "ADM1_PCODE" },
+          "defaultStyle": {
+            "regionColumn": "ADM1_PCODE"
+          },
           "activeStyle": "T_TL"
+        },
+        {
+          "type": "geojson",
+          "id": "hot-populated_places",
+          "name": "translate#catalog.admin.settlements.name",
+          "description": "translate#catalog.admin.settlements.description",
+          "url": "https://production-raw-data-api.s3.amazonaws.com/ISO3/ARM/populated_places/hotosm_arm_populated_places_osm_geojson.zip"
         }
       ]
     },
     {
-      "name": "Healthcare",
       "type": "group",
-      "id": "arm-health",
+      "id": "arm-climate",
+      "name": "translate#catalog.climate.name",
+      "members": [
+        {
+          "type": "wms",
+          "id": "sc-climat",
+          "name": "translate#catalog.climate.zones",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:climat"
+        },
+        {
+          "type": "wms",
+          "id": "sc-temperature",
+          "name": "translate#catalog.climate.temperature",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:temperature"
+        },
+        {
+          "type": "wms",
+          "id": "sc-armenia_prec",
+          "name": "translate#catalog.climate.precipitation",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:armenia_prec"
+        },
+        {
+          "type": "wms",
+          "id": "sc-max_precipitation",
+          "name": "translate#catalog.climate.maxPrecipitation",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:max_precipitation"
+        },
+        {
+          "type": "wms",
+          "id": "sc-solar_radiation",
+          "name": "translate#catalog.climate.solarRadiation",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:solar_radiation"
+        },
+        {
+          "type": "wms",
+          "id": "sc-radiation_bal",
+          "name": "translate#catalog.climate.radiationBalance",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:radiation_bal"
+        },
+        {
+          "type": "wms",
+          "id": "sc-rad_dur_jan",
+          "name": "translate#catalog.climate.sunshineJan",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:rad_dur_jan"
+        },
+        {
+          "type": "wms",
+          "id": "sc-rad_dur_apr",
+          "name": "translate#catalog.climate.sunshineApr",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:rad_dur_apr"
+        },
+        {
+          "type": "wms",
+          "id": "sc-solar_radiance_duratin_jul",
+          "name": "translate#catalog.climate.sunshineJul",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:solar_radiance_duratin_jul"
+        },
+        {
+          "type": "wms",
+          "id": "sc-solar_radiance_duratin_oct",
+          "name": "translate#catalog.climate.sunshineOct",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:solar_radiance_duratin_oct"
+        },
+        {
+          "type": "wms",
+          "id": "sc-wind_resources",
+          "name": "translate#catalog.climate.wind",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:wind_resources"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "id": "arm-nature",
+      "name": "translate#catalog.nature.name",
+      "members": [
+        {
+          "type": "wms",
+          "id": "sc-landscape",
+          "name": "translate#catalog.nature.landscapes",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:landscape"
+        },
+        {
+          "type": "wms",
+          "id": "sc-soil_arm",
+          "name": "translate#catalog.nature.soils",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:soil_arm"
+        },
+        {
+          "type": "wms",
+          "id": "sc-vegetation_arm",
+          "name": "translate#catalog.nature.vegetation",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:vegetation_arm"
+        },
+        {
+          "type": "wms",
+          "id": "sc-arm_forest_area",
+          "name": "translate#catalog.nature.forests",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:arm_forest_area"
+        },
+        {
+          "type": "wms",
+          "id": "sc-arm_landuse",
+          "name": "translate#catalog.nature.landUse",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:arm_landuse"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "id": "arm-water",
+      "name": "translate#catalog.water.name",
+      "members": [
+        {
+          "type": "wms",
+          "id": "sc-arm_rivers_erica",
+          "name": "translate#catalog.water.rivers",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:arm_rivers_erica"
+        },
+        {
+          "type": "wms",
+          "id": "sc-arm_catchmets",
+          "name": "translate#catalog.water.catchments",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:arm_catchmets"
+        },
+        {
+          "type": "wms",
+          "id": "sc-lakes_and_reservoirs",
+          "name": "translate#catalog.water.lakes",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:lakes_and_reservoirs"
+        },
+        {
+          "type": "wms",
+          "id": "sc-springs0",
+          "name": "translate#catalog.water.springs",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:springs0"
+        },
+        {
+          "type": "wms",
+          "id": "sc-hydrogeology",
+          "name": "translate#catalog.water.aquifers",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:Hydrogeology"
+        },
+        {
+          "type": "wms",
+          "id": "sc-groundwater_zones",
+          "name": "translate#catalog.water.groundwater",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:Groundwater_zones"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "id": "arm-hazards",
+      "name": "translate#catalog.hazards.name",
+      "members": [
+        {
+          "type": "wms",
+          "id": "sc-seismic_zones",
+          "name": "translate#catalog.hazards.seismicZones",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:seismic_zones"
+        },
+        {
+          "type": "wms",
+          "id": "sc-seismic_hazard_475",
+          "name": "translate#catalog.hazards.seismicHazard",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:seismic_hazard_475"
+        },
+        {
+          "type": "wms",
+          "id": "sc-model_2017",
+          "name": "translate#catalog.hazards.faults",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:model_2017"
+        },
+        {
+          "type": "geojson",
+          "id": "usgs-earthquakes",
+          "name": "translate#catalog.hazards.earthquakes.name",
+          "description": "translate#catalog.hazards.earthquakes.description",
+          "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=1970-01-01&minmagnitude=3&minlatitude=38.5&maxlatitude=41.6&minlongitude=43.2&maxlongitude=46.9&orderby=time",
+          "activeStyle": "mag",
+          "featureInfoTemplate": {
+            "template": "<h3>{{place}}</h3><p>M {{mag}}</p><p><a href=\"{{url}}\">USGS</a></p>"
+          }
+        },
+        {
+          "type": "wms",
+          "id": "sc-armenia_landslide",
+          "name": "translate#catalog.hazards.landslides",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:armenia_landslide"
+        },
+        {
+          "type": "wms",
+          "id": "sc-mudflow_arm",
+          "name": "translate#catalog.hazards.mudflows",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:mudflow_arm"
+        },
+        {
+          "type": "wms",
+          "id": "sc-avalanches",
+          "name": "translate#catalog.hazards.avalanches",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:avalanches"
+        },
+        {
+          "type": "wms",
+          "id": "sc-flooding_duration",
+          "name": "translate#catalog.hazards.floodDuration",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:flooding_duration"
+        },
+        {
+          "type": "wms",
+          "id": "sc-flooding_layer",
+          "name": "translate#catalog.hazards.springFlood",
+          "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+          "layers": "geonode:flooding_layer"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "id": "arm-infrastructure",
+      "name": "translate#catalog.infrastructure.name",
       "members": [
         {
           "type": "ckan-item",
-          "name": "Health facilities (healthsites.io)",
           "id": "arm-health-healthsites",
+          "name": "translate#catalog.infrastructure.health",
           "url": "https://data.opendata.am",
           "datasetId": "healthsites-of-armenia",
           "resourceId": "4c1fffc1-b547-45bb-bdaa-0e6e0cccf026"
+        },
+        {
+          "type": "geojson",
+          "id": "hot-education_facilities",
+          "name": "translate#catalog.infrastructure.education.name",
+          "description": "translate#catalog.infrastructure.education.description",
+          "url": "https://production-raw-data-api.s3.amazonaws.com/ISO3/ARM/education_facilities/hotosm_arm_education_facilities_osm_geojson.zip"
+        },
+        {
+          "type": "geojson",
+          "id": "hot-financial_services",
+          "name": "translate#catalog.infrastructure.financial.name",
+          "description": "translate#catalog.infrastructure.financial.description",
+          "url": "https://production-raw-data-api.s3.amazonaws.com/ISO3/ARM/financial_services/hotosm_arm_financial_services_osm_geojson.zip"
+        },
+        {
+          "type": "geojson",
+          "id": "hot-airports",
+          "name": "translate#catalog.infrastructure.airports.name",
+          "description": "translate#catalog.infrastructure.airports.description",
+          "url": "https://production-raw-data-api.s3.amazonaws.com/ISO3/ARM/airports/hotosm_arm_airports_osm_geojson.zip"
+        },
+        {
+          "type": "geojson",
+          "id": "hot-railways",
+          "name": "translate#catalog.infrastructure.railways.name",
+          "description": "translate#catalog.infrastructure.railways.description",
+          "url": "https://production-raw-data-api.s3.amazonaws.com/ISO3/ARM/railways/hotosm_arm_railways_osm_geojson.zip"
         }
       ]
     },
     {
-      "name": "Open Data Armenia: datasets for the atlas",
-      "type": "ckan-group",
-      "id": "odam-atlas",
-      "description": "Datasets of [data.opendata.am](https://data.opendata.am) tagged `atlas`, loaded from the catalogue when the map opens. Tag a dataset `atlas` to add it here.",
-      "url": "https://data.opendata.am",
-      "filterQuery": [{ "fq": "tags:atlas" }],
-      "groupBy": "group",
-      "ungroupedTitle": "Other",
-      "supportedResourceFormats": [{ "id": "CSV", "formatRegex": "^csv$" }]
-    },
-    {
-      "id": "ZIdekvc10z",
-      "type": "wms-group",
-      "name": "Sustainable Caucasus",
-      "description": "This GeoNode instance has been developed in the frame of the \"Supporting Sustainable Mountain Development in the Caucasus (Sustainable Caucasus)\" project, funded by the Swiss National Science Foundation and the Swiss Agency for Development and Cooperation under the SCOPES Program, and coordinated by the University of Geneva.",
-      "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows"
-    },
-    {
-      "name": "Events",
       "type": "group",
+      "id": "arm-biodiversity",
+      "name": "translate#catalog.biodiversity.name",
+      "members": [
+        {
+          "type": "url-template-imagery",
+          "id": "gbif-occurrences",
+          "name": "translate#catalog.biodiversity.gbif.name",
+          "description": "translate#catalog.biodiversity.gbif.description",
+          "url": "https://api.gbif.org/v2/map/occurrence/density/{z}/{x}/{y}@1x.png?country=AM&style=purpleYellow.point",
+          "maximumLevel": 16,
+          "attribution": "GBIF.org",
+          "tileErrorHandlingOptions": {
+            "ignoreUnknownTileErrors": true
+          },
+          "rectangle": {
+            "west": 43.4,
+            "south": 38.8,
+            "east": 46.7,
+            "north": 41.35
+          }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "id": "arm-history",
+      "name": "translate#catalog.history.name",
       "members": [
         {
           "type": "ckan-item",
-          "name": "December 1988 Leninakan-Spitak-Kirovakan, Armenia Images",
-          "description": "The magnitude 6.9 earthquake shook northwestern Armenia, and was followed four minutes later by a magnitude 5.8 aftershock. The earthquakes affected an area 80 kilometers in diameter. This set includes damage photographs taken in and around the devastated cities of Spitak and Leninakan, where 25,000 deaths occurred. Location: Northwestern Armenian SSR, 18 kilometers north northwest of Spitak. Damage: $14.2 billion. Fifteen thousand were injured and 517,000 lost their homes. The death toll (25,000) could have been much worse had it not been for the heroic rescue of 15,000 who were pulled from the rubble.",
           "id": "event0001",
+          "name": "translate#catalog.history.spitak",
           "url": "https://data.opendata.am",
           "datasetId": "the-spitak-earthquake",
           "resourceId": "2097b1a7-fdc7-4f3d-9e5f-79e829bf59b6"
+        },
+        {
+          "type": "ckan-item",
+          "id": "arm-history-pleiades",
+          "name": "translate#catalog.history.pleiades",
+          "url": "https://data.opendata.am",
+          "datasetId": "arm-pleiades",
+          "resourceId": "198859e9-2a19-4d7e-bafc-9f24770255b6"
+        }
+      ]
+    },
+    {
+      "type": "ckan-group",
+      "id": "odam-atlas",
+      "name": "translate#catalog.odam.name",
+      "description": "translate#catalog.odam.description",
+      "url": "https://data.opendata.am",
+      "filterQuery": [
+        {
+          "fq": "tags:atlas"
+        }
+      ],
+      "groupBy": "group",
+      "ungroupedTitle": "Other",
+      "supportedResourceFormats": [
+        {
+          "id": "CSV",
+          "formatRegex": "^csv$"
         }
       ]
     }
