@@ -5,6 +5,12 @@
     "googleUrlShortenerKey": null,
     "googleAnalyticsKey": null,
     "googleAnalyticsOptions": null,
+    // Armenian region types (scripts/regions) come first, so they take priority
+    // over TerriaJS defaults when a column name matches both.
+    "regionMappingDefinitionsUrls": [
+      "data/regions/regionMapping.json",
+      "build/TerriaJS/data/regionMapping.json"
+    ],
     // Log ConsoleAnalytics events to console
     // logToConsole: true,
     /* Text that appears at the bottom of the map */

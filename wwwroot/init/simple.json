@@ -1,170 +1,202 @@
 {
-    "homeCamera": {
-      "north": 42,
-      "east": 47,
-      "south": 38,
-      "west": 43
+  "homeCamera": {
+    "north": 42,
+    "east": 47,
+    "south": 38,
+    "west": 43
+  },
+  "catalog": [
+    {
+      "name": "Administrative division",
+      "type": "group",
+      "id": "arm-admin",
+      "members": [
+        {
+          "type": "geojson",
+          "name": "Marzes (provinces)",
+          "id": "arm-admin-marz",
+          "description": "Boundaries of the 11 marzes (provinces) of Armenia, including Yerevan.\n\nSource: [OpenStreetMap](https://www.openstreetmap.org/relation/364087) contributors, ODbL. Built by `scripts/regions/build-marz.mjs`.",
+          "url": "data/regions/arm_marz.geojson",
+          "featureInfoTemplate": {
+            "template": "<h3>{{name_en}}</h3><p>{{name_hy}}<br/>{{name_ru}}</p><p>ISO 3166-2: {{iso}}</p>"
+          }
+        },
+        {
+          "type": "csv",
+          "name": "Population by marz, 2021",
+          "id": "arm-admin-marz-population-2021",
+          "description": "Population of Armenia by marz (province) and sex, 2021 estimates.\n\nSource: [Armenia - Subnational Population Statistics](https://data.opendata.am/dataset/armenia-subnational-population-statistics), Open Data Armenia (OCHA common operational dataset).",
+          "url": "https://data.opendata.am/dataset/4db06f31-816a-47f3-b1f4-3232908a41b0/resource/4b597832-d863-49f6-9e08-2a22ab02809d/download/arm_admpop_adm1_2021.csv",
+          "columns": [
+            { "name": "ADM1_PCODE", "regionType": "ARM_MARZ" },
+            { "name": "T_TL", "title": "Total population" },
+            { "name": "F_TL", "title": "Female population" },
+            { "name": "M_TL", "title": "Male population" }
+          ],
+          "defaultStyle": { "regionColumn": "ADM1_PCODE" },
+          "activeStyle": "T_TL"
+        }
+      ]
     },
-    "catalog": [
-      {
-        "id": "ZIdekvc10z",
-        "type": "wms-group",
-        "name": "Sustainable Caucasus",
-        "description" : "This GeoNode instance has been developed in the frame of the \"Supporting Sustainable Mountain Development in the Caucasus (Sustainable Caucasus)\" project, funded by the Swiss National Science Foundation and the Swiss Agency for Development and Cooperation under the SCOPES Program, and coordinated by the University of Geneva.",
-        "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-        "members": [
-          {
-            "type": "wms",
-            "localId": "vegetation_arm",
-            "legends": [
-              {
-                "items": [
-                  {
-                    "title": "A - Best",
-                    "color": "#6B0038"
-                  },
-                  {
-                    "title": "B",
-                    "color": "#F41911"
-                  },
-                  {
-                    "title": "C",
-                    "color": "#F67F00"
-                  },
-                  {
-                    "title": "D",
-                    "color": "#D78B6D"
-                  },
-                  {
-                    "title": "E - Worst",
-                    "color": "#ECD2BE"
-                  },
-                  {
-                    "title": "No data",
-                    "color": "rgba(0,0,0,0)",
-                    "outlineColor": "black",
-                    "addSpacingAbove": true
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "HotOSM",
-        "type": "group",
-        "members": [
-          {
-            "type": "geojson",
-            "name": "Buildings",
-            "description" : "Armenian buildings from HotOSM communuty (original source - Humanitarian Data Exchange",
-            "id": "hotosmbuildings",
-            "url": "data/hotosm/buildings.geojson"
-          },
-          {
-            "type": "geojson",
-            "name": "Waterways",
-            "description" : "Armenian waterways from HotOSM communuty (original source - Humanitarian Data Exchange",
-            "id": "hotosmwaterways",
-            "url": "data/hotosm/roads.geojson"
-          },
-          {
-            "type": "geojson",
-            "name": "Roads",
-            "description" : "Armenian roads from HotOSM communuty (original source - Humanitarian Data Exchange",
-            "id": "hotosmroads",
-            "url": "data/hotosm/roads.geojson"
-          },
-          {
-            "type": "geojson",
-            "name": "Health facilities",
-            "description" : "Armenian health facilities from HotOSM communuty (original source - Humanitarian Data Exchange",
-            "id": "hotosmhealth",
-            "url": "data/hotosm/health.geojson"
-          }
-        ]
-      },
-      {
-        "name": "Events",
-        "type": "group",
-        "members": [
-          {
-            "type": "kml",
-            "name": "December 1988 Leninakan-Spitak-Kirovakan, Armenia Images",
-            "description" : "The magnitude 6.9 earthquake shook northwestern Armenia, and was followed four minutes later by a magnitude 5.8 aftershock. The earthquakes affected an area 80 kilometers in diameter. This set includes damage photographs taken in and around the devastated cities of Spitak and Leninakan, where 25,000 deaths occurred. Location: Northwestern Armenian SSR, 18 kilometers north northwest of Spitak. Damage: $14.2 billion. Fifteen thousand were injured and 517,000 lost their homes. The death toll (25,000) could have been much worse had it not been for the heroic rescue of 15,000 who were pulled from the rubble.",
-            "id": "event0001",
-            "url": "data/events/noaa_1998.kml"
-          }
-        ]
-      },      
-      {
-        "name": "Transport",
-        "type": "group",
-        "members": [
-          {
-            "type": "kml",
-            "name": "Model Output Statistics for YEREVAN (ZVARTNOTS AIRPORT) (37788)",
-            "description" : "DWD’s fully automatic MOSMIX product optimizes and interprets the forecast calculations of the NWP models ICON (DWD) and IFS (ECMWF), combines these and calculates statistically optimized weather forecasts in terms of point forecasts (PFCs). Thus, statistically corrected, updated forecasts for the next ten days are calculated for about 5400 locations around the world. Most forecasting locations are spread over Germany and Europe. MOSMIX forecasts (PFCs) include nearly all common meteorological parameters measured by weather stations.",
-            "id": "de.dwd.mosmix.37788",
-            "url": "data/transport/MOSMIX_L_2024081403_37788.kml"
-          }
-        ]
-      },
-      {
-        "url": "https://unosat-geodrr.cern.ch/data/rest/services/Hosted/Province_Boundary_GOV_ARM_2019/FeatureServer",
-        "type": "esri-featureServer-group",
-        "name": "Province boundaries (Government of Armenia)",
-        "id": "geodrrarmboundariesgov"
-      },            
-      {
-        "id": "FxPHcHvxoO",
-        "type": "wms-group",
-        "name": "CENS RA",
-        "url": "http://og.cens.am:8081/geoserver/ows",
-        "members": [
-          {
-            "type": "wms",
-            "localId": "cens",
-            "legends": [
-              {
-                "items": [
-                  {
-                    "title": "A - Best",
-                    "color": "#6B0038"
-                  },
-                  {
-                    "title": "B",
-                    "color": "#F41911"
-                  },
-                  {
-                    "title": "C",
-                    "color": "#F67F00"
-                  },
-                  {
-                    "title": "D",
-                    "color": "#D78B6D"
-                  },
-                  {
-                    "title": "E - Worst",
-                    "color": "#ECD2BE"
-                  },
-                  {
-                    "title": "No data",
-                    "color": "rgba(0,0,0,0)",
-                    "outlineColor": "black",
-                    "addSpacingAbove": true
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "viewerMode": "3dSmooth",
-    "baseMaps": {
-      "defaultBaseMapId": "basemap-openstreetmap",
-      "previewBaseMapId": "basemap-openstreetmap"
+    {
+      "id": "ZIdekvc10z",
+      "type": "wms-group",
+      "name": "Sustainable Caucasus",
+      "description": "This GeoNode instance has been developed in the frame of the \"Supporting Sustainable Mountain Development in the Caucasus (Sustainable Caucasus)\" project, funded by the Swiss National Science Foundation and the Swiss Agency for Development and Cooperation under the SCOPES Program, and coordinated by the University of Geneva.",
+      "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
+      "members": [
+        {
+          "type": "wms",
+          "localId": "vegetation_arm",
+          "legends": [
+            {
+              "items": [
+                {
+                  "title": "A - Best",
+                  "color": "#6B0038"
+                },
+                {
+                  "title": "B",
+                  "color": "#F41911"
+                },
+                {
+                  "title": "C",
+                  "color": "#F67F00"
+                },
+                {
+                  "title": "D",
+                  "color": "#D78B6D"
+                },
+                {
+                  "title": "E - Worst",
+                  "color": "#ECD2BE"
+                },
+                {
+                  "title": "No data",
+                  "color": "rgba(0,0,0,0)",
+                  "outlineColor": "black",
+                  "addSpacingAbove": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "HotOSM",
+      "type": "group",
+      "members": [
+        {
+          "type": "geojson",
+          "name": "Buildings",
+          "description": "Armenian buildings from HotOSM communuty (original source - Humanitarian Data Exchange",
+          "id": "hotosmbuildings",
+          "url": "data/hotosm/buildings.geojson"
+        },
+        {
+          "type": "geojson",
+          "name": "Waterways",
+          "description": "Armenian waterways from HotOSM communuty (original source - Humanitarian Data Exchange",
+          "id": "hotosmwaterways",
+          "url": "data/hotosm/roads.geojson"
+        },
+        {
+          "type": "geojson",
+          "name": "Roads",
+          "description": "Armenian roads from HotOSM communuty (original source - Humanitarian Data Exchange",
+          "id": "hotosmroads",
+          "url": "data/hotosm/roads.geojson"
+        },
+        {
+          "type": "geojson",
+          "name": "Health facilities",
+          "description": "Armenian health facilities from HotOSM communuty (original source - Humanitarian Data Exchange",
+          "id": "hotosmhealth",
+          "url": "data/hotosm/health.geojson"
+        }
+      ]
+    },
+    {
+      "name": "Events",
+      "type": "group",
+      "members": [
+        {
+          "type": "kml",
+          "name": "December 1988 Leninakan-Spitak-Kirovakan, Armenia Images",
+          "description": "The magnitude 6.9 earthquake shook northwestern Armenia, and was followed four minutes later by a magnitude 5.8 aftershock. The earthquakes affected an area 80 kilometers in diameter. This set includes damage photographs taken in and around the devastated cities of Spitak and Leninakan, where 25,000 deaths occurred. Location: Northwestern Armenian SSR, 18 kilometers north northwest of Spitak. Damage: $14.2 billion. Fifteen thousand were injured and 517,000 lost their homes. The death toll (25,000) could have been much worse had it not been for the heroic rescue of 15,000 who were pulled from the rubble.",
+          "id": "event0001",
+          "url": "data/events/noaa_1998.kml"
+        }
+      ]
+    },
+    {
+      "name": "Transport",
+      "type": "group",
+      "members": [
+        {
+          "type": "kml",
+          "name": "Model Output Statistics for YEREVAN (ZVARTNOTS AIRPORT) (37788)",
+          "description": "DWD’s fully automatic MOSMIX product optimizes and interprets the forecast calculations of the NWP models ICON (DWD) and IFS (ECMWF), combines these and calculates statistically optimized weather forecasts in terms of point forecasts (PFCs). Thus, statistically corrected, updated forecasts for the next ten days are calculated for about 5400 locations around the world. Most forecasting locations are spread over Germany and Europe. MOSMIX forecasts (PFCs) include nearly all common meteorological parameters measured by weather stations.",
+          "id": "de.dwd.mosmix.37788",
+          "url": "data/transport/MOSMIX_L_2024081403_37788.kml"
+        }
+      ]
+    },
+    {
+      "url": "https://unosat-geodrr.cern.ch/data/rest/services/Hosted/Province_Boundary_GOV_ARM_2019/FeatureServer",
+      "type": "esri-featureServer-group",
+      "name": "Province boundaries (Government of Armenia)",
+      "id": "geodrrarmboundariesgov"
+    },
+    {
+      "id": "FxPHcHvxoO",
+      "type": "wms-group",
+      "name": "CENS RA",
+      "url": "http://og.cens.am:8081/geoserver/ows",
+      "members": [
+        {
+          "type": "wms",
+          "localId": "cens",
+          "legends": [
+            {
+              "items": [
+                {
+                  "title": "A - Best",
+                  "color": "#6B0038"
+                },
+                {
+                  "title": "B",
+                  "color": "#F41911"
+                },
+                {
+                  "title": "C",
+                  "color": "#F67F00"
+                },
+                {
+                  "title": "D",
+                  "color": "#D78B6D"
+                },
+                {
+                  "title": "E - Worst",
+                  "color": "#ECD2BE"
+                },
+                {
+                  "title": "No data",
+                  "color": "rgba(0,0,0,0)",
+                  "outlineColor": "black",
+                  "addSpacingAbove": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
+  ],
+  "viewerMode": "3dSmooth",
+  "baseMaps": {
+    "defaultBaseMapId": "basemap-openstreetmap",
+    "previewBaseMapId": "basemap-openstreetmap"
   }
+}

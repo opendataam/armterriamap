@@ -57,6 +57,29 @@ yarn gulp dev
 HotOSM layers are stored as zip archives in `wwwroot/data/hotosm/`; the Docker build unpacks them.
 For local development run `sh unpack.sh` in that directory.
 
+Resources of data.opendata.am are served without CORS headers, so the map loads them through
+the terriajs-server proxy (`allowProxyFor` in `serverconfig.json`).
+
+### Region mapping (choropleths by marz)
+
+A CSV with a column of marzes is shown as a choropleth without any configuration. The column is
+recognised by its name (`marz`, `province`, `region`, `adm1_pcode`, `adm1_en`, `մարզ`, `марз`,
+`область`, ...) and its values can be:
+
+- ISO 3166-2 codes: `AM-ER`, `AM-SH`
+- OCHA P-codes: `AM01` ... `AM11`
+- names in English, Armenian or Russian: `Shirak`, `Շիրակի մարզ`, `Ширакская область`, `г. Ереван`
+
+The region type is `ARM_MARZ`, defined in `wwwroot/data/regions/regionMapping.json`. Boundaries,
+vector tiles and the region id list are built from OpenStreetMap by:
+
+```bash
+cd scripts/regions && npm install && npm run build-marz
+```
+
+The script overwrites `wwwroot/data/regions/`; edit the spelling variants in
+`scripts/regions/build-marz.mjs`, not the generated files.
+
 ### Updating TerriaMap
 
 Apply the upstream changes between the current and the new TerriaMap release, excluding
