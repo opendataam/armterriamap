@@ -118,5 +118,101 @@
   },
   "aboutButton": {
     "caption": "About"
+  },
+  "catalog": {
+    "admin": {
+      "marz": "Marzes (provinces)",
+      "population": {
+        "name": "Population by marz, 2021",
+        "description": "Population of Armenia by marz (province) and sex, 2021 estimates.\n\nSource: [Armenia - Subnational Population Statistics](https://data.opendata.am/dataset/armenia-subnational-population-statistics), Open Data Armenia (OCHA common operational dataset)."
+      },
+      "settlements": {
+        "name": "Settlements",
+        "description": "Settlements in Armenia from OpenStreetMap, exported monthly by the Humanitarian OpenStreetMap Team.\n\nSource: [HDX](https://data.humdata.org/dataset/hotosm_arm_populated_places), © OpenStreetMap contributors, ODbL."
+      },
+      "name": "Administrative division and population"
+    },
+    "climate": {
+      "zones": "Climatic zones",
+      "temperature": "Average annual temperature",
+      "precipitation": "Average annual precipitation",
+      "maxPrecipitation": "Maximal daily precipitation",
+      "solarRadiation": "Average annual solar radiation",
+      "radiationBalance": "Radiation balance",
+      "sunshineJan": "Sunshine duration, January",
+      "sunshineApr": "Sunshine duration, April",
+      "sunshineJul": "Sunshine duration, July",
+      "sunshineOct": "Sunshine duration, October",
+      "wind": "Wind resources",
+      "name": "Climate"
+    },
+    "nature": {
+      "landscapes": "Landscapes",
+      "soils": "Soils",
+      "vegetation": "Vegetation",
+      "forests": "Forest areas",
+      "landUse": "Land use",
+      "name": "Landscapes, soils and vegetation"
+    },
+    "water": {
+      "rivers": "Rivers",
+      "catchments": "River catchments",
+      "lakes": "Lakes and reservoirs",
+      "springs": "Springs",
+      "aquifers": "Aquifer systems",
+      "groundwater": "Groundwater zones",
+      "name": "Water resources"
+    },
+    "hazards": {
+      "seismicZones": "Seismic zonation",
+      "seismicHazard": "Probabilistic seismic hazard (475-year return period)",
+      "faults": "Active faults",
+      "earthquakes": {
+        "name": "Earthquakes since 1970, M3+ (USGS)",
+        "description": "Earthquakes of magnitude 3 and above in Armenia and nearby since 1970, from the USGS catalog. New events appear automatically.\n\nSource: [USGS Earthquake Hazards Program](https://earthquake.usgs.gov/earthquakes/search/), public domain."
+      },
+      "landslides": "Landslides",
+      "mudflows": "Debris and mud flows",
+      "avalanches": "Avalanche hazard",
+      "floodDuration": "Flood duration",
+      "springFlood": "Spring flood runoff layer",
+      "name": "Natural hazards"
+    },
+    "infrastructure": {
+      "health": "Health facilities (healthsites.io)",
+      "education": {
+        "name": "Education facilities",
+        "description": "Education facilities in Armenia from OpenStreetMap, exported monthly by the Humanitarian OpenStreetMap Team.\n\nSource: [HDX](https://data.humdata.org/dataset/hotosm_arm_education_facilities), © OpenStreetMap contributors, ODbL."
+      },
+      "financial": {
+        "name": "Banks, ATMs and other financial services",
+        "description": "Banks, ATMs and other financial services in Armenia from OpenStreetMap, exported monthly by the Humanitarian OpenStreetMap Team.\n\nSource: [HDX](https://data.humdata.org/dataset/hotosm_arm_financial_services), © OpenStreetMap contributors, ODbL."
+      },
+      "airports": {
+        "name": "Airports",
+        "description": "Airports in Armenia from OpenStreetMap, exported monthly by the Humanitarian OpenStreetMap Team.\n\nSource: [HDX](https://data.humdata.org/dataset/hotosm_arm_airports), © OpenStreetMap contributors, ODbL."
+      },
+      "railways": {
+        "name": "Railways",
+        "description": "Railways in Armenia from OpenStreetMap, exported monthly by the Humanitarian OpenStreetMap Team.\n\nSource: [HDX](https://data.humdata.org/dataset/hotosm_arm_railways), © OpenStreetMap contributors, ODbL."
+      },
+      "name": "Infrastructure and services"
+    },
+    "biodiversity": {
+      "gbif": {
+        "name": "Species observations (GBIF)",
+        "description": "Density of species occurrence records in Armenia: observations, museum specimens and surveys published to GBIF (about 390,000 records). Brighter colour means more records.\n\nSource: [GBIF.org](https://www.gbif.org/country/AM/summary), data from many publishers under CC0, CC BY and CC BY-NC."
+      },
+      "name": "Biodiversity"
+    },
+    "history": {
+      "spitak": "Spitak earthquake of 1988: damage photographs",
+      "pleiades": "Ancient places (Pleiades)",
+      "name": "History and culture"
+    },
+    "odam": {
+      "name": "Open Data Armenia: datasets for the atlas",
+      "description": "Datasets of [data.opendata.am](https://data.opendata.am) tagged `atlas`, loaded from the catalogue when the map opens. Tag a dataset `atlas` to add it here."
+    }
   }
 }

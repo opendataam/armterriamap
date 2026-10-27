@@ -2415,5 +2415,101 @@
   },
   "aboutButton": {
     "caption": "О проекте"
+  },
+  "catalog": {
+    "admin": {
+      "marz": "Марзы (области)",
+      "population": {
+        "name": "Население по марзам, 2021",
+        "description": "Население Армении по марзам (областям) и полу, оценка на 2021 год.\n\nИсточник: [Armenia - Subnational Population Statistics](https://data.opendata.am/dataset/armenia-subnational-population-statistics), Open Data Armenia (общие оперативные данные OCHA)."
+      },
+      "settlements": {
+        "name": "Населённые пункты",
+        "description": "Населённые пункты в Армении по данным OpenStreetMap, ежемесячная выгрузка Humanitarian OpenStreetMap Team.\n\nИсточник: [HDX](https://data.humdata.org/dataset/hotosm_arm_populated_places), © участники OpenStreetMap, ODbL."
+      },
+      "name": "Административное деление и население"
+    },
+    "climate": {
+      "zones": "Климатические зоны",
+      "temperature": "Среднегодовая температура",
+      "precipitation": "Среднегодовое количество осадков",
+      "maxPrecipitation": "Максимальные суточные осадки",
+      "solarRadiation": "Среднегодовая солнечная радиация",
+      "radiationBalance": "Радиационный баланс",
+      "sunshineJan": "Продолжительность солнечного сияния, январь",
+      "sunshineApr": "Продолжительность солнечного сияния, апрель",
+      "sunshineJul": "Продолжительность солнечного сияния, июль",
+      "sunshineOct": "Продолжительность солнечного сияния, октябрь",
+      "wind": "Ветровые ресурсы",
+      "name": "Климат"
+    },
+    "nature": {
+      "landscapes": "Ландшафты",
+      "soils": "Почвы",
+      "vegetation": "Растительность",
+      "forests": "Лесные массивы",
+      "landUse": "Землепользование",
+      "name": "Ландшафты, почвы и растительность"
+    },
+    "water": {
+      "rivers": "Реки",
+      "catchments": "Водосборные бассейны рек",
+      "lakes": "Озёра и водохранилища",
+      "springs": "Родники",
+      "aquifers": "Водоносные системы",
+      "groundwater": "Зоны подземных вод",
+      "name": "Водные ресурсы"
+    },
+    "hazards": {
+      "seismicZones": "Сейсмическое районирование",
+      "seismicHazard": "Вероятностная сейсмическая опасность (повторяемость 475 лет)",
+      "faults": "Активные разломы",
+      "earthquakes": {
+        "name": "Землетрясения с 1970 года, M3+ (USGS)",
+        "description": "Землетрясения магнитудой 3 и выше в Армении и на соседних территориях с 1970 года по каталогу USGS. Новые события появляются автоматически.\n\nИсточник: [USGS Earthquake Hazards Program](https://earthquake.usgs.gov/earthquakes/search/), общественное достояние."
+      },
+      "landslides": "Оползни",
+      "mudflows": "Сели",
+      "avalanches": "Лавинная опасность",
+      "floodDuration": "Продолжительность паводков",
+      "springFlood": "Слой стока весеннего половодья",
+      "name": "Природные опасности"
+    },
+    "infrastructure": {
+      "health": "Медицинские учреждения (healthsites.io)",
+      "education": {
+        "name": "Учебные заведения",
+        "description": "Учебные заведения в Армении по данным OpenStreetMap, ежемесячная выгрузка Humanitarian OpenStreetMap Team.\n\nИсточник: [HDX](https://data.humdata.org/dataset/hotosm_arm_education_facilities), © участники OpenStreetMap, ODbL."
+      },
+      "financial": {
+        "name": "Банки, банкоматы и другие финансовые услуги",
+        "description": "Банки, банкоматы и другие финансовые услуги в Армении по данным OpenStreetMap, ежемесячная выгрузка Humanitarian OpenStreetMap Team.\n\nИсточник: [HDX](https://data.humdata.org/dataset/hotosm_arm_financial_services), © участники OpenStreetMap, ODbL."
+      },
+      "airports": {
+        "name": "Аэропорты",
+        "description": "Аэропорты в Армении по данным OpenStreetMap, ежемесячная выгрузка Humanitarian OpenStreetMap Team.\n\nИсточник: [HDX](https://data.humdata.org/dataset/hotosm_arm_airports), © участники OpenStreetMap, ODbL."
+      },
+      "railways": {
+        "name": "Железные дороги",
+        "description": "Железные дороги в Армении по данным OpenStreetMap, ежемесячная выгрузка Humanitarian OpenStreetMap Team.\n\nИсточник: [HDX](https://data.humdata.org/dataset/hotosm_arm_railways), © участники OpenStreetMap, ODbL."
+      },
+      "name": "Инфраструктура и услуги"
+    },
+    "biodiversity": {
+      "gbif": {
+        "name": "Наблюдения видов (GBIF)",
+        "description": "Плотность записей о встречах видов в Армении: наблюдения, музейные образцы и исследования, опубликованные в GBIF (около 390 000 записей). Чем ярче цвет, тем больше записей.\n\nИсточник: [GBIF.org](https://www.gbif.org/country/AM/summary), данные многих публикаторов по лицензиям CC0, CC BY и CC BY-NC."
+      },
+      "name": "Биоразнообразие"
+    },
+    "history": {
+      "spitak": "Спитакское землетрясение 1988 года: фотографии разрушений",
+      "pleiades": "Древние места (Pleiades)",
+      "name": "История и культура"
+    },
+    "odam": {
+      "name": "Open Data Armenia: данные для атласа",
+      "description": "Наборы данных [data.opendata.am](https://data.opendata.am) с тегом `atlas`, загружаемые из каталога при открытии карты. Добавьте датасету тег `atlas`, чтобы он появился здесь."
+    }
   }
 }

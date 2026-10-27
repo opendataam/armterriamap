@@ -2380,5 +2380,101 @@
   },
   "aboutButton": {
     "caption": "Նախագծի մասին"
+  },
+  "catalog": {
+    "admin": {
+      "marz": "Մարզեր",
+      "population": {
+        "name": "Բնակչությունն ըստ մարզերի, 2021",
+        "description": "Հայաստանի բնակչությունն ըստ մարզերի և սեռի, 2021 թվականի գնահատական։\n\nԱղբյուր՝ [Armenia - Subnational Population Statistics](https://data.opendata.am/dataset/armenia-subnational-population-statistics), Open Data Armenia (OCHA ընդհանուր օպերատիվ տվյալներ)։"
+      },
+      "settlements": {
+        "name": "Բնակավայրեր",
+        "description": "Բնակավայրեր՝ ըստ OpenStreetMap-ի, ամսական արտահանում Humanitarian OpenStreetMap Team-ի կողմից։\n\nԱղբյուր՝ [HDX](https://data.humdata.org/dataset/hotosm_arm_populated_places), © OpenStreetMap contributors, ODbL։"
+      },
+      "name": "Վարչական բաժանում և բնակչություն"
+    },
+    "climate": {
+      "zones": "Կլիմայական գոտիներ",
+      "temperature": "Միջին տարեկան ջերմաստիճան",
+      "precipitation": "Միջին տարեկան տեղումներ",
+      "maxPrecipitation": "Առավելագույն օրական տեղումներ",
+      "solarRadiation": "Արեգակնային ճառագայթման միջին տարեկան քանակ",
+      "radiationBalance": "Ճառագայթային հաշվեկշիռ",
+      "sunshineJan": "Արևափայլի տևողություն, հունվար",
+      "sunshineApr": "Արևափայլի տևողություն, ապրիլ",
+      "sunshineJul": "Արևափայլի տևողություն, հուլիս",
+      "sunshineOct": "Արևափայլի տևողություն, հոկտեմբեր",
+      "wind": "Քամու ռեսուրսներ",
+      "name": "Կլիմա"
+    },
+    "nature": {
+      "landscapes": "Լանդշաֆտներ",
+      "soils": "Հողեր",
+      "vegetation": "Բուսականություն",
+      "forests": "Անտառային տարածքներ",
+      "landUse": "Հողօգտագործում",
+      "name": "Լանդշաֆտներ, հողեր և բուսականություն"
+    },
+    "water": {
+      "rivers": "Գետեր",
+      "catchments": "Գետերի ջրհավաք ավազաններ",
+      "lakes": "Լճեր և ջրամբարներ",
+      "springs": "Աղբյուրներ",
+      "aquifers": "Ջրատար համակարգեր",
+      "groundwater": "Ստորերկրյա ջրերի գոտիներ",
+      "name": "Ջրային ռեսուրսներ"
+    },
+    "hazards": {
+      "seismicZones": "Սեյսմիկ գոտիավորում",
+      "seismicHazard": "Սեյսմիկ վտանգի հավանականային գնահատում (475 տարի կրկնելիություն)",
+      "faults": "Ակտիվ խզվածքներ",
+      "earthquakes": {
+        "name": "Երկրաշարժեր 1970 թվականից, M3+ (USGS)",
+        "description": "3 և ավելի մագնիտուդով երկրաշարժեր Հայաստանում և հարակից տարածքներում 1970 թվականից՝ ըստ USGS կատալոգի։ Նոր իրադարձություններն ավելանում են ինքնաշխատ։\n\nԱղբյուր՝ [USGS Earthquake Hazards Program](https://earthquake.usgs.gov/earthquakes/search/), հանրային սեփականություն։"
+      },
+      "landslides": "Սողանքներ",
+      "mudflows": "Սելավներ",
+      "avalanches": "Ձնահյուսի վտանգ",
+      "floodDuration": "Հեղեղումների տևողություն",
+      "springFlood": "Գարնանային վարարման հոսքի շերտ",
+      "name": "Բնական վտանգներ"
+    },
+    "infrastructure": {
+      "health": "Բժշկական հաստատություններ (healthsites.io)",
+      "education": {
+        "name": "Կրթական հաստատություններ",
+        "description": "Կրթական հաստատություններ՝ ըստ OpenStreetMap-ի, ամսական արտահանում Humanitarian OpenStreetMap Team-ի կողմից։\n\nԱղբյուր՝ [HDX](https://data.humdata.org/dataset/hotosm_arm_education_facilities), © OpenStreetMap contributors, ODbL։"
+      },
+      "financial": {
+        "name": "Բանկեր, բանկոմատներ և այլ ֆինանսական ծառայություններ",
+        "description": "Բանկեր, բանկոմատներ և այլ ֆինանսական ծառայություններ՝ ըստ OpenStreetMap-ի, ամսական արտահանում Humanitarian OpenStreetMap Team-ի կողմից։\n\nԱղբյուր՝ [HDX](https://data.humdata.org/dataset/hotosm_arm_financial_services), © OpenStreetMap contributors, ODbL։"
+      },
+      "airports": {
+        "name": "Օդանավակայաններ",
+        "description": "Օդանավակայաններ՝ ըստ OpenStreetMap-ի, ամսական արտահանում Humanitarian OpenStreetMap Team-ի կողմից։\n\nԱղբյուր՝ [HDX](https://data.humdata.org/dataset/hotosm_arm_airports), © OpenStreetMap contributors, ODbL։"
+      },
+      "railways": {
+        "name": "Երկաթուղիներ",
+        "description": "Երկաթուղիներ՝ ըստ OpenStreetMap-ի, ամսական արտահանում Humanitarian OpenStreetMap Team-ի կողմից։\n\nԱղբյուր՝ [HDX](https://data.humdata.org/dataset/hotosm_arm_railways), © OpenStreetMap contributors, ODbL։"
+      },
+      "name": "Ենթակառուցվածքներ և ծառայություններ"
+    },
+    "biodiversity": {
+      "gbif": {
+        "name": "Տեսակների դիտարկումներ (GBIF)",
+        "description": "Տեսակների հանդիպման գրառումների խտությունը Հայաստանում՝ GBIF-ում հրապարակված դիտարկումներ, թանգարանային նմուշներ և հետազոտություններ (մոտ 390 000 գրառում)։ Ավելի պայծառ գույնը նշանակում է ավելի շատ գրառումներ։\n\nԱղբյուր՝ [GBIF.org](https://www.gbif.org/country/AM/summary), տարբեր հրապարակողների տվյալներ CC0, CC BY և CC BY-NC լիցենզիաներով։"
+      },
+      "name": "Կենսաբազմազանություն"
+    },
+    "history": {
+      "spitak": "Սպիտակի 1988 թվականի երկրաշարժ. ավերածությունների լուսանկարներ",
+      "pleiades": "Հնագույն վայրեր (Pleiades)",
+      "name": "Պատմություն և մշակույթ"
+    },
+    "odam": {
+      "name": "Open Data Armenia. տվյալներ ատլասի համար",
+      "description": "[data.opendata.am](https://data.opendata.am) կատալոգի `atlas` պիտակով տվյալների հավաքածուներ, որոնք բեռնվում են քարտեզը բացելիս։ Ավելացրեք `atlas` պիտակը, որպեսզի հավաքածուն հայտնվի այստեղ։"
+    }
   }
 }
