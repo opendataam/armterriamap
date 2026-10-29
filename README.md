@@ -14,6 +14,7 @@ The application is built from source; compiled output (`wwwroot/build/`) is not 
 - `wwwroot/about.html` - about page
 - `lib/`, `index.js`, `gulpfile.js`, `buildprocess/` - TerriaMap application source
 - `serverconfig.json` - terriajs-server configuration (proxy whitelist etc.)
+- `patches/` - fixes to dependencies (TerriaJS), applied to `node_modules` by `patch-package` after `yarn install`
 
 ## How to
 
@@ -85,7 +86,11 @@ yarn gulp dev
    over the TerriaJS translations, so it can contain both map-specific texts and translations
    of any TerriaJS interface string (see `node_modules/terriajs/wwwroot/languages/en/translation.json`
    for the list of keys)
-3. Refresh the browser
+3. In `wwwroot/init/simple.json`, the `name` and `description` of a catalog item can be a key written
+   as `translate#<key>`. The `name` and `template` of a `featureInfoTemplate` can contain
+   `translate#<key>` tokens among the Mustache tags, e.g.
+   `"name": "translate#catalog.yerevan.hotels - {{{հյուրանոցի__անվանումը}}}"`
+4. Refresh the browser
 
 ### Adding data
 

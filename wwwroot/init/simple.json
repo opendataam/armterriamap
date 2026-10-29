@@ -122,7 +122,10 @@
           "name": "translate#catalog.admin.settlements.name",
           "description": "translate#catalog.admin.settlements.description",
           "url": "https://production-raw-data-api.s3.amazonaws.com/ISO3/ARM/populated_places/hotosm_arm_populated_places_osm_geojson.zip",
-          "activeStyle": "place"
+          "activeStyle": "place",
+          "featureInfoTemplate": {
+            "name": "translate#catalog.admin.settlements.name - {{#name}}{{{name}}}{{/name}}{{^name}}{{#name_en}}{{{name_en}}}{{/name_en}}{{^name_en}}translate#featureInfo.siteData{{/name_en}}{{/name}}"
+          }
         }
       ]
     },
@@ -136,7 +139,11 @@
           "id": "sc-climat",
           "name": "translate#catalog.climate.zones",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:climat"
+          "layers": "geonode:climat",
+          "featureInfoTemplate": {
+            "template": "<table class=\"cesium-infoBox-defaultTable\"><tbody><tr><td>fid</td><td>{{fid}}</td></tr><tr><td>OBJECTID</td><td>{{OBJECTID}}</td></tr><tr><td>ID</td><td>{{ID}}</td></tr><tr><td>Descriptio</td><td>{{Descriptio}}</td></tr><tr><td>Shape_Leng</td><td>{{Shape_Leng}}</td></tr><tr><td>Shape_Le_1</td><td>{{Shape_Le_1}}</td></tr><tr><td>Shape_Area</td><td>{{Shape_Area}}</td></tr></tbody></table>",
+            "showFeatureInfoDownloadWithTemplate": true
+          }
         },
         {
           "type": "wms",
@@ -220,14 +227,22 @@
           "id": "sc-landscape",
           "name": "translate#catalog.nature.landscapes",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:landscape"
+          "layers": "geonode:landscape",
+          "featureInfoTemplate": {
+            "template": "<table class=\"cesium-infoBox-defaultTable\"><tbody><tr><td>fid</td><td>{{fid}}</td></tr><tr><td>OBJECTID</td><td>{{OBJECTID}}</td></tr><tr><td>ID</td><td>{{ID}}</td></tr><tr><td>Tipe</td><td>{{Tipe}}</td></tr><tr><td>Altitude</td><td>{{Altitude}}</td></tr><tr><td>Shape_Leng</td><td>{{Shape_Leng}}</td></tr><tr><td>Shape_Le_1</td><td>{{Shape_Le_1}}</td></tr><tr><td>Shape_Area</td><td>{{Shape_Area}}</td></tr></tbody></table>",
+            "showFeatureInfoDownloadWithTemplate": true
+          }
         },
         {
           "type": "wms",
           "id": "sc-soil_arm",
           "name": "translate#catalog.nature.soils",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:soil_arm"
+          "layers": "geonode:soil_arm",
+          "featureInfoTemplate": {
+            "template": "<table class=\"cesium-infoBox-defaultTable\"><tbody><tr><td>fid</td><td>{{fid}}</td></tr><tr><td>OBJECTID</td><td>{{OBJECTID}}</td></tr><tr><td>ID</td><td>{{ID}}</td></tr><tr><td>Descriptio</td><td>{{Descriptio}}</td></tr><tr><td>Tip</td><td>{{Tip}}</td></tr><tr><td>Shape_Leng</td><td>{{Shape_Leng}}</td></tr><tr><td>Shape_Le_1</td><td>{{Shape_Le_1}}</td></tr><tr><td>Shape_Area</td><td>{{Shape_Area}}</td></tr></tbody></table>",
+            "showFeatureInfoDownloadWithTemplate": true
+          }
         },
         {
           "type": "wms",
@@ -335,7 +350,14 @@
           "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=1970-01-01&minmagnitude=3&minlatitude=38.5&maxlatitude=41.6&minlongitude=43.2&maxlongitude=46.9&orderby=time",
           "activeStyle": "mag",
           "featureInfoTemplate": {
-            "template": "<h3>{{place}}</h3><p>M {{mag}}</p><p><a href=\"{{url}}\">USGS</a></p>"
+            "template": "<h3>{{place}}</h3><p>M {{mag}}</p><p><a href=\"{{url}}\">USGS</a></p>",
+            "name": "translate#catalog.hazards.earthquakes.name - M {{mag}}, {{time}}",
+            "formats": {
+              "time": {
+                "type": "dateTime",
+                "format": "dd.mm.yyyy HH:MM"
+              }
+            }
           }
         },
         {
@@ -394,7 +416,10 @@
           "name": "translate#catalog.infrastructure.education.name",
           "description": "translate#catalog.infrastructure.education.description",
           "url": "https://production-raw-data-api.s3.amazonaws.com/ISO3/ARM/education_facilities/hotosm_arm_education_facilities_osm_geojson.zip",
-          "activeStyle": "amenity"
+          "activeStyle": "amenity",
+          "featureInfoTemplate": {
+            "name": "translate#catalog.infrastructure.education.name - {{#name}}{{{name}}}{{/name}}{{^name}}{{#name_en}}{{{name_en}}}{{/name_en}}{{^name_en}}translate#featureInfo.siteData{{/name_en}}{{/name}}"
+          }
         },
         {
           "type": "geojson",
@@ -402,7 +427,10 @@
           "name": "translate#catalog.infrastructure.financial.name",
           "description": "translate#catalog.infrastructure.financial.description",
           "url": "https://production-raw-data-api.s3.amazonaws.com/ISO3/ARM/financial_services/hotosm_arm_financial_services_osm_geojson.zip",
-          "activeStyle": "amenity"
+          "activeStyle": "amenity",
+          "featureInfoTemplate": {
+            "name": "translate#catalog.infrastructure.financial.name - {{#name}}{{{name}}}{{/name}}{{^name}}{{#name_en}}{{{name_en}}}{{/name_en}}{{^name_en}}translate#featureInfo.siteData{{/name_en}}{{/name}}"
+          }
         },
         {
           "type": "geojson",
@@ -410,7 +438,10 @@
           "name": "translate#catalog.infrastructure.airports.name",
           "description": "translate#catalog.infrastructure.airports.description",
           "url": "https://production-raw-data-api.s3.amazonaws.com/ISO3/ARM/airports/hotosm_arm_airports_osm_geojson.zip",
-          "activeStyle": "aeroway"
+          "activeStyle": "aeroway",
+          "featureInfoTemplate": {
+            "name": "translate#catalog.infrastructure.airports.name - {{#name}}{{{name}}}{{/name}}{{^name}}{{#name_en}}{{{name_en}}}{{/name_en}}{{^name_en}}translate#featureInfo.siteData{{/name_en}}{{/name}}"
+          }
         },
         {
           "type": "geojson",
@@ -418,7 +449,10 @@
           "name": "translate#catalog.infrastructure.railways.name",
           "description": "translate#catalog.infrastructure.railways.description",
           "url": "https://production-raw-data-api.s3.amazonaws.com/ISO3/ARM/railways/hotosm_arm_railways_osm_geojson.zip",
-          "activeStyle": "railway"
+          "activeStyle": "railway",
+          "featureInfoTemplate": {
+            "name": "translate#catalog.infrastructure.railways.name - {{#name}}{{{name}}}{{/name}}{{^name}}{{#name_en}}{{{name_en}}}{{/name_en}}{{^name_en}}translate#featureInfo.siteData{{/name_en}}{{/name}}"
+          }
         }
       ]
     },
@@ -487,19 +521,28 @@
           "type": "esri-featureServer",
           "id": "yerevan-metro-stations",
           "name": "translate#catalog.yerevan.metroStations",
-          "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D5%84%D5%A5%D5%BF%D6%80%D5%B8_%D5%AF%D5%A1%D5%B5%D5%A1%D5%B6%D5%B6%D5%A5%D6%80/FeatureServer/0"
+          "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D5%84%D5%A5%D5%BF%D6%80%D5%B8_%D5%AF%D5%A1%D5%B5%D5%A1%D5%B6%D5%B6%D5%A5%D6%80/FeatureServer/0",
+          "featureInfoTemplate": {
+            "name": "translate#catalog.yerevan.metroStations - {{#մետրո_կայան}}{{{մետրո_կայան}}}{{/մետրո_կայան}}{{^մետրո_կայան}}translate#featureInfo.siteData{{/մետրո_կայան}}"
+          }
         },
         {
           "type": "esri-featureServer",
           "id": "yerevan-metro-lines",
           "name": "translate#catalog.yerevan.metroLines",
-          "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D5%84%D5%A5%D5%BF%D6%80%D5%B8_lines/FeatureServer/0"
+          "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D5%84%D5%A5%D5%BF%D6%80%D5%B8_lines/FeatureServer/0",
+          "featureInfoTemplate": {
+            "name": "translate#catalog.yerevan.metroLines - {{#layer}}{{{layer}}}{{/layer}}{{^layer}}translate#featureInfo.siteData{{/layer}}"
+          }
         },
         {
           "type": "esri-featureServer",
           "id": "yerevan-bus-stops",
           "name": "translate#catalog.yerevan.busStops",
-          "url": "https://gis.yerevan.am/server/rest/services/Hosted/Bus_stops_lots/FeatureServer/0"
+          "url": "https://gis.yerevan.am/server/rest/services/Hosted/Bus_stops_lots/FeatureServer/0",
+          "featureInfoTemplate": {
+            "name": "translate#catalog.yerevan.busStops - {{#street}}{{{street}}}{{/street}}{{^street}}translate#featureInfo.siteData{{/street}}"
+          }
         },
         {
           "type": "esri-featureServer",
@@ -517,13 +560,25 @@
           "type": "esri-featureServer",
           "id": "yerevan-hotels",
           "name": "translate#catalog.yerevan.hotels",
-          "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D5%80%D5%B5%D5%B8%D6%82%D6%80%D5%A1%D5%B6%D5%B8%D6%81%D5%B6%D5%A5%D6%80/FeatureServer/0"
+          "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D5%80%D5%B5%D5%B8%D6%82%D6%80%D5%A1%D5%B6%D5%B8%D6%81%D5%B6%D5%A5%D6%80/FeatureServer/0",
+          "featureInfoTemplate": {
+            "name": "translate#catalog.yerevan.hotels - {{#հյուրանոցի__անվանումը}}{{{հյուրանոցի__անվանումը}}}{{/հյուրանոցի__անվանումը}}{{^հյուրանոցի__անվանումը}}translate#featureInfo.siteData{{/հյուրանոցի__անվանումը}}"
+          }
         },
         {
           "type": "esri-featureServer",
           "id": "yerevan-green-areas",
           "name": "translate#catalog.yerevan.greenAreas",
-          "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D4%B8%D5%B6%D5%A4%D5%B0_%D6%85%D5%A3%D5%BF_%D5%AF%D5%A1%D5%B6%D5%A1%D5%B9_%D5%BF%D5%A1%D6%80%D5%A1%D5%AE%D6%84/FeatureServer/0"
+          "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D4%B8%D5%B6%D5%A4%D5%B0_%D6%85%D5%A3%D5%BF_%D5%AF%D5%A1%D5%B6%D5%A1%D5%B9_%D5%BF%D5%A1%D6%80%D5%A1%D5%AE%D6%84/FeatureServer/0",
+          "featureInfoTemplate": {
+            "name": "translate#catalog.yerevan.greenAreas - {{#anvanum}}{{{anvanum}}}{{/anvanum}}{{^anvanum}}translate#featureInfo.siteData{{/anvanum}}",
+            "formats": {
+              "docupdate": {
+                "type": "dateTime",
+                "format": "dd.mm.yyyy"
+              }
+            }
+          }
         },
         {
           "type": "esri-featureServer",
@@ -534,34 +589,67 @@
           "where": "endofperiod_date >= CURRENT_TIMESTAMP - INTERVAL '1' DAY",
           "useStyleInformationFromService": false,
           "activeStyle": "pm2_5concmass1hourmean_value",
-          "tileRequests": false
+          "tileRequests": false,
+          "columns": [
+            {
+              "name": "pm2_5concmass1hourmean_value",
+              "title": "PM2.5, µg/m³"
+            }
+          ],
+          "featureInfoTemplate": {
+            "name": "translate#catalog.yerevan.airQuality.name - {{#globalid}}{{{globalid}}}{{/globalid}}{{^globalid}}translate#featureInfo.siteData{{/globalid}}",
+            "template": "<table class=\"cesium-infoBox-defaultTable\"><tbody><tr><td>translate#catalog.yerevan.airQuality.featureInfo.period</td><td>{{startofperiod_date}} – {{endofperiod_date}}</td></tr><tr><td>translate#catalog.yerevan.airQuality.featureInfo.pm25Hour</td><td>{{pm2_5concmass1hourmean_value}}</td></tr><tr><td>translate#catalog.yerevan.airQuality.featureInfo.pm25Day</td><td>{{pm2_5concmass24hourrollingmea_1}}</td></tr><tr><td>translate#catalog.yerevan.airQuality.featureInfo.pm10Hour</td><td>{{pm10concmass1hourmean_value}}</td></tr><tr><td>translate#catalog.yerevan.airQuality.featureInfo.pm10Day</td><td>{{pm10concmass24hourrollingmean_v}}</td></tr><tr><td>translate#catalog.yerevan.airQuality.featureInfo.no2Hour</td><td>{{no2conc1hourmean_value}}</td></tr><tr><td>translate#catalog.yerevan.airQuality.featureInfo.aqi</td><td>{{pm2_5concmassnowcastusepaaqi_va}}</td></tr><tr><td>translate#catalog.yerevan.airQuality.featureInfo.sensor</td><td>{{code}}</td></tr></tbody></table>",
+            "formats": {
+              "startofperiod_date": {
+                "type": "dateTime",
+                "format": "dd.mm.yyyy HH:MM"
+              },
+              "endofperiod_date": {
+                "type": "dateTime",
+                "format": "HH:MM"
+              }
+            },
+            "showFeatureInfoDownloadWithTemplate": true
+          }
         },
         {
           "type": "esri-featureServer",
           "id": "yerevan-seismic-microzonation",
           "name": "translate#catalog.yerevan.seismicMicrozonation",
           "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D5%8D%D5%A5%D5%B5%D5%BD%D5%B4%D5%B8%D5%B4%D5%AB%D5%AF%D6%80%D5%B8%D5%B7%D6%80%D5%BB%D5%A1%D5%B6%D5%A1%D6%81%D5%B8%D6%82%D5%B4/FeatureServer/15",
-          "opacity": 0.6
+          "opacity": 0.6,
+          "featureInfoTemplate": {
+            "name": "translate#catalog.yerevan.seismicMicrozonation - {{#layer}}{{{layer}}}{{/layer}}{{^layer}}translate#featureInfo.siteData{{/layer}}"
+          }
         },
         {
           "type": "esri-featureServer",
           "id": "yerevan-landslides",
           "name": "translate#catalog.yerevan.landslides",
           "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D5%8D%D5%B8%D5%B2%D5%A1%D5%B6%D6%84%D5%B6%D5%A5%D6%80/FeatureServer/6",
-          "opacity": 0.7
+          "opacity": 0.7,
+          "featureInfoTemplate": {
+            "name": "translate#catalog.yerevan.landslides - {{#ladscape}}{{{ladscape}}}{{/ladscape}}{{^ladscape}}translate#featureInfo.siteData{{/ladscape}}"
+          }
         },
         {
           "type": "esri-featureServer",
           "id": "yerevan-main-fault",
           "name": "translate#catalog.yerevan.mainFault",
           "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D4%BD%D5%A6%D5%B8%D6%82%D5%B4%D5%A1%D5%B5%D5%AB%D5%B6_%D5%AD%D5%A1%D5%AD%D5%BF%D5%B8%D6%82%D5%B4%D5%B6%D5%A5%D6%80/FeatureServer/2",
-          "opacity": 0.6
+          "opacity": 0.6,
+          "featureInfoTemplate": {
+            "name": "translate#catalog.yerevan.mainFault - {{#field1}}{{{field1}}}{{/field1}}{{^field1}}translate#featureInfo.siteData{{/field1}}"
+          }
         },
         {
           "type": "esri-featureServer",
           "id": "yerevan-faults",
           "name": "translate#catalog.yerevan.faults",
-          "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D4%BD%D5%A6%D5%B8%D6%82%D5%B4%D5%A1%D5%B5%D5%AB%D5%B6_%D5%AD%D5%A1%D5%AD%D5%BF%D5%B8%D6%82%D5%B4%D5%B6%D5%A5%D6%80/FeatureServer/3"
+          "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D4%BD%D5%A6%D5%B8%D6%82%D5%B4%D5%A1%D5%B5%D5%AB%D5%B6_%D5%AD%D5%A1%D5%AD%D5%BF%D5%B8%D6%82%D5%B4%D5%B6%D5%A5%D6%80/FeatureServer/3",
+          "featureInfoTemplate": {
+            "name": "translate#catalog.yerevan.faults - {{#fault}}{{{fault}}}{{/fault}}{{^fault}}translate#featureInfo.siteData{{/fault}}"
+          }
         },
         {
           "type": "esri-featureServer",

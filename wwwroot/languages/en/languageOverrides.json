@@ -236,7 +236,17 @@
       "greenAreas": "Public green areas",
       "airQuality": {
         "description": "Hourly mean concentration of fine particulate matter PM2.5 (µg/m³) at the sensors of the Yerevan air quality network. Sensors without readings in the last 24 hours are hidden. For comparison, the WHO guideline for the daily mean is 15 µg/m³.",
-        "name": "Air quality: PM2.5, last hour"
+        "name": "Air quality: PM2.5, last hour",
+        "featureInfo": {
+          "period": "Measurement period",
+          "pm25Hour": "PM2.5, hourly mean, µg/m³",
+          "pm25Day": "PM2.5, 24-hour mean, µg/m³",
+          "pm10Hour": "PM10, hourly mean, µg/m³",
+          "pm10Day": "PM10, 24-hour mean, µg/m³",
+          "no2Hour": "NO₂, hourly mean",
+          "aqi": "PM2.5 air quality index (US EPA NowCast)",
+          "sensor": "Sensor"
+        }
       },
       "seismicMicrozonation": "Seismic microzonation: peak ground acceleration",
       "landslides": "Landslides",
