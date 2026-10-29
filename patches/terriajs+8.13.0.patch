@@ -31,6 +31,23 @@ index ad12c8d..c4c3978 100644
          });
        }
      }
+diff --git a/node_modules/terriajs/lib/Models/Cesium.ts b/node_modules/terriajs/lib/Models/Cesium.ts
+index 97d98d6..5c740f2 100644
+--- a/node_modules/terriajs/lib/Models/Cesium.ts
++++ b/node_modules/terriajs/lib/Models/Cesium.ts
+@@ -431,10 +431,8 @@ export default class Cesium extends GlobeOrMap {
+         : SplitDirection.NONE;
+       this.scene.globe.depthTestAgainstTerrain =
+         this.terria.depthTestAgainstTerrainEnabled;
+-      if (this.scene.skyAtmosphere) {
+-        this.scene.skyAtmosphere.splitDirection =
+-          this.scene.globe.splitDirection;
+-      }
++      // The sky atmosphere is not split: the side of the split screen without
++      // terrain still shows the globe, on the surface of the ellipsoid
+     });
+     this._disposeSplitterReaction = this._reactToSplitterChanges();
+ 
 diff --git a/node_modules/terriajs/lib/ReactViews/Custom/parseCustomMarkdownToReact.ts b/node_modules/terriajs/lib/ReactViews/Custom/parseCustomMarkdownToReact.ts
 index da41fe8..c1faa38 100644
 --- a/node_modules/terriajs/lib/ReactViews/Custom/parseCustomMarkdownToReact.ts
@@ -158,3 +175,18 @@ index fe6b103..9bb69e7 100644
      }
    });
  
+diff --git a/node_modules/terriajs/lib/ReactViews/Workbench/Controls/OpacitySection.tsx b/node_modules/terriajs/lib/ReactViews/Workbench/Controls/OpacitySection.tsx
+index 3f4e4a7..a10f59c 100644
+--- a/node_modules/terriajs/lib/ReactViews/Workbench/Controls/OpacitySection.tsx
++++ b/node_modules/terriajs/lib/ReactViews/Workbench/Controls/OpacitySection.tsx
+@@ -48,7 +48,9 @@ class OpacitySection extends Component<OpacitySectionProps> {
+       <Box verticalCenter paddedHorizontally={3} paddedVertically={2}>
+         <StyledLabel medium htmlFor="opacity">
+           {t(($) => $.workbench.opacity, {
+-            opacity: Math.round(item.opacity * 100)
++            opacity: Math.round(item.opacity * 100),
++            // For translations that name the slider by transparency
++            transparency: 100 - Math.round(item.opacity * 100)
+           })}
+         </StyledLabel>
+         <Spacing right={3} />
