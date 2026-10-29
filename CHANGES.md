@@ -4,6 +4,11 @@
 
 - Patch TerriaJS (`patches/terriajs+8.13.0.patch`, applied by `patch-package` on install) to decode zipped GeoJSON as UTF-8, so Armenian names in the HOT OSM layers are no longer garbled
 - Hide the Armenian fields of the soils, landscapes and climatic zones layers in feature info (`featureInfoTemplate`): the sustainable-caucasus.unepgrid.ch server returns them as `????`
+- Name features in feature info by their own name: HOT OSM layers no longer title unnamed features "Armenia" (`adm0_name`), Yerevan layers and USGS earthquakes no longer show "Site Data"
+- Show dates of the Yerevan layers as dates instead of milliseconds (TerriaJS patch: `dateTime` formats accept milliseconds since the epoch)
+- Air quality: a short feature info table with translated labels instead of 140 technical fields, and the legend title "PM2.5, µg/m³"
+- Translate the `name` and `template` of feature info templates (`translate#key` tokens, see README)
+- Fix translations: "Site Data" (ru "Данные объекта", hy "Օբյեկտի տվյալներ"), the Russian feature info panel heading, and remove the step-by-step guide footnote whose key had no text
 
 #### 0.4.8
 

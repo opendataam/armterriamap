@@ -4,12 +4,14 @@ import ConsoleAnalytics from "terriajs/lib/Core/Analytics/ConsoleAnalytics";
 import GoogleAnalytics from "terriajs/lib/Core/Analytics/GoogleAnalytics";
 import registerCatalogMembers from "terriajs/lib/Models/Catalog/registerCatalogMembers";
 import CommonStrata from "terriajs/lib/Models/Definition/CommonStrata";
+import createStratumInstance from "terriajs/lib/Models/Definition/createStratumInstance";
 import NominatimSearchProvider from "terriajs/lib/Models/SearchProviders/NominatimSearchProvider";
 import registerSearchProviders from "terriajs/lib/Models/SearchProviders/registerSearchProviders";
 import ShareDataService from "terriajs/lib/Models/ShareDataService";
 import Terria from "terriajs/lib/Models/Terria";
 import ViewState from "terriajs/lib/ReactViewModels/ViewState";
 import registerCustomComponentTypes from "terriajs/lib/ReactViews/Custom/registerCustomComponentTypes";
+import { FeatureInfoTemplateTraits } from "terriajs/lib/Traits/TraitsClasses/FeatureInfoTraits";
 import updateApplicationOnHashChange from "terriajs/lib/ViewModels/updateApplicationOnHashChange";
 import updateApplicationOnMessageFromParentWindow from "terriajs/lib/ViewModels/updateApplicationOnMessageFromParentWindow";
 import loadPlugins from "./lib/Core/loadPlugins";
@@ -53,10 +55,14 @@ if (process.env.NODE_ENV === "development") {
 }
 
 const TRANSLATE_PREFIX = "translate#";
+const TRANSLATE_TOKEN = /translate#([\w.]+)/g;
 
 // TerriaJS shows catalog names and descriptions as they are written in the
 // init file. Names and descriptions written as "translate#key" are translated
 // here (keys live in wwwroot/languages/<lng>/languageOverrides.json).
+// The name and template of a feature info template can contain
+// "translate#key" tokens among the Mustache tags; each token is replaced by
+// its translation.
 function translateCatalog() {
   const visit = (model) => {
     const definition = model.strata.get(CommonStrata.definition);
@@ -69,6 +75,22 @@ function translateCatalog() {
         model.target?.setTrait(CommonStrata.override, trait, text);
       }
     });
+    const featureInfoTemplate = {};
+    ["name", "template"].forEach((trait) => {
+      const value = definition?.featureInfoTemplate?.[trait];
+      if (typeof value === "string" && value.includes(TRANSLATE_PREFIX)) {
+        featureInfoTemplate[trait] = value.replace(TRANSLATE_TOKEN, (_, key) =>
+          i18next.t(key)
+        );
+      }
+    });
+    if (Object.keys(featureInfoTemplate).length > 0) {
+      model.setTrait(
+        CommonStrata.override,
+        "featureInfoTemplate",
+        createStratumInstance(FeatureInfoTemplateTraits, featureInfoTemplate)
+      );
+    }
     model.memberModels?.forEach(visit);
   };
   visit(terria.catalog.group);

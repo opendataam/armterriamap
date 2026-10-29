@@ -31,3 +31,40 @@ index ad12c8d..c4c3978 100644
          });
        }
      }
+diff --git a/node_modules/terriajs/lib/ReactViews/FeatureInfo/getFeatureProperties.ts b/node_modules/terriajs/lib/ReactViews/FeatureInfo/getFeatureProperties.ts
+index 75cbf6c..a92e7be 100644
+--- a/node_modules/terriajs/lib/ReactViews/FeatureInfo/getFeatureProperties.ts
++++ b/node_modules/terriajs/lib/ReactViews/FeatureInfo/getFeatureProperties.ts
+@@ -130,9 +130,12 @@ function applyFormatsInPlace(
+         });
+       }
+       if (isDefined(formats[key].type)) {
+-        if (formats[key].type === "dateTime" && isJsonString(value)) {
++        if (
++          formats[key].type === "dateTime" &&
++          (isJsonString(value) || isJsonNumber(value))
++        ) {
+           runInAction(() => {
+-            properties[key] = formatDateTime(value, formats[key]);
++            properties[key] = formatDateTime(String(value), formats[key]);
+           });
+         }
+       }
+diff --git a/node_modules/terriajs/lib/ReactViews/FeatureInfo/mustacheExpressions.ts b/node_modules/terriajs/lib/ReactViews/FeatureInfo/mustacheExpressions.ts
+index 43613ad..82509d3 100644
+--- a/node_modules/terriajs/lib/ReactViews/FeatureInfo/mustacheExpressions.ts
++++ b/node_modules/terriajs/lib/ReactViews/FeatureInfo/mustacheExpressions.ts
+@@ -110,7 +110,12 @@ export function mustacheRenderPartialByName(
+  * @private
+  */
+ export function formatDateTime(text: string, options?: { format?: string }) {
+-  const date = Date.parse(text);
++  let date = Date.parse(text);
++  // An integer that Date.parse() does not read is taken as milliseconds since
++  // the Unix epoch, the format of dates of ArcGIS feature services
++  if (isNaN(date) && /^-?\d+$/.test(text)) {
++    date = Number(text);
++  }
+ 
+   if (!isDefined(date) || isNaN(date)) {
+     return text;
