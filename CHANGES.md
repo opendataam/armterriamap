@@ -8,7 +8,7 @@
 - Show dates of the Yerevan layers as dates instead of milliseconds (TerriaJS patch: `dateTime` formats accept milliseconds since the epoch)
 - Air quality: a short feature info table with translated labels instead of 140 technical fields, and the legend title "PM2.5, µg/m³"
 - Translate the `name` and `template` of feature info templates (`translate#key` tokens, see README)
-- Fix translations: "Site Data" (ru "Данные объекта", hy "Օբյեկտի տվյալներ"), the Russian feature info panel heading, and remove the step-by-step guide footnote whose key had no text
+- Fix Russian texts of the feature info panel ("Скачать эту таблицу", the panel name in the step-by-step guide), and remove the step-by-step guide footnote whose key had no text
 
 #### 0.4.8
 
