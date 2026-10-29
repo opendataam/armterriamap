@@ -485,7 +485,7 @@
     "satelliteSuggestionBtn": "Ցույց տալ {{catalogItemName}} այս վայրում",
     "locationMarker": "Վայրի նշիչ",
     "noInfoAvailable": "Տեղեկություններ չկան",
-    "siteData": "Օբյեկտի տվյալներ",
+    "siteData": "Տվյալները",
     "latLon": "Լայն. / Երկ. ",
     "showRawData": "Ցույց տալ չմշակված տվյալները",
     "showCuratedData": "Ցույց տալ մշակված տվյալները"
