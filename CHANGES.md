@@ -9,6 +9,7 @@
 - Air quality: a short feature info table with translated labels instead of 140 technical fields, and the legend title "PM2.5, µg/m³"
 - Translate the `name` and `template` of feature info templates (`translate#key` tokens, see README)
 - Fix Russian texts of the feature info panel ("Скачать эту таблицу", the panel name in the step-by-step guide), and remove the step-by-step guide footnote whose key had no text
+- Armenian: name the layer opacity slider "Թափանցիկություն" (transparency) instead of "Անթափանցիկություն" (opacity), also in the tour and the help texts. The slider label shows the transparency, 100% minus the opacity (TerriaJS patch: the `workbench.opacity` text also gets a `transparency` value)
 
 #### 0.4.8
 
