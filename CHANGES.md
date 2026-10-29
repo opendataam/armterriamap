@@ -6,6 +6,7 @@
 - The logo keeps its proportions in the side panel (the old one was squashed by a fixed height), and phones get a logo without the icon that the menu and "Data" buttons do not cover
 - Add the menu bar link "An Open Data Armenia project" to opendata.am, translated into Armenian and Russian
 - Show the menu bar links ("An Open Data Armenia project", "About") in the mobile menu too: TerriaJS's `MenuItem` rendered them empty there
+- Split screen mode: when terrain is shown on one side only, the other side shows the map without terrain instead of an empty black space (`patches/terriajs-cesium+26.0.0.patch` draws the globe on the surface of the ellipsoid there and picks features on it; the TerriaJS patch keeps the sky atmosphere on both sides)
 - Patch TerriaJS (`patches/terriajs+8.13.0.patch`, applied by `patch-package` on install) to decode zipped GeoJSON as UTF-8, so Armenian names in the HOT OSM layers are no longer garbled
 - Hide the Armenian fields of the soils, landscapes and climatic zones layers in feature info (`featureInfoTemplate`): the sustainable-caucasus.unepgrid.ch server returns them as `????`
 - Name features in feature info by their own name: HOT OSM layers no longer title unnamed features "Armenia" (`adm0_name`), Yerevan layers and USGS earthquakes no longer show "Site Data"
@@ -13,6 +14,15 @@
 - Air quality: a short feature info table with translated labels instead of 140 technical fields, and the legend title "PM2.5, µg/m³"
 - Translate the `name` and `template` of feature info templates (`translate#key` tokens, see README)
 - Fix Russian texts of the feature info panel ("Скачать эту таблицу", the panel name in the step-by-step guide), and remove the step-by-step guide footnote whose key had no text
+- Railways: red lines and blue stations, 2 px wide. The automatic style coloured the railway lines with the first colour of the `HighContrast` palette, white
+- Metro stations: only the 11 stations that the Yerevan GIS marks as existing (`փուլ`), Charbakh included (its `փուլ` is empty); the 23 planned stations of the same layer are a new layer "Planned metro stations". Both are loaded without tile requests (`tileRequests: false`): the tiled source of TerriaJS ignores `where`
+- Pleiades and other KML layers: the feature info no longer cuts off the first letters. TerriaJS patch: `<style>` elements are removed from descriptions, as the CSS of a KML balloon applied to the whole page
+- The preview map of the data catalogue opens zoomed to the dataset (`zoomMapOnPreviewedItem`, TerriaJS patch). Yerevan layers in the local coordinate system of the Yerevan GIS get their extent (`rectangle`), so their previews and "Ideal zoom" show Yerevan instead of the region
+- Forest areas: "Ideal zoom" and the preview show the whole of Armenia, and the description explains that the west of the country has almost no forests
+- Open Data Armenia group: plain CSV resources are no longer listed
+- Armenian: "Գետերի ջրահավաք ավազաններ" (river catchments), and the story "Play" button is "Սկսել" (Russian "Запустить")
+- Translate the "Share & Story migration" help item into Armenian (`storymigration` keys in the language overrides); Russian falls back to English
+- Armenian: name the layer opacity slider "Թափանցիկություն" (transparency) instead of "Անթափանցիկություն" (opacity), also in the tour and the help texts. The slider label shows the transparency, 100% minus the opacity (TerriaJS patch: the `workbench.opacity` text also gets a `transparency` value)
 
 #### 0.4.8
 

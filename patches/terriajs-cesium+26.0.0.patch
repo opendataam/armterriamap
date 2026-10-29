@@ -1,0 +1,305 @@
+diff --git a/node_modules/terriajs-cesium/Source/Scene/Globe.js b/node_modules/terriajs-cesium/Source/Scene/Globe.js
+index 414a2da..c0fbbb1 100644
+--- a/node_modules/terriajs-cesium/Source/Scene/Globe.js
++++ b/node_modules/terriajs-cesium/Source/Scene/Globe.js
+@@ -1,5 +1,6 @@
+ import BoundingSphere from "../Core/BoundingSphere.js";
+ import buildModuleUrl from "../Core/buildModuleUrl.js";
++import Cartesian2 from "../Core/Cartesian2.js";
+ import Cartesian3 from "../Core/Cartesian3.js";
+ import Cartographic from "../Core/Cartographic.js";
+ import Color from "../Core/Color.js";
+@@ -26,6 +27,7 @@ import GlobeTranslucency from "./GlobeTranslucency.js";
+ import ImageryLayerCollection from "./ImageryLayerCollection.js";
+ import QuadtreePrimitive from "./QuadtreePrimitive.js";
+ import SceneMode from "./SceneMode.js";
++import SceneTransforms from "./SceneTransforms.js";
+ import ShadowMode from "./ShadowMode.js";
+ import SplitDirection from "./SplitDirection.js";
+ import CesiumMath from "../Core/Math.js";
+@@ -797,6 +799,38 @@ Globe.prototype.pickWorldCoordinates = function (
+ };
+ 
+ const cartoScratch = new Cartographic();
++const scratchSplitRayPoint = new Cartesian3();
++const scratchSplitWindowPosition = new Cartesian2();
++
++/**
++ * Whether a ray from the camera goes through the side of the split screen
++ * where terrain is not shown.
++ *
++ * @private
++ */
++function isOnSideWithoutTerrain(globe, ray, scene) {
++  if (
++    globe.splitDirection === SplitDirection.NONE ||
++    scene.mode !== SceneMode.SCENE3D
++  ) {
++    return false;
++  }
++
++  const windowPosition = SceneTransforms.worldToWindowCoordinates(
++    scene,
++    Ray.getPoint(ray, 1.0, scratchSplitRayPoint),
++    scratchSplitWindowPosition,
++  );
++  if (!defined(windowPosition)) {
++    return false;
++  }
++
++  const splitX = scene.splitPosition * scene.canvas.clientWidth;
++  return globe.splitDirection === SplitDirection.LEFT
++    ? windowPosition.x > splitX
++    : windowPosition.x < splitX;
++}
++
+ /**
+  * Find an intersection between a ray and the globe surface that was rendered. The ray must be given in world coordinates.
+  *
+@@ -811,6 +845,15 @@ const cartoScratch = new Cartographic();
+  * const intersection = globe.pick(ray, scene);
+  */
+ Globe.prototype.pick = function (ray, scene, result) {
++  if (isOnSideWithoutTerrain(this, ray, scene)) {
++    // That side of the split screen shows the globe on the surface of the
++    // ellipsoid, without terrain heights
++    const interval = IntersectionTests.rayEllipsoid(ray, this._ellipsoid);
++    return defined(interval)
++      ? Ray.getPoint(ray, interval.start, result)
++      : undefined;
++  }
++
+   result = this.pickWorldCoordinates(ray, scene, true, result);
+   if (defined(result) && scene.mode !== SceneMode.SCENE3D) {
+     result = Cartesian3.fromElements(result.y, result.z, result.x, result);
+diff --git a/node_modules/terriajs-cesium/Source/Scene/GlobeSurfaceShaderSet.js b/node_modules/terriajs-cesium/Source/Scene/GlobeSurfaceShaderSet.js
+index 5f7cf9c..4c14b14 100644
+--- a/node_modules/terriajs-cesium/Source/Scene/GlobeSurfaceShaderSet.js
++++ b/node_modules/terriajs-cesium/Source/Scene/GlobeSurfaceShaderSet.js
+@@ -135,6 +135,7 @@ GlobeSurfaceShaderSet.prototype.getShaderProgram = function (options) {
+   const showUndergroundColor = options.showUndergroundColor;
+   const translucent = options.translucent;
+   const splitTerrain = options.splitTerrain;
++  const flattenTerrain = options.flattenTerrain;
+ 
+   let quantization = 0;
+   let quantizationDefine = "";
+@@ -199,7 +200,8 @@ GlobeSurfaceShaderSet.prototype.getShaderProgram = function (options) {
+       (translucent << 31)) >>>
+       0) +
+     (applyDayNightAlpha ? 0x100000000 : 0) +
+-    (splitTerrain ? 0x200000000 : 0);
++    (splitTerrain ? 0x200000000 : 0) +
++    (flattenTerrain ? 0x400000000 : 0);
+ 
+   let currentClippingShaderState = 0;
+   if (defined(clippingPlanes) && clippingPlanes.length > 0) {
+@@ -388,6 +390,10 @@ GlobeSurfaceShaderSet.prototype.getShaderProgram = function (options) {
+       fs.defines.push("SPLIT_TERRAIN");
+     }
+ 
++    if (flattenTerrain) {
++      vs.defines.push("FLATTEN_TERRAIN");
++    }
++
+     let computeDayColor =
+       "\
+     vec4 computeDayColor(vec4 initialColor, vec3 textureCoordinates, float nightBlend)\n\
+diff --git a/node_modules/terriajs-cesium/Source/Scene/GlobeSurfaceTileProvider.js b/node_modules/terriajs-cesium/Source/Scene/GlobeSurfaceTileProvider.js
+index ade5a2e..8fb8759 100644
+--- a/node_modules/terriajs-cesium/Source/Scene/GlobeSurfaceTileProvider.js
++++ b/node_modules/terriajs-cesium/Source/Scene/GlobeSurfaceTileProvider.js
+@@ -158,6 +158,7 @@ function GlobeSurfaceTileProvider(options) {
+   this._drawCommands = [];
+   this._uniformMaps = [];
+   this._usedDrawCommands = 0;
++  this._flatDrawCommands = [];
+ 
+   this._vertexArraysToDestroy = [];
+ 
+@@ -2124,6 +2125,8 @@ const surfaceShaderSetOptionsScratch = {
+   colorToAlpha: undefined,
+   hasGeodeticSurfaceNormals: undefined,
+   hasExaggeration: undefined,
++  splitTerrain: undefined,
++  flattenTerrain: undefined,
+ };
+ 
+ const defaultUndergroundColor = Color.TRANSPARENT;
+@@ -2368,6 +2371,13 @@ function addDrawCommandsForTile(tileProvider, tile, frameState) {
+   surfaceShaderSetOptions.hasExaggeration = hasExaggeration;
+   surfaceShaderSetOptions.splitTerrain =
+     tileProvider.splitDirection !== SplitDirection.NONE;
++  surfaceShaderSetOptions.flattenTerrain = false;
++
++  // The side of the split screen without terrain shows the tile on the
++  // surface of the ellipsoid, see addFlatDrawCommand
++  const addFlatDrawCommands =
++    surfaceShaderSetOptions.splitTerrain &&
++    frameState.mode === SceneMode.SCENE3D;
+ 
+   const tileImageryCollection = surfaceTile.imagery;
+   let imageryIndex = 0;
+@@ -2430,6 +2440,7 @@ function addDrawCommandsForTile(tileProvider, tile, frameState) {
+ 
+     command.owner = tile;
+ 
++    const drawCommandIndex = tileProvider._usedDrawCommands;
+     ++tileProvider._usedDrawCommands;
+ 
+     if (tile === tileProvider._debug.boundingSphereTile) {
+@@ -2910,8 +2921,82 @@ function addDrawCommandsForTile(tileProvider, tile, frameState) {
+ 
+     pushCommand(command, frameState);
+ 
++    if (addFlatDrawCommands) {
++      addFlatDrawCommand(
++        tileProvider,
++        tile,
++        command,
++        uniformMap,
++        drawCommandIndex,
++        surfaceShaderSetOptions,
++        frameState,
++      );
++    }
++
+     renderState = otherPassesRenderState;
+     initialColor = otherPassesInitialColor;
+   } while (imageryIndex < imageryLen);
+ }
++
++/**
++ * Adds a copy of a tile's draw command that draws the tile on the surface of
++ * the ellipsoid, without terrain heights, on the side of the split screen
++ * where terrain is not shown. Without it that side shows no globe at all.
++ *
++ * @private
++ */
++function addFlatDrawCommand(
++  tileProvider,
++  tile,
++  command,
++  uniformMap,
++  drawCommandIndex,
++  surfaceShaderSetOptions,
++  frameState,
++) {
++  let flat = tileProvider._flatDrawCommands[drawCommandIndex];
++  if (!defined(flat) || flat.sourceUniformMap !== uniformMap) {
++    flat = tileProvider._flatDrawCommands[drawCommandIndex] = {
++      command: new DrawCommand(),
++      sourceUniformMap: uniformMap,
++      // The uniforms of the tile's draw command, except that the fragments
++      // are discarded on the side of the split screen where terrain is shown
++      uniformMap: combine(
++        {
++          u_terrainSplitDirection: function () {
++            return -tileProvider.splitDirection;
++          },
++        },
++        uniformMap,
++      ),
++    };
++  }
++
++  const surfaceTile = tile.data;
++  if (!defined(surfaceTile.flatBoundingSphere)) {
++    surfaceTile.flatBoundingSphere = BoundingSphere.fromRectangle3D(
++      tile.rectangle,
++      tile.tilingScheme.ellipsoid,
++      0.0,
++    );
++  }
++
++  const flatCommand = DrawCommand.shallowClone(command, flat.command);
++  surfaceShaderSetOptions.flattenTerrain = true;
++  flatCommand.shaderProgram = tileProvider._surfaceShaderSet.getShaderProgram(
++    surfaceShaderSetOptions,
++  );
++  surfaceShaderSetOptions.flattenTerrain = false;
++  flatCommand.uniformMap = flat.uniformMap;
++  flatCommand.boundingVolume = surfaceTile.flatBoundingSphere;
++  flatCommand.orientedBoundingBox = undefined;
++  flatCommand.castShadows = false;
++
++  const globeTranslucencyState = frameState.globeTranslucencyState;
++  if (globeTranslucencyState.translucent) {
++    globeTranslucencyState.updateDerivedCommands(flatCommand, frameState);
++  }
++
++  pushCommand(flatCommand, frameState);
++}
+ export default GlobeSurfaceTileProvider;
+diff --git a/node_modules/terriajs-cesium/Source/Shaders/GlobeVS.glsl b/node_modules/terriajs-cesium/Source/Shaders/GlobeVS.glsl
+index 849b619..7893eb1 100644
+--- a/node_modules/terriajs-cesium/Source/Shaders/GlobeVS.glsl
++++ b/node_modules/terriajs-cesium/Source/Shaders/GlobeVS.glsl
+@@ -194,6 +194,20 @@ void main()
+     height = newHeight;
+ #endif
+ 
++#ifdef FLATTEN_TERRAIN
++    // Draw the tile on the surface of the ellipsoid, without terrain heights:
++    // the side of the split screen where terrain is not shown
++#ifdef GEODETIC_SURFACE_NORMALS
++    vec3 flattenNormal = geodeticSurfaceNormal;
++#else
++    vec3 flattenNormal = normalize(position3DWC * czm_ellipsoidInverseRadii * czm_ellipsoidInverseRadii);
++#endif
++    vec3 flattenOffset = flattenNormal * -height;
++    position += flattenOffset;
++    position3DWC += flattenOffset;
++    height = 0.0;
++#endif
++
+     gl_Position = getPosition(position, height, textureCoordinates);
+ 
+     v_positionEC = (u_modifiedModelView * vec4(position, 1.0)).xyz;
+@@ -210,6 +224,10 @@ void main()
+     normalMC = normalize(projection + rejection * exaggeration);
+ #endif
+ 
++#ifdef FLATTEN_TERRAIN
++    normalMC = flattenNormal;
++#endif
++
+     v_normalMC = normalMC;
+     v_normalEC = czm_normal3D * v_normalMC;
+ #endif
+diff --git a/node_modules/terriajs-cesium/Source/Shaders/GlobeVS.js b/node_modules/terriajs-cesium/Source/Shaders/GlobeVS.js
+index d8c278a..dd7c4f4 100644
+--- a/node_modules/terriajs-cesium/Source/Shaders/GlobeVS.js
++++ b/node_modules/terriajs-cesium/Source/Shaders/GlobeVS.js
+@@ -194,6 +194,20 @@ void main()\n\
+     position3DWC += offset;\n\
+     height = newHeight;\n\
+ #endif\n\
++\n\
++#ifdef FLATTEN_TERRAIN\n\
++    // Draw the tile on the surface of the ellipsoid, without terrain heights:\n\
++    // the side of the split screen where terrain is not shown\n\
++#ifdef GEODETIC_SURFACE_NORMALS\n\
++    vec3 flattenNormal = geodeticSurfaceNormal;\n\
++#else\n\
++    vec3 flattenNormal = normalize(position3DWC * czm_ellipsoidInverseRadii * czm_ellipsoidInverseRadii);\n\
++#endif\n\
++    vec3 flattenOffset = flattenNormal * -height;\n\
++    position += flattenOffset;\n\
++    position3DWC += flattenOffset;\n\
++    height = 0.0;\n\
++#endif\n\
+ \n\
+     gl_Position = getPosition(position, height, textureCoordinates);\n\
+ \n\
+@@ -210,6 +224,10 @@ void main()\n\
+     vec3 rejection = normalMC - projection;\n\
+     normalMC = normalize(projection + rejection * exaggeration);\n\
+ #endif\n\
++\n\
++#ifdef FLATTEN_TERRAIN\n\
++    normalMC = flattenNormal;\n\
++#endif\n\
+ \n\
+     v_normalMC = normalMC;\n\
+     v_normalEC = czm_normal3D * v_normalMC;\n\
