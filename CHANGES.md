@@ -3,6 +3,7 @@
 #### next release
 
 - Patch TerriaJS (`patches/terriajs+8.13.0.patch`, applied by `patch-package` on install) to decode zipped GeoJSON as UTF-8, so Armenian names in the HOT OSM layers are no longer garbled
+- Hide the Armenian fields of the soils, landscapes and climatic zones layers in feature info (`featureInfoTemplate`): the sustainable-caucasus.unepgrid.ch server returns them as `????`
 
 #### 0.4.8
 

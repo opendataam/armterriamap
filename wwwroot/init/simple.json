@@ -136,7 +136,11 @@
           "id": "sc-climat",
           "name": "translate#catalog.climate.zones",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:climat"
+          "layers": "geonode:climat",
+          "featureInfoTemplate": {
+            "template": "<table class=\"cesium-infoBox-defaultTable\"><tbody><tr><td>fid</td><td>{{fid}}</td></tr><tr><td>OBJECTID</td><td>{{OBJECTID}}</td></tr><tr><td>ID</td><td>{{ID}}</td></tr><tr><td>Descriptio</td><td>{{Descriptio}}</td></tr><tr><td>Shape_Leng</td><td>{{Shape_Leng}}</td></tr><tr><td>Shape_Le_1</td><td>{{Shape_Le_1}}</td></tr><tr><td>Shape_Area</td><td>{{Shape_Area}}</td></tr></tbody></table>",
+            "showFeatureInfoDownloadWithTemplate": true
+          }
         },
         {
           "type": "wms",
@@ -220,14 +224,22 @@
           "id": "sc-landscape",
           "name": "translate#catalog.nature.landscapes",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:landscape"
+          "layers": "geonode:landscape",
+          "featureInfoTemplate": {
+            "template": "<table class=\"cesium-infoBox-defaultTable\"><tbody><tr><td>fid</td><td>{{fid}}</td></tr><tr><td>OBJECTID</td><td>{{OBJECTID}}</td></tr><tr><td>ID</td><td>{{ID}}</td></tr><tr><td>Tipe</td><td>{{Tipe}}</td></tr><tr><td>Altitude</td><td>{{Altitude}}</td></tr><tr><td>Shape_Leng</td><td>{{Shape_Leng}}</td></tr><tr><td>Shape_Le_1</td><td>{{Shape_Le_1}}</td></tr><tr><td>Shape_Area</td><td>{{Shape_Area}}</td></tr></tbody></table>",
+            "showFeatureInfoDownloadWithTemplate": true
+          }
         },
         {
           "type": "wms",
           "id": "sc-soil_arm",
           "name": "translate#catalog.nature.soils",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:soil_arm"
+          "layers": "geonode:soil_arm",
+          "featureInfoTemplate": {
+            "template": "<table class=\"cesium-infoBox-defaultTable\"><tbody><tr><td>fid</td><td>{{fid}}</td></tr><tr><td>OBJECTID</td><td>{{OBJECTID}}</td></tr><tr><td>ID</td><td>{{ID}}</td></tr><tr><td>Descriptio</td><td>{{Descriptio}}</td></tr><tr><td>Tip</td><td>{{Tip}}</td></tr><tr><td>Shape_Leng</td><td>{{Shape_Leng}}</td></tr><tr><td>Shape_Le_1</td><td>{{Shape_Le_1}}</td></tr><tr><td>Shape_Area</td><td>{{Shape_Area}}</td></tr></tbody></table>",
+            "showFeatureInfoDownloadWithTemplate": true
+          }
         },
         {
           "type": "wms",
