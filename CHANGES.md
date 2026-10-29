@@ -2,6 +2,7 @@
 
 #### next release
 
+- Split screen mode: when terrain is shown on one side only, the other side shows the map without terrain instead of an empty black space (`patches/terriajs-cesium+26.0.0.patch` draws the globe on the surface of the ellipsoid there and picks features on it; the TerriaJS patch keeps the sky atmosphere on both sides)
 - Patch TerriaJS (`patches/terriajs+8.13.0.patch`, applied by `patch-package` on install) to decode zipped GeoJSON as UTF-8, so Armenian names in the HOT OSM layers are no longer garbled
 - Hide the Armenian fields of the soils, landscapes and climatic zones layers in feature info (`featureInfoTemplate`): the sustainable-caucasus.unepgrid.ch server returns them as `????`
 - Name features in feature info by their own name: HOT OSM layers no longer title unnamed features "Armenia" (`adm0_name`), Yerevan layers and USGS earthquakes no longer show "Site Data"

@@ -31,6 +31,23 @@ index ad12c8d..c4c3978 100644
          });
        }
      }
+diff --git a/node_modules/terriajs/lib/Models/Cesium.ts b/node_modules/terriajs/lib/Models/Cesium.ts
+index 97d98d6..5c740f2 100644
+--- a/node_modules/terriajs/lib/Models/Cesium.ts
++++ b/node_modules/terriajs/lib/Models/Cesium.ts
+@@ -431,10 +431,8 @@ export default class Cesium extends GlobeOrMap {
+         : SplitDirection.NONE;
+       this.scene.globe.depthTestAgainstTerrain =
+         this.terria.depthTestAgainstTerrainEnabled;
+-      if (this.scene.skyAtmosphere) {
+-        this.scene.skyAtmosphere.splitDirection =
+-          this.scene.globe.splitDirection;
+-      }
++      // The sky atmosphere is not split: the side of the split screen without
++      // terrain still shows the globe, on the surface of the ellipsoid
+     });
+     this._disposeSplitterReaction = this._reactToSplitterChanges();
+ 
 diff --git a/node_modules/terriajs/lib/ReactViews/FeatureInfo/getFeatureProperties.ts b/node_modules/terriajs/lib/ReactViews/FeatureInfo/getFeatureProperties.ts
 index 75cbf6c..a92e7be 100644
 --- a/node_modules/terriajs/lib/ReactViews/FeatureInfo/getFeatureProperties.ts
