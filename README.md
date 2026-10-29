@@ -14,6 +14,7 @@ The application is built from source; compiled output (`wwwroot/build/`) is not 
 - `wwwroot/about.html` - about page
 - `lib/`, `index.js`, `gulpfile.js`, `buildprocess/` - TerriaMap application source
 - `serverconfig.json` - terriajs-server configuration (proxy whitelist etc.)
+- `patches/` - fixes to dependencies (TerriaJS), applied to `node_modules` by `patch-package` after `yarn install`
 
 ## How to
 

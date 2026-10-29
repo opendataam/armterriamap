@@ -1,0 +1,33 @@
+diff --git a/node_modules/terriajs/lib/Core/loadBlob.ts b/node_modules/terriajs/lib/Core/loadBlob.ts
+index ad12c8d..c4c3978 100644
+--- a/node_modules/terriajs/lib/Core/loadBlob.ts
++++ b/node_modules/terriajs/lib/Core/loadBlob.ts
+@@ -1,10 +1,9 @@
+ import Resource from "terriajs-cesium/Source/Core/Resource";
+ import JsonValue from "./Json";
+-import loadJson from "./loadJson";
+ import {
+   ZipReader,
+   BlobReader as ZipBlobReader,
+-  Data64URIWriter as ZipData64URIWriter,
++  TextWriter as ZipTextWriter,
+   Uint8ArrayWriter as ZipUint8ArrayWriter
+ } from "@zip.js/zip.js";
+ 
+@@ -57,10 +56,13 @@ export async function parseZipJsonBlob(blob: Blob): Promise<JsonValue> {
+     for (let i = 0; i < entries.length; i++) {
+       const entry = entries[i];
+       if (isJson(entry.filename)) {
+-        return entry.getData(new ZipData64URIWriter()).then(function (
+-          uri: string
++        // Decode the entry as UTF-8 text. A base64 data URI passed to loadJson
++        // is decoded by Cesium with atob(), which reads every byte as Latin-1
++        // and turns non-ASCII text (e.g. Armenian) into mojibake.
++        return entry.getData(new ZipTextWriter()).then(function (
++          text: string
+         ) {
+-          return loadJson(uri);
++          return JSON.parse(text);
+         });
+       }
+     }

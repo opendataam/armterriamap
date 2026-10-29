@@ -14,6 +14,8 @@ ENV PATH="/app/node_modules/.bin:${PATH}"
 # translations in wwwroot does not trigger a full `yarn install` on rebuild.
 COPY --chown=node:node package.json yarn.lock .yarnrc /app/
 COPY --chown=node:node .yarn /app/.yarn
+# patch-package applies these to node_modules in the postinstall script.
+COPY --chown=node:node patches /app/patches
 RUN yarn install --frozen-lockfile --network-timeout 1000000
 
 COPY --chown=node:node . /app

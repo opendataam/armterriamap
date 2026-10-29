@@ -2,6 +2,8 @@
 
 #### next release
 
+- Patch TerriaJS (`patches/terriajs+8.13.0.patch`, applied by `patch-package` on install) to decode zipped GeoJSON as UTF-8, so Armenian names in the HOT OSM layers are no longer garbled
+
 #### 0.4.8
 
 - Upgrade terriajs-server to 5.0.0

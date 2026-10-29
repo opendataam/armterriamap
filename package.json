@@ -53,6 +53,7 @@
     "minimist": "^1.2.8",
     "msw": "^2.12.14",
     "node-notifier": "^10.0.1",
+    "patch-package": "^8.0.1",
     "plugin-error": "^2.0.1",
     "prettier": "3.8.1",
     "pretty-quick": "^4.2.2",
@@ -83,7 +84,7 @@
     "gulp": "gulp",
     "build": "gulp build",
     "dev": "gulp dev",
-    "postinstall": "echo 'Installation successful. What to do next:\\n  yarn gulp dev   # Starts the server on port 3001, builds TerriaMap and dependencies, and rebuilds if files change.'",
+    "postinstall": "patch-package && echo 'Installation successful. What to do next:\\n  yarn gulp dev   # Starts the server on port 3001, builds TerriaMap and dependencies, and rebuilds if files change.'",
     "prettier": "prettier --write .",
     "prettier-check": "prettier --check .",
     "lint": "gulp lint"
