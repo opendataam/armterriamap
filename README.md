@@ -139,6 +139,9 @@ when the map opens:
   (e.g. a choropleth) use their own type (`csv`, `geojson`) with the CKAN resource URL.
 - The group "Open Data Armenia: datasets for the atlas" (`ckan-group`) lists every dataset tagged
   `atlas` on data.opendata.am, grouped by CKAN group. Tag a dataset `atlas` to add it to the map.
+  Plain CSV resources are not listed (TerriaJS lists only CSV resources of the `csv-geo-*` formats):
+  most of them are tables or copies of other resources. To show a CSV as a choropleth, add it to the
+  catalog as a `csv` item on the resource URL, like population by marz.
 
 After rebuilding the marz boundaries, upload the new GeoJSON to the CKAN dataset
 [armenia-marz-boundaries-osm](https://data.opendata.am/dataset/armenia-marz-boundaries-osm)

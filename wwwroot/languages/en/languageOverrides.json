@@ -163,6 +163,7 @@
       "soils": "Soils",
       "vegetation": "Vegetation",
       "forests": "Forest areas",
+      "forestsDescription": "Forest areas of Armenia. The forests grow mainly in the north-east (Lori, Tavush) and in the south (Syunik). The west of the country (Shirak, Armavir, Aragatsotn) has almost no forests, so the layer has no areas there.\n\nSource: [Sustainable Caucasus](https://sustainable-caucasus.unepgrid.ch) (UNEP/GRID-Geneva).",
       "landUse": "Land use",
       "name": "Landscapes, soils and vegetation"
     },
@@ -228,6 +229,7 @@
       "description": "Layers of the [Yerevan Municipality GIS](https://gis.yerevan.am/server/rest/services). The municipality does not state a licence for these data; they are shown with attribution to the source.",
       "districts": "Administrative districts",
       "metroStations": "Metro stations",
+      "metroStationsPlanned": "Planned metro stations",
       "metroLines": "Metro lines",
       "busStops": "Bus stops",
       "monuments": "Monuments",
