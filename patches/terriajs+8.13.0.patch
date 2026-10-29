@@ -48,6 +48,23 @@ index 97d98d6..5c740f2 100644
      });
      this._disposeSplitterReaction = this._reactToSplitterChanges();
  
+diff --git a/node_modules/terriajs/lib/ReactViews/Custom/parseCustomMarkdownToReact.ts b/node_modules/terriajs/lib/ReactViews/Custom/parseCustomMarkdownToReact.ts
+index da41fe8..c1faa38 100644
+--- a/node_modules/terriajs/lib/ReactViews/Custom/parseCustomMarkdownToReact.ts
++++ b/node_modules/terriajs/lib/ReactViews/Custom/parseCustomMarkdownToReact.ts
+@@ -71,7 +71,11 @@ export function parseCustomMarkdownToReactWithOptions(
+       false,
+       {
+         ADD_TAGS: CustomComponent.names,
+-        ADD_ATTR: CustomComponent.attributes
++        ADD_ATTR: CustomComponent.attributes,
++        // A <style> element is not scoped to the text it comes with: the
++        // CSS of a KML balloon (e.g. `ul { text-indent: -0.5em }`) would
++        // apply to the whole page and cut letters off in the feature info.
++        FORBID_TAGS: ["style"]
+       },
+       options
+     );
 diff --git a/node_modules/terriajs/lib/ReactViews/FeatureInfo/getFeatureProperties.ts b/node_modules/terriajs/lib/ReactViews/FeatureInfo/getFeatureProperties.ts
 index 75cbf6c..a92e7be 100644
 --- a/node_modules/terriajs/lib/ReactViews/FeatureInfo/getFeatureProperties.ts
@@ -85,6 +102,79 @@ index 43613ad..82509d3 100644
  
    if (!isDefined(date) || isNaN(date)) {
      return text;
+diff --git a/node_modules/terriajs/lib/ReactViews/Preview/DataPreviewMap.tsx b/node_modules/terriajs/lib/ReactViews/Preview/DataPreviewMap.tsx
+index fe6b103..9bb69e7 100644
+--- a/node_modules/terriajs/lib/ReactViews/Preview/DataPreviewMap.tsx
++++ b/node_modules/terriajs/lib/ReactViews/Preview/DataPreviewMap.tsx
+@@ -9,9 +9,11 @@ import { observer } from "mobx-react";
+ import { FC, useEffect, useMemo, useRef } from "react";
+ import { useTranslation } from "react-i18next";
+ import CesiumMath from "terriajs-cesium/Source/Core/Math";
++import Rectangle from "terriajs-cesium/Source/Core/Rectangle";
+ import filterOutUndefined from "../../Core/filterOutUndefined";
+ import CatalogMemberMixin from "../../ModelMixins/CatalogMemberMixin";
+ import MappableMixin, { ImageryParts } from "../../ModelMixins/MappableMixin";
++import CameraView from "../../Models/CameraView";
+ import GeoJsonCatalogItem from "../../Models/Catalog/CatalogItems/GeoJsonCatalogItem";
+ import CommonStrata from "../../Models/Definition/CommonStrata";
+ import CreateModel from "../../Models/Definition/CreateModel";
+@@ -176,7 +178,7 @@ const DataPreviewMap: FC<DataPreviewMapProps> = observer((props) => {
+       north = center + minimumHeight * 0.5;
+     }
+ 
+-    return createBoundingRectangleCatalogItem(
++    const zoomedOutItem = createBoundingRectangleCatalogItem(
+       terria,
+       {
+         west,
+@@ -186,6 +188,12 @@ const DataPreviewMap: FC<DataPreviewMapProps> = observer((props) => {
+       },
+       "__preview-data-extent-zoomed-out"
+     );
++    // The preview opens zoomed to the item: show only the item rectangle, as
++    // toggleZoom does
++    if (isZoomedToExtentRef.current) {
++      zoomedOutItem.setTrait(CommonStrata.override, "show", false);
++    }
++    return zoomedOutItem;
+   }, [homeCamera, previewed?.rectangle, terria]);
+ 
+   const previewViewer = useMemo(() => {
+@@ -204,7 +212,24 @@ const DataPreviewMap: FC<DataPreviewMapProps> = observer((props) => {
+ 
+     viewer.viewerMode = ViewerMode.Leaflet;
+     viewer.disableInteraction = true;
+-    viewer.homeCamera = homeCamera;
++    // With zoomMapOnPreviewedItem the preview opens zoomed to the item. The
++    // viewer starts at its home camera, so that is where it is set.
++    const rectangle = previewed?.rectangle;
++    viewer.homeCamera =
++      isZoomedToExtentRef.current &&
++      rectangle?.west !== undefined &&
++      rectangle.south !== undefined &&
++      rectangle.east !== undefined &&
++      rectangle.north !== undefined
++        ? new CameraView(
++            Rectangle.fromDegrees(
++              rectangle.west,
++              rectangle.south,
++              rectangle.east,
++              rectangle.north
++            )
++          )
++        : homeCamera;
+ 
+     return viewer;
+   }, [
+@@ -273,7 +298,7 @@ const DataPreviewMap: FC<DataPreviewMapProps> = observer((props) => {
+         "show",
+         true
+       );
+-      previewViewer.currentViewer.zoomTo(previewViewer?.homeCamera);
++      previewViewer.currentViewer.zoomTo(homeCamera);
+     }
+   });
+ 
 diff --git a/node_modules/terriajs/lib/ReactViews/Workbench/Controls/OpacitySection.tsx b/node_modules/terriajs/lib/ReactViews/Workbench/Controls/OpacitySection.tsx
 index 3f4e4a7..a10f59c 100644
 --- a/node_modules/terriajs/lib/ReactViews/Workbench/Controls/OpacitySection.tsx
