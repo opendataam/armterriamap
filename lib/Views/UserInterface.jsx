@@ -1,10 +1,27 @@
 import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
+import MobileMenuItem from "terriajs/lib/ReactViews/Mobile/MobileMenuItem";
 import RelatedMaps from "terriajs/lib/ReactViews/RelatedMaps/RelatedMaps";
 import { MenuLeft } from "terriajs/lib/ReactViews/StandardUserInterface/customizable/Groups";
-import MenuItem from "terriajs/lib/ReactViews/StandardUserInterface/customizable/MenuItem";
+import MenuButton from "terriajs/lib/ReactViews/StandardUserInterface/customizable/MenuButton";
+import responsiveSwitch from "terriajs/lib/ReactViews/StandardUserInterface/customizable/ResponsiveSwitch";
 import StandardUserInterface from "terriajs/lib/ReactViews/StandardUserInterface/StandardUserInterface";
 import version from "../../version";
+
+// TerriaJS's MenuItem renders an empty item in the mobile menu: it passes
+// caption and href to MobileMenuItem, which renders only its children.
+const MobileMenuLink = ({ caption, href }) => (
+  <MobileMenuItem>
+    <MobileMenuItem.Link href={href}>{caption}</MobileMenuItem.Link>
+  </MobileMenuItem>
+);
+
+MobileMenuLink.propTypes = {
+  caption: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired
+};
+
+const MenuLink = responsiveSwitch(MenuButton, MobileMenuLink);
 
 export const TerriaUserInterface = ({ terria, viewState, themeOverrides }) => {
   const { t } = useTranslation();
@@ -20,8 +37,13 @@ export const TerriaUserInterface = ({ terria, viewState, themeOverrides }) => {
       version={version}
     >
       <MenuLeft>
+        <MenuLink
+          caption={t("projectLink.caption")}
+          href="https://opendata.am"
+          key="project-link"
+        />
         {aboutButtonHrefUrl ? (
-          <MenuItem
+          <MenuLink
             caption={t("aboutButton.caption")}
             href={aboutButtonHrefUrl}
             key="about-link"
