@@ -2413,6 +2413,9 @@
     "panelHeading": "Связанные карты",
     "panelText": "Нажатие на карту ниже откроет её в отдельном окне или вкладке."
   },
+  "projectLink": {
+    "caption": "Проект Open Data Armenia"
+  },
   "aboutButton": {
     "caption": "О проекте"
   },

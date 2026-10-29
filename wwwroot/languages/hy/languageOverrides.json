@@ -2378,6 +2378,9 @@
     "panelHeading": "Առնչվող քարտեզներ",
     "panelText": "Ստորև որևէ քարտեզի վրա սեղմելիս այն կբացվի առանձին պատուհանում կամ ներդիրում։"
   },
+  "projectLink": {
+    "caption": "Open Data Armenia-ի նախագիծ"
+  },
   "aboutButton": {
     "caption": "Նախագծի մասին"
   },

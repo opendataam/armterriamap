@@ -2,6 +2,10 @@
 
 #### next release
 
+- Brand the map as "Open Data Armenia Atlas": a new logo (`wwwroot/images/opendataam_atlas_logo.png`) that links to maps.opendata.am, the app name and the page title
+- The logo keeps its proportions in the side panel (the old one was squashed by a fixed height), and phones get a logo without the icon that the menu and "Data" buttons do not cover
+- Add the menu bar link "An Open Data Armenia project" to opendata.am, translated into Armenian and Russian
+- Show the menu bar links ("An Open Data Armenia project", "About") in the mobile menu too: TerriaJS's `MenuItem` rendered them empty there
 - Patch TerriaJS (`patches/terriajs+8.13.0.patch`, applied by `patch-package` on install) to decode zipped GeoJSON as UTF-8, so Armenian names in the HOT OSM layers are no longer garbled
 - Hide the Armenian fields of the soils, landscapes and climatic zones layers in feature info (`featureInfoTemplate`): the sustainable-caucasus.unepgrid.ch server returns them as `????`
 - Name features in feature info by their own name: HOT OSM layers no longer title unnamed features "Armenia" (`adm0_name`), Yerevan layers and USGS earthquakes no longer show "Site Data"

@@ -49,12 +49,20 @@
             link: "http://opendata.am"
         },*/
     // This is used in various text messages. You should also set <title> in index.html
-    "appName": "Community national map of Armenia",
+    "appName": "Open Data Armenia Atlas",
     // See comments in lib/Views/global.scss for further information about customising colors, logos, fonts etc.
+    // The link to opendata.am is in the menu bar (lib/Views/UserInterface.jsx).
+    // No width or height on the logo: the brand bar scales it down to the panel
+    // width (max-width: 100%), and a fixed height would squash it.
     "brandBarElements": [
       "",
-      "<a target=\"_blank\" href=\"https://opendata.am\"><img src=\"images/opendataam_logo.png\" height=\"52\" title=\"Version: {{version}}\" /></a>",
+      "<a href=\"https://maps.opendata.am\"><img src=\"images/opendataam_atlas_logo.png\" alt=\"Open Data Armenia Atlas\" title=\"Version: {{version}}\" /></a>",
       ""
+    ],
+    // The mobile header has about 170 px between the menu and "Data" buttons and
+    // overlaps the logo with them, so phones get the name without the icon.
+    "brandBarSmallElements": [
+      "<a href=\"https://maps.opendata.am\"><img src=\"images/opendataam_atlas_logo_small.png\" alt=\"Open Data Armenia Atlas\" height=\"34\" /></a>"
     ],
     // Shown when things go wrong.
     "supportEmail": "opendata@opendata.am",
