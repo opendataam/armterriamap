@@ -11,6 +11,7 @@ import ShareDataService from "terriajs/lib/Models/ShareDataService";
 import Terria from "terriajs/lib/Models/Terria";
 import ViewState from "terriajs/lib/ReactViewModels/ViewState";
 import registerCustomComponentTypes from "terriajs/lib/ReactViews/Custom/registerCustomComponentTypes";
+import { MetadataUrlTraits } from "terriajs/lib/Traits/TraitsClasses/CatalogMemberTraits";
 import { FeatureInfoTemplateTraits } from "terriajs/lib/Traits/TraitsClasses/FeatureInfoTraits";
 import updateApplicationOnHashChange from "terriajs/lib/ViewModels/updateApplicationOnHashChange";
 import updateApplicationOnMessageFromParentWindow from "terriajs/lib/ViewModels/updateApplicationOnMessageFromParentWindow";
@@ -58,8 +59,9 @@ const TRANSLATE_PREFIX = "translate#";
 const TRANSLATE_TOKEN = /translate#([\w.]+)/g;
 
 // TerriaJS shows catalog names and descriptions as they are written in the
-// init file. Names and descriptions written as "translate#key" are translated
-// here (keys live in wwwroot/languages/<lng>/languageOverrides.json).
+// init file. Names, descriptions and titles of metadata links written as
+// "translate#key" are translated here (keys live in
+// wwwroot/languages/<lng>/languageOverrides.json).
 // The name and template of a feature info template can contain
 // "translate#key" tokens among the Mustache tags; each token is replaced by
 // its translation.
@@ -89,6 +91,21 @@ function translateCatalog() {
         CommonStrata.override,
         "featureInfoTemplate",
         createStratumInstance(FeatureInfoTemplateTraits, featureInfoTemplate)
+      );
+    }
+    const metadataUrls = definition?.metadataUrls;
+    if (metadataUrls?.some((m) => m.title?.startsWith(TRANSLATE_PREFIX))) {
+      model.setTrait(
+        CommonStrata.override,
+        "metadataUrls",
+        metadataUrls.map((m) =>
+          createStratumInstance(MetadataUrlTraits, {
+            url: m.url,
+            title: m.title?.startsWith(TRANSLATE_PREFIX)
+              ? i18next.t(m.title.slice(TRANSLATE_PREFIX.length))
+              : m.title
+          })
+        )
       );
     }
     model.memberModels?.forEach(visit);

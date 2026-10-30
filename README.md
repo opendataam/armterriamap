@@ -89,7 +89,8 @@ yarn gulp dev
 3. In `wwwroot/init/simple.json`, the `name` and `description` of a catalog item can be a key written
    as `translate#<key>`. The `name` and `template` of a `featureInfoTemplate` can contain
    `translate#<key>` tokens among the Mustache tags, e.g.
-   `"name": "translate#catalog.yerevan.hotels - {{{հյուրանոցի__անվանումը}}}"`
+   `"name": "translate#catalog.yerevan.hotels - {{{հյուրանոցի__անվանումը}}}"`.
+   The `title` of a `metadataUrls` link can be a `translate#<key>` too
 4. Refresh the browser
 
 ### Adding data

@@ -140,6 +140,12 @@
           "name": "translate#catalog.climate.zones",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
           "layers": "geonode:climat",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/74",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ],
           "featureInfoTemplate": {
             "template": "<table class=\"cesium-infoBox-defaultTable\"><tbody><tr><td>fid</td><td>{{fid}}</td></tr><tr><td>OBJECTID</td><td>{{OBJECTID}}</td></tr><tr><td>ID</td><td>{{ID}}</td></tr><tr><td>Descriptio</td><td>{{Descriptio}}</td></tr><tr><td>Shape_Leng</td><td>{{Shape_Leng}}</td></tr><tr><td>Shape_Le_1</td><td>{{Shape_Le_1}}</td></tr><tr><td>Shape_Area</td><td>{{Shape_Area}}</td></tr></tbody></table>",
             "showFeatureInfoDownloadWithTemplate": true
@@ -150,70 +156,130 @@
           "id": "sc-temperature",
           "name": "translate#catalog.climate.temperature",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:temperature"
+          "layers": "geonode:temperature",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/85",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ]
         },
         {
           "type": "wms",
           "id": "sc-armenia_prec",
           "name": "translate#catalog.climate.precipitation",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:armenia_prec"
+          "layers": "geonode:armenia_prec",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/92",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ]
         },
         {
           "type": "wms",
           "id": "sc-max_precipitation",
           "name": "translate#catalog.climate.maxPrecipitation",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:max_precipitation"
+          "layers": "geonode:max_precipitation",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/97",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ]
         },
         {
           "type": "wms",
           "id": "sc-solar_radiation",
           "name": "translate#catalog.climate.solarRadiation",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:solar_radiation"
+          "layers": "geonode:solar_radiation",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/94",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ]
         },
         {
           "type": "wms",
           "id": "sc-radiation_bal",
           "name": "translate#catalog.climate.radiationBalance",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:radiation_bal"
+          "layers": "geonode:radiation_bal",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/477",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ]
         },
         {
           "type": "wms",
           "id": "sc-rad_dur_jan",
           "name": "translate#catalog.climate.sunshineJan",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:rad_dur_jan"
+          "layers": "geonode:rad_dur_jan",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/490",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ]
         },
         {
           "type": "wms",
           "id": "sc-rad_dur_apr",
           "name": "translate#catalog.climate.sunshineApr",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:rad_dur_apr"
+          "layers": "geonode:rad_dur_apr",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/489",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ]
         },
         {
           "type": "wms",
           "id": "sc-solar_radiance_duratin_jul",
           "name": "translate#catalog.climate.sunshineJul",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:solar_radiance_duratin_jul"
+          "layers": "geonode:solar_radiance_duratin_jul",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/488",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ]
         },
         {
           "type": "wms",
           "id": "sc-solar_radiance_duratin_oct",
           "name": "translate#catalog.climate.sunshineOct",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:solar_radiance_duratin_oct"
+          "layers": "geonode:solar_radiance_duratin_oct",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/486",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ]
         },
         {
           "type": "wms",
           "id": "sc-wind_resources",
           "name": "translate#catalog.climate.wind",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:wind_resources"
+          "layers": "geonode:wind_resources",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/164",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ]
         }
       ]
     },
@@ -228,6 +294,12 @@
           "name": "translate#catalog.nature.landscapes",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
           "layers": "geonode:landscape",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/82",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ],
           "featureInfoTemplate": {
             "template": "<table class=\"cesium-infoBox-defaultTable\"><tbody><tr><td>fid</td><td>{{fid}}</td></tr><tr><td>OBJECTID</td><td>{{OBJECTID}}</td></tr><tr><td>ID</td><td>{{ID}}</td></tr><tr><td>Tipe</td><td>{{Tipe}}</td></tr><tr><td>Altitude</td><td>{{Altitude}}</td></tr><tr><td>Shape_Leng</td><td>{{Shape_Leng}}</td></tr><tr><td>Shape_Le_1</td><td>{{Shape_Le_1}}</td></tr><tr><td>Shape_Area</td><td>{{Shape_Area}}</td></tr></tbody></table>",
             "showFeatureInfoDownloadWithTemplate": true
@@ -239,6 +311,12 @@
           "name": "translate#catalog.nature.soils",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
           "layers": "geonode:soil_arm",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/78",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ],
           "featureInfoTemplate": {
             "template": "<table class=\"cesium-infoBox-defaultTable\"><tbody><tr><td>fid</td><td>{{fid}}</td></tr><tr><td>OBJECTID</td><td>{{OBJECTID}}</td></tr><tr><td>ID</td><td>{{ID}}</td></tr><tr><td>Descriptio</td><td>{{Descriptio}}</td></tr><tr><td>Tip</td><td>{{Tip}}</td></tr><tr><td>Shape_Leng</td><td>{{Shape_Leng}}</td></tr><tr><td>Shape_Le_1</td><td>{{Shape_Le_1}}</td></tr><tr><td>Shape_Area</td><td>{{Shape_Area}}</td></tr></tbody></table>",
             "showFeatureInfoDownloadWithTemplate": true
@@ -249,7 +327,13 @@
           "id": "sc-vegetation_arm",
           "name": "translate#catalog.nature.vegetation",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:vegetation_arm"
+          "layers": "geonode:vegetation_arm",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/399",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ]
         },
         {
           "type": "wms",
@@ -258,6 +342,12 @@
           "description": "translate#catalog.nature.forestsDescription",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
           "layers": "geonode:arm_forest_area",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/64",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ],
           "rectangle": {
             "west": 43.4,
             "south": 38.8,
@@ -270,7 +360,13 @@
           "id": "sc-arm_landuse",
           "name": "translate#catalog.nature.landUse",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:arm_landuse"
+          "layers": "geonode:arm_landuse",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/81",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ]
         }
       ]
     },
@@ -284,42 +380,78 @@
           "id": "sc-arm_rivers_erica",
           "name": "translate#catalog.water.rivers",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:arm_rivers_erica"
+          "layers": "geonode:arm_rivers_erica",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/27",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ]
         },
         {
           "type": "wms",
           "id": "sc-arm_catchmets",
           "name": "translate#catalog.water.catchments",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:arm_catchmets"
+          "layers": "geonode:arm_catchmets",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/52",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ]
         },
         {
           "type": "wms",
           "id": "sc-lakes_and_reservoirs",
           "name": "translate#catalog.water.lakes",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:lakes_and_reservoirs"
+          "layers": "geonode:lakes_and_reservoirs",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/103",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ]
         },
         {
           "type": "wms",
           "id": "sc-springs0",
           "name": "translate#catalog.water.springs",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:springs0"
+          "layers": "geonode:springs0",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/1068",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ]
         },
         {
           "type": "wms",
           "id": "sc-hydrogeology",
           "name": "translate#catalog.water.aquifers",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:Hydrogeology"
+          "layers": "geonode:Hydrogeology",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/1066",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ]
         },
         {
           "type": "wms",
           "id": "sc-groundwater_zones",
           "name": "translate#catalog.water.groundwater",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:Groundwater_zones"
+          "layers": "geonode:Groundwater_zones",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/1069",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ]
         }
       ]
     },
@@ -333,21 +465,39 @@
           "id": "sc-seismic_zones",
           "name": "translate#catalog.hazards.seismicZones",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:seismic_zones"
+          "layers": "geonode:seismic_zones",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/991",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ]
         },
         {
           "type": "wms",
           "id": "sc-seismic_hazard_475",
           "name": "translate#catalog.hazards.seismicHazard",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:seismic_hazard_475"
+          "layers": "geonode:seismic_hazard_475",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/979",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ]
         },
         {
           "type": "wms",
           "id": "sc-model_2017",
           "name": "translate#catalog.hazards.faults",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:model_2017"
+          "layers": "geonode:model_2017",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/984",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ]
         },
         {
           "type": "geojson",
@@ -372,35 +522,65 @@
           "id": "sc-armenia_landslide",
           "name": "translate#catalog.hazards.landslides",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:armenia_landslide"
+          "layers": "geonode:armenia_landslide",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/95",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ]
         },
         {
           "type": "wms",
           "id": "sc-mudflow_arm",
           "name": "translate#catalog.hazards.mudflows",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:mudflow_arm"
+          "layers": "geonode:mudflow_arm",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/102",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ]
         },
         {
           "type": "wms",
           "id": "sc-avalanches",
           "name": "translate#catalog.hazards.avalanches",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:avalanches"
+          "layers": "geonode:avalanches",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/93",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ]
         },
         {
           "type": "wms",
           "id": "sc-flooding_duration",
           "name": "translate#catalog.hazards.floodDuration",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:flooding_duration"
+          "layers": "geonode:flooding_duration",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/87",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ]
         },
         {
           "type": "wms",
           "id": "sc-flooding_layer",
           "name": "translate#catalog.hazards.springFlood",
           "url": "https://sustainable-caucasus.unepgrid.ch/geoserver/ows",
-          "layers": "geonode:flooding_layer"
+          "layers": "geonode:flooding_layer",
+          "metadataUrls": [
+            {
+              "url": "https://sustainable-caucasus.unepgrid.ch/catalogue/#/dataset/89",
+              "title": "translate#catalog.links.unepDataset"
+            }
+          ]
         }
       ]
     },
@@ -544,6 +724,13 @@
           "id": "yerevan-districts",
           "name": "translate#catalog.yerevan.districts",
           "url": "https://gis.yerevan.am/server/rest/services/Hosted/Yerevan_Districts/FeatureServer/0",
+          "hideSource": true,
+          "metadataUrls": [
+            {
+              "url": "https://gis.yerevan.am/portal/home/item.html?id=a6d8fac221e3492593303f6b2074101a",
+              "title": "translate#catalog.links.yerevanDataset"
+            }
+          ],
           "opacity": 0.4,
           "rectangle": {
             "west": 44.36,
@@ -557,6 +744,17 @@
           "id": "yerevan-metro-stations",
           "name": "translate#catalog.yerevan.metroStations",
           "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D5%84%D5%A5%D5%BF%D6%80%D5%B8_%D5%AF%D5%A1%D5%B5%D5%A1%D5%B6%D5%B6%D5%A5%D6%80/FeatureServer/0",
+          "hideSource": true,
+          "metadataUrls": [
+            {
+              "url": "https://gis.yerevan.am/portal/apps/experiencebuilder/experience/?id=13c109e913644a8d877db51465ace1f2",
+              "title": "translate#catalog.links.yerevanMap"
+            },
+            {
+              "url": "https://gis.yerevan.am/portal/home/item.html?id=81735c4659f94fd9969bf3fb2b98e0f9",
+              "title": "translate#catalog.links.yerevanDataset"
+            }
+          ],
           "where": "փուլ = 'Գոյություն ունեցող' OR փուլ IS NULL",
           "tileRequests": false,
           "featureInfoTemplate": {
@@ -568,6 +766,17 @@
           "id": "yerevan-metro-stations-planned",
           "name": "translate#catalog.yerevan.metroStationsPlanned",
           "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D5%84%D5%A5%D5%BF%D6%80%D5%B8_%D5%AF%D5%A1%D5%B5%D5%A1%D5%B6%D5%B6%D5%A5%D6%80/FeatureServer/0",
+          "hideSource": true,
+          "metadataUrls": [
+            {
+              "url": "https://gis.yerevan.am/portal/apps/experiencebuilder/experience/?id=13c109e913644a8d877db51465ace1f2",
+              "title": "translate#catalog.links.yerevanMap"
+            },
+            {
+              "url": "https://gis.yerevan.am/portal/home/item.html?id=81735c4659f94fd9969bf3fb2b98e0f9",
+              "title": "translate#catalog.links.yerevanDataset"
+            }
+          ],
           "where": "փուլ = 'Նախագծային'",
           "tileRequests": false,
           "featureInfoTemplate": {
@@ -579,6 +788,17 @@
           "id": "yerevan-metro-lines",
           "name": "translate#catalog.yerevan.metroLines",
           "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D5%84%D5%A5%D5%BF%D6%80%D5%B8_lines/FeatureServer/0",
+          "hideSource": true,
+          "metadataUrls": [
+            {
+              "url": "https://gis.yerevan.am/portal/apps/experiencebuilder/experience/?id=13c109e913644a8d877db51465ace1f2",
+              "title": "translate#catalog.links.yerevanMap"
+            },
+            {
+              "url": "https://gis.yerevan.am/portal/home/item.html?id=29edf91fd1a24c5fa3c552b416bc9901",
+              "title": "translate#catalog.links.yerevanDataset"
+            }
+          ],
           "rectangle": {
             "west": 44.46,
             "south": 40.14,
@@ -594,6 +814,17 @@
           "id": "yerevan-bus-stops",
           "name": "translate#catalog.yerevan.busStops",
           "url": "https://gis.yerevan.am/server/rest/services/Hosted/Bus_stops_lots/FeatureServer/0",
+          "hideSource": true,
+          "metadataUrls": [
+            {
+              "url": "https://gis.yerevan.am/portal/apps/dashboards/a4e21cdbd7b84136b8224c6189155892",
+              "title": "translate#catalog.links.yerevanMap"
+            },
+            {
+              "url": "https://gis.yerevan.am/portal/home/item.html?id=b7fe9c193d974e6b831904aedb23e0b8",
+              "title": "translate#catalog.links.yerevanDataset"
+            }
+          ],
           "featureInfoTemplate": {
             "name": "translate#catalog.yerevan.busStops - {{#street}}{{{street}}}{{/street}}{{^street}}translate#featureInfo.siteData{{/street}}"
           }
@@ -602,19 +833,74 @@
           "type": "esri-featureServer",
           "id": "yerevan-monuments",
           "name": "translate#catalog.yerevan.monuments",
-          "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D4%B2%D5%B8%D5%AC%D5%B8%D6%80_%D5%B0%D5%B8%D6%82%D5%B7%D5%A1%D6%80%D5%B1%D5%A1%D5%B6%D5%B6%D5%A5%D6%80%D5%A8_view/FeatureServer/0"
+          "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D4%B2%D5%B8%D5%AC%D5%B8%D6%80_%D5%B0%D5%B8%D6%82%D5%B7%D5%A1%D6%80%D5%B1%D5%A1%D5%B6%D5%B6%D5%A5%D6%80%D5%A8_view/FeatureServer/0",
+          "hideSource": true,
+          "metadataUrls": [
+            {
+              "url": "https://gis.yerevan.am/portal/apps/experiencebuilder/experience/?id=fc8118116b344e7ebacbd1c82fa698ff",
+              "title": "translate#catalog.links.yerevanMap"
+            },
+            {
+              "url": "https://gis.yerevan.am/portal/home/item.html?id=a87976e610304d84a02c2f15cf858d7b",
+              "title": "translate#catalog.links.yerevanDataset"
+            }
+          ]
+        },
+        {
+          "type": "esri-featureServer",
+          "id": "yerevan-memorial-plaques",
+          "name": "translate#catalog.yerevan.memorialPlaques",
+          "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D5%80%D5%B8%D6%82%D5%B7%D5%A1%D5%BF%D5%A1%D5%AD%D5%BF%D5%A1%D5%AF%D5%B6%D5%A5%D6%80_view/FeatureServer/0",
+          "hideSource": true,
+          "metadataUrls": [
+            {
+              "url": "https://gis.yerevan.am/portal/apps/experiencebuilder/experience/?id=0414e699e22b4ae58f0743f51e29fc59",
+              "title": "translate#catalog.links.yerevanMap"
+            },
+            {
+              "url": "https://gis.yerevan.am/portal/home/item.html?id=cf254c0da1db45348c5aa486a20700be",
+              "title": "translate#catalog.links.yerevanDataset"
+            }
+          ],
+          "rectangle": {
+            "west": 44.44,
+            "south": 40.13,
+            "east": 44.58,
+            "north": 40.23
+          },
+          "featureInfoTemplate": {
+            "name": "translate#catalog.yerevan.memorialPlaques - {{#address}}{{{address}}}{{/address}}{{^address}}translate#featureInfo.siteData{{/address}}"
+          }
         },
         {
           "type": "esri-featureServer",
           "id": "yerevan-kindergartens",
           "name": "translate#catalog.yerevan.kindergartens",
-          "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D5%84%D5%A1%D5%B6%D5%AF%D5%A1%D5%BA%D5%A1%D6%80%D5%BF%D5%A5%D5%A6%D5%B6%D5%A5%D6%80/FeatureServer/0"
+          "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D5%84%D5%A1%D5%B6%D5%AF%D5%A1%D5%BA%D5%A1%D6%80%D5%BF%D5%A5%D5%A6%D5%B6%D5%A5%D6%80/FeatureServer/0",
+          "hideSource": true,
+          "metadataUrls": [
+            {
+              "url": "https://gis.yerevan.am/portal/apps/experiencebuilder/experience/?id=a9861444fa1940f2b08522c7e5808304",
+              "title": "translate#catalog.links.yerevanMap"
+            },
+            {
+              "url": "https://gis.yerevan.am/portal/home/item.html?id=edd57907b56b46569b9c7d28f8e26387",
+              "title": "translate#catalog.links.yerevanDataset"
+            }
+          ]
         },
         {
           "type": "esri-featureServer",
           "id": "yerevan-hotels",
           "name": "translate#catalog.yerevan.hotels",
           "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D5%80%D5%B5%D5%B8%D6%82%D6%80%D5%A1%D5%B6%D5%B8%D6%81%D5%B6%D5%A5%D6%80/FeatureServer/0",
+          "hideSource": true,
+          "metadataUrls": [
+            {
+              "url": "https://gis.yerevan.am/portal/home/item.html?id=1d1faa255095438eb393cc1fb1aed933",
+              "title": "translate#catalog.links.yerevanDataset"
+            }
+          ],
           "rectangle": {
             "west": 44.46,
             "south": 40.16,
@@ -630,6 +916,17 @@
           "id": "yerevan-green-areas",
           "name": "translate#catalog.yerevan.greenAreas",
           "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D4%B8%D5%B6%D5%A4%D5%B0_%D6%85%D5%A3%D5%BF_%D5%AF%D5%A1%D5%B6%D5%A1%D5%B9_%D5%BF%D5%A1%D6%80%D5%A1%D5%AE%D6%84/FeatureServer/0",
+          "hideSource": true,
+          "metadataUrls": [
+            {
+              "url": "https://gis.yerevan.am/portal/apps/experiencebuilder/experience/?id=6b47fa041f0d49578bfde03d79705c22",
+              "title": "translate#catalog.links.yerevanMap"
+            },
+            {
+              "url": "https://gis.yerevan.am/portal/home/item.html?id=21ce6b50b2aa4600b925022f57e26a1d",
+              "title": "translate#catalog.links.yerevanDataset"
+            }
+          ],
           "rectangle": {
             "west": 44.42,
             "south": 40.13,
@@ -651,6 +948,17 @@
           "id": "yerevan-air-quality",
           "name": "translate#catalog.yerevan.airQuality.name",
           "url": "https://gis.yerevan.am/server/rest/services/Hosted/Device_Joined_NewAPI/FeatureServer/0",
+          "hideSource": true,
+          "metadataUrls": [
+            {
+              "url": "https://gis.yerevan.am/portal/apps/experiencebuilder/experience/?id=d6435f44ea92460682d12c2317612b29",
+              "title": "translate#catalog.links.yerevanMap"
+            },
+            {
+              "url": "https://gis.yerevan.am/portal/home/item.html?id=15161c227c9e4148bb813227369a520d",
+              "title": "translate#catalog.links.yerevanDataset"
+            }
+          ],
           "description": "translate#catalog.yerevan.airQuality.description",
           "where": "endofperiod_date >= CURRENT_TIMESTAMP - INTERVAL '1' DAY",
           "useStyleInformationFromService": false,
@@ -683,6 +991,17 @@
           "id": "yerevan-seismic-microzonation",
           "name": "translate#catalog.yerevan.seismicMicrozonation",
           "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D5%8D%D5%A5%D5%B5%D5%BD%D5%B4%D5%B8%D5%B4%D5%AB%D5%AF%D6%80%D5%B8%D5%B7%D6%80%D5%BB%D5%A1%D5%B6%D5%A1%D6%81%D5%B8%D6%82%D5%B4/FeatureServer/15",
+          "hideSource": true,
+          "metadataUrls": [
+            {
+              "url": "https://gis.yerevan.am/portal/apps/experiencebuilder/experience/?id=dad660b02c204a1cae2d54cefd7c1385",
+              "title": "translate#catalog.links.yerevanMap"
+            },
+            {
+              "url": "https://gis.yerevan.am/portal/home/item.html?id=41928f5b232947e0ac47465b68db522b",
+              "title": "translate#catalog.links.yerevanDataset"
+            }
+          ],
           "rectangle": {
             "west": 44.36,
             "south": 40.06,
@@ -699,6 +1018,17 @@
           "id": "yerevan-landslides",
           "name": "translate#catalog.yerevan.landslides",
           "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D5%8D%D5%B8%D5%B2%D5%A1%D5%B6%D6%84%D5%B6%D5%A5%D6%80/FeatureServer/6",
+          "hideSource": true,
+          "metadataUrls": [
+            {
+              "url": "https://gis.yerevan.am/portal/apps/experiencebuilder/experience/?id=6b47fa041f0d49578bfde03d79705c22",
+              "title": "translate#catalog.links.yerevanMap"
+            },
+            {
+              "url": "https://gis.yerevan.am/portal/home/item.html?id=7a2cd4b7ccc94c158d7eea8be4e39211",
+              "title": "translate#catalog.links.yerevanDataset"
+            }
+          ],
           "rectangle": {
             "west": 44.44,
             "south": 40.08,
@@ -715,6 +1045,17 @@
           "id": "yerevan-main-fault",
           "name": "translate#catalog.yerevan.mainFault",
           "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D4%BD%D5%A6%D5%B8%D6%82%D5%B4%D5%A1%D5%B5%D5%AB%D5%B6_%D5%AD%D5%A1%D5%AD%D5%BF%D5%B8%D6%82%D5%B4%D5%B6%D5%A5%D6%80/FeatureServer/2",
+          "hideSource": true,
+          "metadataUrls": [
+            {
+              "url": "https://gis.yerevan.am/portal/apps/experiencebuilder/experience/?id=dad660b02c204a1cae2d54cefd7c1385",
+              "title": "translate#catalog.links.yerevanMap"
+            },
+            {
+              "url": "https://gis.yerevan.am/portal/home/item.html?id=39690ec331df41ff82bb79c94ff91cd9",
+              "title": "translate#catalog.links.yerevanDataset"
+            }
+          ],
           "rectangle": {
             "west": 44.43,
             "south": 40.1,
@@ -731,6 +1072,17 @@
           "id": "yerevan-faults",
           "name": "translate#catalog.yerevan.faults",
           "url": "https://gis.yerevan.am/server/rest/services/Hosted/%D4%BD%D5%A6%D5%B8%D6%82%D5%B4%D5%A1%D5%B5%D5%AB%D5%B6_%D5%AD%D5%A1%D5%AD%D5%BF%D5%B8%D6%82%D5%B4%D5%B6%D5%A5%D6%80/FeatureServer/3",
+          "hideSource": true,
+          "metadataUrls": [
+            {
+              "url": "https://gis.yerevan.am/portal/apps/experiencebuilder/experience/?id=dad660b02c204a1cae2d54cefd7c1385",
+              "title": "translate#catalog.links.yerevanMap"
+            },
+            {
+              "url": "https://gis.yerevan.am/portal/home/item.html?id=39690ec331df41ff82bb79c94ff91cd9",
+              "title": "translate#catalog.links.yerevanDataset"
+            }
+          ],
           "rectangle": {
             "west": 44.48,
             "south": 40.11,
@@ -745,7 +1097,18 @@
           "type": "esri-featureServer",
           "id": "yerevan-construction",
           "name": "translate#catalog.yerevan.construction",
-          "url": "https://gis.yerevan.am/server/rest/services/Hosted/Construction_public_view/FeatureServer/0"
+          "url": "https://gis.yerevan.am/server/rest/services/Hosted/Construction_public_view/FeatureServer/0",
+          "hideSource": true,
+          "metadataUrls": [
+            {
+              "url": "https://gis.yerevan.am/portal/apps/experiencebuilder/experience/?id=5b664ee26f71429caa0745deb53f2155",
+              "title": "translate#catalog.links.yerevanMap"
+            },
+            {
+              "url": "https://gis.yerevan.am/portal/home/item.html?id=2f2425da63724965a7e0a2a5ce158902",
+              "title": "translate#catalog.links.yerevanDataset"
+            }
+          ]
         }
       ]
     },
