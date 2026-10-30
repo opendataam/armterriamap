@@ -233,7 +233,7 @@
     },
     "yerevan": {
       "name": "Yerevan",
-      "description": "Layers of the [Yerevan Municipality GIS](https://gis.yerevan.am/server/rest/services). The municipality does not state a licence for these data; they are shown with attribution to the source.",
+      "description": "Layers of the [Yerevan Municipality GIS](https://gis.yerevan.am/portal/home/). The municipality does not state a licence for these data; they are shown with attribution to the source.",
       "districts": "Administrative districts",
       "metroStations": "Metro stations",
       "metroStationsPlanned": "Planned metro stations",
@@ -261,7 +261,13 @@
       "landslides": "Landslides",
       "mainFault": "Main fault zone (assumed)",
       "faults": "Secondary faults",
-      "construction": "Construction projects"
+      "construction": "Construction projects",
+      "memorialPlaques": "Memorial plaques"
+    },
+    "links": {
+      "yerevanMap": "Map on the Yerevan GIS portal",
+      "yerevanDataset": "Dataset on the Yerevan GIS portal",
+      "unepDataset": "Dataset on Sustainable Caucasus (UNEP/GRID-Geneva)"
     },
     "threeD": {
       "photorealistic": {
@@ -321,5 +327,8 @@
     "title": "Atlas of Armenia",
     "welcomeMessage": "Explore open data about Armenia on the map: population, natural hazards, water, climate, nature and the city of Yerevan.<br/>Start with the story, browse the data catalogue or search for a place.",
     "welcomeMessageOnMobile": "Explore open data about Armenia on the map."
+  },
+  "description": {
+    "metadataUrls": "Links"
   }
 }

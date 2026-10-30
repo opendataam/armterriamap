@@ -2,6 +2,10 @@
 
 #### next release
 
+- Yerevan layers link to the Yerevan GIS portal instead of the REST address of their service, which opens "403: The administrator has disabled the Services Directory" in a browser: a "Map on the Yerevan GIS portal" button opens the thematic map of the portal that shows the layer (where there is one), a "Dataset on the Yerevan GIS portal" button opens the item page of its service (`metadataUrls`, `hideSource`). The group description links to the portal home page
+- Add the Yerevan layer "Memorial plaques" (395 plaques from the portal's memorial plaques platform)
+- Sustainable Caucasus layers show one link to the dataset page of sustainable-caucasus.unepgrid.ch instead of 13 metadata links (12 of them CSW XML records). TerriaJS patch: `metadataUrls` set in the catalog replace those of WMS GetCapabilities, which were kept as both are merged by index
+- Translate the `title` of `metadataUrls` links (`translate#key`), and name their section "Links" (Armenian "Հղումներ", Russian "Ссылки") instead of "Metadata Links"
 - Brand the map as "Open Data Armenia Atlas": a new logo (`wwwroot/images/opendataam_atlas_logo.png`) that links to maps.opendata.am, the app name and the page title
 - The logo keeps its proportions in the side panel (the old one was squashed by a fixed height), and phones get a logo without the icon that the menu and "Data" buttons do not cover
 - Add the menu bar link "An Open Data Armenia project" to opendata.am, translated into Armenian and Russian

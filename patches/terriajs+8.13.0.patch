@@ -31,6 +31,31 @@ index ad12c8d..c4c3978 100644
          });
        }
      }
+diff --git a/node_modules/terriajs/lib/Models/Catalog/Ows/WebMapServiceCapabilitiesStratum.ts b/node_modules/terriajs/lib/Models/Catalog/Ows/WebMapServiceCapabilitiesStratum.ts
+index 0cc8d5b..1f5f53d 100644
+--- a/node_modules/terriajs/lib/Models/Catalog/Ows/WebMapServiceCapabilitiesStratum.ts
++++ b/node_modules/terriajs/lib/Models/Catalog/Ows/WebMapServiceCapabilitiesStratum.ts
+@@ -30,6 +30,7 @@ import WebMapServiceCatalogItemTraits, {
+   WebMapServiceAvailableLayerStylesTraits,
+   WebMapServiceAvailableStyleTraits
+ } from "../../../Traits/TraitsClasses/WebMapServiceCatalogItemTraits";
++import CommonStrata from "../../Definition/CommonStrata";
+ import LoadableStratum from "../../Definition/LoadableStratum";
+ import Model, { BaseModel } from "../../Definition/Model";
+ import StratumFromTraits from "../../Definition/StratumFromTraits";
+@@ -93,6 +94,12 @@ export default class WebMapServiceCapabilitiesStratum extends LoadableStratum(
+   }
+ 
+   @computed get metadataUrls() {
++    // Metadata URLs of the catalog item replace those of GetCapabilities.
++    // They are merged by index, so the capabilities ones would be kept.
++    if (this.catalogItem.strata.get(CommonStrata.definition)?.metadataUrls) {
++      return undefined;
++    }
++
+     const metadataUrls: MetadataURL[] = [];
+ 
+     Array.from(this.capabilitiesLayers.values()).forEach((layer) => {
 diff --git a/node_modules/terriajs/lib/Models/Cesium.ts b/node_modules/terriajs/lib/Models/Cesium.ts
 index 97d98d6..5c740f2 100644
 --- a/node_modules/terriajs/lib/Models/Cesium.ts
